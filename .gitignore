@@ -1,0 +1,45 @@
+/node_modules
+
+.next
+/out
+/posts
+/temp
+/tsconfig.tsbuildinfo
+
+# Added by Task Master AI
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dev-debug.log
+# Dependency directories
+node_modules/
+# Environment variables
+.env
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+# OS specific
+.DS_Store
+
+# Task files
+# tasks.json
+# tasks/ 
+.taskmaster/
+.cursor/
+.roo
+Spareng Pdf Pages
+
+# pdfs
+*.pdf
+*.PDF
+.roomodes
+.windsurfrules
+*.md
