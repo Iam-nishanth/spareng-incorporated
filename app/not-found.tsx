@@ -42,10 +42,10 @@ export default function NotFound() {
       delay: 0.5,
     },
     {
-      title: 'Industries',
-      description: 'See who we serve',
+      title: 'Use Cases',
+      description: 'See how we can help you',
       icon: FiSearch,
-      href: '/industries',
+      href: '/use-cases',
       delay: 0.6,
     },
     {

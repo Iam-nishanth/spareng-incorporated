@@ -9,7 +9,7 @@ export default function Layout(props: { children: React.ReactNode }) {
     <html lang="en" data-theme={colorMode} style={{ colorScheme: colorMode }}>
       <head>
         {/* Favicons */}
-        <link
+        {/* <link
           rel="apple-touch-icon"
           sizes="76x76"
           href="/static/favicons/apple-touch-icon.png"
@@ -27,7 +27,7 @@ export default function Layout(props: { children: React.ReactNode }) {
           href="/static/favicons/favicon-16x16.png"
         />
         <link rel="manifest" href="/static/favicons/manifest.json" />
-        <link rel="shortcut icon" href="/static/favicons/favicon.ico" />
+        <link rel="shortcut icon" href="/static/favicons/favicon.ico" /> */}
         
         {/* Basic SEO */}
         <title>Spareng - MHE Spares, Material Handling Equipment Parts & Industrial Components</title>

@@ -53,7 +53,7 @@ export const sizerSugarGraderProducts: Product[] = [
   },
   {
     id: 'ssg-003',
-    title: 'Unbalanced Motors',
+    title: 'Unbalanced Motor',
     model: 'UM-SSG-001',
     sku: 'SP-UM-SSG-001',
     category: ['Screening Equipment', 'Sizer Sugar Grader'],

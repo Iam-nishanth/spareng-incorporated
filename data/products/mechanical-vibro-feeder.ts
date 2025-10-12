@@ -28,7 +28,7 @@ export const mechanicalVibroFeederProducts: Product[] = [
   },
   {
     id: 'mvf-002',
-    title: 'Unbalanced Motors',
+    title: 'Unbalanced Motor',
     model: 'UM-MVF-001',
     sku: 'SP-UM-MVF-001',
     category: ['Material Handling', 'Mechanical Vibro Feeder'],

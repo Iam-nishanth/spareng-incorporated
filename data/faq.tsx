@@ -5,21 +5,21 @@ const faq = {
   // description: '',
   items: [
     {
-      q: 'What industries do you serve?',
-      a: "We serve a wide range of industries, including manufacturing, warehousing, logistics, and construction",
+      q: 'What types of MHE spare parts do you supply?',
+      a: "We supply a comprehensive range of Material Handling Equipment spare parts including conveyor components (idlers, rollers, pulleys), screening equipment parts, crushing system components, port handling equipment, and specialized conveyor systems for various industries.",
     },
     {
-      q: 'How long does the installation process take?',
-      a: "The installation process typically takes 1-2 business days. However, the actual time may vary depending on the complexity of the project and location.",
+      q: 'Do you provide custom solutions for specific machine requirements?',
+      a: "Yes, we offer custom solutions and can manufacture spare parts according to your specific machine specifications. Our engineering team works closely with clients to ensure perfect fit and optimal performance for your material handling systems.",
     },
     {
-      q: 'Do you offer Maintenance Services?',
-      a: 'Yes, we offer maintenance services to ensure your equipment is operating at peak performance.',
+      q: 'What is your delivery timeline for spare parts?',
+      a: "We maintain a 24x7 dedicated team for timely delivery of spare parts to minimize breakdown timelines. Standard delivery is 3-7 business days, with emergency parts available for critical situations. Pan-India service ensures quick delivery across all major industrial locations.",
     },
-    // {
-    //   q: 'what Certifications do your products hold?',
-    //   a: 'Our products are certified to meet the highest standards of safety and quality, ensuring they are reliable and long-lasting.',
-    // },
+    {
+      q: 'Do you offer after-sales support and technical consultancy?',
+      a: "Yes, we provide comprehensive after-sales services including spare part replacement support, breakdown assistance, periodic machine health checks, and technical consultancy for new projects, retrofits, and performance optimization using latest IIoT technologies.",
+    },
   ],
 }
 

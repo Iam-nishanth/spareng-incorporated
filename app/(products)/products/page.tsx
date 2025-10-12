@@ -139,8 +139,8 @@ const FilterContent: React.FC<{
       )}
 
       {/* Product Categories - Always Open */}
-      <Box>
-        <Heading size="sm" mb="3" color="gray.700" fontWeight="600">
+      <Box py={{ base: 0, md: 4 }}>
+        <Heading size="sm" mb="3" color="black" fontWeight="600">
           Product Categories
         </Heading>
         <CheckboxGroup
@@ -273,13 +273,30 @@ const ProductsPage: NextPage = () => {
       return matchesSearch && matchesCategory && matchesSubcategory
     })
 
+    // Remove duplicates based on exact title match
+    const uniqueProducts = filtered.reduce((acc, current) => {
+      const existingIndex = acc.findIndex(product => 
+        product.title.toLowerCase() === current.title.toLowerCase()
+      )
+      
+      if (existingIndex === -1) {
+        // No duplicate found, add the product
+        acc.push(current)
+      } else {
+        // Duplicate found, keep the first occurrence (or you could keep the latest)
+        // For now, we'll keep the first occurrence
+      }
+      
+      return acc
+    }, [] as typeof filtered)
+
     // Sort products
     switch (sortBy) {
       case 'name-az':
-        filtered.sort((a, b) => a.title.localeCompare(b.title))
+        uniqueProducts.sort((a, b) => a.title.localeCompare(b.title))
         break
       case 'name-za':
-        filtered.sort((a, b) => b.title.localeCompare(a.title))
+        uniqueProducts.sort((a, b) => b.title.localeCompare(a.title))
         break
       case 'best-seller':
       default:
@@ -287,7 +304,7 @@ const ProductsPage: NextPage = () => {
         break
     }
 
-    return filtered
+    return uniqueProducts
   }, [searchTerm, selectedCategories, selectedSubcategories, sortBy])
 
   const handleClearFilters = () => {

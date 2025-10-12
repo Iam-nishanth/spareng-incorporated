@@ -81,7 +81,7 @@ export const IndustriesCarousel: React.FC = () => {
             textAlign="center"
             mb={3}
           >
-            Industries We Serve
+            Industries & Machines We Support
           </Text>
           <Heading
             as="h2"
@@ -92,7 +92,7 @@ export const IndustriesCarousel: React.FC = () => {
             lineHeight="shorter"
             mb={4}
           >
-            Solutions for Every Industry
+            Complete MHE Solutions
           </Heading>
           <Text
             fontSize="lg"
@@ -101,9 +101,8 @@ export const IndustriesCarousel: React.FC = () => {
             maxW="3xl"
             lineHeight="relaxed"
           >
-            Interested in knowing what solutions we have for your specific industry? No matter your
-            requirements, we can provide products that fit your needs - whether it's for
-            manufacturing, hospitality or anything in between.
+            From individual MHE spare parts to complete material handling systems, we provide solutions for every industry. 
+            Build your machines using our premium spare parts and components for mining, steel, cement, power, and port operations.
           </Text>
         </VStack>
 

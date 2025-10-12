@@ -207,7 +207,7 @@ export default function IndustriesPage() {
         content="Discover the machines you can build using our premium MHE spare parts and components. From belt conveyors to screening equipment, crushing systems, and port handling machinery - all built with our quality spare parts."
       />
       <meta name="keywords" content="bulk material handling machines, belt conveyor systems, screening equipment, crushing machinery, port handling equipment, industrial conveyors, material processing systems" />
-      <link rel="canonical" href="https://spareng.com/industries/" />
+      <link rel="canonical" href="https://spareng.com/use-cases/" />
       
       {/* Service Schema */}
       <script 

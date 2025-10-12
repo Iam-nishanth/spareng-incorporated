@@ -20,8 +20,8 @@ const siteConfig = {
         label: 'Products',
       },
       {
-        id: 'industries',
-        label: 'Industries',
+        id: 'use-cases',
+        label: 'Use Cases',
       },
       {
         id: 'contact',
@@ -56,7 +56,7 @@ const siteConfig = {
         title: 'Pages',
         links: [
           { label: 'Products', href: '/products' },
-          { label: 'Industries', href: '/industries' },
+          { label: 'Use Cases', href: '/use-cases' },
           { label: 'Contact', href: '/contact' },
         ],
       },

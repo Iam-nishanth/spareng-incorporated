@@ -616,7 +616,7 @@ export const conveyorPartsProducts: Product[] = [
   },
   {
     id: 'cp-027',
-    title: 'Pin Bush Coupling',
+    title: 'Pin-Bush Coupling',
     model: 'PBC-001',
     sku: 'SP-PBC-001',
     category: ['Conveyor Components'],

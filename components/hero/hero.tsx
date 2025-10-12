@@ -12,7 +12,7 @@ export const Hero = ({ title, description, children, ...rest }: HeroProps) => {
         <VStack spacing={[4, null, 8]} alignItems="flex-start" pt={{ base: 16, md: 0 }}>
           <Text
             as="h1"
-            fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}
+            fontSize={{ base: '3xl', md: '4xl', lg: '50px' }}
             fontWeight="bold"
             lineHeight="shorter"
             textAlign="left"
