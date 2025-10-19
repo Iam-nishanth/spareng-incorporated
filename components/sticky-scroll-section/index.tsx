@@ -38,29 +38,29 @@ const defaultItems: StickyScrollItem[] = [
     title: 'Spares Supply Excellence',
     description:
       'Our dedicated 24x7 team ensures timely delivery of spare parts to minimize breakdown timelines of your material handling equipment. With extensive inventory management and strategic partnerships, we guarantee rapid response to your critical spare parts requirements across all industrial sectors.',
-    imageSrc: '/home/why-choose/spares-supply.png',
+    imageSrc: '/home/why-choose/spares-supply.avif',
   },
   {
     id: 2,
     title: 'After Sales Services',
     description:
       'Our exclusive service team provides comprehensive solutions and support for spare part replacement, breakdown-related issues, and conducts periodic machine health condition checks. We ensure uninterrupted operations of your plant with proactive maintenance and rapid response capabilities.',
-    imageSrc: '/home/why-choose/after-sales.png',
+    imageSrc: '/home/why-choose/after-sales.avif',
   },
   {
     id: 3,
     title: 'Repairs & Refurbishment',
     description:
       'We undertake complete repairs and refurbishment of various material handling equipment using our experienced and highly skilled professionals. Our state-of-the-art workshop facilities ensure your equipment is restored to optimal performance standards with extended operational life.',
-    imageSrc: '/home/why-choose/repairs-refurbishment.png',
+    imageSrc: '/home/why-choose/repairs-refurbishment.webp',
   },
-  {
-    id: 4,
-    title: 'Technical Consultancy',
-    description:
-      'Our engineering consultancy services cover new proposed projects, retrofit projects, and equipment design in material handling. We provide performance studies, current parameter analysis, and solutions to enhance operational excellence, including IIoT-based Life Cycle Analysis for modern industrial applications.',
-    imageSrc: '/home/why-choose/technical-consultancy.png',
-  },
+  // {
+  //   id: 4,
+  //   title: 'Technical Consultancy',
+  //   description:
+  //     'Our engineering consultancy services cover new proposed projects, retrofit projects, and equipment design in material handling. We provide performance studies, current parameter analysis, and solutions to enhance operational excellence, including IIoT-based Life Cycle Analysis for modern industrial applications.',
+  //   imageSrc: '/home/why-choose/technical-consultancy.png',
+  // },
 ]
 
 const MotionBox = motion.div

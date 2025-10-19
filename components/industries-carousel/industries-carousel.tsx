@@ -1,20 +1,22 @@
 'use client'
 
-import React, { useCallback, useEffect, useState } from 'react'
 import {
   Box,
   Container,
+  HStack,
   Heading,
+  IconButton,
+  Image,
   Text,
   VStack,
-  HStack,
-  IconButton,
   useColorModeValue,
-  Image,
 } from '@chakra-ui/react'
-import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
+import useEmblaCarousel from 'embla-carousel-react'
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
+
+import React, { useCallback, useEffect, useState } from 'react'
+
 import industries from '#data/industries'
 
 export const IndustriesCarousel: React.FC = () => {
@@ -29,7 +31,7 @@ export const IndustriesCarousel: React.FC = () => {
         '(min-width: 1024px)': { slidesToScroll: 3 },
       },
     },
-    [Autoplay({ delay: 4000, stopOnInteraction: false })]
+    [Autoplay({ delay: 4000, stopOnInteraction: false })],
   )
 
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false)
@@ -37,11 +39,11 @@ export const IndustriesCarousel: React.FC = () => {
 
   const scrollPrev = useCallback(
     () => emblaApi && emblaApi.scrollPrev(),
-    [emblaApi]
+    [emblaApi],
   )
   const scrollNext = useCallback(
     () => emblaApi && emblaApi.scrollNext(),
-    [emblaApi]
+    [emblaApi],
   )
 
   const onSelect = useCallback(() => {
@@ -101,8 +103,10 @@ export const IndustriesCarousel: React.FC = () => {
             maxW="3xl"
             lineHeight="relaxed"
           >
-            From individual MHE spare parts to complete material handling systems, we provide solutions for every industry. 
-            Build your machines using our premium spare parts and components for mining, steel, cement, power, and port operations.
+            From individual MHE spare parts to complete material handling
+            systems, we provide solutions for every industry. Build your
+            machines using our premium spare parts and components for mining,
+            steel, cement, power, and port operations.
           </Text>
         </VStack>
 
@@ -153,8 +157,16 @@ export const IndustriesCarousel: React.FC = () => {
                   <Box
                     key={key}
                     flex="0 0 100%"
-                    minW={{ base: '100%', md: 'calc(50% - 12px)', lg: 'calc(33.333% - 16px)' }}
-                    maxW={{ base: '100%', md: 'calc(50% - 12px)', lg: 'calc(33.333% - 16px)' }}
+                    minW={{
+                      base: '100%',
+                      md: 'calc(50% - 12px)',
+                      lg: 'calc(33.333% - 16px)',
+                    }}
+                    maxW={{
+                      base: '100%',
+                      md: 'calc(50% - 12px)',
+                      lg: 'calc(33.333% - 16px)',
+                    }}
                   >
                     <Box
                       bg={cardBg}

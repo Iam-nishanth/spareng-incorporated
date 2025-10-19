@@ -125,7 +125,7 @@ const Home: NextPage = () => {
       <HeroSection />
       <ProductsSection />
       <StickyScrollSection />
-      <LogoSlider />
+      {/* <LogoSlider /> */}
       <IndustriesCarousel />
       <FaqSection />
     </Box>
@@ -222,6 +222,7 @@ const HeroSection: React.FC = () => {
       <Features
         id="benefits"
         columns={[1, 2, 4]}
+        minChildWidth="240px"
         iconSize={4}
         innerWidth="container.xl"
         pt="20"
@@ -233,6 +234,7 @@ const HeroSection: React.FC = () => {
               'Precision-engineered spare parts built to withstand harsh industrial conditions',
             iconPosition: 'left',
             delay: 0.6,
+            imageSrc: '/home/Industrial Bay Doors.png',
           },
           {
             title: 'Cost Effective',
@@ -241,6 +243,7 @@ const HeroSection: React.FC = () => {
               'Competitive pricing on genuine MHE spare parts with bulk order discounts',
             iconPosition: 'left',
             delay: 0.8,
+            imageSrc: '/home/DockLeveller.png',
           },
           {
             title: 'Safety Compliant',
@@ -249,6 +252,7 @@ const HeroSection: React.FC = () => {
               'All spare parts meet international safety standards and quality certifications',
             iconPosition: 'left',
             delay: 1,
+            imageSrc: '/home/industrial-hall-1630742_1280.jpg',
           },
           {
             title: 'Fast Delivery',
@@ -257,6 +261,7 @@ const HeroSection: React.FC = () => {
               'Quick dispatch and nationwide delivery with technical support',
             iconPosition: 'left',
             delay: 1.1,
+            imageSrc: '/home/Roller Shutters.png',
           },
         ]}
         reveal={FallInPlace}
@@ -284,7 +289,7 @@ const ProductsSection = () => {
             title: 'Conveyor Parts',
             description:
               'Idlers, rollers, brackets, and belts for conveyor systems in mining and processing',
-            imageSrc: '/home/product-range/conveyor-parts.png',
+            imageSrc: '/Products/CONVEYOR_PARTS/IDLER_BEARING.jpeg',
             learnMoreHref: '/products',
             enquireHref: '/contact',
             delay: 0.2,
@@ -293,7 +298,7 @@ const ProductsSection = () => {
             title: 'Pulleys & Drums',
             description:
               'Head, tail, snub, and magnetic pulleys for material handling systems',
-            imageSrc: '/home/product-range/pulleys-drums.png',
+            imageSrc: '/Products/CONVEYOR_PARTS/TAIL_PULLEY.jpeg',
             learnMoreHref: '/products',
             enquireHref: '/contact',
             delay: 0.3,
@@ -302,7 +307,7 @@ const ProductsSection = () => {
             title: 'Crusher Spares',
             description:
               'High-wear parts and components for crushing equipment in mining operations',
-            imageSrc: '/home/product-range/crusher-spares.png',
+            imageSrc: '/home/product-range/Conveyor Spares.jpg',
             learnMoreHref: '/products',
             enquireHref: '/contact',
             delay: 0.4,
@@ -311,7 +316,7 @@ const ProductsSection = () => {
             title: 'Screening Equipment',
             description:
               'Screen cloth, flip flow mats, and vibrating screen components for processing',
-            imageSrc: '/home/product-range/screening-equipment.png',
+            imageSrc: '/Products/FLIP_FLOW_SCREEN/COMPRESSION_SPRINGS.jpeg',
             learnMoreHref: '/products',
             enquireHref: '/contact',
             delay: 0.5,
@@ -320,7 +325,7 @@ const ProductsSection = () => {
             title: 'Safety Systems',
             description:
               'Zero speed switches, belt sway switches, and pull cord switches for equipment safety',
-            imageSrc: '/home/product-range/safety-systems.png',
+            imageSrc: '/Products/BARGE_LOADER/LIMIT_SWITCH.jpeg',
             learnMoreHref: '/products',
             enquireHref: '/contact',
             delay: 0.6,
@@ -329,7 +334,7 @@ const ProductsSection = () => {
             title: 'Magnetic Separators',
             description:
               'High-intensity magnetic separators and drum magnets for material separation',
-            imageSrc: '/home/product-range/magnetic-separators.png',
+            imageSrc: '/Products/CONVEYOR_PARTS/OVER_BAND_MAGNETIC_SEPERATOR.jpeg',
             learnMoreHref: '/products',
             enquireHref: '/contact',
             delay: 0.7,

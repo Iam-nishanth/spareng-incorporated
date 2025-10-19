@@ -13,6 +13,7 @@ import {
   ThemingProps,
   SystemProps,
 } from '@chakra-ui/react'
+import Image from 'next/image'
 
 import { Section, SectionTitle, SectionTitleProps } from 'components/section'
 
@@ -32,6 +33,7 @@ export interface FeaturesProps
   reveal?: React.FC<any>
   iconSize?: SystemProps['boxSize']
   innerWidth?: SystemProps['maxW']
+  minChildWidth?: SystemProps['minW']
 }
 
 export interface FeatureProps {
@@ -43,6 +45,20 @@ export interface FeatureProps {
   ip?: 'left' | 'top'
   variant?: string
   delay?: number
+  // Optional background image for the feature container
+  bgImageSrc?: string
+  bgSize?: SystemProps['backgroundSize']
+  bgPosition?: SystemProps['backgroundPosition']
+  bgRepeat?: SystemProps['backgroundRepeat']
+  // Optional top image, shown above content
+  imageSrc?: string
+  imageAlt?: string
+  imageHeight?: SystemProps['height']
+  imageFit?: React.CSSProperties['objectFit']
+  imagePosition?: React.CSSProperties['objectPosition']
+  // Optional controls for overlayed icon sizing
+  overlayIconSize?: SystemProps['boxSize']
+  overlayBadgeSize?: SystemProps['boxSize']
 }
 
 export const Feature: React.FC<FeatureProps> = (props) => {
@@ -54,15 +70,67 @@ export const Feature: React.FC<FeatureProps> = (props) => {
     iconSize = 8,
     ip,
     variant,
+    bgImageSrc,
+    bgSize = 'cover',
+    bgPosition = 'center',
+    bgRepeat = 'no-repeat',
+    imageSrc,
+    imageAlt,
+    imageHeight = 140,
+    imageFit = 'cover',
+    imagePosition = 'center',
+    overlayIconSize,
+    overlayBadgeSize,
   } = props
   const styles = useMultiStyleConfig('Feature', { variant })
 
   const pos = iconPosition || ip
-  const direction = pos === 'left' ? 'row' : 'column'
+  const direction = imageSrc ? 'column' : pos === 'left' ? 'row' : 'column'
 
   return (
-    <Stack sx={styles.container} direction={direction}>
-      {icon && (
+    <Stack
+      sx={styles.container}
+      direction={direction}
+      bgImage={bgImageSrc ? `url(${bgImageSrc})` : undefined}
+      bgSize={bgImageSrc ? bgSize : undefined}
+      bgPosition={bgImageSrc ? bgPosition : undefined}
+      bgRepeat={bgImageSrc ? bgRepeat : undefined}
+    >
+      {imageSrc && (
+        <Box position="relative" width="100%" height={imageHeight} borderRadius="lg" overflow="hidden" mb={4}>
+          <Image
+            src={imageSrc}
+            alt={imageAlt || ''}
+            fill
+            style={{ objectFit: imageFit, objectPosition: imagePosition, display: 'block' }}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority={false}
+          />
+          {icon && (
+            <Circle
+              position="absolute"
+              left="4"
+              bottom="4"
+              bg="whiteAlpha.900"
+              _dark={{ bg: 'blackAlpha.600' }}
+              color="primary.500"
+              boxShadow="lg"
+              borderWidth="1px"
+              borderColor="blackAlpha.200"
+              backdropFilter="saturate(180%) blur(6px)"
+              size={overlayBadgeSize || '9'}
+            >
+              <Icon
+                as={icon}
+                boxSize={
+                  overlayIconSize || (typeof iconSize === 'number' ? Math.max(3, iconSize - 1) : iconSize)
+                }
+              />
+            </Circle>
+          )}
+        </Box>
+      )}
+      {!imageSrc && icon && (
         <Circle sx={styles.icon}>
           <Icon as={icon} boxSize={iconSize} />
         </Circle>
@@ -86,6 +154,7 @@ export const Features: React.FC<FeaturesProps> = (props) => {
     iconSize = 8,
     aside,
     reveal: Wrap = Revealer,
+    minChildWidth,
     ...rest
   } = props
 
@@ -106,7 +175,11 @@ export const Features: React.FC<FeaturesProps> = (props) => {
               />
             </Wrap>
           )}
-          <SimpleGrid columns={columns} spacing={spacing}>
+          <SimpleGrid
+            columns={minChildWidth ? undefined : columns}
+            minChildWidth={minChildWidth}
+            spacing={spacing}
+          >
             {features.map((feature, i) => {
               return (
                 <Wrap key={i} delay={feature.delay}>

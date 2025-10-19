@@ -172,7 +172,7 @@ const industries: { [key: string]: Industry } = {
   beltConveyor: {
     title: 'Belt Conveyor Systems',
     description: 'Troughed belt conveyors with impact idlers, return idlers, and drive systems for efficient material transport.',
-    imageSrc: '/images/machines/belt-conveyor.jpg',
+    imageSrc: '/images/machines/heavy-duty-conveyor-belt.jpg',
     category: 'Material Handling',
     benefits: [
       'Heavy-duty troughed belt design',
@@ -192,7 +192,7 @@ const industries: { [key: string]: Industry } = {
   screeningEquipment: {
     title: 'Screening Equipment',
     description: 'Circular motion screens, flip flow screens, and linear motion screens for material separation and grading.',
-    imageSrc: '/images/machines/screening-equipment.jpg',
+    imageSrc: '/images/machines/Screening-Washing-Plant-Titanium-Vibrating-Screen-for-River-Sand.avif',
     category: 'Processing Equipment',
     benefits: [
       'Circular motion screens for efficient separation',
@@ -212,7 +212,7 @@ const industries: { [key: string]: Industry } = {
   crushingSystems: {
     title: 'Crushing Systems',
     description: 'Impact mills, hammer mills, and ring granulators for material size reduction and processing.',
-    imageSrc: '/images/machines/crushing-systems.jpg',
+    imageSrc: '/images/machines/impact-crusher-1.jpg',
     category: 'Processing Equipment',
     benefits: [
       'High-impact crushing efficiency',
@@ -272,7 +272,7 @@ const industries: { [key: string]: Industry } = {
   specializedConveyors: {
     title: 'Specialized Conveyors',
     description: 'Steep angle conveyors, pipe conveyors, and screw conveyors for challenging material handling applications.',
-    imageSrc: '/images/machines/specialized-conveyor.jpg',
+    imageSrc: '/images/machines/specialized-conveyor.webp',
     category: 'Specialized Equipment',
     benefits: [
       'Steep angle conveyors up to 45°',
