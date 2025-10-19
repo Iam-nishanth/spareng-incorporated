@@ -23,7 +23,7 @@ import { pneumaticHandlingSystemsData } from './pneumatic-handling-systems'
 import { driveBaseAssemblyData } from './drive-base-assembly'
 import { steepAngleSidewallConveyorsData } from './steep-angle-sidewall-conveyors'
 import { spillageDribbleConveyorsData } from './spillage-dribble-conveyors'
-import { stackerScraperReclaimerData } from './stacker-scraper-reclaimer'
+// import { stackerScraperReclaimerData } from './stacker-scraper-reclaimer'
 import { prismGateFlowDiverterData } from './prism-gate-flow-diverter'
 
 // Export product types
@@ -50,7 +50,7 @@ export * from './pneumatic-handling-systems'
 export * from './drive-base-assembly'
 export * from './steep-angle-sidewall-conveyors'
 export * from './spillage-dribble-conveyors'
-export * from './stacker-scraper-reclaimer'
+// export * from './stacker-scraper-reclaimer'
 export * from './prism-gate-flow-diverter'
 
 // Combined product data from all categories - now includes 24 comprehensive product lines
@@ -77,7 +77,7 @@ export const allBrands: BrandData[] = [
   driveBaseAssemblyData,
   steepAngleSidewallConveyorsData,
   spillageDribbleConveyorsData,
-  stackerScraperReclaimerData,
+  // stackerScraperReclaimerData,
   prismGateFlowDiverterData,
 ]
 
@@ -105,7 +105,7 @@ export const allProducts: Product[] = [
   ...driveBaseAssemblyData.products,
   ...steepAngleSidewallConveyorsData.products,
   ...spillageDribbleConveyorsData.products,
-  ...stackerScraperReclaimerData.products,
+  // ...stackerScraperReclaimerData.products,
   ...prismGateFlowDiverterData.products,
 ]
 
