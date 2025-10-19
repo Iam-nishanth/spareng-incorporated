@@ -207,10 +207,10 @@ const HeroSection: React.FC = () => {
               <ImagesSlider
                 images={[
                   // '/home/highspeed doors.jpg',
-                  '/home/industrial-hall-1630742_1280.jpg',
-                  '/home/DockLeveller.png',
-                  '/home/Industrial Bay Doors.png', 
-                  '/home/Roller Shutters.png',
+                  '/home/conveyor-image.jpg',
+                  '/home/Spillage-Dribble-Conveyors.jpg',
+                  '/home/Pneumatic-Conveying-blog.jpg', 
+                  '/home/-9vsb4z5j.webp',
                   ]}
                 intervalMs={4000}
               />
@@ -222,7 +222,7 @@ const HeroSection: React.FC = () => {
       <Features
         id="benefits"
         columns={[1, 2, 4]}
-        minChildWidth="240px"
+        // minChildWidth="240px"
         iconSize={4}
         innerWidth="container.xl"
         pt="20"
@@ -234,7 +234,7 @@ const HeroSection: React.FC = () => {
               'Precision-engineered spare parts built to withstand harsh industrial conditions',
             iconPosition: 'left',
             delay: 0.6,
-            imageSrc: '/home/Industrial Bay Doors.png',
+            // imageSrc: '/home/Industrial Bay Doors.png',
           },
           {
             title: 'Cost Effective',
@@ -243,7 +243,7 @@ const HeroSection: React.FC = () => {
               'Competitive pricing on genuine MHE spare parts with bulk order discounts',
             iconPosition: 'left',
             delay: 0.8,
-            imageSrc: '/home/DockLeveller.png',
+            // imageSrc: '/home/DockLeveller.png',
           },
           {
             title: 'Safety Compliant',
@@ -252,7 +252,7 @@ const HeroSection: React.FC = () => {
               'All spare parts meet international safety standards and quality certifications',
             iconPosition: 'left',
             delay: 1,
-            imageSrc: '/home/industrial-hall-1630742_1280.jpg',
+            // imageSrc: '/home/industrial-hall-1630742_1280.jpg',
           },
           {
             title: 'Fast Delivery',
@@ -261,7 +261,7 @@ const HeroSection: React.FC = () => {
               'Quick dispatch and nationwide delivery with technical support',
             iconPosition: 'left',
             delay: 1.1,
-            imageSrc: '/home/Roller Shutters.png',
+            // imageSrc: '/home/Roller Shutters.png',
           },
         ]}
         reveal={FallInPlace}
