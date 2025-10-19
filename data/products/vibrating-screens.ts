@@ -226,31 +226,31 @@ export const vibratingScreensProducts: Product[] = [
     image: '/Products/Vibrating_Screens/CARDAN_PROPERLER_SHAFT.jpeg',
     partNumber: 'SP-CPS-001'
   },
-  {
-    id: 'vs-010',
-    title: 'V-Pulley/Wedge Pulley',
-    model: 'VWP-001',
-    sku: 'SP-VWP-001',
-    category: ['Screening Equipment', 'Vibrating Screens'],
-    subcategory: 'Drive Components',
-    specifications: {},
-    features: [
-      'Cast iron construction',
-      'V-groove design for belt grip',
-      'Precision balanced',
-      'High power transmission efficiency'
-    ],
-    applications: [
-      'Belt drive systems',
-      'Power transmission',
-      'Screen drive applications',
-      'Industrial machinery'
-    ],
-    compatibleEquipment: ['Vibrating screens', 'Belt drive systems'],
-    tags: ['v-pulley', 'wedge pulley', 'belt drive', 'power transmission'],
-    image: '/Products/Vibrating_Screens/V-PULLEYWEDGE_PULLEY.jpeg',
-    partNumber: 'SP-VWP-001'
-  },
+  // {
+  //   id: 'vs-010',
+  //   title: 'V-Pulley/Wedge Pulley',
+  //   model: 'VWP-001',
+  //   sku: 'SP-VWP-001',
+  //   category: ['Screening Equipment', 'Vibrating Screens'],
+  //   subcategory: 'Drive Components',
+  //   specifications: {},
+  //   features: [
+  //     'Cast iron construction',
+  //     'V-groove design for belt grip',
+  //     'Precision balanced',
+  //     'High power transmission efficiency'
+  //   ],
+  //   applications: [
+  //     'Belt drive systems',
+  //     'Power transmission',
+  //     'Screen drive applications',
+  //     'Industrial machinery'
+  //   ],
+  //   compatibleEquipment: ['Vibrating screens', 'Belt drive systems'],
+  //   tags: ['v-pulley', 'wedge pulley', 'belt drive', 'power transmission'],
+  //   image: '/Products/Vibrating_Screens/V-PULLEYWEDGE_PULLEY.jpeg',
+  //   partNumber: 'SP-VWP-001'
+  // },
   {
     id: 'vs-011',
     title: 'V-Belts',
@@ -276,31 +276,32 @@ export const vibratingScreensProducts: Product[] = [
     image: '/Products/Vibrating_Screens/V-BELTS.jpeg',
     partNumber: 'SP-VB-001'
   },
-  {
-    id: 'vs-012',
-    title: 'Motor',
-    model: 'MOT-VIB-001',
-    sku: 'SP-MOT-VIB-001',
-    category: ['Screening Equipment', 'Vibrating Screens'],
-    subcategory: 'Drive Components',
-    specifications: {},
-    features: [
-      'High efficiency design',
-      'Robust construction',
-      'Variable speed capability',
-      'Low maintenance requirements'
-    ],
-    applications: [
-      'Screen drive systems',
-      'Vibrating equipment',
-      'Industrial applications',
-      'Material handling'
-    ],
-    compatibleEquipment: ['Vibrating screens', 'Drive systems'],
-    tags: ['motor', 'drive', 'vibrating', 'efficiency'],
-    image: '/Products/Vibrating_Screens/MOTOR.jpeg',
-    partNumber: 'SP-MOT-VIB-001'
-  },
+  // DISCONTINUED - Temporarily not available
+  // {
+  //   id: 'vs-012',
+  //   title: 'Motor',
+  //   model: 'MOT-VIB-001',
+  //   sku: 'SP-MOT-VIB-001',
+  //   category: ['Screening Equipment', 'Vibrating Screens'],
+  //   subcategory: 'Drive Components',
+  //   specifications: {},
+  //   features: [
+  //     'High efficiency design',
+  //     'Robust construction',
+  //     'Variable speed capability',
+  //     'Low maintenance requirements'
+  //   ],
+  //   applications: [
+  //     'Screen drive systems',
+  //     'Vibrating equipment',
+  //     'Industrial applications',
+  //     'Material handling'
+  //   ],
+  //   compatibleEquipment: ['Vibrating screens', 'Drive systems'],
+  //   tags: ['motor', 'drive', 'vibrating', 'efficiency'],
+  //   image: '/Products/Vibrating_Screens/MOTOR.jpeg',
+  //   partNumber: 'SP-MOT-VIB-001'
+  // },
   {
     id: 'vs-013',
     title: 'Clamping/Tensioning Plate',

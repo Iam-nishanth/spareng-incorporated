@@ -26,31 +26,32 @@ export const linearMotionScreenProducts: Product[] = [
     image: '/Products/LINEAR_MOTION_SCREEN/SCREEN_CLOTH.png',
     partNumber: 'SP-SC-LMS-001'
   },
-  {
-    id: 'lms-002',
-    title: 'Unbalanced Motor',
-    model: 'UM-LMS-001',
-    sku: 'SP-UM-LMS-001',
-    category: ['Screening Equipment', 'Linear Motion Screen'],
-    subcategory: 'Drive Components',
-    specifications: {},
-    features: [
-      'High efficiency vibrating motor',
-      'Adjustable eccentric weights',
-      'Robust construction',
-      'Low maintenance design'
-    ],
-    applications: [
-      'Linear motion screen drives',
-      'Vibrating equipment',
-      'Material handling systems',
-      'Industrial screening'
-    ],
-    compatibleEquipment: ['Linear motion screens', 'Vibrating equipment'],
-    tags: ['unbalanced motor', 'vibrating motor', 'linear motion', 'drive'],
-    image: '/Products/LINEAR_MOTION_SCREEN/UNBALANED_MOTOR.jpeg',
-    partNumber: 'SP-UM-LMS-001'
-  },
+  // DISCONTINUED - Temporarily not available
+  // {
+  //   id: 'lms-002',
+  //   title: 'Unbalanced Motor',
+  //   model: 'UM-LMS-001',
+  //   sku: 'SP-UM-LMS-001',
+  //   category: ['Screening Equipment', 'Linear Motion Screen'],
+  //   subcategory: 'Drive Components',
+  //   specifications: {},
+  //   features: [
+  //     'High efficiency vibrating motor',
+  //     'Adjustable eccentric weights',
+  //     'Robust construction',
+  //     'Low maintenance design'
+  //   ],
+  //   applications: [
+  //     'Linear motion screen drives',
+  //     'Vibrating equipment',
+  //     'Material handling systems',
+  //     'Industrial screening'
+  //   ],
+  //   compatibleEquipment: ['Linear motion screens', 'Vibrating equipment'],
+  //   tags: ['unbalanced motor', 'vibrating motor', 'linear motion', 'drive'],
+  //   image: '/Products/LINEAR_MOTION_SCREEN/UNBALANED_MOTOR.jpeg',
+  //   partNumber: 'SP-UM-LMS-001'
+  // },
   {
     id: 'lms-003',
     title: 'Compression Springs',

@@ -101,56 +101,58 @@ export const screwConveyorProducts: Product[] = [
     image: '/Products/SCREW_CONVEYOR/TYRE_COUPLING.jpeg',
     partNumber: 'SP-TC-SC-001'
   },
-  {
-    id: 'sc-005',
-    title: 'Geared Motor',
-    model: 'GM-SC-001',
-    sku: 'SP-GM-SC-001',
-    category: ['Material Handling', 'Screw Conveyor'],
-    subcategory: 'Drive Components',
-    specifications: {},
-    features: [
-      'Integrated gear reduction',
-      'High efficiency design',
-      'Compact construction',
-      'Low maintenance requirements'
-    ],
-    applications: [
-      'Screw conveyor drives',
-      'Material handling',
-      'Industrial applications',
-      'Bulk material transport'
-    ],
-    compatibleEquipment: ['Screw conveyors', 'Material handling systems'],
-    tags: ['geared motor', 'gear reduction', 'drive system', 'compact'],
-    image: '/Products/SCREW_CONVEYOR/GEARED_MOTOR.jpeg',
-    partNumber: 'SP-GM-SC-001'
-  },
-  {
-    id: 'sc-006',
-    title: 'Bearings',
-    model: 'BRG-SC-001',
-    sku: 'SP-BRG-SC-001',
-    category: ['Material Handling', 'Screw Conveyor'],
-    subcategory: 'Support Components',
-    specifications: {},
-    features: [
-      'High quality steel construction',
-      'Sealed design',
-      'Long service life',
-      'Low maintenance'
-    ],
-    applications: [
-      'Screw shaft support',
-      'Rotating equipment',
-      'Industrial machinery',
-      'Material handling systems'
-    ],
-    compatibleEquipment: ['Screw conveyors', 'Rotating equipment'],
-    tags: ['bearings', 'sealed', 'shaft support', 'screw conveyor'],
-    image: '/Products/SCREW_CONVEYOR/BEARINGS.jpeg',
-    partNumber: 'SP-BRG-SC-001'
-  },
+  // DISCONTINUED - Temporarily not available
+  // {
+  //   id: 'sc-005',
+  //   title: 'Geared Motor',
+  //   model: 'GM-SC-001',
+  //   sku: 'SP-GM-SC-001',
+  //   category: ['Material Handling', 'Screw Conveyor'],
+  //   subcategory: 'Drive Components',
+  //   specifications: {},
+  //   features: [
+  //     'Integrated gear reduction',
+  //     'High efficiency design',
+  //     'Compact construction',
+  //     'Low maintenance requirements'
+  //   ],
+  //   applications: [
+  //     'Screw conveyor drives',
+  //     'Material handling',
+  //     'Industrial applications',
+  //     'Bulk material transport'
+  //   ],
+  //   compatibleEquipment: ['Screw conveyors', 'Material handling systems'],
+  //   tags: ['geared motor', 'gear reduction', 'drive system', 'compact'],
+  //   image: '/Products/SCREW_CONVEYOR/GEARED_MOTOR.jpeg',
+  //   partNumber: 'SP-GM-SC-001'
+  // },
+  // DISCONTINUED - Temporarily not available
+  // {
+  //   id: 'sc-006',
+  //   title: 'Bearings',
+  //   model: 'BRG-SC-001',
+  //   sku: 'SP-BRG-SC-001',
+  //   category: ['Material Handling', 'Screw Conveyor'],
+  //   subcategory: 'Support Components',
+  //   specifications: {},
+  //   features: [
+  //     'High quality steel construction',
+  //     'Sealed design',
+  //     'Long service life',
+  //     'Low maintenance'
+  //   ],
+  //   applications: [
+  //     'Screw shaft support',
+  //     'Rotating equipment',
+  //     'Industrial machinery',
+  //     'Material handling systems'
+  //   ],
+  //   compatibleEquipment: ['Screw conveyors', 'Rotating equipment'],
+  //   tags: ['bearings', 'sealed', 'shaft support', 'screw conveyor'],
+  //   image: '/Products/SCREW_CONVEYOR/BEARINGS.jpeg',
+  //   partNumber: 'SP-BRG-SC-001'
+  // },
   {
     id: 'sc-007',
     title: 'Sealing Arrangement',

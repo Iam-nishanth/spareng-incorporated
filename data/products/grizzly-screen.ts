@@ -126,31 +126,32 @@ export const grizzlyScreenProducts: Product[] = [
     image: '/Products/GRIZZLY_SCREEN/BEARING_HOUS.jpeg',
     partNumber: 'SP-BH-GS-001'
   },
-  {
-    id: 'gs-006',
-    title: 'Unbalanced Motor',
-    model: 'UM-GS-001',
-    sku: 'SP-UM-GS-001',
-    category: ['Screening Equipment', 'Grizzly Screen'],
-    subcategory: 'Drive Components',
-    specifications: {},
-    features: [
-      'High efficiency vibrating motor',
-      'Adjustable eccentric weights',
-      'Heavy duty construction',
-      'Low maintenance design'
-    ],
-    applications: [
-      'Grizzly screen drives',
-      'Heavy duty vibrating equipment',
-      'Material handling systems',
-      'Industrial screening'
-    ],
-    compatibleEquipment: ['Grizzly screens', 'Vibrating equipment'],
-    tags: ['unbalanced motor', 'vibrating motor', 'heavy duty', 'grizzly screen'],
-    image: '/Products/GRIZZLY_SCREEN/UN_BALANCED_MOTOR.jpeg',
-    partNumber: 'SP-UM-GS-001'
-  }
+  // DISCONTINUED - Temporarily not available
+  // {
+  //   id: 'gs-006',
+  //   title: 'Unbalanced Motor',
+  //   model: 'UM-GS-001',
+  //   sku: 'SP-UM-GS-001',
+  //   category: ['Screening Equipment', 'Grizzly Screen'],
+  //   subcategory: 'Drive Components',
+  //   specifications: {},
+  //   features: [
+  //     'High efficiency vibrating motor',
+  //     'Adjustable eccentric weights',
+  //     'Heavy duty construction',
+  //     'Low maintenance design'
+  //   ],
+  //   applications: [
+  //     'Grizzly screen drives',
+  //     'Heavy duty vibrating equipment',
+  //     'Material handling systems',
+  //     'Industrial screening'
+  //   ],
+  //   compatibleEquipment: ['Grizzly screens', 'Vibrating equipment'],
+  //   tags: ['unbalanced motor', 'vibrating motor', 'heavy duty', 'grizzly screen'],
+  //   image: '/Products/GRIZZLY_SCREEN/UN_BALANCED_MOTOR.jpeg',
+  //   partNumber: 'SP-UM-GS-001'
+  // }
 ]
 
 export const grizzlyScreenData: BrandData = {

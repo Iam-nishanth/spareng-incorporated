@@ -26,31 +26,32 @@ export const mechanicalVibroFeederProducts: Product[] = [
     image: '/Products/MECHANICAL_VIBRO_FEEDER/UHME_LINERS.jpeg',
     partNumber: 'SP-UL-001'
   },
-  {
-    id: 'mvf-002',
-    title: 'Unbalanced Motor',
-    model: 'UM-MVF-001',
-    sku: 'SP-UM-MVF-001',
-    category: ['Material Handling', 'Mechanical Vibro Feeder'],
-    subcategory: 'Drive Components',
-    specifications: {},
-    features: [
-      'High efficiency vibrating motor',
-      'Adjustable eccentric weights',
-      'Robust construction',
-      'Variable amplitude control'
-    ],
-    applications: [
-      'Vibro feeder drives',
-      'Material feeding systems',
-      'Vibrating equipment',
-      'Industrial feeders'
-    ],
-    compatibleEquipment: ['Vibro feeders', 'Feeding systems'],
-    tags: ['unbalanced motors', 'vibrating motor', 'feeder drive', 'amplitude control'],
-    image: '/Products/MECHANICAL_VIBRO_FEEDER/UN-BALANCED_MOTORS.jpeg',
-    partNumber: 'SP-UM-MVF-001'
-  },
+  // DISCONTINUED - Temporarily not available
+  // {
+  //   id: 'mvf-002',
+  //   title: 'Unbalanced Motor',
+  //   model: 'UM-MVF-001',
+  //   sku: 'SP-UM-MVF-001',
+  //   category: ['Material Handling', 'Mechanical Vibro Feeder'],
+  //   subcategory: 'Drive Components',
+  //   specifications: {},
+  //   features: [
+  //     'High efficiency vibrating motor',
+  //     'Adjustable eccentric weights',
+  //     'Robust construction',
+  //     'Variable amplitude control'
+  //   ],
+  //   applications: [
+  //     'Vibro feeder drives',
+  //     'Material feeding systems',
+  //     'Vibrating equipment',
+  //     'Industrial feeders'
+  //   ],
+  //   compatibleEquipment: ['Vibro feeders', 'Feeding systems'],
+  //   tags: ['unbalanced motors', 'vibrating motor', 'feeder drive', 'amplitude control'],
+  //   image: '/Products/MECHANICAL_VIBRO_FEEDER/UN-BALANCED_MOTORS.jpeg',
+  //   partNumber: 'SP-UM-MVF-001'
+  // },
   {
     id: 'mvf-003',
     title: 'D-Shackles',

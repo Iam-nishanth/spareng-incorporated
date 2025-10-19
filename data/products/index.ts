@@ -11,14 +11,14 @@ import { mechanicalVibroFeederData } from './mechanical-vibro-feeder'
 import { sizerSugarGraderData } from './sizer-sugar-grader'
 import { screwConveyorData } from './screw-conveyor'
 import { rotaryAirLockValveData } from './rotary-air-lock-valve'
-import { bulkReceptionUnitData } from './bulk-reception-unit'
-import { pipeConveyorData } from './pipe-conveyor'
-import { bogieData } from './bogie'
+// import { bulkReceptionUnitData } from './bulk-reception-unit'
+// import { pipeConveyorData } from './pipe-conveyor'
+// import { bogieData } from './bogie'
 import { mobileHopperData } from './mobile-hopper'
-import { bargeLoaderData } from './barge-loader'
-import { reclaimFeederData } from './reclaim-feeder'
+// import { bargeLoaderData } from './barge-loader'
+// import { reclaimFeederData } from './reclaim-feeder'
 import { dustExtractionSystemsData } from './dust-extraction-systems'
-import { dustSuppressionSystemsData } from './dust-suppression-systems'
+// import { dustSuppressionSystemsData } from './dust-suppression-systems'
 import { pneumaticHandlingSystemsData } from './pneumatic-handling-systems'
 import { driveBaseAssemblyData } from './drive-base-assembly'
 import { steepAngleSidewallConveyorsData } from './steep-angle-sidewall-conveyors'
@@ -65,14 +65,14 @@ export const allBrands: BrandData[] = [
   sizerSugarGraderData,
   screwConveyorData,
   rotaryAirLockValveData,
-  bulkReceptionUnitData,
-  pipeConveyorData,
-  bogieData,
+  // bulkReceptionUnitData,
+  // pipeConveyorData,
+  // bogieData,
   mobileHopperData,
-  bargeLoaderData,
-  reclaimFeederData,
+  // bargeLoaderData,
+  // reclaimFeederData,
   dustExtractionSystemsData,
-  dustSuppressionSystemsData,
+  // dustSuppressionSystemsData,
   pneumaticHandlingSystemsData,
   driveBaseAssemblyData,
   steepAngleSidewallConveyorsData,
@@ -93,14 +93,14 @@ export const allProducts: Product[] = [
   ...sizerSugarGraderData.products,
   ...screwConveyorData.products,
   ...rotaryAirLockValveData.products,
-  ...bulkReceptionUnitData.products,
-  ...pipeConveyorData.products,
-  ...bogieData.products,
+  // ...bulkReceptionUnitData.products,
+  // ...pipeConveyorData.products,
+  // ...bogieData.products,
   ...mobileHopperData.products,
-  ...bargeLoaderData.products,
-  ...reclaimFeederData.products,
+  // ...bargeLoaderData.products,
+  // ...reclaimFeederData.products,
   ...dustExtractionSystemsData.products,
-  ...dustSuppressionSystemsData.products,
+  // ...dustSuppressionSystemsData.products,
   ...pneumaticHandlingSystemsData.products,
   ...driveBaseAssemblyData.products,
   ...steepAngleSidewallConveyorsData.products,
@@ -119,7 +119,13 @@ export const getProductsByCategory = (category: string) => {
   })
 }
 
-// Get all unique categories - handles both string and string[] categories
+const emitCategories = [
+  "Dust Extraction Systems",
+  "Bogie",
+  "Steep Angle Sidewall Conveyors",
+]
+
+// Get all unique categories - handles both string and string[] categories, excludes emitCategories
 export const getAllCategories = () => {
   const categories = new Set<string>()
   
@@ -131,7 +137,8 @@ export const getAllCategories = () => {
     }
   })
   
-  return Array.from(categories)
+  // Filter out categories that are in emitCategories
+  return Array.from(categories).filter(category => !emitCategories.includes(category))
 }
 
 

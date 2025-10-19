@@ -1,33 +1,33 @@
 import { BrandData, Product } from './product-types'
 
 export const conveyorPartsProducts: Product[] = [
-  // IDLERS - Carrying Idlers
-  {
-    id: 'cp-001',
-    title: 'Carrying Idlers',
-    model: 'CI-001',
-    sku: 'SP-CI-001',
-    category: ['Conveyor Components'],
-    subcategory: 'Idlers',
-    specifications: {},
-    features: [
-      'Heavy duty steel construction',
-      'Precision balanced rollers',
-      'Sealed for life bearings',
-      'Low maintenance design',
-      'Corrosion resistant coating'
-    ],
-    applications: [
-      'Belt conveyors in mining',
-      'Material handling systems',
-      'Bulk material transport',
-      'Industrial conveyor systems'
-    ],
-    compatibleEquipment: ['Belt conveyors', 'Mining conveyors', 'Industrial conveyors'],
-    tags: ['idlers', 'carrying', 'heavy duty', 'mining'],
-    image: '/Products/CONVEYOR_PARTS/CARYING_IDLERS.jpeg',
-    partNumber: 'SP-CI-001'
-  },
+  // // IDLERS - Carrying Idlers
+  // {
+  //   id: 'cp-001',
+  //   title: 'Carrying Idlers',
+  //   model: 'CI-001',
+  //   sku: 'SP-CI-001',
+  //   category: ['Conveyor Components'],
+  //   subcategory: 'Idlers',
+  //   specifications: {},
+  //   features: [
+  //     'Heavy duty steel construction',
+  //     'Precision balanced rollers',
+  //     'Sealed for life bearings',
+  //     'Low maintenance design',
+  //     'Corrosion resistant coating'
+  //   ],
+  //   applications: [
+  //     'Belt conveyors in mining',
+  //     'Material handling systems',
+  //     'Bulk material transport',
+  //     'Industrial conveyor systems'
+  //   ],
+  //   compatibleEquipment: ['Belt conveyors', 'Mining conveyors', 'Industrial conveyors'],
+  //   tags: ['idlers', 'carrying', 'heavy duty', 'mining'],
+  //   image: '/Products/CONVEYOR_PARTS/CARYING_IDLERS.jpeg',
+  //   partNumber: 'SP-CI-001'
+  // },
 
   // IDLERS - Impact Idlers
   {
@@ -55,30 +55,30 @@ export const conveyorPartsProducts: Product[] = [
     image: '/Products/CONVEYOR_PARTS/IMPACT_IDLERS.jpeg',
     partNumber: 'SP-II-001'
   },
-  {
-    id: 'cp-005',
-    title: 'Impact Idlers - Heavy Duty',
-    model: 'II-002',
-    sku: 'SP-II-002',
-    category: ['Conveyor Components'],
-    subcategory: 'Idlers',
-    specifications: {},
-    features: [
-      'Polyurethane impact rings',
-      'Superior shock absorption',
-      'Long service life',
-      'Maintenance free design'
-    ],
-    applications: [
-      'Heavy impact loading zones',
-      'Mining transfer points',
-      'Quarry applications'
-    ],
-    compatibleEquipment: ['Heavy duty conveyors', 'Mining systems'],
-    tags: ['idlers', 'impact', 'polyurethane', 'heavy duty'],
-    image: '/Products/CONVEYOR_PARTS/IMPACT_IDLERS_1.jpeg',
-    partNumber: 'SP-II-002'
-  },
+  // {
+  //   id: 'cp-005',
+  //   title: 'Impact Idlers - Heavy Duty',
+  //   model: 'II-002',
+  //   sku: 'SP-II-002',
+  //   category: ['Conveyor Components'],
+  //   subcategory: 'Idlers',
+  //   specifications: {},
+  //   features: [
+  //     'Polyurethane impact rings',
+  //     'Superior shock absorption',
+  //     'Long service life',
+  //     'Maintenance free design'
+  //   ],
+  //   applications: [
+  //     'Heavy impact loading zones',
+  //     'Mining transfer points',
+  //     'Quarry applications'
+  //   ],
+  //   compatibleEquipment: ['Heavy duty conveyors', 'Mining systems'],
+  //   tags: ['idlers', 'impact', 'polyurethane', 'heavy duty'],
+  //   image: '/Products/CONVEYOR_PARTS/IMPACT_IDLERS_1.jpeg',
+  //   partNumber: 'SP-II-002'
+  // },
 
   // IDLERS - Return Idlers
   {
@@ -105,30 +105,30 @@ export const conveyorPartsProducts: Product[] = [
     image: '/Products/CONVEYOR_PARTS/RETURN_IDLERS.jpeg',
     partNumber: 'SP-RI-001'
   },
-  {
-    id: 'cp-007',
-    title: 'Self Alignment Return Idlers',
-    model: 'RI-002',
-    sku: 'SP-RI-002',
-    category: ['Conveyor Components'],
-    subcategory: 'Idlers',
-    specifications: {},
-    features: [
-      'Adjustable angle configuration',
-      'Heavy duty construction',
-      'Easy belt tracking',
-      'Minimal maintenance'
-    ],
-    applications: [
-      'Long distance conveyors',
-      'Heavy duty applications',
-      'Mining operations'
-    ],
-    compatibleEquipment: ['Mining conveyors', 'Long distance systems'],
-    tags: ['idlers', 'return', 'adjustable', 'heavy duty'],
-    image: '/Products/CONVEYOR_PARTS/RETURN_IDLERS_1.jpeg',
-    partNumber: 'SP-RI-002'
-  },
+  // {
+  //   id: 'cp-007',
+  //   title: 'Self Alignment Return Idlers',
+  //   model: 'RI-002',
+  //   sku: 'SP-RI-002',
+  //   category: ['Conveyor Components'],
+  //   subcategory: 'Idlers',
+  //   specifications: {},
+  //   features: [
+  //     'Adjustable angle configuration',
+  //     'Heavy duty construction',
+  //     'Easy belt tracking',
+  //     'Minimal maintenance'
+  //   ],
+  //   applications: [
+  //     'Long distance conveyors',
+  //     'Heavy duty applications',
+  //     'Mining operations'
+  //   ],
+  //   compatibleEquipment: ['Mining conveyors', 'Long distance systems'],
+  //   tags: ['idlers', 'return', 'adjustable', 'heavy duty'],
+  //   image: '/Products/CONVEYOR_PARTS/RETURN_IDLERS_1.jpeg',
+  //   partNumber: 'SP-RI-002'
+  // },
 
   // IDLERS - Self Alignment
   {
@@ -138,6 +138,7 @@ export const conveyorPartsProducts: Product[] = [
     sku: 'SP-SA-001',
     category: ['Conveyor Components'],
     subcategory: 'Idlers',
+    imageFit: 'contain',
     specifications: {},
     features: [
       'Automatic belt alignment',
@@ -152,7 +153,7 @@ export const conveyorPartsProducts: Product[] = [
     ],
     compatibleEquipment: ['Long distance conveyors', 'Outdoor systems'],
     tags: ['idlers', 'self-alignment', 'automatic', 'tracking'],
-    image: '/Products/CONVEYOR_PARTS/SELF_ALLIGNMENT.jpeg',
+    image: '/Products/CONVEYOR_PARTS/self-aligning-idler.webp',
     partNumber: 'SP-SA-001'
   },
 
@@ -258,31 +259,31 @@ export const conveyorPartsProducts: Product[] = [
     partNumber: 'SP-TP-001'
   },
 
-  // PULLEYS - Snub Pulleys
-  {
-    id: 'cp-013',
-    title: 'Snub Pulley',
-    model: 'SP-001',
-    sku: 'SP-SP-001',
-    category: ['Conveyor Components'],
-    subcategory: 'Pulleys',
-    specifications: {},
-    features: [
-      'Increases belt wrap angle',
-      'Improves traction',
-      'Smooth operation',
-      'Available in grooved pattern'
-    ],
-    applications: [
-      'Increased belt wrap on drive pulley',
-      'Belt tensioning systems',
-      'Power transmission enhancement'
-    ],
-    compatibleEquipment: ['Belt conveyors with drive systems'],
-    tags: ['pulleys', 'snub', 'traction', 'wrap angle'],
-    image: '/Products/CONVEYOR_PARTS/SNUB_PULLEY.jpeg',
-    partNumber: 'SP-SP-001'
-  },
+  // // PULLEYS - Snub Pulleys
+  // {
+  //   id: 'cp-013',
+  //   title: 'Snub Pulley',
+  //   model: 'SP-001',
+  //   sku: 'SP-SP-001',
+  //   category: ['Conveyor Components'],
+  //   subcategory: 'Pulleys',
+  //   specifications: {},
+  //   features: [
+  //     'Increases belt wrap angle',
+  //     'Improves traction',
+  //     'Smooth operation',
+  //     'Available in grooved pattern'
+  //   ],
+  //   applications: [
+  //     'Increased belt wrap on drive pulley',
+  //     'Belt tensioning systems',
+  //     'Power transmission enhancement'
+  //   ],
+  //   compatibleEquipment: ['Belt conveyors with drive systems'],
+  //   tags: ['pulleys', 'snub', 'traction', 'wrap angle'],
+  //   image: '/Products/CONVEYOR_PARTS/SNUB_PULLEY.jpeg',
+  //   partNumber: 'SP-SP-001'
+  // },
 
   // PULLEYS - Magnetic Pulleys
   {
@@ -312,31 +313,32 @@ export const conveyorPartsProducts: Product[] = [
   },
 
   // BELTS - Conveyor Belts
-  {
-    id: 'cp-015',
-    title: 'Conveyor Belt',
-    model: 'CB-001',
-    sku: 'SP-CB-001',
-    category: ['Conveyor Components'],
-    subcategory: 'Belts',
-    specifications: {},
-    features: [
-      'Multi-ply textile carcass',
-      'Natural rubber covers',
-      'Oil and chemical resistant',
-      'Long service life'
-    ],
-    applications: [
-      'General material handling',
-      'Mining operations',
-      'Industrial conveyors',
-      'Bulk material transport'
-    ],
-    compatibleEquipment: ['All types of belt conveyors'],
-    tags: ['belts', 'conveyor', 'textile', 'rubber'],
-    image: '/Products/CONVEYOR_PARTS/CONVEYOR_BELT.jpeg',
-    partNumber: 'SP-CB-001'
-  },
+  // DISCONTINUED - Temporarily not available
+  // {
+  //   id: 'cp-015',
+  //   title: 'Conveyor Belt',
+  //   model: 'CB-001',
+  //   sku: 'SP-CB-001',
+  //   category: ['Conveyor Components'],
+  //   subcategory: 'Belts',
+  //   specifications: {},
+  //   features: [
+  //     'Multi-ply textile carcass',
+  //     'Natural rubber covers',
+  //     'Oil and chemical resistant',
+  //     'Long service life'
+  //   ],
+  //   applications: [
+  //     'General material handling',
+  //     'Mining operations',
+  //     'Industrial conveyors',
+  //     'Bulk material transport'
+  //   ],
+  //   compatibleEquipment: ['All types of belt conveyors'],
+  //   tags: ['belts', 'conveyor', 'textile', 'rubber'],
+  //   image: '/Products/CONVEYOR_PARTS/CONVEYOR_BELT.jpeg',
+  //   partNumber: 'SP-CB-001'
+  // },
   {
     id: 'cp-016',
     title: 'Chevron Belt',
@@ -389,130 +391,130 @@ export const conveyorPartsProducts: Product[] = [
   },
 
   // BEARINGS
-  {
-    id: 'cp-018',
-    title: 'Conveyor Bearing',
-    model: 'CBR-001',
-    sku: 'SP-CBR-001',
-    category: ['Conveyor Components'],
-    subcategory: 'Bearings',
-    specifications: {},
-    features: [
-      'Double sealed for protection',
-      'Pre-lubricated with high grade grease',
-      'Chrome steel construction',
-      'Long service life'
-    ],
-    applications: [
-      'Idler roller bearings',
-      'Pulley shaft bearings',
-      'Conveyor drive systems'
-    ],
-    compatibleEquipment: ['All conveyor components'],
-    tags: ['bearings', 'sealed', 'chrome steel', 'lubricated'],
-    image: '/Products/CONVEYOR_PARTS/CONVEYOR_BEARING.jpeg',
-    partNumber: 'SP-CBR-001'
-  },
-  {
-    id: 'cp-019',
-    title: 'Idler Bearing',
-    model: 'IBR-001',
-    sku: 'SP-IBR-001',
-    category: ['Conveyor Components'],
-    subcategory: 'Bearings',
-    specifications: {},
-    features: [
-      'Self-aligning capability',
-      'Triple lip seal protection',
-      'Heavy duty construction',
-      'Handles misalignment'
-    ],
-    applications: [
-      'Heavy duty idler rollers',
-      'Mining conveyor idlers',
-      'Harsh environment applications'
-    ],
-    compatibleEquipment: ['Heavy duty idlers', 'Mining systems'],
-    tags: ['bearings', 'spherical roller', 'self-aligning', 'heavy duty'],
-    image: '/Products/CONVEYOR_PARTS/IDLER_BEARING.jpeg',
-    partNumber: 'SP-IBR-001'
-  },
+  // {
+  //   id: 'cp-018',
+  //   title: 'Conveyor Bearing',
+  //   model: 'CBR-001',
+  //   sku: 'SP-CBR-001',
+  //   category: ['Conveyor Components'],
+  //   subcategory: 'Bearings',
+  //   specifications: {},
+  //   features: [
+  //     'Double sealed for protection',
+  //     'Pre-lubricated with high grade grease',
+  //     'Chrome steel construction',
+  //     'Long service life'
+  //   ],
+  //   applications: [
+  //     'Idler roller bearings',
+  //     'Pulley shaft bearings',
+  //     'Conveyor drive systems'
+  //   ],
+  //   compatibleEquipment: ['All conveyor components'],
+  //   tags: ['bearings', 'sealed', 'chrome steel', 'lubricated'],
+  //   image: '/Products/CONVEYOR_PARTS/CONVEYOR_BEARING.jpeg',
+  //   partNumber: 'SP-CBR-001'
+  // },
+  // {
+  //   id: 'cp-019',
+  //   title: 'Idler Bearing',
+  //   model: 'IBR-001',
+  //   sku: 'SP-IBR-001',
+  //   category: ['Conveyor Components'],
+  //   subcategory: 'Bearings',
+  //   specifications: {},
+  //   features: [
+  //     'Self-aligning capability',
+  //     'Triple lip seal protection',
+  //     'Heavy duty construction',
+  //     'Handles misalignment'
+  //   ],
+  //   applications: [
+  //     'Heavy duty idler rollers',
+  //     'Mining conveyor idlers',
+  //     'Harsh environment applications'
+  //   ],
+  //   compatibleEquipment: ['Heavy duty idlers', 'Mining systems'],
+  //   tags: ['bearings', 'spherical roller', 'self-aligning', 'heavy duty'],
+  //   image: '/Products/CONVEYOR_PARTS/IDLER_BEARING.jpeg',
+  //   partNumber: 'SP-IBR-001'
+  // },
 
   // BRACKETS & LOCKING ASSEMBLIES
-  {
-    id: 'cp-020',
-    title: 'Locking Assembly Idler Bracket',
-    model: 'LAB-001',
-    sku: 'SP-LAB-001',
-    category: ['Conveyor Components'],
-    subcategory: 'Structural Components',
-    specifications: {},
-    features: [
-      'Quick release locking mechanism',
-      'Height and angle adjustment',
-      'Galvanized corrosion protection',
-      'Easy maintenance access'
-    ],
-    applications: [
-      'Idler mounting systems',
-      'Conveyor maintenance',
-      'Quick idler replacement'
-    ],
-    compatibleEquipment: ['All types of conveyor idlers'],
-    tags: ['brackets', 'locking assembly', 'adjustable', 'galvanized'],
-    image: '/Products/CONVEYOR_PARTS/LOCKING_ASSEMBLY_IDLER_BRACKET.jpeg',
-    partNumber: 'SP-LAB-001'
-  },
+  // {
+  //   id: 'cp-020',
+  //   title: 'Locking Assembly Idler Bracket',
+  //   model: 'LAB-001',
+  //   sku: 'SP-LAB-001',
+  //   category: ['Conveyor Components'],
+  //   subcategory: 'Structural Components',
+  //   specifications: {},
+  //   features: [
+  //     'Quick release locking mechanism',
+  //     'Height and angle adjustment',
+  //     'Galvanized corrosion protection',
+  //     'Easy maintenance access'
+  //   ],
+  //   applications: [
+  //     'Idler mounting systems',
+  //     'Conveyor maintenance',
+  //     'Quick idler replacement'
+  //   ],
+  //   compatibleEquipment: ['All types of conveyor idlers'],
+  //   tags: ['brackets', 'locking assembly', 'adjustable', 'galvanized'],
+  //   image: '/Products/CONVEYOR_PARTS/LOCKING_ASSEMBLY_IDLER_BRACKET.jpeg',
+  //   partNumber: 'SP-LAB-001'
+  // },
 
-  // SAFETY SWITCHES
-  {
-    id: 'cp-021',
-    title: 'Belt Sway Switch',
-    model: 'BSS-001',
-    sku: 'SP-BSS-001',
-    category: ['Conveyor Components'],
-    subcategory: 'Safety & Control',
-    specifications: {},
-    features: [
-      'Detects belt misalignment',
-      'Dual contact configuration',
-      'Weather proof housing',
-      'Manual reset safety feature'
-    ],
-    applications: [
-      'Belt misalignment detection',
-      'Conveyor safety systems',
-      'Emergency shutdown systems'
-    ],
-    compatibleEquipment: ['All belt conveyor systems'],
-    tags: ['safety switches', 'belt sway', 'misalignment', 'emergency'],
-    image: '/Products/CONVEYOR_PARTS/BELT_SWAY_SWITCH.jpeg',
-    partNumber: 'SP-BSS-001'
-  },
-  {
-    id: 'cp-022',
-    title: 'Pull Cord Switch',
-    model: 'PCS-001',
-    sku: 'SP-PCS-001',
-    category: ['Conveyor Components'],
-    subcategory: 'Safety & Control',
-    specifications: {},
-    features: [
-      'Emergency stop via pull cord',
-      'Key reset for security',
-      'Weather resistant housing',
-      'Long cable run capability'
-    ],
-    applications: [
-      'Emergency stop systems',
-      'Long conveyor lines',
-      'Personnel safety systems'
-    ],
-    compatibleEquipment: ['Long belt conveyor systems'],
-    tags: ['safety switches', 'pull cord', 'emergency stop', 'key reset'],
-    image: '/Products/CONVEYOR_PARTS/PULL_CHORD_SWITCH.jpeg',
-    partNumber: 'SP-PCS-001'
-  },
+  // // SAFETY SWITCHES
+  // {
+  //   id: 'cp-021',
+  //   title: 'Belt Sway Switch',
+  //   model: 'BSS-001',
+  //   sku: 'SP-BSS-001',
+  //   category: ['Conveyor Components'],
+  //   subcategory: 'Safety & Control',
+  //   specifications: {},
+  //   features: [
+  //     'Detects belt misalignment',
+  //     'Dual contact configuration',
+  //     'Weather proof housing',
+  //     'Manual reset safety feature'
+  //   ],
+  //   applications: [
+  //     'Belt misalignment detection',
+  //     'Conveyor safety systems',
+  //     'Emergency shutdown systems'
+  //   ],
+  //   compatibleEquipment: ['All belt conveyor systems'],
+  //   tags: ['safety switches', 'belt sway', 'misalignment', 'emergency'],
+  //   image: '/Products/CONVEYOR_PARTS/BELT_SWAY_SWITCH.jpeg',
+  //   partNumber: 'SP-BSS-001'
+  // },
+  // {
+  //   id: 'cp-022',
+  //   title: 'Pull Cord Switch',
+  //   model: 'PCS-001',
+  //   sku: 'SP-PCS-001',
+  //   category: ['Conveyor Components'],
+  //   subcategory: 'Safety & Control',
+  //   specifications: {},
+  //   features: [
+  //     'Emergency stop via pull cord',
+  //     'Key reset for security',
+  //     'Weather resistant housing',
+  //     'Long cable run capability'
+  //   ],
+  //   applications: [
+  //     'Emergency stop systems',
+  //     'Long conveyor lines',
+  //     'Personnel safety systems'
+  //   ],
+  //   compatibleEquipment: ['Long belt conveyor systems'],
+  //   tags: ['safety switches', 'pull cord', 'emergency stop', 'key reset'],
+  //   image: '/Products/CONVEYOR_PARTS/PULL_CHORD_SWITCH.jpeg',
+  //   partNumber: 'SP-PCS-001'
+  // },
   {
     id: 'cp-023',
     title: 'Zero Speed Switch',
@@ -564,56 +566,56 @@ export const conveyorPartsProducts: Product[] = [
     image: '/Products/CONVEYOR_PARTS/EXTERNAL_SCRAPPER.jpeg',
     partNumber: 'SP-ES-001'
   },
-  {
-    id: 'cp-025',
-    title: 'Internal Scraper',
-    model: 'IS-001',
-    sku: 'SP-IS-001',
-    category: ['Conveyor Components'],
-    subcategory: 'Maintenance & Accessories',
-    specifications: {},
-    features: [
-      'Tungsten carbide tips',
-      'Extreme wear resistance',
-      'Adjustable contact pressure',
-      'Long service life'
-    ],
-    applications: [
-      'Heavy duty belt cleaning',
-      'Sticky material removal',
-      'Mining applications'
-    ],
-    compatibleEquipment: ['Heavy duty mining conveyors'],
-    tags: ['scrapers', 'internal', 'tungsten carbide', 'heavy duty'],
-    image: '/Products/CONVEYOR_PARTS/INTERNAL_SCRAPPER.jpeg',
-    partNumber: 'SP-IS-001'
-  },
+  // {
+  //   id: 'cp-025',
+  //   title: 'Internal Scraper',
+  //   model: 'IS-001',
+  //   sku: 'SP-IS-001',
+  //   category: ['Conveyor Components'],
+  //   subcategory: 'Maintenance & Accessories',
+  //   specifications: {},
+  //   features: [
+  //     'Tungsten carbide tips',
+  //     'Extreme wear resistance',
+  //     'Adjustable contact pressure',
+  //     'Long service life'
+  //   ],
+  //   applications: [
+  //     'Heavy duty belt cleaning',
+  //     'Sticky material removal',
+  //     'Mining applications'
+  //   ],
+  //   compatibleEquipment: ['Heavy duty mining conveyors'],
+  //   tags: ['scrapers', 'internal', 'tungsten carbide', 'heavy duty'],
+  //   image: '/Products/CONVEYOR_PARTS/INTERNAL_SCRAPPER.jpeg',
+  //   partNumber: 'SP-IS-001'
+  // },
 
   // COUPLINGS
-  {
-    id: 'cp-026',
-    title: 'Fluid Coupling',
-    model: 'FC-001',
-    sku: 'SP-FC-001',
-    category: ['Conveyor Components'],
-    subcategory: 'Drive Systems',
-    specifications: {},
-    features: [
-      'Smooth torque transmission',
-      'Overload protection',
-      'Vibration damping',
-      'Maintenance free operation'
-    ],
-    applications: [
-      'Conveyor drive systems',
-      'Motor to gearbox coupling',
-      'Soft start applications'
-    ],
-    compatibleEquipment: ['Conveyor drive trains'],
-    tags: ['couplings', 'fluid', 'torque transmission', 'soft start'],
-    image: '/Products/CONVEYOR_PARTS/FLUID_COUPLING.jpeg',
-    partNumber: 'SP-FC-001'
-  },
+  // {
+  //   id: 'cp-026',
+  //   title: 'Fluid Coupling',
+  //   model: 'FC-001',
+  //   sku: 'SP-FC-001',
+  //   category: ['Conveyor Components'],
+  //   subcategory: 'Drive Systems',
+  //   specifications: {},
+  //   features: [
+  //     'Smooth torque transmission',
+  //     'Overload protection',
+  //     'Vibration damping',
+  //     'Maintenance free operation'
+  //   ],
+  //   applications: [
+  //     'Conveyor drive systems',
+  //     'Motor to gearbox coupling',
+  //     'Soft start applications'
+  //   ],
+  //   compatibleEquipment: ['Conveyor drive trains'],
+  //   tags: ['couplings', 'fluid', 'torque transmission', 'soft start'],
+  //   image: '/Products/CONVEYOR_PARTS/FLUID_COUPLING.jpeg',
+  //   partNumber: 'SP-FC-001'
+  // },
   {
     id: 'cp-027',
     title: 'Pin-Bush Coupling',
@@ -690,130 +692,130 @@ export const conveyorPartsProducts: Product[] = [
   },
 
   // SEALING SYSTEMS
-  {
-    id: 'cp-030',
-    title: 'Skirt Rubber Sealing',
-    model: 'SRS-001',
-    sku: 'SP-SRS-001',
-    category: ['Conveyor Components'],
-    subcategory: 'Maintenance & Accessories',
-    specifications: {},
-    features: [
-      'Flexible SBR rubber construction',
-      'Dust containment',
-      'Easy installation',
-      'Chemical resistant'
-    ],
-    applications: [
-      'Transfer chute sealing',
-      'Dust containment',
-      'Loading point protection'
-    ],
-    compatibleEquipment: ['Transfer chutes', 'Loading systems'],
-    tags: ['sealing', 'skirt rubber', 'dust containment', 'flexible'],
-    image: '/Products/CONVEYOR_PARTS/SKIRT_RUBBER_SEALING.jpeg',
-    partNumber: 'SP-SRS-001'
-  },
+  // {
+  //   id: 'cp-030',
+  //   title: 'Skirt Rubber Sealing',
+  //   model: 'SRS-001',
+  //   sku: 'SP-SRS-001',
+  //   category: ['Conveyor Components'],
+  //   subcategory: 'Maintenance & Accessories',
+  //   specifications: {},
+  //   features: [
+  //     'Flexible SBR rubber construction',
+  //     'Dust containment',
+  //     'Easy installation',
+  //     'Chemical resistant'
+  //   ],
+  //   applications: [
+  //     'Transfer chute sealing',
+  //     'Dust containment',
+  //     'Loading point protection'
+  //   ],
+  //   compatibleEquipment: ['Transfer chutes', 'Loading systems'],
+  //   tags: ['sealing', 'skirt rubber', 'dust containment', 'flexible'],
+  //   image: '/Products/CONVEYOR_PARTS/SKIRT_RUBBER_SEALING.jpeg',
+  //   partNumber: 'SP-SRS-001'
+  // },
 
   // DRIVE COMPONENTS
-  {
-    id: 'cp-031',
-    title: 'Gear Box',
-    model: 'GB-001',
-    sku: 'SP-GB-001',
-    category: ['Conveyor Components'],
-    subcategory: 'Drive Systems',
-    specifications: {},
-    features: [
-      'Heavy duty cast iron construction',
-      'High efficiency gear train',
-      'Oil bath lubrication',
-      'Multiple ratio options'
-    ],
-    applications: [
-      'Conveyor drive systems',
-      'Belt drive applications',
-      'Material handling equipment'
-    ],
-    compatibleEquipment: ['Conveyor drive systems'],
-    tags: ['gearbox', 'drive', 'heavy duty', 'efficient'],
-    image: '/Products/CONVEYOR_PARTS/GEAR_BOX.jpeg',
-    partNumber: 'SP-GB-001'
-  },
-  {
-    id: 'cp-032',
-    title: 'Drive Frame',
-    model: 'DF-001',
-    sku: 'SP-DF-001',
-    category: ['Conveyor Components'],
-    subcategory: 'Drive Systems',
-    specifications: {},
-    features: [
-      'Heavy duty structural steel',
-      'Integrated tensioning system',
-      'Bolt-down mounting',
-      'Corrosion resistant coating'
-    ],
-    applications: [
-      'Conveyor drive mounting',
-      'Motor and gearbox support',
-      'Tensioning systems'
-    ],
-    compatibleEquipment: ['All conveyor drive systems'],
-    tags: ['drive frame', 'structural', 'mounting', 'tensioning'],
-    image: '/Products/CONVEYOR_PARTS/DRIVE_FRAME.jpeg',
-    partNumber: 'SP-DF-001'
-  },
+  // {
+  //   id: 'cp-031',
+  //   title: 'Gear Box',
+  //   model: 'GB-001',
+  //   sku: 'SP-GB-001',
+  //   category: ['Conveyor Components'],
+  //   subcategory: 'Drive Systems',
+  //   specifications: {},
+  //   features: [
+  //     'Heavy duty cast iron construction',
+  //     'High efficiency gear train',
+  //     'Oil bath lubrication',
+  //     'Multiple ratio options'
+  //   ],
+  //   applications: [
+  //     'Conveyor drive systems',
+  //     'Belt drive applications',
+  //     'Material handling equipment'
+  //   ],
+  //   compatibleEquipment: ['Conveyor drive systems'],
+  //   tags: ['gearbox', 'drive', 'heavy duty', 'efficient'],
+  //   image: '/Products/CONVEYOR_PARTS/GEAR_BOX.jpeg',
+  //   partNumber: 'SP-GB-001'
+  // },
+  // {
+  //   id: 'cp-032',
+  //   title: 'Drive Frame',
+  //   model: 'DF-001',
+  //   sku: 'SP-DF-001',
+  //   category: ['Conveyor Components'],
+  //   subcategory: 'Drive Systems',
+  //   specifications: {},
+  //   features: [
+  //     'Heavy duty structural steel',
+  //     'Integrated tensioning system',
+  //     'Bolt-down mounting',
+  //     'Corrosion resistant coating'
+  //   ],
+  //   applications: [
+  //     'Conveyor drive mounting',
+  //     'Motor and gearbox support',
+  //     'Tensioning systems'
+  //   ],
+  //   compatibleEquipment: ['All conveyor drive systems'],
+  //   tags: ['drive frame', 'structural', 'mounting', 'tensioning'],
+  //   image: '/Products/CONVEYOR_PARTS/DRIVE_FRAME.jpeg',
+  //   partNumber: 'SP-DF-001'
+  // },
 
   // PLUMMER BLOCKS
-  {
-    id: 'cp-033',
-    title: 'Plummer Block',
-    model: 'PB-001',
-    sku: 'SP-PB-001',
-    category: ['Conveyor Components'],
-    subcategory: 'Structural Components',
-    specifications: {},
-    features: [
-      'Cast iron construction',
-      'Self-aligning capability',
-      'Labyrinth seal protection',
-      'Easy maintenance access'
-    ],
-    applications: [
-      'Pulley shaft support',
-      'Drive shaft mounting',
-      'Heavy duty applications'
-    ],
-    compatibleEquipment: ['Pulley systems', 'Drive shafts'],
-    tags: ['plummer block', 'bearing housing', 'self-aligning', 'heavy duty'],
-    image: '/Products/CONVEYOR_PARTS/PLUMMER_BLOCK.jpeg',
-    partNumber: 'SP-PB-001'
-  },
-  {
-    id: 'cp-034',
-    title: 'Pillow Block',
-    model: 'PIB-001',
-    sku: 'SP-PIB-001',
-    category: ['Conveyor Components'],
-    subcategory: 'Structural Components',
-    specifications: {},
-    features: [
-      'Precision machined surfaces',
-      'Triple lip seal protection',
-      'Standard mounting dimensions',
-      'Long service life'
-    ],
-    applications: [
-      'Light to medium duty shafts',
-      'Standard conveyor applications',
-      'General machinery'
-    ],
-    compatibleEquipment: ['Standard conveyor systems'],
-    tags: ['pillow block', 'bearing housing', 'precision', 'standard'],
-    image: '/Products/CONVEYOR_PARTS/PILLOW_BLOCK.jpeg',
-    partNumber: 'SP-PIB-001'
-  },
+  // {
+  //   id: 'cp-033',
+  //   title: 'Plummer Block',
+  //   model: 'PB-001',
+  //   sku: 'SP-PB-001',
+  //   category: ['Conveyor Components'],
+  //   subcategory: 'Structural Components',
+  //   specifications: {},
+  //   features: [
+  //     'Cast iron construction',
+  //     'Self-aligning capability',
+  //     'Labyrinth seal protection',
+  //     'Easy maintenance access'
+  //   ],
+  //   applications: [
+  //     'Pulley shaft support',
+  //     'Drive shaft mounting',
+  //     'Heavy duty applications'
+  //   ],
+  //   compatibleEquipment: ['Pulley systems', 'Drive shafts'],
+  //   tags: ['plummer block', 'bearing housing', 'self-aligning', 'heavy duty'],
+  //   image: '/Products/CONVEYOR_PARTS/PLUMMER_BLOCK.jpeg',
+  //   partNumber: 'SP-PB-001'
+  // },
+  // {
+  //   id: 'cp-034',
+  //   title: 'Pillow Block',
+  //   model: 'PIB-001',
+  //   sku: 'SP-PIB-001',
+  //   category: ['Conveyor Components'],
+  //   subcategory: 'Structural Components',
+  //   specifications: {},
+  //   features: [
+  //     'Precision machined surfaces',
+  //     'Triple lip seal protection',
+  //     'Standard mounting dimensions',
+  //     'Long service life'
+  //   ],
+  //   applications: [
+  //     'Light to medium duty shafts',
+  //     'Standard conveyor applications',
+  //     'General machinery'
+  //   ],
+  //   compatibleEquipment: ['Standard conveyor systems'],
+  //   tags: ['pillow block', 'bearing housing', 'precision', 'standard'],
+  //   image: '/Products/CONVEYOR_PARTS/PILLOW_BLOCK.jpeg',
+  //   partNumber: 'SP-PIB-001'
+  // },
 
   // MAGNETIC SEPARATORS
   {
@@ -922,56 +924,56 @@ export const conveyorPartsProducts: Product[] = [
   },
 
   // VULCANIZING EQUIPMENT
-  {
-    id: 'cp-039',
-    title: 'Hot Belt Vulcanizing Machine',
-    model: 'HBVM-001',
-    sku: 'SP-HBVM-001',
-    category: ['Conveyor Components'],
-    subcategory: 'Maintenance & Accessories',
-    specifications: {},
-    features: [
-      'Precise temperature control',
-      'Uniform heating distribution',
-      'PLC based automation',
-      'Portable design available'
-    ],
-    applications: [
-      'Belt joint vulcanization',
-      'Field repair operations',
-      'Belt maintenance',
-      'Rubber belt joining'
-    ],
-    compatibleEquipment: ['All rubber conveyor belts'],
-    tags: ['vulcanizing', 'belt joining', 'hot vulcanization', 'repair'],
-    image: '/Products/CONVEYOR_PARTS/HOT_BELT_VULCANIZING_MACHINE.jpeg',
-    partNumber: 'SP-HBVM-001'
-  },
-  {
-    id: 'cp-040',
-    title: 'Cold Vulcanizing Kit',
-    model: 'CVK-001',
-    sku: 'SP-CVK-001',
-    category: ['Conveyor Components'],
-    subcategory: 'Maintenance & Accessories',
-    specifications: {},
-    features: [
-      'Room temperature curing',
-      'No heat or pressure required',
-      'Portable repair solution',
-      'Strong bond strength'
-    ],
-    applications: [
-      'Emergency belt repairs',
-      'Field splicing operations',
-      'Temporary belt joints',
-      'Maintenance repairs'
-    ],
-    compatibleEquipment: ['Rubber conveyor belts'],
-    tags: ['vulcanizing', 'cold cure', 'emergency repair', 'field repair'],
-    image: '/Products/CONVEYOR_PARTS/COLD_VULCANIZING.jpeg',
-    partNumber: 'SP-CVK-001'
-  }
+  // {
+  //   id: 'cp-039',
+  //   title: 'Hot Belt Vulcanizing Machine',
+  //   model: 'HBVM-001',
+  //   sku: 'SP-HBVM-001',
+  //   category: ['Conveyor Components'],
+  //   subcategory: 'Maintenance & Accessories',
+  //   specifications: {},
+  //   features: [
+  //     'Precise temperature control',
+  //     'Uniform heating distribution',
+  //     'PLC based automation',
+  //     'Portable design available'
+  //   ],
+  //   applications: [
+  //     'Belt joint vulcanization',
+  //     'Field repair operations',
+  //     'Belt maintenance',
+  //     'Rubber belt joining'
+  //   ],
+  //   compatibleEquipment: ['All rubber conveyor belts'],
+  //   tags: ['vulcanizing', 'belt joining', 'hot vulcanization', 'repair'],
+  //   image: '/Products/CONVEYOR_PARTS/HOT_BELT_VULCANIZING_MACHINE.jpeg',
+  //   partNumber: 'SP-HBVM-001'
+  // },
+  // {
+  //   id: 'cp-040',
+  //   title: 'Cold Vulcanizing Kit',
+  //   model: 'CVK-001',
+  //   sku: 'SP-CVK-001',
+  //   category: ['Conveyor Components'],
+  //   subcategory: 'Maintenance & Accessories',
+  //   specifications: {},
+  //   features: [
+  //     'Room temperature curing',
+  //     'No heat or pressure required',
+  //     'Portable repair solution',
+  //     'Strong bond strength'
+  //   ],
+  //   applications: [
+  //     'Emergency belt repairs',
+  //     'Field splicing operations',
+  //     'Temporary belt joints',
+  //     'Maintenance repairs'
+  //   ],
+  //   compatibleEquipment: ['Rubber conveyor belts'],
+  //   tags: ['vulcanizing', 'cold cure', 'emergency repair', 'field repair'],
+  //   image: '/Products/CONVEYOR_PARTS/COLD_VULCANIZING.jpeg',
+  //   partNumber: 'SP-CVK-001'
+  // }
 ]
 
 export const conveyorPartsData: BrandData = {

@@ -183,35 +183,35 @@ export default function IndustriesPage() {
     //   tags: ['Stacker', 'Reclaimer', 'Stockyard', 'Storage', 'Bulk Material'],
     //   image: '/images/machines/stacker-reclaimer.jpg'
     // },
-    'specialized-conveyor': {
-      id: 'specialized-conveyors',
-      title: 'Specialized Conveyors',
-      model: 'SC-2024',
-      sku: 'SC-STEEP-001',
-      brand: 'Spareng',
-      category: 'Specialized Conveyors',
-      subcategory: 'Steep Angle',
-      description:
-        'Specialized conveyor systems including steep angle conveyors, pipe conveyors, and screw conveyors for challenging material handling applications.',
-      features: [
-        'Steep angle conveyors up to 45° incline',
-        'Pipe conveyors for enclosed material transport',
-        'Screw conveyors for fine material handling',
-        'Corrugated sidewalls for steep angle applications',
-        'Flexible design for various applications',
-        'Low maintenance and high reliability',
-      ],
-      applications: [
-        'Steep terrain material transport',
-        'Underground mining operations',
-        'Food and chemical processing',
-        'Waste management systems',
-        'Agricultural material handling',
-        'Industrial bulk transport',
-      ],
-      tags: ['Steep Angle', 'Pipe Conveyor', 'Screw Conveyor', 'Specialized'],
-      image: '/images/machines/Curve_Conveyor.jpg',
-    },
+    // 'specialized-conveyor': {
+    //   id: 'specialized-conveyors',
+    //   title: 'Specialized Conveyors',
+    //   model: 'SC-2024',
+    //   sku: 'SC-STEEP-001',
+    //   brand: 'Spareng',
+    //   category: 'Specialized Conveyors',
+    //   subcategory: 'Steep Angle',
+    //   description:
+    //     'Specialized conveyor systems including steep angle conveyors, pipe conveyors, and screw conveyors for challenging material handling applications.',
+    //   features: [
+    //     'Steep angle conveyors up to 45° incline',
+    //     'Pipe conveyors for enclosed material transport',
+    //     'Screw conveyors for fine material handling',
+    //     'Corrugated sidewalls for steep angle applications',
+    //     'Flexible design for various applications',
+    //     'Low maintenance and high reliability',
+    //   ],
+    //   applications: [
+    //     'Steep terrain material transport',
+    //     'Underground mining operations',
+    //     'Food and chemical processing',
+    //     'Waste management systems',
+    //     'Agricultural material handling',
+    //     'Industrial bulk transport',
+    //   ],
+    //   tags: ['Steep Angle', 'Pipe Conveyor', 'Screw Conveyor', 'Specialized'],
+    //   image: '/images/machines/Curve_Conveyor.jpg',
+    // },
   }
 
   const handleLearnMore = (machineKey) => {
@@ -320,7 +320,7 @@ export default function IndustriesPage() {
         <FallInPlace>
           {/* Machine Showcase Grid */}
           <Container maxW="container.xl" py={20}>
-            <SimpleGrid columns={{ base: 1, md: 2, lg: 2 }} spacing={8}>
+            <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
               {/* Belt Conveyor Systems */}
               <Box
                 bg={useColorModeValue('white', 'gray.800')}
@@ -639,7 +639,7 @@ export default function IndustriesPage() {
               </Box> */}
 
               {/* Specialized Conveyors */}
-              <Box
+              {/* <Box
                 bg={useColorModeValue('white', 'gray.800')}
                 borderRadius="xl"
                 p={6}
@@ -721,7 +721,7 @@ export default function IndustriesPage() {
                     </Button>
                   </HStack>
                 </VStack>
-              </Box>
+              </Box> */}
             </SimpleGrid>
           </Container>
         </FallInPlace>

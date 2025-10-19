@@ -51,56 +51,58 @@ export const rotaryAirLockValveProducts: Product[] = [
     image: '/Products/ROTARY_AIR_LOCK_VALVE/RAV_HOUSING.jpeg',
     partNumber: 'SP-RAVH-001'
   },
-  {
-    id: 'ralv-003',
-    title: 'Bearings',
-    model: 'BRG-RALV-001',
-    sku: 'SP-BRG-RALV-001',
-    category: ['Material Handling', 'Rotary Air Lock Valve'],
-    subcategory: 'Support Components',
-    specifications: {},
-    features: [
-      'Sealed bearing design',
-      'High load capacity',
-      'Long service life',
-      'Low maintenance'
-    ],
-    applications: [
-      'Valve rotor support',
-      'Rotating equipment',
-      'Industrial machinery',
-      'Material handling systems'
-    ],
-    compatibleEquipment: ['Rotary air lock valves', 'Rotating equipment'],
-    tags: ['bearings', 'sealed', 'rotor support', 'air lock valve'],
-    image: '/Products/ROTARY_AIR_LOCK_VALVE/BEARINGS.jpeg',
-    partNumber: 'SP-BRG-RALV-001'
-  },
-  {
-    id: 'ralv-004',
-    title: 'Plummer Blocks',
-    model: 'PB-RALV-001',
-    sku: 'SP-PB-RALV-001',
-    category: ['Material Handling', 'Rotary Air Lock Valve'],
-    subcategory: 'Support Components',
-    specifications: {},
-    features: [
-      'Cast iron construction',
-      'Self-aligning capability',
-      'Easy maintenance access',
-      'Heavy duty design'
-    ],
-    applications: [
-      'Valve shaft support',
-      'Bearing housing',
-      'Industrial machinery',
-      'Material handling equipment'
-    ],
-    compatibleEquipment: ['Rotary air lock valves', 'Industrial machinery'],
-    tags: ['plummer blocks', 'bearing housing', 'shaft support', 'air lock valve'],
-    image: '/Products/ROTARY_AIR_LOCK_VALVE/PLUMMER_BLOCKS.jpeg',
-    partNumber: 'SP-PB-RALV-001'
-  },
+  // DISCONTINUED - Temporarily not available
+  // {
+  //   id: 'ralv-003',
+  //   title: 'Bearings',
+  //   model: 'BRG-RALV-001',
+  //   sku: 'SP-BRG-RALV-001',
+  //   category: ['Material Handling', 'Rotary Air Lock Valve'],
+  //   subcategory: 'Support Components',
+  //   specifications: {},
+  //   features: [
+  //     'Sealed bearing design',
+  //     'High load capacity',
+  //     'Long service life',
+  //     'Low maintenance'
+  //   ],
+  //   applications: [
+  //     'Valve rotor support',
+  //     'Rotating equipment',
+  //     'Industrial machinery',
+  //     'Material handling systems'
+  //   ],
+  //   compatibleEquipment: ['Rotary air lock valves', 'Rotating equipment'],
+  //   tags: ['bearings', 'sealed', 'rotor support', 'air lock valve'],
+  //   image: '/Products/ROTARY_AIR_LOCK_VALVE/BEARINGS.jpeg',
+  //   partNumber: 'SP-BRG-RALV-001'
+  // },
+  // DISCONTINUED - Temporarily not available
+  // {
+  //   id: 'ralv-004',
+  //   title: 'Plummer Blocks',
+  //   model: 'PB-RALV-001',
+  //   sku: 'SP-PB-RALV-001',
+  //   category: ['Material Handling', 'Rotary Air Lock Valve'],
+  //   subcategory: 'Support Components',
+  //   specifications: {},
+  //   features: [
+  //     'Cast iron construction',
+  //     'Self-aligning capability',
+  //     'Easy maintenance access',
+  //     'Heavy duty design'
+  //   ],
+  //   applications: [
+  //     'Valve shaft support',
+  //     'Bearing housing',
+  //     'Industrial machinery',
+  //     'Material handling equipment'
+  //   ],
+  //   compatibleEquipment: ['Rotary air lock valves', 'Industrial machinery'],
+  //   tags: ['plummer blocks', 'bearing housing', 'shaft support', 'air lock valve'],
+  //   image: '/Products/ROTARY_AIR_LOCK_VALVE/PLUMMER_BLOCKS.jpeg',
+  //   partNumber: 'SP-PB-RALV-001'
+  // },
   {
     id: 'ralv-005',
     title: 'Sealing Arrangement',

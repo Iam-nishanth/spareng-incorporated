@@ -126,31 +126,31 @@ export const flipFlowScreenProducts: Product[] = [
     image: '/Products/FLIP_FLOW_SCREEN/COMPRESSION_SPRINGS.jpeg',
     partNumber: 'SP-CS-FFS-001'
   },
-  {
-    id: 'ffs-006',
-    title: 'V-Pulley',
-    model: 'VP-FFS-001',
-    sku: 'SP-VP-FFS-001',
-    category: ['Screening Equipment', 'Flip Flow Screen'],
-    subcategory: 'Drive Components',
-    specifications: {},
-    features: [
-      'Cast iron construction',
-      'V-groove design for belt grip',
-      'Precision balanced',
-      'High power transmission efficiency'
-    ],
-    applications: [
-      'Belt drive systems',
-      'Power transmission',
-      'Screen drive applications',
-      'Industrial machinery'
-    ],
-    compatibleEquipment: ['Flip flow screens', 'Belt drive systems'],
-    tags: ['v-pulley', 'belt drive', 'power transmission', 'cast iron'],
-    image: '/Products/FLIP_FLOW_SCREEN/V-PULLEY.jpeg',
-    partNumber: 'SP-VP-FFS-001'
-  },
+  // {
+  //   id: 'ffs-006',
+  //   title: 'V-Pulley',
+  //   model: 'VP-FFS-001',
+  //   sku: 'SP-VP-FFS-001',
+  //   category: ['Screening Equipment', 'Flip Flow Screen'],
+  //   subcategory: 'Drive Components',
+  //   specifications: {},
+  //   features: [
+  //     'Cast iron construction',
+  //     'V-groove design for belt grip',
+  //     'Precision balanced',
+  //     'High power transmission efficiency'
+  //   ],
+  //   applications: [
+  //     'Belt drive systems',
+  //     'Power transmission',
+  //     'Screen drive applications',
+  //     'Industrial machinery'
+  //   ],
+  //   compatibleEquipment: ['Flip flow screens', 'Belt drive systems'],
+  //   tags: ['v-pulley', 'belt drive', 'power transmission', 'cast iron'],
+  //   image: '/Products/FLIP_FLOW_SCREEN/V-PULLEY.jpeg',
+  //   partNumber: 'SP-VP-FFS-001'
+  // },
   {
     id: 'ffs-007',
     title: 'V-Belts',
@@ -201,56 +201,56 @@ export const flipFlowScreenProducts: Product[] = [
     image: '/Products/FLIP_FLOW_SCREEN/CARDAN_PROPERLER_SHAFT.jpeg',
     partNumber: 'SP-CPS-FFS-001'
   },
-  {
-    id: 'ffs-009',
-    title: 'Shaft',
-    model: 'SH-FFS-001',
-    sku: 'SP-SH-FFS-001',
-    category: ['Screening Equipment', 'Flip Flow Screen'],
-    subcategory: 'Drive Components',
-    specifications: {},
-    features: [
-      'High strength steel construction',
-      'Precision machined surfaces',
-      'Heat treated for durability',
-      'Balanced for smooth operation'
-    ],
-    applications: [
-      'Screen drive systems',
-      'Rotating equipment',
-      'Power transmission',
-      'Industrial machinery'
-    ],
-    compatibleEquipment: ['Flip flow screens', 'Drive systems'],
-    tags: ['shaft', 'steel construction', 'precision machined', 'drive system'],
-    image: '/Products/FLIP_FLOW_SCREEN/SHAFT.png',
-    partNumber: 'SP-SH-FFS-001'
-  },
-  {
-    id: 'ffs-010',
-    title: 'C-Bend Plate',
-    model: 'CBP-FFS-001',
-    sku: 'SP-CBP-FFS-001',
-    category: ['Screening Equipment', 'Flip Flow Screen'],
-    subcategory: 'Structural Components',
-    specifications: {},
-    features: [
-      'Heavy duty steel construction',
-      'C-shaped bend design',
-      'Structural reinforcement',
-      'Corrosion resistant coating'
-    ],
-    applications: [
-      'Screen structural support',
-      'Frame reinforcement',
-      'Industrial screening equipment',
-      'Structural applications'
-    ],
-    compatibleEquipment: ['Flip flow screens', 'Structural systems'],
-    tags: ['c-bend plate', 'structural support', 'reinforcement', 'steel construction'],
-    image: '/Products/FLIP_FLOW_SCREEN/C-BEND_PLATE.png',
-    partNumber: 'SP-CBP-FFS-001'
-  }
+  // {
+  //   id: 'ffs-009',
+  //   title: 'Shaft',
+  //   model: 'SH-FFS-001',
+  //   sku: 'SP-SH-FFS-001',
+  //   category: ['Screening Equipment', 'Flip Flow Screen'],
+  //   subcategory: 'Drive Components',
+  //   specifications: {},
+  //   features: [
+  //     'High strength steel construction',
+  //     'Precision machined surfaces',
+  //     'Heat treated for durability',
+  //     'Balanced for smooth operation'
+  //   ],
+  //   applications: [
+  //     'Screen drive systems',
+  //     'Rotating equipment',
+  //     'Power transmission',
+  //     'Industrial machinery'
+  //   ],
+  //   compatibleEquipment: ['Flip flow screens', 'Drive systems'],
+  //   tags: ['shaft', 'steel construction', 'precision machined', 'drive system'],
+  //   image: '/Products/FLIP_FLOW_SCREEN/SHAFT.png',
+  //   partNumber: 'SP-SH-FFS-001'
+  // },
+  // {
+  //   id: 'ffs-010',
+  //   title: 'C-Bend Plate',
+  //   model: 'CBP-FFS-001',
+  //   sku: 'SP-CBP-FFS-001',
+  //   category: ['Screening Equipment', 'Flip Flow Screen'],
+  //   subcategory: 'Structural Components',
+  //   specifications: {},
+  //   features: [
+  //     'Heavy duty steel construction',
+  //     'C-shaped bend design',
+  //     'Structural reinforcement',
+  //     'Corrosion resistant coating'
+  //   ],
+  //   applications: [
+  //     'Screen structural support',
+  //     'Frame reinforcement',
+  //     'Industrial screening equipment',
+  //     'Structural applications'
+  //   ],
+  //   compatibleEquipment: ['Flip flow screens', 'Structural systems'],
+  //   tags: ['c-bend plate', 'structural support', 'reinforcement', 'steel construction'],
+  //   image: '/Products/FLIP_FLOW_SCREEN/C-BEND_PLATE.png',
+  //   partNumber: 'SP-CBP-FFS-001'
+  // }
 ]
 
 export const flipFlowScreenData: BrandData = {
