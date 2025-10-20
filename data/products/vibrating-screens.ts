@@ -101,31 +101,31 @@ export const vibratingScreensProducts: Product[] = [
     image: '/Products/Vibrating_Screens/BEARING_HOUSING.png',
     partNumber: 'SP-BH-VIB-001'
   },
-  {
-    id: 'vs-005',
-    title: 'Heavy Duty Bearings',
-    model: 'HDB-001',
-    sku: 'SP-HDB-001',
-    category: ['Screening Equipment', 'Vibrating Screens'],
-    subcategory: 'Support Components',
-    specifications: {},
-    features: [
-      'Heavy duty spherical roller bearings',
-      'High load capacity',
-      'Extended service life',
-      'Sealed design for protection'
-    ],
-    applications: [
-      'Vibrating screen drives',
-      'Heavy duty rotating equipment',
-      'High load applications',
-      'Industrial machinery'
-    ],
-    compatibleEquipment: ['Vibrating screens', 'Heavy duty equipment'],
-    tags: ['heavy duty bearings', 'spherical roller', 'high load', 'sealed'],
-    image: '/Products/Vibrating_Screens/HEAVY_DUTY_BEARINGS.png',
-    partNumber: 'SP-HDB-001'
-  },
+  // {
+  //   id: 'vs-005',
+  //   title: 'Heavy Duty Bearings',
+  //   model: 'HDB-001',
+  //   sku: 'SP-HDB-001',
+  //   category: ['Screening Equipment', 'Vibrating Screens'],
+  //   subcategory: 'Support Components',
+  //   specifications: {},
+  //   features: [
+  //     'Heavy duty spherical roller bearings',
+  //     'High load capacity',
+  //     'Extended service life',
+  //     'Sealed design for protection'
+  //   ],
+  //   applications: [
+  //     'Vibrating screen drives',
+  //     'Heavy duty rotating equipment',
+  //     'High load applications',
+  //     'Industrial machinery'
+  //   ],
+  //   compatibleEquipment: ['Vibrating screens', 'Heavy duty equipment'],
+  //   tags: ['heavy duty bearings', 'spherical roller', 'high load', 'sealed'],
+  //   image: '/Products/Vibrating_Screens/HEAVY_DUTY_BEARINGS.png',
+  //   partNumber: 'SP-HDB-001'
+  // },
   {
     id: 'vs-006',
     title: 'Bearing Lock Cover',
@@ -251,31 +251,31 @@ export const vibratingScreensProducts: Product[] = [
   //   image: '/Products/Vibrating_Screens/V-PULLEYWEDGE_PULLEY.jpeg',
   //   partNumber: 'SP-VWP-001'
   // },
-  {
-    id: 'vs-011',
-    title: 'V-Belts',
-    model: 'VB-001',
-    sku: 'SP-VB-001',
-    category: ['Screening Equipment', 'Vibrating Screens'],
-    subcategory: 'Drive Components',
-    specifications: {},
-    features: [
-      'High quality rubber construction',
-      'Excellent power transmission',
-      'Oil and heat resistant',
-      'Long service life'
-    ],
-    applications: [
-      'Screen drive systems',
-      'Power transmission',
-      'Belt drive applications',
-      'Industrial machinery'
-    ],
-    compatibleEquipment: ['Vibrating screens', 'Belt drive systems'],
-    tags: ['v-belts', 'rubber', 'power transmission', 'drive system'],
-    image: '/Products/Vibrating_Screens/V-BELTS.jpeg',
-    partNumber: 'SP-VB-001'
-  },
+  // {
+  //   id: 'vs-011',
+  //   title: 'V-Belts',
+  //   model: 'VB-001',
+  //   sku: 'SP-VB-001',
+  //   category: ['Screening Equipment', 'Vibrating Screens'],
+  //   subcategory: 'Drive Components',
+  //   specifications: {},
+  //   features: [
+  //     'High quality rubber construction',
+  //     'Excellent power transmission',
+  //     'Oil and heat resistant',
+  //     'Long service life'
+  //   ],
+  //   applications: [
+  //     'Screen drive systems',
+  //     'Power transmission',
+  //     'Belt drive applications',
+  //     'Industrial machinery'
+  //   ],
+  //   compatibleEquipment: ['Vibrating screens', 'Belt drive systems'],
+  //   tags: ['v-belts', 'rubber', 'power transmission', 'drive system'],
+  //   image: '/Products/Vibrating_Screens/V-BELTS.jpeg',
+  //   partNumber: 'SP-VB-001'
+  // },
   // DISCONTINUED - Temporarily not available
   // {
   //   id: 'vs-012',

@@ -207,7 +207,7 @@ const HeroSection: React.FC = () => {
               <ImagesSlider
                 images={[
                   // '/home/highspeed doors.jpg',
-                  '/home/conveyor-image.jpg',
+                  // '/home/conveyor-image.jpg',
                   '/home/Spillage-Dribble-Conveyors.jpg',
                   '/home/Pneumatic-Conveying-blog.jpg', 
                   '/home/-9vsb4z5j.webp',

@@ -57,7 +57,7 @@ export const spillageDribbleConveyorsProducts: Product[] = [
     title: 'Tail Pulley',
     model: 'TP-SDC-001',
     sku: 'SP-TP-SDC-001',
-    category: ['Conveyor Components', 'Spillage Dribble Conveyors'],
+    category: ['Conveyor Components'],
     subcategory: 'Pulleys',
     specifications: {},
     features: [

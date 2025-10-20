@@ -27,31 +27,31 @@ export const steepAngleSidewallConveyorsProducts: Product[] = [
     image: '/Products/STEEP_ANGLE_SIDE_WALL_CONVEYORS-SPARE_PARTS/SIDE_WALL_BELT.jpeg',
     partNumber: 'SP-SWB-SASC-001'
   },
-  {
-    id: 'sasc-002',
-    title: 'Side Wall Bonding',
-    model: 'SWB-SASC-002',
-    sku: 'SP-SWB-SASC-002',
-    category: ['Conveyor Components', 'Steep Angle Sidewall Conveyors'],
-    subcategory: 'Belt Components',
-    specifications: {},
-    features: [
-      'Strong adhesive bonding',
-      'Weather resistant',
-      'Flexible joint design',
-      'Long service life'
-    ],
-    applications: [
-      'Sidewall belt joining',
-      'Belt repair',
-      'Maintenance applications',
-      'Field installation'
-    ],
-    compatibleEquipment: ['Sidewall belts', 'Belt repair systems'],
-    tags: ['sidewall bonding', 'belt joining', 'adhesive', 'repair'],
-    image: '/Products/STEEP_ANGLE_SIDE_WALL_CONVEYORS-SPARE_PARTS/SIDE_WALL_BONDING.jpeg',
-    partNumber: 'SP-SWB-SASC-002'
-  },
+  // {
+  //   id: 'sasc-002',
+  //   title: 'Side Wall Bonding',
+  //   model: 'SWB-SASC-002',
+  //   sku: 'SP-SWB-SASC-002',
+  //   category: ['Conveyor Components', 'Steep Angle Sidewall Conveyors'],
+  //   subcategory: 'Belt Components',
+  //   specifications: {},
+  //   features: [
+  //     'Strong adhesive bonding',
+  //     'Weather resistant',
+  //     'Flexible joint design',
+  //     'Long service life'
+  //   ],
+  //   applications: [
+  //     'Sidewall belt joining',
+  //     'Belt repair',
+  //     'Maintenance applications',
+  //     'Field installation'
+  //   ],
+  //   compatibleEquipment: ['Sidewall belts', 'Belt repair systems'],
+  //   tags: ['sidewall bonding', 'belt joining', 'adhesive', 'repair'],
+  //   image: '/Products/STEEP_ANGLE_SIDE_WALL_CONVEYORS-SPARE_PARTS/SIDE_WALL_BONDING.jpeg',
+  //   partNumber: 'SP-SWB-SASC-002'
+  // },
 
   // Pulleys
   {
@@ -622,31 +622,31 @@ export const steepAngleSidewallConveyorsProducts: Product[] = [
   },
 
   // Manufacturing Equipment
-  {
-    id: 'sasc-025',
-    title: 'Side Wall Belt Vulcanizing Machine',
-    model: 'SWBVM-SASC-001',
-    sku: 'SP-SWBVM-SASC-001',
-    category: ['Conveyor Components', 'Steep Angle Sidewall Conveyors'],
-    subcategory: 'Manufacturing Equipment',
-    specifications: {},
-    features: [
-      'Belt vulcanizing capability',
-      'Temperature and pressure control',
-      'Professional grade equipment',
-      'Precise operation'
-    ],
-    applications: [
-      'Belt splicing and repair',
-      'Sidewall belt manufacturing',
-      'Field vulcanizing',
-      'Maintenance operations'
-    ],
-    compatibleEquipment: ['Belt manufacturing', 'Maintenance equipment'],
-    tags: ['vulcanizing machine', 'belt splicing', 'steep angle', 'manufacturing'],
-    image: '/Products/STEEP_ANGLE_SIDE_WALL_CONVEYORS-SPARE_PARTS/SIDE_WALL_BELT_VULCANIZING_MACHINE.jpeg',
-    partNumber: 'SP-SWBVM-SASC-001'
-  },
+  // {
+  //   id: 'sasc-025',
+  //   title: 'Side Wall Belt Vulcanizing Machine',
+  //   model: 'SWBVM-SASC-001',
+  //   sku: 'SP-SWBVM-SASC-001',
+  //   category: ['Conveyor Components', 'Steep Angle Sidewall Conveyors'],
+  //   subcategory: 'Manufacturing Equipment',
+  //   specifications: {},
+  //   features: [
+  //     'Belt vulcanizing capability',
+  //     'Temperature and pressure control',
+  //     'Professional grade equipment',
+  //     'Precise operation'
+  //   ],
+  //   applications: [
+  //     'Belt splicing and repair',
+  //     'Sidewall belt manufacturing',
+  //     'Field vulcanizing',
+  //     'Maintenance operations'
+  //   ],
+  //   compatibleEquipment: ['Belt manufacturing', 'Maintenance equipment'],
+  //   tags: ['vulcanizing machine', 'belt splicing', 'steep angle', 'manufacturing'],
+  //   image: '/Products/STEEP_ANGLE_SIDE_WALL_CONVEYORS-SPARE_PARTS/SIDE_WALL_BELT_VULCANIZING_MACHINE.jpeg',
+  //   partNumber: 'SP-SWBVM-SASC-001'
+  // },
   // {
   //   id: 'sasc-026',
   //   title: 'Clamping Molds by Adjusting Screw',

@@ -151,31 +151,31 @@ export const flipFlowScreenProducts: Product[] = [
   //   image: '/Products/FLIP_FLOW_SCREEN/V-PULLEY.jpeg',
   //   partNumber: 'SP-VP-FFS-001'
   // },
-  {
-    id: 'ffs-007',
-    title: 'V-Belts',
-    model: 'VB-FFS-001',
-    sku: 'SP-VB-FFS-001',
-    category: ['Screening Equipment', 'Flip Flow Screen'],
-    subcategory: 'Drive Components',
-    specifications: {},
-    features: [
-      'High quality rubber construction',
-      'Excellent power transmission',
-      'Oil and heat resistant',
-      'Long service life'
-    ],
-    applications: [
-      'Screen drive systems',
-      'Power transmission',
-      'Belt drive applications',
-      'Industrial machinery'
-    ],
-    compatibleEquipment: ['Flip flow screens', 'Belt drive systems'],
-    tags: ['v-belts', 'rubber', 'power transmission', 'drive system'],
-    image: '/Products/FLIP_FLOW_SCREEN/V-BELTS.jpeg',
-    partNumber: 'SP-VB-FFS-001'
-  },
+  // {
+  //   id: 'ffs-007',
+  //   title: 'V-Belts',
+  //   model: 'VB-FFS-001',
+  //   sku: 'SP-VB-FFS-001',
+  //   category: ['Screening Equipment', 'Flip Flow Screen'],
+  //   subcategory: 'Drive Components',
+  //   specifications: {},
+  //   features: [
+  //     'High quality rubber construction',
+  //     'Excellent power transmission',
+  //     'Oil and heat resistant',
+  //     'Long service life'
+  //   ],
+  //   applications: [
+  //     'Screen drive systems',
+  //     'Power transmission',
+  //     'Belt drive applications',
+  //     'Industrial machinery'
+  //   ],
+  //   compatibleEquipment: ['Flip flow screens', 'Belt drive systems'],
+  //   tags: ['v-belts', 'rubber', 'power transmission', 'drive system'],
+  //   image: '/Products/FLIP_FLOW_SCREEN/V-BELTS.jpeg',
+  //   partNumber: 'SP-VB-FFS-001'
+  // },
   {
     id: 'ffs-008',
     title: 'Cardan Propeller Shaft',

@@ -153,31 +153,31 @@ export const screwConveyorProducts: Product[] = [
   //   image: '/Products/SCREW_CONVEYOR/BEARINGS.jpeg',
   //   partNumber: 'SP-BRG-SC-001'
   // },
-  {
-    id: 'sc-007',
-    title: 'Sealing Arrangement',
-    model: 'SA-SC-001',
-    sku: 'SP-SA-SC-001',
-    category: ['Material Handling', 'Screw Conveyor'],
-    subcategory: 'Sealing Components',
-    specifications: {},
-    features: [
-      'High performance sealing materials',
-      'Dust tight design',
-      'Easy replacement',
-      'Chemical resistant'
-    ],
-    applications: [
-      'Conveyor sealing',
-      'Dust containment',
-      'Material handling',
-      'Industrial applications'
-    ],
-    compatibleEquipment: ['Screw conveyors', 'Material handling systems'],
-    tags: ['sealing arrangement', 'dust tight', 'containment', 'screw conveyor'],
-    image: '/Products/SCREW_CONVEYOR/SEALING_ARRANGEMENT.jpeg',
-    partNumber: 'SP-SA-SC-001'
-  },
+  // {
+  //   id: 'sc-007',
+  //   title: 'Sealing Arrangement',
+  //   model: 'SA-SC-001',
+  //   sku: 'SP-SA-SC-001',
+  //   category: ['Material Handling', 'Screw Conveyor'],
+  //   subcategory: 'Sealing Components',
+  //   specifications: {},
+  //   features: [
+  //     'High performance sealing materials',
+  //     'Dust tight design',
+  //     'Easy replacement',
+  //     'Chemical resistant'
+  //   ],
+  //   applications: [
+  //     'Conveyor sealing',
+  //     'Dust containment',
+  //     'Material handling',
+  //     'Industrial applications'
+  //   ],
+  //   compatibleEquipment: ['Screw conveyors', 'Material handling systems'],
+  //   tags: ['sealing arrangement', 'dust tight', 'containment', 'screw conveyor'],
+  //   image: '/Products/SCREW_CONVEYOR/SEALING_ARRANGEMENT.jpeg',
+  //   partNumber: 'SP-SA-SC-001'
+  // },
   {
     id: 'sc-008',
     title: 'Zero Speed Switch',

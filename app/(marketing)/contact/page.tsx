@@ -91,7 +91,7 @@ const ContactPage: NextPage = () => {
             "description": "Material Handling Equipment (MHE) spare parts supplier",
             "url": "https://spareng.com",
             "telephone": "",
-            "email": "info@spareng.com",
+            "email": "info@sparenginc.com",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "Plot No. E8/C8 - 2A, (24-60/10/11), IDA, UPPAL",
@@ -183,7 +183,7 @@ const ContactPage: NextPage = () => {
                           <Box>
                             <Text fontWeight="semibold" mb="1">Email</Text>
                             <Text color="muted" fontSize="sm">
-                              info@spareng.com
+                              info@sparenginc.com
                             </Text>
                           </Box>
                         </HStack>

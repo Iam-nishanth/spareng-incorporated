@@ -103,31 +103,31 @@ export const rotaryAirLockValveProducts: Product[] = [
   //   image: '/Products/ROTARY_AIR_LOCK_VALVE/PLUMMER_BLOCKS.jpeg',
   //   partNumber: 'SP-PB-RALV-001'
   // },
-  {
-    id: 'ralv-005',
-    title: 'Sealing Arrangement',
-    model: 'SA-RALV-001',
-    sku: 'SP-SA-RALV-001',
-    category: ['Material Handling', 'Rotary Air Lock Valve'],
-    subcategory: 'Sealing Components',
-    specifications: {},
-    features: [
-      'High performance sealing materials',
-      'Dust tight design',
-      'Easy replacement',
-      'Chemical resistant'
-    ],
-    applications: [
-      'Air lock sealing',
-      'Dust containment',
-      'Pneumatic systems',
-      'Material handling'
-    ],
-    compatibleEquipment: ['Rotary air lock valves', 'Pneumatic systems'],
-    tags: ['sealing arrangement', 'dust tight', 'air lock', 'containment'],
-    image: '/Products/ROTARY_AIR_LOCK_VALVE/SEALING_ARRANGEMENT.jpeg',
-    partNumber: 'SP-SA-RALV-001'
-  },
+  // {
+  //   id: 'ralv-005',
+  //   title: 'Sealing Arrangement',
+  //   model: 'SA-RALV-001',
+  //   sku: 'SP-SA-RALV-001',
+  //   category: ['Material Handling', 'Rotary Air Lock Valve'],
+  //   subcategory: 'Sealing Components',
+  //   specifications: {},
+  //   features: [
+  //     'High performance sealing materials',
+  //     'Dust tight design',
+  //     'Easy replacement',
+  //     'Chemical resistant'
+  //   ],
+  //   applications: [
+  //     'Air lock sealing',
+  //     'Dust containment',
+  //     'Pneumatic systems',
+  //     'Material handling'
+  //   ],
+  //   compatibleEquipment: ['Rotary air lock valves', 'Pneumatic systems'],
+  //   tags: ['sealing arrangement', 'dust tight', 'air lock', 'containment'],
+  //   image: '/Products/ROTARY_AIR_LOCK_VALVE/SEALING_ARRANGEMENT.jpeg',
+  //   partNumber: 'SP-SA-RALV-001'
+  // },
   {
     id: 'ralv-006',
     title: 'Center Shaft',

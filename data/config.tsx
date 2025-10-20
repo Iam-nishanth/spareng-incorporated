@@ -46,8 +46,8 @@ const siteConfig = {
       items: [
         {
           label: 'Email',
-          value: 'info@spareng.com',
-          href: 'mailto:info@spareng.com',
+          value: 'info@sparenginc.com',
+          href: 'mailto:info@sparenginc.com',
         },
       ],
     },
