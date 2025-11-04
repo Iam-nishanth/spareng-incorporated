@@ -339,56 +339,6 @@ export const conveyorPartsProducts: Product[] = [
   //   image: '/Products/CONVEYOR_PARTS/CONVEYOR_BELT.jpeg',
   //   partNumber: 'SP-CB-001'
   // },
-  {
-    id: 'cp-016',
-    title: 'Chevron Belt',
-    model: 'CHB-001',
-    sku: 'SP-CHB-001',
-    category: ['Conveyor Components'],
-    subcategory: 'Belts',
-    specifications: {},
-    features: [
-      'V-shaped chevron cleats',
-      'Prevents material rollback',
-      'High grip on inclines',
-      'Flexible cleat design'
-    ],
-    applications: [
-      'Inclined conveyor systems',
-      'Steep angle transport',
-      'Loose material handling',
-      'Agricultural applications'
-    ],
-    compatibleEquipment: ['Inclined belt conveyors', 'Agricultural systems'],
-    tags: ['belts', 'chevron', 'inclined', 'cleats'],
-    image: '/Products/CONVEYOR_PARTS/CHEVRON_BELT.jpeg',
-    partNumber: 'SP-CHB-001'
-  },
-  {
-    id: 'cp-017',
-    title: 'Food Grade Belt',
-    model: 'FGB-001',
-    sku: 'SP-FGB-001',
-    category: ['Conveyor Components'],
-    subcategory: 'Belts',
-    specifications: {},
-    features: [
-      'FDA approved materials',
-      'Easy to clean surface',
-      'Chemical resistant',
-      'Non-toxic construction'
-    ],
-    applications: [
-      'Food processing',
-      'Pharmaceutical industry',
-      'Packaging applications',
-      'Clean room environments'
-    ],
-    compatibleEquipment: ['Food processing conveyors', 'Clean room systems'],
-    tags: ['belts', 'food grade', 'FDA approved', 'hygienic'],
-    image: '/Products/CONVEYOR_PARTS/FOOD_GRADE_BELT.jpeg',
-    partNumber: 'SP-FGB-001'
-  },
 
   // BEARINGS
   // {
@@ -973,7 +923,59 @@ export const conveyorPartsProducts: Product[] = [
   //   tags: ['vulcanizing', 'cold cure', 'emergency repair', 'field repair'],
   //   image: '/Products/CONVEYOR_PARTS/COLD_VULCANIZING.jpeg',
   //   partNumber: 'SP-CVK-001'
-  // }
+  // },
+
+  // BELTS - Positioned last for featured sort
+  {
+    id: 'cp-016',
+    title: 'Chevron Belt',
+    model: 'CHB-001',
+    sku: 'SP-CHB-001',
+    category: ['Conveyor Components'],
+    subcategory: 'Belts',
+    specifications: {},
+    features: [
+      'V-shaped chevron cleats',
+      'Prevents material rollback',
+      'High grip on inclines',
+      'Flexible cleat design'
+    ],
+    applications: [
+      'Inclined conveyor systems',
+      'Steep angle transport',
+      'Loose material handling',
+      'Agricultural applications'
+    ],
+    compatibleEquipment: ['Inclined belt conveyors', 'Agricultural systems'],
+    tags: ['belts', 'chevron', 'inclined', 'cleats'],
+    image: '/Products/CONVEYOR_PARTS/CHEVRON_BELT.jpeg',
+    partNumber: 'SP-CHB-001'
+  },
+  {
+    id: 'cp-017',
+    title: 'Food Grade Belt',
+    model: 'FGB-001',
+    sku: 'SP-FGB-001',
+    category: ['Conveyor Components'],
+    subcategory: 'Belts',
+    specifications: {},
+    features: [
+      'FDA approved materials',
+      'Easy to clean surface',
+      'Chemical resistant',
+      'Non-toxic construction'
+    ],
+    applications: [
+      'Food processing',
+      'Pharmaceutical industry',
+      'Packaging applications',
+      'Clean room environments'
+    ],
+    compatibleEquipment: ['Food processing conveyors', 'Clean room systems'],
+    tags: ['belts', 'food grade', 'FDA approved', 'hygienic'],
+    image: '/Products/CONVEYOR_PARTS/FOOD_GRADE_BELT.jpeg',
+    partNumber: 'SP-FGB-001'
+  }
 ]
 
 export const conveyorPartsData: BrandData = {

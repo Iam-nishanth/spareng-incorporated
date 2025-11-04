@@ -6,7 +6,7 @@ export const grizzlyScreenProducts: Product[] = [
     title: 'Grizzly Bars',
     model: 'GB-001',
     sku: 'SP-GB-001',
-    category: ['Screening Spares', 'Grizzly Screen'],
+    category: ['Screening Spares'],
     subcategory: 'Screen Media',
     specifications: {},
     features: [
@@ -31,7 +31,7 @@ export const grizzlyScreenProducts: Product[] = [
     title: 'Screen Cloth',
     model: 'SC-GS-001',
     sku: 'SP-SC-GS-001',
-    category: ['Screening Spares', 'Grizzly Screen'],
+    category: ['Screening Spares'],
     subcategory: 'Screen Media',
     specifications: {},
     features: [
@@ -81,7 +81,7 @@ export const grizzlyScreenProducts: Product[] = [
     title: 'Cardan Propeller Shaft',
     model: 'CPS-GS-001',
     sku: 'SP-CPS-GS-001',
-    category: ['Screening Spares', 'Grizzly Screen'],
+    category: ['Screening Spares'],
     subcategory: 'Drive Components',
     specifications: {},
     features: [
@@ -106,7 +106,7 @@ export const grizzlyScreenProducts: Product[] = [
     title: 'Bearing Housing',
     model: 'BH-GS-001',
     sku: 'SP-BH-GS-001',
-    category: ['Screening Spares', 'Grizzly Screen'],
+    category: ['Screening Spares'],
     subcategory: 'Support Components',
     specifications: {},
     features: [

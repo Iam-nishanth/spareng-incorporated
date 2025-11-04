@@ -6,7 +6,7 @@ export const linearMotionScreenProducts: Product[] = [
     title: 'Screen Cloth',
     model: 'SC-LMS-001',
     sku: 'SP-SC-LMS-001',
-    category: ['Screening Spares', 'Linear Motion Screen'],
+    category: ['Screening Spares'],
     subcategory: 'Screen Media',
     specifications: {},
     features: [

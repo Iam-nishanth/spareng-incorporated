@@ -7,7 +7,7 @@ export const pneumaticHandlingSystemsProducts: Product[] = [
     title: 'Ball Valve',
     model: 'BV-PHS-001',
     sku: 'SP-BV-PHS-001',
-    category: [  'Pneumatic Handling Systems'],
+    category: [  'Pneumatic Handling Spares'],
     subcategory: 'Control Valves',
     specifications: {},
     features: [
@@ -32,7 +32,7 @@ export const pneumaticHandlingSystemsProducts: Product[] = [
     title: 'Butterfly Valve',
     model: 'BFV-PHS-001',
     sku: 'SP-BFV-PHS-001',
-    category: [  'Pneumatic Handling Systems'],
+    category: [  'Pneumatic Handling Spares'],
     subcategory: 'Control Valves',
     specifications: {},
     features: [
@@ -57,7 +57,7 @@ export const pneumaticHandlingSystemsProducts: Product[] = [
     title: 'Dome Valve',
     model: 'DV-PHS-001',
     sku: 'SP-DV-PHS-001',
-    category: [  'Pneumatic Handling Systems'],
+    category: [  'Pneumatic Handling Spares'],
     subcategory: 'Control Valves',
     specifications: {},
     features: [
@@ -82,7 +82,7 @@ export const pneumaticHandlingSystemsProducts: Product[] = [
     title: 'Knife Gate Valve',
     model: 'KGV-PHS-001',
     sku: 'SP-KGV-PHS-001',
-    category: [  'Pneumatic Handling Systems'],
+    category: [  'Pneumatic Handling Spares'],
     subcategory: 'Control Valves',
     specifications: {},
     features: [
@@ -107,7 +107,7 @@ export const pneumaticHandlingSystemsProducts: Product[] = [
     title: 'Non-Return Valve',
     model: 'NRV-PHS-001',
     sku: 'SP-NRV-PHS-001',
-    category: [  'Pneumatic Handling Systems'],
+    category: [  'Pneumatic Handling Spares'],
     subcategory: 'Control Valves',
     specifications: {},
     features: [
@@ -132,7 +132,7 @@ export const pneumaticHandlingSystemsProducts: Product[] = [
     title: 'Y-Type Angle Valve',
     model: 'YAV-PHS-001',
     sku: 'SP-YAV-PHS-001',
-    category: [  'Pneumatic Handling Systems'],
+    category: [  'Pneumatic Handling Spares'],
     subcategory: 'Control Valves',
     specifications: {},
     features: [
@@ -157,7 +157,7 @@ export const pneumaticHandlingSystemsProducts: Product[] = [
     title: 'Solenoid Valve',
     model: 'SV-PHS-001',
     sku: 'SP-SV-PHS-001',
-    category: [  'Pneumatic Handling Systems'],
+    category: [  'Pneumatic Handling Spares'],
     subcategory: 'Control Valves',
     specifications: {},
     features: [
@@ -182,7 +182,7 @@ export const pneumaticHandlingSystemsProducts: Product[] = [
     title: 'Quick Exhaust Valve',
     model: 'QEV-PHS-001',
     sku: 'SP-QEV-PHS-001',
-    category: [  'Pneumatic Handling Systems'],
+    category: [  'Pneumatic Handling Spares'],
     subcategory: 'Control Valves',
     specifications: {},
     features: [
@@ -209,7 +209,7 @@ export const pneumaticHandlingSystemsProducts: Product[] = [
     title: 'Pneumatic Actuator',
     model: 'PA-PHS-001',
     sku: 'SP-PA-PHS-001',
-    category: [  'Pneumatic Handling Systems'],
+    category: [  'Pneumatic Handling Spares'],
     subcategory: 'Actuators',
     specifications: {},
     features: [
@@ -234,7 +234,7 @@ export const pneumaticHandlingSystemsProducts: Product[] = [
     title: 'Pneumatic Cylinder',
     model: 'PC-PHS-001',
     sku: 'SP-PC-PHS-001',
-    category: [  'Pneumatic Handling Systems'],
+    category: [  'Pneumatic Handling Spares'],
     subcategory: 'Actuators',
     specifications: {},
     features: [
@@ -261,7 +261,7 @@ export const pneumaticHandlingSystemsProducts: Product[] = [
     title: 'Pressure Regulator',
     model: 'PR-PHS-001',
     sku: 'SP-PR-PHS-001',
-    category: [  'Pneumatic Handling Systems'],
+    category: [  'Pneumatic Handling Spares'],
     subcategory: 'Control Components',
     specifications: {},
     features: [
@@ -288,7 +288,7 @@ export const pneumaticHandlingSystemsProducts: Product[] = [
     title: 'Seal for Valves',
     model: 'SFV-PHS-001',
     sku: 'SP-SFV-PHS-001',
-    category: [  'Pneumatic Handling Systems'],
+    category: [  'Pneumatic Handling Spares'],
     subcategory: 'Sealing Components',
     specifications: {},
     features: [
@@ -315,7 +315,7 @@ export const pneumaticHandlingSystemsProducts: Product[] = [
     title: 'Alloy Long Radius Bend',
     model: 'ALRB-PHS-001',
     sku: 'SP-ALRB-PHS-001',
-    category: [  'Pneumatic Handling Systems'],
+    category: [  'Pneumatic Handling Spares'],
     subcategory: 'Piping Components',
     specifications: {},
     features: [
@@ -338,7 +338,7 @@ export const pneumaticHandlingSystemsProducts: Product[] = [
 ]
 
 export const pneumaticHandlingSystemsData: BrandData = {
-  brand: 'Spareng Pneumatic Handling Systems',
+  brand: 'Spareng Pneumatic Handling Spares',
   description: 'Comprehensive range of pneumatic handling system components including valves, actuators, and control systems for industrial automation',
   website: 'https://spareng.com',
   products: pneumaticHandlingSystemsProducts
