@@ -1,31 +1,31 @@
 import { BrandData, Product } from './product-types'
 
 export const mechanicalVibroFeederProducts: Product[] = [
-  {
-    id: 'mvf-001',
-    title: 'UHMW Liners',
-    model: 'UL-001',
-    sku: 'SP-UL-001',
-    category: ['Material Handling', 'Mechanical Vibro Feeder'],
-    subcategory: 'Wear Parts',
-    specifications: {},
-    features: [
-      'Ultra High Molecular Weight polyethylene',
-      'Excellent wear resistance',
-      'Low friction coefficient',
-      'Chemical resistant'
-    ],
-    applications: [
-      'Feeder trough lining',
-      'Wear protection',
-      'Material handling',
-      'Industrial feeders'
-    ],
-    compatibleEquipment: ['Vibro feeders', 'Material handling equipment'],
-    tags: ['UHMW liners', 'wear protection', 'polyethylene', 'vibro feeder'],
-    image: '/Products/MECHANICAL_VIBRO_FEEDER/UHME_LINERS.jpeg',
-    partNumber: 'SP-UL-001'
-  },
+  // {
+  //   id: 'mvf-001',
+  //   title: 'UHMW Liners',
+  //   model: 'UL-001',
+  //   sku: 'SP-UL-001',
+  //   category: ['Material Handling', 'Mechanical Vibro Feeder'],
+  //   subcategory: 'Wear Parts',
+  //   specifications: {},
+  //   features: [
+  //     'Ultra High Molecular Weight polyethylene',
+  //     'Excellent wear resistance',
+  //     'Low friction coefficient',
+  //     'Chemical resistant'
+  //   ],
+  //   applications: [
+  //     'Feeder trough lining',
+  //     'Wear protection',
+  //     'Material handling',
+  //     'Industrial feeders'
+  //   ],
+  //   compatibleEquipment: ['Vibro feeders', 'Material handling equipment'],
+  //   tags: ['UHMW liners', 'wear protection', 'polyethylene', 'vibro feeder'],
+  //   image: '/Products/MECHANICAL_VIBRO_FEEDER/UHME_LINERS.jpeg',
+  //   partNumber: 'SP-UL-001'
+  // },
   // DISCONTINUED - Temporarily not available
   // {
   //   id: 'mvf-002',

@@ -57,12 +57,12 @@ export * from './prism-gate-flow-diverter'
 export const allBrands: BrandData[] = [
   conveyorPartsData,
   crushersData,
-  vibratingScreensData,
-  flipFlowScreenData,
-  linearMotionScreenData,
-  grizzlyScreenData,
+  // vibratingScreensData,
+  // flipFlowScreenData,
+  // linearMotionScreenData,
+  // grizzlyScreenData,
   mechanicalVibroFeederData,
-  sizerSugarGraderData,
+  // sizerSugarGraderData,
   screwConveyorData,
   rotaryAirLockValveData,
   // bulkReceptionUnitData,
@@ -78,19 +78,19 @@ export const allBrands: BrandData[] = [
   steepAngleSidewallConveyorsData,
   spillageDribbleConveyorsData,
   // stackerScraperReclaimerData,
-  prismGateFlowDiverterData,
+  // prismGateFlowDiverterData,
 ]
 
 // All products combined - comprehensive collection from all 24 categories
 export const allProducts: Product[] = [
   ...conveyorPartsData.products,
   ...crushersData.products,
-  ...vibratingScreensData.products,
-  ...flipFlowScreenData.products,
-  ...linearMotionScreenData.products,
-  ...grizzlyScreenData.products,
+  // ...vibratingScreensData.products,
+  // ...flipFlowScreenData.products,
+  // ...linearMotionScreenData.products,
+  // ...grizzlyScreenData.products,
   ...mechanicalVibroFeederData.products,
-  ...sizerSugarGraderData.products,
+  // ...sizerSugarGraderData.products,
   ...screwConveyorData.products,
   ...rotaryAirLockValveData.products,
   // ...bulkReceptionUnitData.products,
@@ -106,7 +106,7 @@ export const allProducts: Product[] = [
   ...steepAngleSidewallConveyorsData.products,
   ...spillageDribbleConveyorsData.products,
   // ...stackerScraperReclaimerData.products,
-  ...prismGateFlowDiverterData.products,
+  // ...prismGateFlowDiverterData.products,
 ]
 
 // Get products by category - handles both string and string[] categories
@@ -123,6 +123,9 @@ const emitCategories = [
   "Dust Extraction Systems",
   "Bogie",
   "Steep Angle Sidewall Conveyors",
+  "Vibrating Screens",
+  "Flip Flow Screens",
+  "Linear Motion Screens",
 ]
 
 // Get all unique categories - handles both string and string[] categories, excludes emitCategories

@@ -182,31 +182,31 @@ export const mobileHopperProducts: Product[] = [
   //   image: '/Products/MOBILE_HOPPER/EQUALIZER.jpeg',
   //   partNumber: 'SP-EQ-MH-001'
   // },
-  {
-    id: 'mh-008',
-    title: 'Hardox Liners',
-    model: 'HL-MH-001',
-    sku: 'SP-HL-MH-001',
-    category: ['Material Handling', 'Mobile Hopper'],
-    subcategory: 'Wear Parts',
-    specifications: {},
-    features: [
-      'Hardox steel construction',
-      'Extreme wear resistance',
-      'High impact strength',
-      'Long service life'
-    ],
-    applications: [
-      'Mobile hopper wear protection',
-      'Abrasive material handling',
-      'Heavy duty applications',
-      'Industrial wear protection'
-    ],
-    compatibleEquipment: ['Mobile hoppers', 'Wear protection systems'],
-    tags: ['hardox liners', 'wear protection', 'mobile hopper', 'abrasion resistant'],
-    image: '/Products/MOBILE_HOPPER/LINNERS-HERDOX.jpeg',
-    partNumber: 'SP-HL-MH-001'
-  },
+  // {
+  //   id: 'mh-008',
+  //   title: 'Hardox Liners',
+  //   model: 'HL-MH-001',
+  //   sku: 'SP-HL-MH-001',
+  //   category: ['Material Handling', 'Mobile Hopper'],
+  //   subcategory: 'Wear Parts',
+  //   specifications: {},
+  //   features: [
+  //     'Hardox steel construction',
+  //     'Extreme wear resistance',
+  //     'High impact strength',
+  //     'Long service life'
+  //   ],
+  //   applications: [
+  //     'Mobile hopper wear protection',
+  //     'Abrasive material handling',
+  //     'Heavy duty applications',
+  //     'Industrial wear protection'
+  //   ],
+  //   compatibleEquipment: ['Mobile hoppers', 'Wear protection systems'],
+  //   tags: ['hardox liners', 'wear protection', 'mobile hopper', 'abrasion resistant'],
+  //   image: '/Products/MOBILE_HOPPER/LINNERS-HERDOX.jpeg',
+  //   partNumber: 'SP-HL-MH-001'
+  // },
   // DISCONTINUED - Temporarily not available
   // {
   //   id: 'mh-009',

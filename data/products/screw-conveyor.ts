@@ -6,7 +6,7 @@ export const screwConveyorProducts: Product[] = [
     title: 'Paddle with Liners',
     model: 'PWL-001',
     sku: 'SP-PWL-001',
-    category: ['Material Handling', 'Screw Conveyor'],
+    category: ['Screw Conveyor'],
     subcategory: 'Conveyor Components',
     specifications: {},
     features: [
@@ -21,7 +21,7 @@ export const screwConveyorProducts: Product[] = [
       'Industrial mixing systems',
       'Bulk material processing'
     ],
-    compatibleEquipment: ['Screw conveyors', 'Mixing systems'],
+    compatibleEquipment: ['Screw conveyors',],
     tags: ['paddle', 'liner', 'wear resistant', 'material mixing'],
     image: '/Products/SCREW_CONVEYOR/PADDEL_WITH_LINERS.jpeg',
     partNumber: 'SP-PWL-001'
@@ -31,7 +31,7 @@ export const screwConveyorProducts: Product[] = [
     title: 'Spur Gears',
     model: 'SG-SC-001',
     sku: 'SP-SG-SC-001',
-    category: ['Material Handling', 'Screw Conveyor'],
+    category: ['Material Handling'],
     subcategory: 'Drive Components',
     specifications: {},
     features: [

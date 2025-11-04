@@ -6,7 +6,7 @@ export const vibratingScreensProducts: Product[] = [
     title: 'Screen Cloth',
     model: 'SC-001',
     sku: 'SP-SC-001',
-    category: ['Screening Spares', 'Vibrating Screens'],
+    category: ['Screening Spares',  ],
     subcategory: 'Screen Media',
     specifications: {},
     features: [
@@ -21,7 +21,7 @@ export const vibratingScreensProducts: Product[] = [
       'Industrial screening operations',
       'Mining and aggregate processing'
     ],
-    compatibleEquipment: ['Vibrating screens', 'Screening Spares',],
+    compatibleEquipment: [  'Screening Spares',],
     tags: ['screen cloth', 'wire mesh', 'screening', 'separation'],
     image: '/Products/Vibrating_Screens/SCREEN_CLOTH.png',
     partNumber: 'SP-SC-001'
@@ -31,7 +31,7 @@ export const vibratingScreensProducts: Product[] = [
     title: 'Punched Plate',
     model: 'PP-001',
     sku: 'SP-PP-001',
-    category: ['Screening Spares', 'Vibrating Screens'],
+    category: ['Screening Spares',  ],
     subcategory: 'Screen Media',
     specifications: {},
     features: [
@@ -46,7 +46,7 @@ export const vibratingScreensProducts: Product[] = [
       'Industrial applications',
       'Mining operations'
     ],
-    compatibleEquipment: ['Vibrating screens', 'Heavy duty screens'],
+    compatibleEquipment: [  'Heavy duty screens'],
     tags: ['punched plate', 'steel', 'heavy duty', 'screening'],
     image: '/Products/Vibrating_Screens/PUNCHED_PLATE.png',
     partNumber: 'SP-PP-001'
@@ -56,7 +56,7 @@ export const vibratingScreensProducts: Product[] = [
     title: 'Basket Plate',
     model: 'BP-001',
     sku: 'SP-BP-001',
-    category: ['Screening Spares', 'Vibrating Screens'],
+    category: ['Screening Spares',  ],
     subcategory: 'Screen Media',
     specifications: {},
     features: [
@@ -71,7 +71,7 @@ export const vibratingScreensProducts: Product[] = [
       'Industrial screening',
       'Material classification'
     ],
-    compatibleEquipment: ['Vibrating screens', 'Screening Spares',],
+    compatibleEquipment: [  'Screening Spares',],
     tags: ['basket plate', 'perforated', 'fine screening', 'wet screening'],
     image: '/Products/Vibrating_Screens/BASKET_PLATE.png',
     partNumber: 'SP-BP-001'
@@ -81,7 +81,7 @@ export const vibratingScreensProducts: Product[] = [
     title: 'Bearing Housing',
     model: 'BH-VIB-001',
     sku: 'SP-BH-VIB-001',
-    category: ['Screening Spares', 'Vibrating Screens'],
+    category: ['Screening Spares',  ],
     subcategory: 'Support Components',
     specifications: {},
     features: [
@@ -96,7 +96,7 @@ export const vibratingScreensProducts: Product[] = [
       'Rotating equipment',
       'Heavy duty applications'
     ],
-    compatibleEquipment: ['Vibrating screens', 'Drive systems'],
+    compatibleEquipment: [  'Drive systems'],
     tags: ['bearing housing', 'cast iron', 'drive system', 'support'],
     image: '/Products/Vibrating_Screens/BEARING_HOUSING.png',
     partNumber: 'SP-BH-VIB-001'
@@ -106,7 +106,7 @@ export const vibratingScreensProducts: Product[] = [
   //   title: 'Heavy Duty Bearings',
   //   model: 'HDB-001',
   //   sku: 'SP-HDB-001',
-  //   category: ['Screening Spares', 'Vibrating Screens'],
+  //   category: ['Screening Spares',  ],
   //   subcategory: 'Support Components',
   //   specifications: {},
   //   features: [
@@ -121,7 +121,7 @@ export const vibratingScreensProducts: Product[] = [
   //     'High load applications',
   //     'Industrial machinery'
   //   ],
-  //   compatibleEquipment: ['Vibrating screens', 'Heavy duty equipment'],
+  //   compatibleEquipment: [  'Heavy duty equipment'],
   //   tags: ['heavy duty bearings', 'spherical roller', 'high load', 'sealed'],
   //   image: '/Products/Vibrating_Screens/HEAVY_DUTY_BEARINGS.png',
   //   partNumber: 'SP-HDB-001'
@@ -131,7 +131,7 @@ export const vibratingScreensProducts: Product[] = [
     title: 'Bearing Lock Cover',
     model: 'BLC-001',
     sku: 'SP-BLC-001',
-    category: ['Screening Spares', 'Vibrating Screens'],
+    category: ['Screening Spares',  ],
     subcategory: 'Support Components',
     specifications: {},
     features: [
@@ -146,7 +146,7 @@ export const vibratingScreensProducts: Product[] = [
       'Equipment security',
       'Industrial applications'
     ],
-    compatibleEquipment: ['Vibrating screens', 'Bearing systems'],
+    compatibleEquipment: [  'Bearing systems'],
     tags: ['bearing lock cover', 'protection', 'maintenance', 'security'],
     image: '/Products/Vibrating_Screens/BEARING_LOCK_COVER.png',
     partNumber: 'SP-BLC-001'
@@ -156,7 +156,7 @@ export const vibratingScreensProducts: Product[] = [
     title: 'Labyrinth Cover',
     model: 'LC-001',
     sku: 'SP-LC-001',
-    category: ['Screening Spares', 'Vibrating Screens'],
+    category: ['Screening Spares',  ],
     subcategory: 'Sealing Components',
     specifications: {},
     features: [
@@ -171,7 +171,7 @@ export const vibratingScreensProducts: Product[] = [
       'Contamination prevention',
       'Industrial sealing'
     ],
-    compatibleEquipment: ['Vibrating screens', 'Rotating equipment'],
+    compatibleEquipment: [  'Rotating equipment'],
     tags: ['labyrinth cover', 'sealing', 'dust protection', 'contamination'],
     image: '/Products/Vibrating_Screens/LABYRINTH_COVER.png',
     partNumber: 'SP-LC-001'
@@ -181,7 +181,7 @@ export const vibratingScreensProducts: Product[] = [
     title: 'Screen Main Shaft',
     model: 'SMS-001',
     sku: 'SP-SMS-001',
-    category: ['Screening Spares', 'Vibrating Screens'],
+    category: ['Screening Spares',  ],
     subcategory: 'Drive Components',
     specifications: {},
     features: [
@@ -196,7 +196,7 @@ export const vibratingScreensProducts: Product[] = [
       'Heavy duty rotating applications',
       'Industrial screening equipment'
     ],
-    compatibleEquipment: ['Vibrating screens', 'Drive systems'],
+    compatibleEquipment: [  'Drive systems'],
     tags: ['main shaft', 'precision machined', 'heat treated', 'drive system'],
     image: '/Products/Vibrating_Screens/SCREEN_MAIN_SHAFT.png',
     partNumber: 'SP-SMS-001'
@@ -206,7 +206,7 @@ export const vibratingScreensProducts: Product[] = [
     title: 'Cardan Propeller Shaft',
     model: 'CPS-001',
     sku: 'SP-CPS-001',
-    category: ['Screening Spares', 'Vibrating Screens'],
+    category: ['Screening Spares',  ],
     subcategory: 'Drive Components',
     specifications: {},
     features: [
@@ -221,7 +221,7 @@ export const vibratingScreensProducts: Product[] = [
       'Vibrating equipment drives',
       'Industrial machinery'
     ],
-    compatibleEquipment: ['Vibrating screens', 'Drive systems'],
+    compatibleEquipment: [  'Drive systems'],
     tags: ['cardan shaft', 'propeller shaft', 'drive transmission', 'universal joint'],
     image: '/Products/Vibrating_Screens/CARDAN_PROPERLER_SHAFT.jpeg',
     partNumber: 'SP-CPS-001'
@@ -231,7 +231,7 @@ export const vibratingScreensProducts: Product[] = [
   //   title: 'V-Pulley/Wedge Pulley',
   //   model: 'VWP-001',
   //   sku: 'SP-VWP-001',
-  //   category: ['Screening Spares', 'Vibrating Screens'],
+  //   category: ['Screening Spares',  ],
   //   subcategory: 'Drive Components',
   //   specifications: {},
   //   features: [
@@ -246,7 +246,7 @@ export const vibratingScreensProducts: Product[] = [
   //     'Screen drive applications',
   //     'Industrial machinery'
   //   ],
-  //   compatibleEquipment: ['Vibrating screens', 'Belt drive systems'],
+  //   compatibleEquipment: [  'Belt drive systems'],
   //   tags: ['v-pulley', 'wedge pulley', 'belt drive', 'power transmission'],
   //   image: '/Products/Vibrating_Screens/V-PULLEYWEDGE_PULLEY.jpeg',
   //   partNumber: 'SP-VWP-001'
@@ -256,7 +256,7 @@ export const vibratingScreensProducts: Product[] = [
   //   title: 'V-Belts',
   //   model: 'VB-001',
   //   sku: 'SP-VB-001',
-  //   category: ['Screening Spares', 'Vibrating Screens'],
+  //   category: ['Screening Spares',  ],
   //   subcategory: 'Drive Components',
   //   specifications: {},
   //   features: [
@@ -271,7 +271,7 @@ export const vibratingScreensProducts: Product[] = [
   //     'Belt drive applications',
   //     'Industrial machinery'
   //   ],
-  //   compatibleEquipment: ['Vibrating screens', 'Belt drive systems'],
+  //   compatibleEquipment: [  'Belt drive systems'],
   //   tags: ['v-belts', 'rubber', 'power transmission', 'drive system'],
   //   image: '/Products/Vibrating_Screens/V-BELTS.jpeg',
   //   partNumber: 'SP-VB-001'
@@ -282,7 +282,7 @@ export const vibratingScreensProducts: Product[] = [
   //   title: 'Motor',
   //   model: 'MOT-VIB-001',
   //   sku: 'SP-MOT-VIB-001',
-  //   category: ['Screening Spares', 'Vibrating Screens'],
+  //   category: ['Screening Spares',  ],
   //   subcategory: 'Drive Components',
   //   specifications: {},
   //   features: [
@@ -297,7 +297,7 @@ export const vibratingScreensProducts: Product[] = [
   //     'Industrial applications',
   //     'Material handling'
   //   ],
-  //   compatibleEquipment: ['Vibrating screens', 'Drive systems'],
+  //   compatibleEquipment: [  'Drive systems'],
   //   tags: ['motor', 'drive', 'vibrating', 'efficiency'],
   //   image: '/Products/Vibrating_Screens/MOTOR.jpeg',
   //   partNumber: 'SP-MOT-VIB-001'
@@ -307,7 +307,7 @@ export const vibratingScreensProducts: Product[] = [
     title: 'Clamping/Tensioning Plate',
     model: 'CTP-001',
     sku: 'SP-CTP-001',
-    category: ['Screening Spares', 'Vibrating Screens'],
+    category: ['Screening Spares',  ],
     subcategory: 'Fastening Components',
     specifications: {},
     features: [
@@ -322,7 +322,7 @@ export const vibratingScreensProducts: Product[] = [
       'Screen maintenance',
       'Industrial screening'
     ],
-    compatibleEquipment: ['Vibrating screens', 'Screen cloth systems'],
+    compatibleEquipment: [  'Screen cloth systems'],
     tags: ['clamping plate', 'tensioning', 'screen mounting', 'fastening'],
     image: '/Products/Vibrating_Screens/CLAMPINGTENSIONING_PLATE.png',
     partNumber: 'SP-CTP-001'
@@ -332,7 +332,7 @@ export const vibratingScreensProducts: Product[] = [
     title: 'Feeding Zone Impact Plate',
     model: 'FZIP-001',
     sku: 'SP-FZIP-001',
-    category: ['Screening Spares', 'Vibrating Screens'],
+    category: ['Screening Spares',  ],
     subcategory: 'Wear Parts',
     specifications: {},
     features: [
@@ -347,7 +347,7 @@ export const vibratingScreensProducts: Product[] = [
       'Screen protection',
       'Heavy duty screening'
     ],
-    compatibleEquipment: ['Vibrating screens', 'Feeding systems'],
+    compatibleEquipment: [  'Feeding systems'],
     tags: ['impact plate', 'feeding zone', 'wear protection', 'heavy duty'],
     image: '/Products/Vibrating_Screens/FEEDING_ZONE_IMPACT_PLATE.png',
     partNumber: 'SP-FZIP-001'

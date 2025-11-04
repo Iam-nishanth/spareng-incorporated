@@ -1,31 +1,31 @@
 import { BrandData, Product } from './product-types'
 
 export const prismGateFlowDiverterProducts: Product[] = [
-  {
-    id: 'pgfd-001',
-    title: 'Liners',
-    model: 'LIN-PGFD-001',
-    sku: 'SP-LIN-PGFD-001',
-    category: ['Material Handling', 'Prism Gate Flow Diverter'],
-    subcategory: 'Wear Parts',
-    specifications: {},
-    features: [
-      'High wear-resistant material',
-      'Easy replacement design',
-      'Abrasion protection',
-      'Long service life'
-    ],
-    applications: [
-      'Prism gate wear protection',
-      'Flow diverter lining',
-      'Abrasive material handling',
-      'Industrial wear protection'
-    ],
-    compatibleEquipment: ['Prism gates', 'Flow diverters', 'Wear protection systems'],
-    tags: ['liners', 'wear protection', 'prism gate', 'abrasion resistant'],
-    image: '/Products/PRISM_GATE_FLOW_DIVERTER_GATE/LINERS.jpeg',
-    partNumber: 'SP-LIN-PGFD-001'
-  },
+  // {
+  //   id: 'pgfd-001',
+  //   title: 'Liners',
+  //   model: 'LIN-PGFD-001',
+  //   sku: 'SP-LIN-PGFD-001',
+  //   category: ['Material Handling', 'Prism Gate Flow Diverter'],
+  //   subcategory: 'Wear Parts',
+  //   specifications: {},
+  //   features: [
+  //     'High wear-resistant material',
+  //     'Easy replacement design',
+  //     'Abrasion protection',
+  //     'Long service life'
+  //   ],
+  //   applications: [
+  //     'Prism gate wear protection',
+  //     'Flow diverter lining',
+  //     'Abrasive material handling',
+  //     'Industrial wear protection'
+  //   ],
+  //   compatibleEquipment: ['Prism gates', 'Flow diverters', 'Wear protection systems'],
+  //   tags: ['liners', 'wear protection', 'prism gate', 'abrasion resistant'],
+  //   image: '/Products/PRISM_GATE_FLOW_DIVERTER_GATE/LINERS.jpeg',
+  //   partNumber: 'SP-LIN-PGFD-001'
+  // },
   {
     id: 'pgfd-002',
     title: 'Motorized Actuator',

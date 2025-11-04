@@ -128,31 +128,31 @@ export const reclaimFeederProducts: Product[] = [
   //   image: '/Products/RECLAIM_FEEDER/FLIGHT_BARS.png',
   //   partNumber: 'SP-FB-RF-001'
   // },
-  {
-    id: 'rf-006',
-    title: 'Liners',
-    model: 'LIN-RF-001',
-    sku: 'SP-LIN-RF-001',
-    category: ['Material Handling', 'Reclaim Feeder'],
-    subcategory: 'Wear Parts',
-    specifications: {},
-    features: [
-      'High wear-resistant material',
-      'Easy replacement design',
-      'Abrasion protection',
-      'Long service life'
-    ],
-    applications: [
-      'Reclaim feeder wear protection',
-      'Abrasive material handling',
-      'Industrial wear protection',
-      'Material handling systems'
-    ],
-    compatibleEquipment: ['Reclaim feeders', 'Wear protection systems'],
-    tags: ['liners', 'wear protection', 'reclaim feeder', 'abrasion resistant'],
-    image: '/Products/RECLAIM_FEEDER/LINERS.jpeg',
-    partNumber: 'SP-LIN-RF-001'
-  },
+  // {
+  //   id: 'rf-006',
+  //   title: 'Liners',
+  //   model: 'LIN-RF-001',
+  //   sku: 'SP-LIN-RF-001',
+  //   category: ['Material Handling', 'Reclaim Feeder'],
+  //   subcategory: 'Wear Parts',
+  //   specifications: {},
+  //   features: [
+  //     'High wear-resistant material',
+  //     'Easy replacement design',
+  //     'Abrasion protection',
+  //     'Long service life'
+  //   ],
+  //   applications: [
+  //     'Reclaim feeder wear protection',
+  //     'Abrasive material handling',
+  //     'Industrial wear protection',
+  //     'Material handling systems'
+  //   ],
+  //   compatibleEquipment: ['Reclaim feeders', 'Wear protection systems'],
+  //   tags: ['liners', 'wear protection', 'reclaim feeder', 'abrasion resistant'],
+  //   image: '/Products/RECLAIM_FEEDER/LINERS.jpeg',
+  //   partNumber: 'SP-LIN-RF-001'
+  // },
   {
     id: 'rf-007',
     title: 'Hydraulic Take-Up',

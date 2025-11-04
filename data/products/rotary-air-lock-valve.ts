@@ -6,7 +6,7 @@ export const rotaryAirLockValveProducts: Product[] = [
     title: 'Rotary Vanes',
     model: 'RV-001',
     sku: 'SP-RV-001',
-    category: ['Material Handling', 'Rotary Air Lock Valve'],
+    category: ['Rotary Air Lock Valve'],
     subcategory: 'Valve Components',
     specifications: {},
     features: [
@@ -31,7 +31,7 @@ export const rotaryAirLockValveProducts: Product[] = [
     title: 'RAV Housing',
     model: 'RAVH-001',
     sku: 'SP-RAVH-001',
-    category: ['Material Handling', 'Rotary Air Lock Valve'],
+    category: ['Rotary Air Lock Valve'],
     subcategory: 'Valve Components',
     specifications: {},
     features: [
