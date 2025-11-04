@@ -541,31 +541,31 @@ export const bargeLoaderProducts: Product[] = [
     image: '/Products/BARGE_LOADER/LIMIT_SWITCH.jpeg',
     partNumber: 'SP-LS-BL-001'
   },
-  {
-    id: 'bl-022',
-    title: 'Zero Speed Switch',
-    model: 'ZSS-BL-001',
-    sku: 'SP-ZSS-BL-001',
-    category: ['Material Handling', 'Barge Loader'],
-    subcategory: 'Safety & Control',
-    specifications: {},
-    features: [
-      'Speed monitoring capability',
-      'Adjustable response time',
-      'Fail-safe operation',
-      'Weather resistant'
-    ],
-    applications: [
-      'Speed monitoring',
-      'Jam detection',
-      'Safety systems',
-      'Barge loader protection'
-    ],
-    compatibleEquipment: ['Barge loaders', 'Monitoring systems'],
-    tags: ['zero speed switch', 'speed monitoring', 'barge loader', 'safety'],
-    image: '/Products/BARGE_LOADER/ZERO_SPEED_SWITCH.jpeg',
-    partNumber: 'SP-ZSS-BL-001'
-  },
+  // {
+  //   id: 'bl-022',
+  //   title: 'Zero Speed Switch',
+  //   model: 'ZSS-BL-001',
+  //   sku: 'SP-ZSS-BL-001',
+  //   category: ['Material Handling', 'Barge Loader'],
+  //   subcategory: 'Safety & Control',
+  //   specifications: {},
+  //   features: [
+  //     'Speed monitoring capability',
+  //     'Adjustable response time',
+  //     'Fail-safe operation',
+  //     'Weather resistant'
+  //   ],
+  //   applications: [
+  //     'Speed monitoring',
+  //     'Jam detection',
+  //     'Safety systems',
+  //     'Barge loader protection'
+  //   ],
+  //   compatibleEquipment: ['Barge loaders', 'Monitoring systems'],
+  //   tags: ['zero speed switch', 'speed monitoring', 'barge loader', 'safety'],
+  //   image: '/Products/BARGE_LOADER/ZERO_SPEED_SWITCH.jpeg',
+  //   partNumber: 'SP-ZSS-BL-001'
+  // },
   {
     id: 'bl-023',
     title: 'Animo Meter',

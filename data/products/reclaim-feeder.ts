@@ -307,31 +307,31 @@ export const reclaimFeederProducts: Product[] = [
   //   image: '/Products/RECLAIM_FEEDER/CHUTE_JAMING_SWITCH.jpeg',
   //   partNumber: 'SP-CJS-RF-001'
   // },
-  {
-    id: 'rf-013',
-    title: 'Zero Speed Switch',
-    model: 'ZSS-RF-001',
-    sku: 'SP-ZSS-RF-001',
-    category: ['Material Handling', 'Reclaim Feeder'],
-    subcategory: 'Safety & Control',
-    specifications: {},
-    features: [
-      'Speed monitoring capability',
-      'Adjustable response time',
-      'Fail-safe operation',
-      'Weather resistant'
-    ],
-    applications: [
-      'Speed monitoring',
-      'Jam detection',
-      'Safety systems',
-      'Reclaim feeder protection'
-    ],
-    compatibleEquipment: ['Reclaim feeders', 'Monitoring systems'],
-    tags: ['zero speed switch', 'speed monitoring', 'reclaim feeder', 'safety'],
-    image: '/Products/RECLAIM_FEEDER/ZERO_SPEED_SWITCH.jpeg',
-    partNumber: 'SP-ZSS-RF-001'
-  }
+  // {
+  //   id: 'rf-013',
+  //   title: 'Zero Speed Switch',
+  //   model: 'ZSS-RF-001',
+  //   sku: 'SP-ZSS-RF-001',
+  //   category: ['Reclaim Feeder'],
+  //   subcategory: 'Safety & Control',
+  //   specifications: {},
+  //   features: [
+  //     'Speed monitoring capability',
+  //     'Adjustable response time',
+  //     'Fail-safe operation',
+  //     'Weather resistant'
+  //   ],
+  //   applications: [
+  //     'Speed monitoring',
+  //     'Jam detection',
+  //     'Safety systems',
+  //     'Reclaim feeder protection'
+  //   ],
+  //   compatibleEquipment: ['Reclaim feeders', 'Monitoring systems'],
+  //   tags: ['zero speed switch', 'speed monitoring', 'reclaim feeder', 'safety'],
+  //   image: '/Products/RECLAIM_FEEDER/ZERO_SPEED_SWITCH.jpeg',
+  //   partNumber: 'SP-ZSS-RF-001'
+  // }
 ]
 
 export const reclaimFeederData: BrandData = {

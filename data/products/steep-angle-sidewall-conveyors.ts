@@ -595,31 +595,31 @@ export const steepAngleSidewallConveyorsProducts: Product[] = [
     image: '/Products/STEEP_ANGLE_SIDE_WALL_CONVEYORS-SPARE_PARTS/PULL_CHORD_SWITCH.jpeg',
     partNumber: 'SP-PCS-SASC-001'
   },
-  {
-    id: 'sasc-024',
-    title: 'Zero Speed Switch',
-    model: 'ZSS-SASC-001',
-    sku: 'SP-ZSS-SASC-001',
-    category: ['Conveyor Components', 'Steep Angle Sidewall Conveyors'],
-    subcategory: 'Safety & Control',
-    specifications: {},
-    features: [
-      'Speed monitoring capability',
-      'Adjustable response time',
-      'Fail-safe operation',
-      'Weather resistant'
-    ],
-    applications: [
-      'Speed monitoring',
-      'Jam detection',
-      'Safety systems',
-      'Steep angle conveyor protection'
-    ],
-    compatibleEquipment: ['Steep angle conveyors', 'Monitoring systems'],
-    tags: ['zero speed switch', 'speed monitoring', 'steep angle', 'safety'],
-    image: '/Products/STEEP_ANGLE_SIDE_WALL_CONVEYORS-SPARE_PARTS/ZERO_SPPED_SWITCH.jpeg',
-    partNumber: 'SP-ZSS-SASC-001'
-  },
+  // {
+  //   id: 'sasc-024',
+  //   title: 'Zero Speed Switch',
+  //   model: 'ZSS-SASC-001',
+  //   sku: 'SP-ZSS-SASC-001',
+  //   category: ['Conveyor Components', 'Steep Angle Sidewall Conveyors'],
+  //   subcategory: 'Safety & Control',
+  //   specifications: {},
+  //   features: [
+  //     'Speed monitoring capability',
+  //     'Adjustable response time',
+  //     'Fail-safe operation',
+  //     'Weather resistant'
+  //   ],
+  //   applications: [
+  //     'Speed monitoring',
+  //     'Jam detection',
+  //     'Safety systems',
+  //     'Steep angle conveyor protection'
+  //   ],
+  //   compatibleEquipment: ['Steep angle conveyors', 'Monitoring systems'],
+  //   tags: ['zero speed switch', 'speed monitoring', 'steep angle', 'safety'],
+  //   image: '/Products/STEEP_ANGLE_SIDE_WALL_CONVEYORS-SPARE_PARTS/ZERO_SPPED_SWITCH.jpeg',
+  //   partNumber: 'SP-ZSS-SASC-001'
+  // },
 
   // Manufacturing Equipment
   // {

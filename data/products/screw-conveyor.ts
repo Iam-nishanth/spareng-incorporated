@@ -178,31 +178,31 @@ export const screwConveyorProducts: Product[] = [
   //   image: '/Products/SCREW_CONVEYOR/SEALING_ARRANGEMENT.jpeg',
   //   partNumber: 'SP-SA-SC-001'
   // },
-  {
-    id: 'sc-008',
-    title: 'Zero Speed Switch',
-    model: 'ZSS-SC-001',
-    sku: 'SP-ZSS-SC-001',
-    category: ['Material Handling', 'Screw Conveyor'],
-    subcategory: 'Safety & Control',
-    specifications: {},
-    features: [
-      'Speed monitoring capability',
-      'Adjustable response time',
-      'Fail-safe operation',
-      'Weather resistant housing'
-    ],
-    applications: [
-      'Conveyor speed monitoring',
-      'Safety systems',
-      'Process control',
-      'Jam detection'
-    ],
-    compatibleEquipment: ['Screw conveyors', 'Control systems'],
-    tags: ['zero speed switch', 'speed monitoring', 'safety', 'control'],
-    image: '/Products/SCREW_CONVEYOR/ZERO_SPEED_SWITCH.jpeg',
-    partNumber: 'SP-ZSS-SC-001'
-  },
+  // {
+  //   id: 'sc-008',
+  //   title: 'Zero Speed Switch',
+  //   model: 'ZSS-SC-001',
+  //   sku: 'SP-ZSS-SC-001',
+  //   category: ['Material Handling', 'Screw Conveyor'],
+  //   subcategory: 'Safety & Control',
+  //   specifications: {},
+  //   features: [
+  //     'Speed monitoring capability',
+  //     'Adjustable response time',
+  //     'Fail-safe operation',
+  //     'Weather resistant housing'
+  //   ],
+  //   applications: [
+  //     'Conveyor speed monitoring',
+  //     'Safety systems',
+  //     'Process control',
+  //     'Jam detection'
+  //   ],
+  //   compatibleEquipment: ['Screw conveyors', 'Control systems'],
+  //   tags: ['zero speed switch', 'speed monitoring', 'safety', 'control'],
+  //   image: '/Products/SCREW_CONVEYOR/ZERO_SPEED_SWITCH.jpeg',
+  //   partNumber: 'SP-ZSS-SC-001'
+  // },
   {
     id: 'sc-009',
     title: 'Nozzles',

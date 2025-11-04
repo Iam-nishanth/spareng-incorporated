@@ -823,7 +823,7 @@ export const conveyorPartsProducts: Product[] = [
     title: 'Over Band Magnetic Separator',  
     model: 'OBMS-001',
     sku: 'SP-OBMS-001',
-    category: ['Conveyor Components'],
+    category: ['Magnetic Separator'],
     subcategory: 'Separation Systems',
     specifications: {},
     features: [
@@ -848,7 +848,7 @@ export const conveyorPartsProducts: Product[] = [
     title: 'Suspension Type Separator',
     model: 'STS-001',
     sku: 'SP-STS-001',
-    category: ['Conveyor Components'],
+    category: ['Magnetic Separator'],
     subcategory: 'Separation Systems',
     specifications: {},
     features: [
@@ -875,7 +875,7 @@ export const conveyorPartsProducts: Product[] = [
     title: 'Metal Detector',
     model: 'MD-001',
     sku: 'SP-MD-001',
-    category: ['Conveyor Components'],
+    category: ['Magnetic Separator'],
     subcategory: 'Safety & Control',
     specifications: {},
     features: [

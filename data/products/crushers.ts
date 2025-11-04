@@ -114,32 +114,32 @@ export const crushersProducts: Product[] = [
   },
 
   // BEARING HOUSING
-  {
-    id: 'cr-005',
-    title: 'Bearing Housing',
-    model: 'BH-001',
-    sku: 'SP-BH-001',
-    category: [  'Crusher Spares'],
-    subcategory: 'Support Components',
-    specifications: {},
-    features: [
-      'Cast iron construction',
-      'Precision machined bearing seats',
-      'Robust design for heavy loads',
-      'Corrosion resistant coating',
-      'Easy maintenance access'
-    ],
-    applications: [
-      'Crusher main shafts',
-      'Heavy duty bearing applications',
-      'Rotating equipment support',
-      'Industrial machinery'
-    ],
-    compatibleEquipment: ['All types of crushers', 'Heavy machinery'],
-    tags: ['bearing housing', 'cast iron', 'heavy duty', 'machinery support'],
-    image: '/Products/CRUSEHRS/BEARING_HOUSING.png',
-    partNumber: 'SP-BH-001'
-  },
+  // {
+  //   id: 'cr-005',
+  //   title: 'Bearing Housing',
+  //   model: 'BH-001',
+  //   sku: 'SP-BH-001',
+  //   category: [  'Crusher Spares'],
+  //   subcategory: 'Support Components',
+  //   specifications: {},
+  //   features: [
+  //     'Cast iron construction',
+  //     'Precision machined bearing seats',
+  //     'Robust design for heavy loads',
+  //     'Corrosion resistant coating',
+  //     'Easy maintenance access'
+  //   ],
+  //   applications: [
+  //     'Crusher main shafts',
+  //     'Heavy duty bearing applications',
+  //     'Rotating equipment support',
+  //     'Industrial machinery'
+  //   ],
+  //   compatibleEquipment: ['All types of crushers', 'Heavy machinery'],
+  //   tags: ['bearing housing', 'cast iron', 'heavy duty', 'machinery support'],
+  //   image: '/Products/CRUSEHRS/BEARING_HOUSING.png',
+  //   partNumber: 'SP-BH-001'
+  // },
 
   // BREAKER PLATE ASSEMBLY
   {
@@ -170,32 +170,32 @@ export const crushersProducts: Product[] = [
   },
 
   // TAKE UP ASSEMBLY
-  {
-    id: 'cr-007',
-    title: 'Take Up Assembly',
-    model: 'TUA-001',
-    sku: 'SP-TUA-001',
-    category: [  'Crusher Spares'],
-    subcategory: 'Support Components',
-    specifications: {},
-    features: [
-      'Heavy duty steel construction',
-      'Adjustable design',
-      'Precision machined components',
-      'Reliable operation',
-      'Easy maintenance'
-    ],
-    applications: [
-      'Crusher discharge systems',
-      'Belt tensioning applications',
-      'Material handling systems',
-      'Conveyor applications'
-    ],
-    compatibleEquipment: ['Crushers', 'Conveyor systems', 'Material handlers'],
-    tags: ['take up assembly', 'tensioning', 'heavy duty', 'adjustable'],
-    image: '/Products/CRUSEHRS/TAKE_UNIT_ASSEMBLY.png',
-    partNumber: 'SP-TUA-001'
-  },
+  // {
+  //   id: 'cr-007',
+  //   title: 'Take Up Assembly',
+  //   model: 'TUA-001',
+  //   sku: 'SP-TUA-001',
+  //   category: [  'Crusher Spares'],
+  //   subcategory: 'Support Components',
+  //   specifications: {},
+  //   features: [
+  //     'Heavy duty steel construction',
+  //     'Adjustable design',
+  //     'Precision machined components',
+  //     'Reliable operation',
+  //     'Easy maintenance'
+  //   ],
+  //   applications: [
+  //     'Crusher discharge systems',
+  //     'Belt tensioning applications',
+  //     'Material handling systems',
+  //     'Conveyor applications'
+  //   ],
+  //   compatibleEquipment: ['Crushers', 'Conveyor systems', 'Material handlers'],
+  //   tags: ['take up assembly', 'tensioning', 'heavy duty', 'adjustable'],
+  //   image: '/Products/CRUSEHRS/TAKE_UNIT_ASSEMBLY.png',
+  //   partNumber: 'SP-TUA-001'
+  // },
 
   // BODY LINERS - TOP/BOTTOM HOUSINGS
   {
