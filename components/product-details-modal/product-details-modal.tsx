@@ -167,7 +167,7 @@ export const ProductDetailsModal: React.FC<ProductDetailsModalProps> = ({
         'Conveyor Components', 'Drive Systems', 'Steep Angle Conveyors'
       ],
       'screening': [
-        'Screening Equipment', 'Vibrating Screens', 'Linear Motion Screens'
+        'Screening Spares', 'Vibrating Screens', 'Linear Motion Screens'
       ],
       'crushing': [
         'Crushing Equipment', 'Crushers', 'Impact Mills'

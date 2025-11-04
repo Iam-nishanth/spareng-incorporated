@@ -6,7 +6,7 @@ export const vibratingScreensProducts: Product[] = [
     title: 'Screen Cloth',
     model: 'SC-001',
     sku: 'SP-SC-001',
-    category: ['Screening Equipment', 'Vibrating Screens'],
+    category: ['Screening Spares', 'Vibrating Screens'],
     subcategory: 'Screen Media',
     specifications: {},
     features: [
@@ -21,7 +21,7 @@ export const vibratingScreensProducts: Product[] = [
       'Industrial screening operations',
       'Mining and aggregate processing'
     ],
-    compatibleEquipment: ['Vibrating screens', 'Screening equipment'],
+    compatibleEquipment: ['Vibrating screens', 'Screening Spares',],
     tags: ['screen cloth', 'wire mesh', 'screening', 'separation'],
     image: '/Products/Vibrating_Screens/SCREEN_CLOTH.png',
     partNumber: 'SP-SC-001'
@@ -31,7 +31,7 @@ export const vibratingScreensProducts: Product[] = [
     title: 'Punched Plate',
     model: 'PP-001',
     sku: 'SP-PP-001',
-    category: ['Screening Equipment', 'Vibrating Screens'],
+    category: ['Screening Spares', 'Vibrating Screens'],
     subcategory: 'Screen Media',
     specifications: {},
     features: [
@@ -56,7 +56,7 @@ export const vibratingScreensProducts: Product[] = [
     title: 'Basket Plate',
     model: 'BP-001',
     sku: 'SP-BP-001',
-    category: ['Screening Equipment', 'Vibrating Screens'],
+    category: ['Screening Spares', 'Vibrating Screens'],
     subcategory: 'Screen Media',
     specifications: {},
     features: [
@@ -71,7 +71,7 @@ export const vibratingScreensProducts: Product[] = [
       'Industrial screening',
       'Material classification'
     ],
-    compatibleEquipment: ['Vibrating screens', 'Screening equipment'],
+    compatibleEquipment: ['Vibrating screens', 'Screening Spares',],
     tags: ['basket plate', 'perforated', 'fine screening', 'wet screening'],
     image: '/Products/Vibrating_Screens/BASKET_PLATE.png',
     partNumber: 'SP-BP-001'
@@ -81,7 +81,7 @@ export const vibratingScreensProducts: Product[] = [
     title: 'Bearing Housing',
     model: 'BH-VIB-001',
     sku: 'SP-BH-VIB-001',
-    category: ['Screening Equipment', 'Vibrating Screens'],
+    category: ['Screening Spares', 'Vibrating Screens'],
     subcategory: 'Support Components',
     specifications: {},
     features: [
@@ -106,7 +106,7 @@ export const vibratingScreensProducts: Product[] = [
   //   title: 'Heavy Duty Bearings',
   //   model: 'HDB-001',
   //   sku: 'SP-HDB-001',
-  //   category: ['Screening Equipment', 'Vibrating Screens'],
+  //   category: ['Screening Spares', 'Vibrating Screens'],
   //   subcategory: 'Support Components',
   //   specifications: {},
   //   features: [
@@ -131,7 +131,7 @@ export const vibratingScreensProducts: Product[] = [
     title: 'Bearing Lock Cover',
     model: 'BLC-001',
     sku: 'SP-BLC-001',
-    category: ['Screening Equipment', 'Vibrating Screens'],
+    category: ['Screening Spares', 'Vibrating Screens'],
     subcategory: 'Support Components',
     specifications: {},
     features: [
@@ -156,7 +156,7 @@ export const vibratingScreensProducts: Product[] = [
     title: 'Labyrinth Cover',
     model: 'LC-001',
     sku: 'SP-LC-001',
-    category: ['Screening Equipment', 'Vibrating Screens'],
+    category: ['Screening Spares', 'Vibrating Screens'],
     subcategory: 'Sealing Components',
     specifications: {},
     features: [
@@ -181,7 +181,7 @@ export const vibratingScreensProducts: Product[] = [
     title: 'Screen Main Shaft',
     model: 'SMS-001',
     sku: 'SP-SMS-001',
-    category: ['Screening Equipment', 'Vibrating Screens'],
+    category: ['Screening Spares', 'Vibrating Screens'],
     subcategory: 'Drive Components',
     specifications: {},
     features: [
@@ -206,7 +206,7 @@ export const vibratingScreensProducts: Product[] = [
     title: 'Cardan Propeller Shaft',
     model: 'CPS-001',
     sku: 'SP-CPS-001',
-    category: ['Screening Equipment', 'Vibrating Screens'],
+    category: ['Screening Spares', 'Vibrating Screens'],
     subcategory: 'Drive Components',
     specifications: {},
     features: [
@@ -231,7 +231,7 @@ export const vibratingScreensProducts: Product[] = [
   //   title: 'V-Pulley/Wedge Pulley',
   //   model: 'VWP-001',
   //   sku: 'SP-VWP-001',
-  //   category: ['Screening Equipment', 'Vibrating Screens'],
+  //   category: ['Screening Spares', 'Vibrating Screens'],
   //   subcategory: 'Drive Components',
   //   specifications: {},
   //   features: [
@@ -256,7 +256,7 @@ export const vibratingScreensProducts: Product[] = [
   //   title: 'V-Belts',
   //   model: 'VB-001',
   //   sku: 'SP-VB-001',
-  //   category: ['Screening Equipment', 'Vibrating Screens'],
+  //   category: ['Screening Spares', 'Vibrating Screens'],
   //   subcategory: 'Drive Components',
   //   specifications: {},
   //   features: [
@@ -282,7 +282,7 @@ export const vibratingScreensProducts: Product[] = [
   //   title: 'Motor',
   //   model: 'MOT-VIB-001',
   //   sku: 'SP-MOT-VIB-001',
-  //   category: ['Screening Equipment', 'Vibrating Screens'],
+  //   category: ['Screening Spares', 'Vibrating Screens'],
   //   subcategory: 'Drive Components',
   //   specifications: {},
   //   features: [
@@ -307,7 +307,7 @@ export const vibratingScreensProducts: Product[] = [
     title: 'Clamping/Tensioning Plate',
     model: 'CTP-001',
     sku: 'SP-CTP-001',
-    category: ['Screening Equipment', 'Vibrating Screens'],
+    category: ['Screening Spares', 'Vibrating Screens'],
     subcategory: 'Fastening Components',
     specifications: {},
     features: [
@@ -332,7 +332,7 @@ export const vibratingScreensProducts: Product[] = [
     title: 'Feeding Zone Impact Plate',
     model: 'FZIP-001',
     sku: 'SP-FZIP-001',
-    category: ['Screening Equipment', 'Vibrating Screens'],
+    category: ['Screening Spares', 'Vibrating Screens'],
     subcategory: 'Wear Parts',
     specifications: {},
     features: [

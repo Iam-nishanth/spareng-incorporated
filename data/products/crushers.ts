@@ -7,7 +7,7 @@ export const crushersProducts: Product[] = [
     title: 'Impact Bars',
     model: 'IB-001',
     sku: 'SP-IB-001',
-    category: ['Crushing Equipment', 'Crusher Spares'],
+    category: [  'Crusher Spares'],
     subcategory: 'Wear Parts',
     specifications: {},
     features: [
@@ -35,7 +35,7 @@ export const crushersProducts: Product[] = [
     title: 'Hammers',
     model: 'HAM-001',
     sku: 'SP-HAM-001',
-    category: ['Crushing Equipment', 'Crusher Spares'],
+    category: [  'Crusher Spares'],
     subcategory: 'Wear Parts',
     specifications: {},
     features: [
@@ -63,7 +63,7 @@ export const crushersProducts: Product[] = [
     title: 'Crushing Rings - Profiled/Plain',
     model: 'CR-001',
     sku: 'SP-CR-001',
-    category: ['Crushing Equipment', 'Crusher Spares'],
+    category: [  'Crusher Spares'],
     subcategory: 'Crushing Components',
     specifications: {},
     features: [
@@ -91,7 +91,7 @@ export const crushersProducts: Product[] = [
     title: 'Liner for Breaker Plate',
     model: 'LBP-001',
     sku: 'SP-LBP-001',
-    category: ['Crushing Equipment', 'Crusher Spares'],
+    category: [  'Crusher Spares'],
     subcategory: 'Wear Parts',
     specifications: {},
     features: [
@@ -119,7 +119,7 @@ export const crushersProducts: Product[] = [
     title: 'Bearing Housing',
     model: 'BH-001',
     sku: 'SP-BH-001',
-    category: ['Crushing Equipment', 'Crusher Spares'],
+    category: [  'Crusher Spares'],
     subcategory: 'Support Components',
     specifications: {},
     features: [
@@ -147,7 +147,7 @@ export const crushersProducts: Product[] = [
     title: 'Breaker Plate Assembly',
     model: 'BPA-001',
     sku: 'SP-BPA-001',
-    category: ['Crushing Equipment', 'Crusher Spares'],
+    category: [  'Crusher Spares'],
     subcategory: 'Wear Parts',
     specifications: {},
     features: [
@@ -175,7 +175,7 @@ export const crushersProducts: Product[] = [
     title: 'Take Up Assembly',
     model: 'TUA-001',
     sku: 'SP-TUA-001',
-    category: ['Crushing Equipment', 'Crusher Spares'],
+    category: [  'Crusher Spares'],
     subcategory: 'Support Components',
     specifications: {},
     features: [
@@ -203,7 +203,7 @@ export const crushersProducts: Product[] = [
     title: 'Body Liners - Top/Bottom Housings',
     model: 'BL-001',
     sku: 'SP-BL-001',
-    category: ['Crushing Equipment', 'Crusher Spares'],
+    category: [  'Crusher Spares'],
     subcategory: 'Wear Parts',
     specifications: {},
     features: [
@@ -231,7 +231,7 @@ export const crushersProducts: Product[] = [
     title: 'Main Shaft',
     model: 'MS-001',
     sku: 'SP-MS-001',
-    category: ['Crushing Equipment', 'Crusher Spares'],
+    category: [  'Crusher Spares'],
     subcategory: 'Crushing Components',
     specifications: {},
     features: [
@@ -259,7 +259,7 @@ export const crushersProducts: Product[] = [
     title: 'Impactor Rotor Assembly Side Cover Liners',
     model: 'IRA-001',
     sku: 'SP-IRA-001',
-    category: ['Crushing Equipment', 'Crusher Spares'],
+    category: [  'Crusher Spares'],
     subcategory: 'Crushing Components',
     specifications: {},
     features: [
@@ -287,7 +287,7 @@ export const crushersProducts: Product[] = [
     title: 'Curved Liner',
     model: 'CL-001',
     sku: 'SP-CL-001',
-    category: ['Crushing Equipment', 'Crusher Spares'],
+    category: [  'Crusher Spares'],
     subcategory: 'Wear Parts',
     specifications: {},
     features: [
@@ -315,7 +315,7 @@ export const crushersProducts: Product[] = [
     title: 'Curved Breaker Plate',
     model: 'CBP-001',
     sku: 'SP-CBP-001',
-    category: ['Crushing Equipment', 'Crusher Spares'],
+    category: [  'Crusher Spares'],
     subcategory: 'Wear Parts',
     specifications: {},
     features: [
@@ -343,7 +343,7 @@ export const crushersProducts: Product[] = [
     title: 'RG-Rotor Assembly',
     model: 'RGA-001',
     sku: 'SP-RGA-001',
-    category: ['Crushing Equipment', 'Crusher Spares'],
+    category: [  'Crusher Spares'],
     subcategory: 'Crushing Components',
     specifications: {},
     features: [
@@ -371,7 +371,7 @@ export const crushersProducts: Product[] = [
     title: 'Compression Springs',
     model: 'CS-001',
     sku: 'SP-CS-001',
-    category: ['Crushing Equipment', 'Crusher Spares'],
+    category: [  'Crusher Spares'],
     subcategory: 'Support Components',
     specifications: {},
     features: [
@@ -399,7 +399,7 @@ export const crushersProducts: Product[] = [
     title: 'Hammer Mill Rotor Assembly',
     model: 'HMRA-001',
     sku: 'SP-HMRA-001',
-    category: ['Crushing Equipment', 'Crusher Spares'],
+    category: [  'Crusher Spares'],
     subcategory: 'Machine Types',
     specifications: {},
     features: [
@@ -427,7 +427,7 @@ export const crushersProducts: Product[] = [
     title: 'Toothed Profile Roll Rotor Assembly',
     model: 'TPRRA-001',
     sku: 'SP-TPRRA-001',
-    category: ['Crushing Equipment', 'Crusher Spares'],
+    category: [  'Crusher Spares'],
     subcategory: 'Machine Types',
     specifications: {},
     features: [

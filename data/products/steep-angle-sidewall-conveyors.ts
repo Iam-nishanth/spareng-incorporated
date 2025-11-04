@@ -206,31 +206,31 @@ export const steepAngleSidewallConveyorsProducts: Product[] = [
   //   image: '/Products/STEEP_ANGLE_SIDE_WALL_CONVEYORS-SPARE_PARTS/DEFLECTOR-IDLER.jpeg',
   //   partNumber: 'SP-DI-SASC-001'
   // },
-  {
-    id: 'sasc-009',
-    title: 'Stub Idler',
-    model: 'SI-SASC-001',
-    sku: 'SP-SI-SASC-001',
-    category: ['Conveyor Components', 'Steep Angle Sidewall Conveyors'],
-    subcategory: 'Idlers',
-    specifications: {},
-    features: [
-      'Compact stub design',
-      'Space-saving installation',
-      'Heavy duty construction',
-      'Low maintenance'
-    ],
-    applications: [
-      'Confined space installations',
-      'Steep angle conveyors',
-      'Material handling',
-      'Industrial applications'
-    ],
-    compatibleEquipment: ['Steep angle conveyors', 'Compact systems'],
-    tags: ['stub idler', 'compact', 'steep angle', 'space saving'],
-    image: '/Products/STEEP_ANGLE_SIDE_WALL_CONVEYORS-SPARE_PARTS/STUB_-IDLER.jpeg',
-    partNumber: 'SP-SI-SASC-001'
-  },
+  // {
+  //   id: 'sasc-009',
+  //   title: 'Stub Idler',
+  //   model: 'SI-SASC-001',
+  //   sku: 'SP-SI-SASC-001',
+  //   category: ['Conveyor Components', 'Steep Angle Sidewall Conveyors'],
+  //   subcategory: 'Idlers',
+  //   specifications: {},
+  //   features: [
+  //     'Compact stub design',
+  //     'Space-saving installation',
+  //     'Heavy duty construction',
+  //     'Low maintenance'
+  //   ],
+  //   applications: [
+  //     'Confined space installations',
+  //     'Steep angle conveyors',
+  //     'Material handling',
+  //     'Industrial applications'
+  //   ],
+  //   compatibleEquipment: ['Steep angle conveyors', 'Compact systems'],
+  //   tags: ['stub idler', 'compact', 'steep angle', 'space saving'],
+  //   image: '/Products/STEEP_ANGLE_SIDE_WALL_CONVEYORS-SPARE_PARTS/STUB_-IDLER.jpeg',
+  //   partNumber: 'SP-SI-SASC-001'
+  // },
   // {
   //   id: 'sasc-010',
   //   title: 'Impact Roller',

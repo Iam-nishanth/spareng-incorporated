@@ -152,31 +152,31 @@ export const mechanicalVibroFeederProducts: Product[] = [
     image: '/Products/MECHANICAL_VIBRO_FEEDER/BULL_DOG_GRIPS.jpeg',
     partNumber: 'SP-BDG-001'
   },
-  {
-    id: 'mvf-007',
-    title: 'Compression Springs',
-    model: 'CS-MVF-001',
-    sku: 'SP-CS-MVF-001',
-    category: ['Material Handling', 'Mechanical Vibro Feeder'],
-    subcategory: 'Support Components',
-    specifications: {},
-    features: [
-      'High grade spring steel',
-      'Precision wound coils',
-      'High load capacity',
-      'Corrosion resistant coating'
-    ],
-    applications: [
-      'Feeder suspension systems',
-      'Vibration isolation',
-      'Shock absorption',
-      'Support systems'
-    ],
-    compatibleEquipment: ['Vibro feeders', 'Feeding systems'],
-    tags: ['compression springs', 'suspension', 'vibration isolation', 'feeder'],
-    image: '/Products/MECHANICAL_VIBRO_FEEDER/COMPRESSION_SPRINGS.jpeg',
-    partNumber: 'SP-CS-MVF-001'
-  }
+  // {
+  //   id: 'mvf-007',
+  //   title: 'Compression Springs',
+  //   model: 'CS-MVF-001',
+  //   sku: 'SP-CS-MVF-001',
+  //   category: ['Material Handling', 'Mechanical Vibro Feeder'],
+  //   subcategory: 'Support Components',
+  //   specifications: {},
+  //   features: [
+  //     'High grade spring steel',
+  //     'Precision wound coils',
+  //     'High load capacity',
+  //     'Corrosion resistant coating'
+  //   ],
+  //   applications: [
+  //     'Feeder suspension systems',
+  //     'Vibration isolation',
+  //     'Shock absorption',
+  //     'Support systems'
+  //   ],
+  //   compatibleEquipment: ['Vibro feeders', 'Feeding systems'],
+  //   tags: ['compression springs', 'suspension', 'vibration isolation', 'feeder'],
+  //   image: '/Products/MECHANICAL_VIBRO_FEEDER/COMPRESSION_SPRINGS.jpeg',
+  //   partNumber: 'SP-CS-MVF-001'
+  // }
 ]
 
 export const mechanicalVibroFeederData: BrandData = {

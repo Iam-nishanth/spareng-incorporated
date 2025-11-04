@@ -6,7 +6,7 @@ export const grizzlyScreenProducts: Product[] = [
     title: 'Grizzly Bars',
     model: 'GB-001',
     sku: 'SP-GB-001',
-    category: ['Screening Equipment', 'Grizzly Screen'],
+    category: ['Screening Spares', 'Grizzly Screen'],
     subcategory: 'Screen Media',
     specifications: {},
     features: [
@@ -31,7 +31,7 @@ export const grizzlyScreenProducts: Product[] = [
     title: 'Screen Cloth',
     model: 'SC-GS-001',
     sku: 'SP-SC-GS-001',
-    category: ['Screening Equipment', 'Grizzly Screen'],
+    category: ['Screening Spares', 'Grizzly Screen'],
     subcategory: 'Screen Media',
     specifications: {},
     features: [
@@ -46,42 +46,42 @@ export const grizzlyScreenProducts: Product[] = [
       'Industrial screening',
       'Material classification'
     ],
-    compatibleEquipment: ['Grizzly screens', 'Screening equipment'],
+    compatibleEquipment: ['Grizzly screens', 'Screening Spares',],
     tags: ['screen cloth', 'wire mesh', 'grizzly screen', 'screening'],
     image: '/Products/GRIZZLY_SCREEN/SCREEN_CLOTH.png',
     partNumber: 'SP-SC-GS-001'
   },
-  {
-    id: 'gs-003',
-    title: 'Compression Springs',
-    model: 'CS-GS-001',
-    sku: 'SP-CS-GS-001',
-    category: ['Screening Equipment', 'Grizzly Screen'],
-    subcategory: 'Support Components',
-    specifications: {},
-    features: [
-      'High grade spring steel',
-      'Heavy duty design',
-      'Corrosion resistant coating',
-      'High load capacity'
-    ],
-    applications: [
-      'Screen suspension systems',
-      'Vibration isolation',
-      'Heavy duty support',
-      'Shock absorption'
-    ],
-    compatibleEquipment: ['Grizzly screens', 'Heavy duty equipment'],
-    tags: ['compression springs', 'heavy duty', 'suspension', 'grizzly screen'],
-    image: '/Products/GRIZZLY_SCREEN/COMPRESSION_SPRINGS.jpeg',
-    partNumber: 'SP-CS-GS-001'
-  },
+  // {
+  //   id: 'gs-003',
+  //   title: 'Compression Springs',
+  //   model: 'CS-GS-001',
+  //   sku: 'SP-CS-GS-001',
+  //   category: ['Screening Spares', 'Grizzly Screen'],
+  //   subcategory: 'Support Components',
+  //   specifications: {},
+  //   features: [
+  //     'High grade spring steel',
+  //     'Heavy duty design',
+  //     'Corrosion resistant coating',
+  //     'High load capacity'
+  //   ],
+  //   applications: [
+  //     'Screen suspension systems',
+  //     'Vibration isolation',
+  //     'Heavy duty support',
+  //     'Shock absorption'
+  //   ],
+  //   compatibleEquipment: ['Grizzly screens', 'Heavy duty equipment'],
+  //   tags: ['compression springs', 'heavy duty', 'suspension', 'grizzly screen'],
+  //   image: '/Products/GRIZZLY_SCREEN/COMPRESSION_SPRINGS.jpeg',
+  //   partNumber: 'SP-CS-GS-001'
+  // },
   {
     id: 'gs-004',
     title: 'Cardan Propeller Shaft',
     model: 'CPS-GS-001',
     sku: 'SP-CPS-GS-001',
-    category: ['Screening Equipment', 'Grizzly Screen'],
+    category: ['Screening Spares', 'Grizzly Screen'],
     subcategory: 'Drive Components',
     specifications: {},
     features: [
@@ -106,7 +106,7 @@ export const grizzlyScreenProducts: Product[] = [
     title: 'Bearing Housing',
     model: 'BH-GS-001',
     sku: 'SP-BH-GS-001',
-    category: ['Screening Equipment', 'Grizzly Screen'],
+    category: ['Screening Spares', 'Grizzly Screen'],
     subcategory: 'Support Components',
     specifications: {},
     features: [
@@ -132,7 +132,7 @@ export const grizzlyScreenProducts: Product[] = [
   //   title: 'Unbalanced Motor',
   //   model: 'UM-GS-001',
   //   sku: 'SP-UM-GS-001',
-  //   category: ['Screening Equipment', 'Grizzly Screen'],
+  //   category: ['Screening Spares', 'Grizzly Screen'],
   //   subcategory: 'Drive Components',
   //   specifications: {},
   //   features: [

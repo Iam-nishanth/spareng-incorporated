@@ -71,7 +71,7 @@ export default function IndustriesPage() {
     },
     screening: {
       id: 'screening-equipment',
-      title: 'Screening Equipment',
+      title: 'Screening Spares',
       model: 'SE-2024',
       sku: 'SE-CMS-001',
       brand: 'Spareng',

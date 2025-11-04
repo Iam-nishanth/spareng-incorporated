@@ -30,7 +30,7 @@ const industries: { [key: string]: Industry } = {
     ]
   },
   screeningEquipment: {
-    title: 'Screening Equipment',
+    title: 'Screening Spares',
     description: 'Circular motion screens, flip flow screens, and linear motion screens for material separation and grading.',
     imageSrc: '/images/machines/Screening-Washing-Plant-Titanium-Vibrating-Screen-for-River-Sand.avif',
     category: 'Processing Equipment',

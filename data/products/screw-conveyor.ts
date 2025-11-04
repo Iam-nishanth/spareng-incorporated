@@ -51,56 +51,56 @@ export const screwConveyorProducts: Product[] = [
     image: '/Products/SCREW_CONVEYOR/SPUR_GEARS.jpeg',
     partNumber: 'SP-SG-SC-001'
   },
-  {
-    id: 'sc-003',
-    title: 'Pin-Bush Coupling',
-    model: 'PBC-SC-001',
-    sku: 'SP-PBC-SC-001',
-    category: ['Material Handling', 'Screw Conveyor'],
-    subcategory: 'Drive Components',
-    specifications: {},
-    features: [
-      'Flexible rubber bushes',
-      'Misalignment tolerance',
-      'Easy maintenance',
-      'Vibration damping'
-    ],
-    applications: [
-      'Motor to gearbox connection',
-      'Drive system coupling',
-      'Power transmission',
-      'Machinery connections'
-    ],
-    compatibleEquipment: ['Screw conveyors', 'Drive systems'],
-    tags: ['pin-bush coupling', 'flexible', 'drive connection', 'power transmission'],
-    image: '/Products/SCREW_CONVEYOR/PIN-BUSH_COUPLING.jpeg',
-    partNumber: 'SP-PBC-SC-001'
-  },
-  {
-    id: 'sc-004',
-    title: 'Tyre Coupling',
-    model: 'TC-SC-001',
-    sku: 'SP-TC-SC-001',
-    category: ['Material Handling', 'Screw Conveyor'],
-    subcategory: 'Drive Components',
-    specifications: {},
-    features: [
-      'Flexible rubber tyre element',
-      'High misalignment tolerance',
-      'Shock absorption',
-      'Easy tyre replacement'
-    ],
-    applications: [
-      'Heavy duty drive coupling',
-      'Shock absorbing applications',
-      'Industrial machinery',
-      'Screw conveyor drives'
-    ],
-    compatibleEquipment: ['Screw conveyors', 'Heavy duty drives'],
-    tags: ['tyre coupling', 'shock absorption', 'heavy duty', 'flexible'],
-    image: '/Products/SCREW_CONVEYOR/TYRE_COUPLING.jpeg',
-    partNumber: 'SP-TC-SC-001'
-  },
+  // {
+  //   id: 'sc-003',
+  //   title: 'Pin-Bush Coupling',
+  //   model: 'PBC-SC-001',
+  //   sku: 'SP-PBC-SC-001',
+  //   category: ['Material Handling', 'Screw Conveyor'],
+  //   subcategory: 'Drive Components',
+  //   specifications: {},
+  //   features: [
+  //     'Flexible rubber bushes',
+  //     'Misalignment tolerance',
+  //     'Easy maintenance',
+  //     'Vibration damping'
+  //   ],
+  //   applications: [
+  //     'Motor to gearbox connection',
+  //     'Drive system coupling',
+  //     'Power transmission',
+  //     'Machinery connections'
+  //   ],
+  //   compatibleEquipment: ['Screw conveyors', 'Drive systems'],
+  //   tags: ['pin-bush coupling', 'flexible', 'drive connection', 'power transmission'],
+  //   image: '/Products/SCREW_CONVEYOR/PIN-BUSH_COUPLING.jpeg',
+  //   partNumber: 'SP-PBC-SC-001'
+  // },
+  // {
+  //   id: 'sc-004',
+  //   title: 'Tyre Coupling',
+  //   model: 'TC-SC-001',
+  //   sku: 'SP-TC-SC-001',
+  //   category: ['Material Handling', 'Screw Conveyor'],
+  //   subcategory: 'Drive Components',
+  //   specifications: {},
+  //   features: [
+  //     'Flexible rubber tyre element',
+  //     'High misalignment tolerance',
+  //     'Shock absorption',
+  //     'Easy tyre replacement'
+  //   ],
+  //   applications: [
+  //     'Heavy duty drive coupling',
+  //     'Shock absorbing applications',
+  //     'Industrial machinery',
+  //     'Screw conveyor drives'
+  //   ],
+  //   compatibleEquipment: ['Screw conveyors', 'Heavy duty drives'],
+  //   tags: ['tyre coupling', 'shock absorption', 'heavy duty', 'flexible'],
+  //   image: '/Products/SCREW_CONVEYOR/TYRE_COUPLING.jpeg',
+  //   partNumber: 'SP-TC-SC-001'
+  // },
   // DISCONTINUED - Temporarily not available
   // {
   //   id: 'sc-005',

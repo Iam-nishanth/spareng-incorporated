@@ -151,9 +151,9 @@ const HeroSection: React.FC = () => {
             }
             description={
               <FallInPlace delay={0.4} fontWeight="medium">
-                Premium quality MHE spare parts including conveyor components, 
-                crusher spares, pulleys, idlers, and screening equipment for 
-                mining, steel, cement, and power industries.
+                Premium Bulk Material Handling spare parts including Conveyor Components, 
+                Crusher spares, Pulleys, Idlers, and Screening equipment for 
+                Mining, Steel, Cement, and Power Industries.
               </FallInPlace>
             }
           >
@@ -313,7 +313,7 @@ const ProductsSection = () => {
             delay: 0.4,
           },
           {
-            title: 'Screening Equipment',
+            title: 'Screening Spares',
             description:
               'Screen cloth, flip flow mats, and vibrating screen components for processing',
             imageSrc: '/Products/FLIP_FLOW_SCREEN/COMPRESSION_SPRINGS.jpeg',

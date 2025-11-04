@@ -6,7 +6,7 @@ export const linearMotionScreenProducts: Product[] = [
     title: 'Screen Cloth',
     model: 'SC-LMS-001',
     sku: 'SP-SC-LMS-001',
-    category: ['Screening Equipment', 'Linear Motion Screen'],
+    category: ['Screening Spares', 'Linear Motion Screen'],
     subcategory: 'Screen Media',
     specifications: {},
     features: [
@@ -21,7 +21,7 @@ export const linearMotionScreenProducts: Product[] = [
       'Fine particle classification',
       'Industrial screening operations'
     ],
-    compatibleEquipment: ['Linear motion screens', 'Screening equipment'],
+    compatibleEquipment: ['Linear motion screens', 'Screening Spares',],
     tags: ['screen cloth', 'wire mesh', 'linear motion', 'screening'],
     image: '/Products/LINEAR_MOTION_SCREEN/SCREEN_CLOTH.png',
     partNumber: 'SP-SC-LMS-001'
@@ -32,7 +32,7 @@ export const linearMotionScreenProducts: Product[] = [
   //   title: 'Unbalanced Motor',
   //   model: 'UM-LMS-001',
   //   sku: 'SP-UM-LMS-001',
-  //   category: ['Screening Equipment', 'Linear Motion Screen'],
+  //   category: ['Screening Spares', 'Linear Motion Screen'],
   //   subcategory: 'Drive Components',
   //   specifications: {},
   //   features: [
@@ -52,31 +52,31 @@ export const linearMotionScreenProducts: Product[] = [
   //   image: '/Products/LINEAR_MOTION_SCREEN/UNBALANED_MOTOR.jpeg',
   //   partNumber: 'SP-UM-LMS-001'
   // },
-  {
-    id: 'lms-003',
-    title: 'Compression Springs',
-    model: 'CS-LMS-001',
-    sku: 'SP-CS-LMS-001',
-    category: ['Screening Equipment', 'Linear Motion Screen'],
-    subcategory: 'Support Components',
-    specifications: {},
-    features: [
-      'High grade spring steel',
-      'Precision wound coils',
-      'High load capacity',
-      'Corrosion resistant coating'
-    ],
-    applications: [
-      'Screen suspension systems',
-      'Vibration isolation',
-      'Shock absorption',
-      'Linear motion support'
-    ],
-    compatibleEquipment: ['Linear motion screens', 'Screening equipment'],
-    tags: ['compression springs', 'suspension', 'vibration isolation', 'linear motion'],
-    image: '/Products/LINEAR_MOTION_SCREEN/COMPRESSION_SPRINGS.jpeg',
-    partNumber: 'SP-CS-LMS-001'
-  }
+  // {
+  //   id: 'lms-003',
+  //   title: 'Compression Springs',
+  //   model: 'CS-LMS-001',
+  //   sku: 'SP-CS-LMS-001',
+  //   category: ['Screening Spares', 'Linear Motion Screen'],
+  //   subcategory: 'Support Components',
+  //   specifications: {},
+  //   features: [
+  //     'High grade spring steel',
+  //     'Precision wound coils',
+  //     'High load capacity',
+  //     'Corrosion resistant coating'
+  //   ],
+  //   applications: [
+  //     'Screen suspension systems',
+  //     'Vibration isolation',
+  //     'Shock absorption',
+  //     'Linear motion support'
+  //   ],
+  //   compatibleEquipment: ['Linear motion screens', 'Screening Spares',],
+  //   tags: ['compression springs', 'suspension', 'vibration isolation', 'linear motion'],
+  //   image: '/Products/LINEAR_MOTION_SCREEN/COMPRESSION_SPRINGS.jpeg',
+  //   partNumber: 'SP-CS-LMS-001'
+  // }
 ]
 
 export const linearMotionScreenData: BrandData = {

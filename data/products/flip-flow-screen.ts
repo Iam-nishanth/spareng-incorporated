@@ -6,7 +6,7 @@ export const flipFlowScreenProducts: Product[] = [
     title: 'Polyurethane Mats (PU)',
     model: 'PUM-001',
     sku: 'SP-PUM-001',
-    category: ['Screening Equipment', 'Flip Flow Screen'],
+    category: ['Screening Spares', 'Flip Flow Screen'],
     subcategory: 'Screen Media',
     specifications: {},
     features: [
@@ -21,7 +21,7 @@ export const flipFlowScreenProducts: Product[] = [
       'Wet screening applications',
       'Fine material separation'
     ],
-    compatibleEquipment: ['Flip flow screens', 'Screening equipment'],
+    compatibleEquipment: ['Flip flow screens', 'Screening Spares',],
     tags: ['PU mats', 'polyurethane', 'flip flow', 'screening'],
     image: '/Products/FLIP_FLOW_SCREEN/POLYURITHIN_MATS_PU.jpeg',
     partNumber: 'SP-PUM-001'
@@ -31,7 +31,7 @@ export const flipFlowScreenProducts: Product[] = [
     title: 'Inner Basket Plate',
     model: 'IBP-001',
     sku: 'SP-IBP-001',
-    category: ['Screening Equipment', 'Flip Flow Screen'],
+    category: ['Screening Spares', 'Flip Flow Screen'],
     subcategory: 'Screen Components',
     specifications: {},
     features: [
@@ -56,7 +56,7 @@ export const flipFlowScreenProducts: Product[] = [
     title: 'Outer Basket Plate',
     model: 'OBP-001',
     sku: 'SP-OBP-001',
-    category: ['Screening Equipment', 'Flip Flow Screen'],
+    category: ['Screening Spares', 'Flip Flow Screen'],
     subcategory: 'Screen Components',
     specifications: {},
     features: [
@@ -81,7 +81,7 @@ export const flipFlowScreenProducts: Product[] = [
     title: 'Bearing Housing',
     model: 'BH-FFS-001',
     sku: 'SP-BH-FFS-001',
-    category: ['Screening Equipment', 'Flip Flow Screen'],
+    category: ['Screening Spares', 'Flip Flow Screen'],
     subcategory: 'Support Components',
     specifications: {},
     features: [
@@ -101,37 +101,37 @@ export const flipFlowScreenProducts: Product[] = [
     image: '/Products/FLIP_FLOW_SCREEN/BEARING_HOUSING.png',
     partNumber: 'SP-BH-FFS-001'
   },
-  {
-    id: 'ffs-005',
-    title: 'Compression Springs',
-    model: 'CS-FFS-001',
-    sku: 'SP-CS-FFS-001',
-    category: ['Screening Equipment', 'Flip Flow Screen'],
-    subcategory: 'Support Components',
-    specifications: {},
-    features: [
-      'High grade spring steel',
-      'Precision wound coils',
-      'High load capacity',
-      'Corrosion resistant coating'
-    ],
-    applications: [
-      'Screen suspension systems',
-      'Vibration isolation',
-      'Shock absorption',
-      'Support systems'
-    ],
-    compatibleEquipment: ['Flip flow screens', 'Screening equipment'],
-    tags: ['compression springs', 'suspension', 'vibration isolation', 'support'],
-    image: '/Products/FLIP_FLOW_SCREEN/COMPRESSION_SPRINGS.jpeg',
-    partNumber: 'SP-CS-FFS-001'
-  },
+  // {
+  //   id: 'ffs-005',
+  //   title: 'Compression Springs',
+  //   model: 'CS-FFS-001',
+  //   sku: 'SP-CS-FFS-001',
+  //   category: ['Screening Spares', 'Flip Flow Screen'],
+  //   subcategory: 'Support Components',
+  //   specifications: {},
+  //   features: [
+  //     'High grade spring steel',
+  //     'Precision wound coils',
+  //     'High load capacity',
+  //     'Corrosion resistant coating'
+  //   ],
+  //   applications: [
+  //     'Screen suspension systems',
+  //     'Vibration isolation',
+  //     'Shock absorption',
+  //     'Support systems'
+  //   ],
+  //   compatibleEquipment: ['Flip flow screens', 'Screening Spares',],
+  //   tags: ['compression springs', 'suspension', 'vibration isolation', 'support'],
+  //   image: '/Products/FLIP_FLOW_SCREEN/COMPRESSION_SPRINGS.jpeg',
+  //   partNumber: 'SP-CS-FFS-001'
+  // },
   // {
   //   id: 'ffs-006',
   //   title: 'V-Pulley',
   //   model: 'VP-FFS-001',
   //   sku: 'SP-VP-FFS-001',
-  //   category: ['Screening Equipment', 'Flip Flow Screen'],
+  //   category: ['Screening Spares', 'Flip Flow Screen'],
   //   subcategory: 'Drive Components',
   //   specifications: {},
   //   features: [
@@ -156,7 +156,7 @@ export const flipFlowScreenProducts: Product[] = [
   //   title: 'V-Belts',
   //   model: 'VB-FFS-001',
   //   sku: 'SP-VB-FFS-001',
-  //   category: ['Screening Equipment', 'Flip Flow Screen'],
+  //   category: ['Screening Spares', 'Flip Flow Screen'],
   //   subcategory: 'Drive Components',
   //   specifications: {},
   //   features: [
@@ -181,7 +181,7 @@ export const flipFlowScreenProducts: Product[] = [
     title: 'Cardan Propeller Shaft',
     model: 'CPS-FFS-001',
     sku: 'SP-CPS-FFS-001',
-    category: ['Screening Equipment', 'Flip Flow Screen'],
+    category: ['Screening Spares', 'Flip Flow Screen'],
     subcategory: 'Drive Components',
     specifications: {},
     features: [
@@ -206,7 +206,7 @@ export const flipFlowScreenProducts: Product[] = [
   //   title: 'Shaft',
   //   model: 'SH-FFS-001',
   //   sku: 'SP-SH-FFS-001',
-  //   category: ['Screening Equipment', 'Flip Flow Screen'],
+  //   category: ['Screening Spares', 'Flip Flow Screen'],
   //   subcategory: 'Drive Components',
   //   specifications: {},
   //   features: [
@@ -231,7 +231,7 @@ export const flipFlowScreenProducts: Product[] = [
   //   title: 'C-Bend Plate',
   //   model: 'CBP-FFS-001',
   //   sku: 'SP-CBP-FFS-001',
-  //   category: ['Screening Equipment', 'Flip Flow Screen'],
+  //   category: ['Screening Spares', 'Flip Flow Screen'],
   //   subcategory: 'Structural Components',
   //   specifications: {},
   //   features: [
