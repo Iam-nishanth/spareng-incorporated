@@ -170,32 +170,32 @@ export const crushersProducts: Product[] = [
   },
 
   // TAKE UP ASSEMBLY
-  {
-    id: 'cr-007',
-    title: 'Take Up Assembly',
-    model: 'TUA-001',
-    sku: 'SP-TUA-001',
-    category: ['Screening Spares'],
-    subcategory: 'Support Components',
-    specifications: {},
-    features: [
-      'Heavy duty steel construction',
-      'Adjustable design',
-      'Precision machined components',
-      'Reliable operation',
-      'Easy maintenance'
-    ],
-    applications: [
-      'Crusher discharge systems',
-      'Belt tensioning applications',
-      'Material handling systems',
-      'Conveyor applications'
-    ],
-    compatibleEquipment: ['Crushers', 'Conveyor systems', 'Material handlers'],
-    tags: ['take up assembly', 'tensioning', 'heavy duty', 'adjustable'],
-    image: '/Products/CRUSEHRS/TAKE_UNIT_ASSEMBLY.png',
-    partNumber: 'SP-TUA-001'
-  },
+  // {
+  //   id: 'cr-007',
+  //   title: 'Take Up Assembly',
+  //   model: 'TUA-001',
+  //   sku: 'SP-TUA-001',
+  //   category: ['Screening Spares'],
+  //   subcategory: 'Support Components',
+  //   specifications: {},
+  //   features: [
+  //     'Heavy duty steel construction',
+  //     'Adjustable design',
+  //     'Precision machined components',
+  //     'Reliable operation',
+  //     'Easy maintenance'
+  //   ],
+  //   applications: [
+  //     'Crusher discharge systems',
+  //     'Belt tensioning applications',
+  //     'Material handling systems',
+  //     'Conveyor applications'
+  //   ],
+  //   compatibleEquipment: ['Crushers', 'Conveyor systems', 'Material handlers'],
+  //   tags: ['take up assembly', 'tensioning', 'heavy duty', 'adjustable'],
+  //   image: '/Products/CRUSEHRS/TAKE_UNIT_ASSEMBLY.png',
+  //   partNumber: 'SP-TUA-001'
+  // },
 
   // BODY LINERS - TOP/BOTTOM HOUSINGS
   {

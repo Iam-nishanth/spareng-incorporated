@@ -1,31 +1,31 @@
 import { BrandData, Product } from './product-types'
 
 export const grizzlyScreenProducts: Product[] = [
-  {
-    id: 'gs-001',
-    title: 'Grizzly Bars',
-    model: 'GB-001',
-    sku: 'SP-GB-001',
-    category: ['Screening Spares'],
-    subcategory: 'Screen Media',
-    specifications: {},
-    features: [
-      'High strength steel construction',
-      'Wear resistant design',
-      'Easy replacement system',
-      'Custom spacing available'
-    ],
-    applications: [
-      'Primary screening',
-      'Large material separation',
-      'Mining operations',
-      'Quarry applications'
-    ],
-    compatibleEquipment: ['Grizzly screens', 'Primary screening equipment'],
-    tags: ['grizzly bars', 'steel construction', 'primary screening', 'wear resistant'],
-    image: '/Products/GRIZZLY_SCREEN/GRIZZLY_BARS.jpeg',
-    partNumber: 'SP-GB-001'
-  },
+  // {
+  //   id: 'gs-001',
+  //   title: 'Grizzly Bars',
+  //   model: 'GB-001',
+  //   sku: 'SP-GB-001',
+  //   category: ['Screening Spares'],
+  //   subcategory: 'Screen Media',
+  //   specifications: {},
+  //   features: [
+  //     'High strength steel construction',
+  //     'Wear resistant design',
+  //     'Easy replacement system',
+  //     'Custom spacing available'
+  //   ],
+  //   applications: [
+  //     'Primary screening',
+  //     'Large material separation',
+  //     'Mining operations',
+  //     'Quarry applications'
+  //   ],
+  //   compatibleEquipment: ['Grizzly screens', 'Primary screening equipment'],
+  //   tags: ['grizzly bars', 'steel construction', 'primary screening', 'wear resistant'],
+  //   image: '/Products/GRIZZLY_SCREEN/GRIZZLY_BARS.jpeg',
+  //   partNumber: 'SP-GB-001'
+  // },
   {
     id: 'gs-002',
     title: 'Screen Cloth',
