@@ -185,24 +185,24 @@ const MobileProductList: React.FC<MobileProductListProps> = ({
     <Box>
       {/* Back arrow + banner */}
       <Box bgGradient={category.gradient} color="white" px={4} pt={4} pb={6}>
-        <IconButton
-          aria-label="Back"
-          icon={<Icon as={FiArrowLeft} />}
-          variant="ghost"
-          color="white"
-          _hover={{ bg: 'whiteAlpha.200' }}
-          mb={3}
-          onClick={onBack}
-        />
-        <Text fontSize="xs" fontWeight="600" opacity={0.7} mb={1}>
-          {category.number}
-        </Text>
-        <Heading size="md" fontWeight="800" mb={1}>
-          {category.name}
-        </Heading>
-        <Text fontSize="sm" opacity={0.8}>
-          {category.tagline}
-        </Text>
+        <HStack align="center" spacing={3}>
+          <IconButton
+            aria-label="Back"
+            icon={<Icon as={FiArrowLeft} />}
+            variant="ghost"
+            color="white"
+            _hover={{ bg: 'whiteAlpha.200' }}
+            onClick={onBack}
+          />
+          <VStack align="start" spacing={0}>
+            <Heading size="md" fontWeight="800" mb={0.5} textAlign="left">
+              {category.name}
+            </Heading>
+            <Text fontSize="sm" opacity={0.8} textAlign="left">
+              {category.tagline}
+            </Text>
+          </VStack>
+        </HStack>
       </Box>
 
       {/* Stacked product cards */}
@@ -277,110 +277,55 @@ const ProductsPageContent = () => {
     ? initialCategoryParam
     : hubCategories[0].id
 
-  // Desktop / Tablet state
+  // State
   const [activeCategoryId, setActiveCategoryId] = useState(initialCategory)
   const [activeView, setActiveView] = useState<'category' | 'detail'>('category')
   const [selectedLine, setSelectedLine] = useState<ProductLine | null>(null)
   const [navigatingBack, setNavigatingBack] = useState(false)
 
-  // Mobile state
-  const isMobileInitial = typeof window !== 'undefined' && window.innerWidth < 768
-  const [mobileScreen, setMobileScreen] = useState<1 | 2 | 3>(
-    initialCategoryParam && isMobileInitial ? 2 : 1
-  )
-  const [mobileActiveCategoryId, setMobileActiveCategoryId] = useState<string | null>(
-    initialCategoryParam && isMobileInitial ? initialCategoryParam : null
-  )
-  const [mobileSelectedLine, setMobileSelectedLine] = useState<ProductLine | null>(null)
-  const [mobileNavigatingBack, setMobileNavigatingBack] = useState(false)
-
   // ── URL Param Initialization ──
-  // (We keep this for dynamic changes if they happen, but initial state is now fully synchronous)
   React.useEffect(() => {
     const catParam = searchParams.get('category')
     if (catParam && hubCategories.some(c => c.id === catParam)) {
-      if (activeCategoryId !== catParam && !mobileSelectedLine && !selectedLine) {
-        setActiveCategoryId(catParam)
-        setMobileActiveCategoryId(catParam)
-      }
+      setActiveCategoryId(catParam)
     }
   }, [searchParams])
 
   // ── Browser History Interceptor ──
   React.useEffect(() => {
     const handlePopState = () => {
-      // Desktop
       if (activeView === 'detail') {
         setNavigatingBack(true)
         setActiveView('category')
         setSelectedLine(null)
       }
-      
-      // Mobile
-      if (mobileScreen === 3) {
-        setMobileNavigatingBack(true)
-        setMobileScreen(2)
-        setMobileSelectedLine(null)
-      } else if (mobileScreen === 2) {
-        setMobileNavigatingBack(true)
-        setMobileScreen(1)
-      }
     }
     
     window.addEventListener('popstate', handlePopState)
     return () => window.removeEventListener('popstate', handlePopState)
-  }, [activeView, mobileScreen])
+  }, [activeView])
 
-  // ── Desktop helpers ──
+  // ── Helpers ──
   const activeCategory =
     hubCategories.find((c) => c.id === activeCategoryId) ?? hubCategories[0]
 
-  const handleDesktopSelectCategory = (id: string) => {
+  const handleSelectCategory = (id: string) => {
     setNavigatingBack(false)
     setActiveCategoryId(id)
     setActiveView('category')
     setSelectedLine(null)
   }
 
-  const handleDesktopSelectLine = (line: ProductLine) => {
+  const handleSelectLine = (line: ProductLine) => {
     setNavigatingBack(false)
     setSelectedLine(line)
     setActiveView('detail')
     window.history.pushState({ detail: true, id: line.id }, '', `#${line.id}`)
   }
 
-  const handleDesktopBackToCategory = () => {
+  const handleBackToCategory = () => {
     window.history.back()
   }
-
-  // ── Mobile helpers ──
-  const mobileActiveCategory = hubCategories.find((c) => c.id === mobileActiveCategoryId)
-
-  const handleMobileSelectCategory = (id: string) => {
-    setMobileNavigatingBack(false)
-    setMobileActiveCategoryId(id)
-    setMobileScreen(2)
-    window.history.pushState({ screen: 2, id }, '', `#cat-${id}`)
-  }
-
-  const handleMobileSelectLine = (line: ProductLine) => {
-    setMobileNavigatingBack(false)
-    setMobileSelectedLine(line)
-    setMobileScreen(3)
-    window.history.pushState({ screen: 3, id: line.id }, '', `#${line.id}`)
-  }
-
-  const handleMobileBackToList = () => {
-    window.history.back()
-  }
-
-  const handleMobileBackToPicker = () => {
-    window.history.back()
-  }
-
-  // ── Framer Motion helpers ──
-  const mobileEnterX = mobileNavigatingBack ? '100%' : '-100%'
-  const mobileExitX = mobileNavigatingBack ? '-100%' : '100%'
 
   return (
     <>
@@ -393,88 +338,27 @@ const ProductsPageContent = () => {
       <Box position="relative" overflow="hidden">
         <BackgroundGradient height="400px" zIndex="-1" />
         
-        {/* ── Mobile layout (< md) ── */}
-        <Box display={{ base: 'block', md: 'none' }} overflow="hidden" pt="32">
-        <AnimatePresence mode="wait">
-          {mobileScreen === 1 && (
-            <MotionBox
-              key="mobile-screen-1"
-              initial={{ opacity: 0, x: mobileEnterX }}
-              animate={{ opacity: 1, x: 0, transition: { duration: 0.25, ease: 'easeOut' } }}
-              exit={{ opacity: 0, x: mobileExitX, transition: { duration: 0.2, ease: 'easeIn' } }}
-            >
-              <MobileCategoryPicker
-                categories={hubCategories}
-                activeId={mobileActiveCategoryId}
-                onSelect={handleMobileSelectCategory}
-              />
-            </MotionBox>
-          )}
-
-          {mobileScreen === 2 && mobileActiveCategory && (
-            <MotionBox
-              key="mobile-screen-2"
-              initial={{ opacity: 0, x: mobileEnterX }}
-              animate={{ opacity: 1, x: 0, transition: { duration: 0.25, ease: 'easeOut' } }}
-              exit={{ opacity: 0, x: mobileExitX, transition: { duration: 0.2, ease: 'easeIn' } }}
-            >
-              <MobileProductList
-                category={mobileActiveCategory}
-                onSelectLine={handleMobileSelectLine}
-                onBack={handleMobileBackToPicker}
-              />
-            </MotionBox>
-          )}
-
-          {mobileScreen === 3 && mobileSelectedLine && mobileActiveCategory && (
-            <MotionBox
-              key="mobile-screen-3"
-              initial={{ opacity: 0, x: mobileEnterX }}
-              animate={{ opacity: 1, x: 0, transition: { duration: 0.25, ease: 'easeOut' } }}
-              exit={{ opacity: 0, x: mobileExitX, transition: { duration: 0.2, ease: 'easeIn' } }}
-            >
-              <Box>
-                <HStack px={4} pt={4} pb={2}>
-                  <IconButton
-                    aria-label="Back"
-                    icon={<Icon as={FiArrowLeft} />}
-                    variant="ghost"
-                    onClick={handleMobileBackToList}
-                    size="sm"
-                  />
-                </HStack>
-                <ProductDetailView
-                  line={mobileSelectedLine}
-                  category={mobileActiveCategory}
-                  onBackToCategory={handleMobileBackToList}
-                />
-              </Box>
-            </MotionBox>
-          )}
-        </AnimatePresence>
-      </Box>
-
-      {/* ── Tablet layout (md, < lg) ── */}
-      <Box display={{ base: 'none', md: 'block', lg: 'none' }} pt="36" pb="16">
-        <Box maxW="container.2xl" mx="auto" px="15px">
-          <ProductCategoryNav
-            categories={hubCategories}
-            activeId={activeCategoryId}
-            onSelect={handleDesktopSelectCategory}
-            variant="tabstrip"
-          />
-          <Box mt={6}>
-            <RightPanel
-              category={activeCategory}
-              activeView={activeView}
-              selectedLine={selectedLine}
-              navigatingBack={navigatingBack}
-              onSelectLine={handleDesktopSelectLine}
-              onBackToCategory={handleDesktopBackToCategory}
+        {/* ── Mobile & Tablet layout (< lg) ── */}
+        <Box display={{ base: 'block', lg: 'none' }} pt={[24, 32]} pb="16">
+          <Box maxW="container.2xl" mx="auto" px="15px">
+            <ProductCategoryNav
+              categories={hubCategories}
+              activeId={activeCategoryId}
+              onSelect={handleSelectCategory}
+              variant="tabstrip"
             />
+            <Box mt={6}>
+              <RightPanel
+                category={activeCategory}
+                activeView={activeView}
+                selectedLine={selectedLine}
+                navigatingBack={navigatingBack}
+                onSelectLine={handleSelectLine}
+                onBackToCategory={handleBackToCategory}
+              />
+            </Box>
           </Box>
         </Box>
-      </Box>
 
       {/* ── Desktop layout (≥ lg) ── */}
       <Box display={{ base: 'none', lg: 'block' }} pt="36" pb="16">
@@ -484,7 +368,7 @@ const ProductsPageContent = () => {
             <ProductCategoryNav
               categories={hubCategories}
               activeId={activeCategoryId}
-              onSelect={handleDesktopSelectCategory}
+              onSelect={handleSelectCategory}
               variant="sidebar"
             />
 
@@ -505,8 +389,8 @@ const ProductsPageContent = () => {
                 activeView={activeView}
                 selectedLine={selectedLine}
                 navigatingBack={navigatingBack}
-                onSelectLine={handleDesktopSelectLine}
-                onBackToCategory={handleDesktopBackToCategory}
+                onSelectLine={handleSelectLine}
+                onBackToCategory={handleBackToCategory}
               />
             </Box>
           </Flex>

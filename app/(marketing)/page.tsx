@@ -163,7 +163,7 @@ const HeroSection: React.FC = () => {
               </FallInPlace>
             }
           >
-            <FallInPlace delay={0.8}>
+            <FallInPlace delay={0.5}>
               <Stack direction={{ base: 'column', md: 'row' }} spacing={3} alignItems={{ base: 'stretch', md: 'center' }} pt="4" pb="8">
                 <ButtonLink colorScheme="primary" size="lg" href="/contact">
                   Get Quote
@@ -297,7 +297,7 @@ const ProductsSection = () => {
             Discover our extensive range of high-performance material handling systems, industrial processing equipment, and premium spares.
           </Text>
         </Stack>
-        <SimpleGrid columns={[1, 2, 3]} spacing={8}>
+        <SimpleGrid columns={[1, 2,2, 3]} spacing={8}>
           {hubCategories.map((cat, i) => {
             // Extract distinct product line images for the carousel
             const images = cat.productLines

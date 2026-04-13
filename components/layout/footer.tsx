@@ -37,7 +37,7 @@ export const Footer: React.FC<FooterProps> = (props) => {
       >
         <Stack spacing={{ base: 4, md: 6 }}>
           <Stack spacing={{ base: 2, md: 3 }}>
-            <Box as={siteConfig.logo} marginLeft="-30px" />
+            <Box as={siteConfig.logo} marginLeft={[0, -30, -30]} />
             <Flex
               direction={{ base: 'column', lg: 'row' }}
               justify={{ base: 'flex-start', lg: 'space-between' }}

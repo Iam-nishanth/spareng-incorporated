@@ -8,8 +8,8 @@ export const Logo: React.FC<ImageProps> = (props) => {
     <Image
       src={isDark ? "/Spareng_INC-dark.png" : "/Sparent_INC.png"}
       alt="Spareng Incorporated"
-      width={[150, 200]}
-      height="100px"
+      width={{ base: 140, md: 200 }}
+      maxHeight={{ base: 150, md: 100 }}
       objectFit="contain"
       display="block"
       filter={isDark ? 'brightness(1.2) saturate(1.1)' : 'none'}
