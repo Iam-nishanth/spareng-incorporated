@@ -61,7 +61,7 @@ const RightPanel: React.FC<RightPanelProps> = ({
   const exitX = navigatingBack ? -100 : 100
 
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence>
       <MotionBox
         key={`${category.id}-${activeView}`}
         initial={{ opacity: 0, x: enterX }}
@@ -282,6 +282,7 @@ const ProductsPageContent = () => {
   const [activeView, setActiveView] = useState<'category' | 'detail'>('category')
   const [selectedLine, setSelectedLine] = useState<ProductLine | null>(null)
   const [navigatingBack, setNavigatingBack] = useState(false)
+  const [savedScrollPosition, setSavedScrollPosition] = useState(0)
 
   // ── URL Param Initialization ──
   React.useEffect(() => {
@@ -291,11 +292,25 @@ const ProductsPageContent = () => {
     }
   }, [searchParams])
 
+  // ── Scroll Position Restoration ──
+  React.useEffect(() => {
+    if (activeView === 'category' && savedScrollPosition > 0) {
+      window.scrollTo(0, savedScrollPosition)
+      setSavedScrollPosition(0)
+    }
+  }, [activeView, savedScrollPosition])
+
   // ── Browser History Interceptor ──
   React.useEffect(() => {
     const handlePopState = () => {
-      if (activeView === 'detail') {
+      const catParam = new URLSearchParams(window.location.search).get('category')
+      if (catParam && hubCategories.some(c => c.id === catParam)) {
+        setActiveCategoryId(catParam)
+        setActiveView('category')
+        setSelectedLine(null)
+      } else if (activeView === 'detail') {
         setNavigatingBack(true)
+        setSavedScrollPosition(window.scrollY)
         setActiveView('category')
         setSelectedLine(null)
       }
@@ -314,10 +329,16 @@ const ProductsPageContent = () => {
     setActiveCategoryId(id)
     setActiveView('category')
     setSelectedLine(null)
+    
+    // Update URL param when switching categories
+    const url = new URL(window.location.href)
+    url.searchParams.set('category', id)
+    window.history.pushState({ category: id }, '', url.toString())
   }
 
   const handleSelectLine = (line: ProductLine) => {
     setNavigatingBack(false)
+    setSavedScrollPosition(window.scrollY)
     setSelectedLine(line)
     setActiveView('detail')
     window.history.pushState({ detail: true, id: line.id }, '', `#${line.id}`)
