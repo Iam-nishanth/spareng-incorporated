@@ -156,14 +156,14 @@ const HeroSection: React.FC = () => {
               </FallInPlace>
             }
             description={
-              <FallInPlace delay={0.4} fontWeight="medium">
+              <FallInPlace delay={0.2} fontWeight="medium">
                 Premium Bulk Material Handling spare parts including Conveyor Components, 
                 Crusher spares, Pulleys, Idlers, and Screening equipment for 
                 Mining, Steel, Cement, and Power Industries.
               </FallInPlace>
             }
           >
-            <FallInPlace delay={0.5}>
+            <FallInPlace delay={0.4}>
               <Stack direction={{ base: 'column', md: 'row' }} spacing={3} alignItems={{ base: 'stretch', md: 'center' }} pt="4" pb="8">
                 <ButtonLink colorScheme="primary" size="lg" href="/contact">
                   Get Quote
