@@ -1,0 +1,152 @@
+'use client'
+
+import {
+  Box,
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  Button,
+  Flex,
+  Heading,
+  HStack,
+  Icon,
+  ListItem,
+  Text,
+  UnorderedList,
+} from '@chakra-ui/react'
+import Image from 'next/image'
+import Link from 'next/link'
+import React from 'react'
+import { FiImage } from 'react-icons/fi'
+
+import { HubCategory, ProductLine } from '#data/hub-categories'
+
+interface ProductDetailViewProps {
+  line: ProductLine
+  category: HubCategory
+  onBackToCategory: () => void
+}
+
+export const ProductDetailView: React.FC<ProductDetailViewProps> = ({
+  line,
+  category,
+  onBackToCategory,
+}) => {
+  const [imgError, setImgError] = React.useState(false)
+
+  React.useEffect(() => {
+    setImgError(false)
+  }, [line.image])
+
+  return (
+    <Box w="full" px={6} py={2}>
+      {/* Breadcrumb */}
+      <Breadcrumb separator="›" fontSize="sm" color="gray.500" _dark={{ color: 'gray.400' }}>
+        <BreadcrumbItem>
+          <BreadcrumbLink onClick={onBackToCategory} cursor="pointer">
+            Products
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem>
+          <BreadcrumbLink onClick={onBackToCategory} cursor="pointer">
+            {category.name}
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem isCurrentPage>
+          <BreadcrumbLink color="gray.700" _dark={{ color: 'gray.200' }} fontWeight="500">
+            {line.name}
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+      </Breadcrumb>
+
+      {/* Main Split Layout */}
+      <Flex direction={{ base: 'column', lg: 'row' }} gap={{ base: 6, lg: 10 }} mt={4}>
+        
+        {/* Left Side: Image Container */}
+        <Box w={{ base: '100%', lg: '45%' }} flexShrink={0}>
+          <Box
+            position="relative"
+            aspectRatio="4/3"
+            bg="white"
+            overflow="hidden"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+          >
+            {line.image && !imgError ? (
+              <Image
+                src={line.image}
+                alt={line.name}
+                fill
+                style={{ objectFit: 'contain', borderRadius: "15px" }}
+                unoptimized
+                onError={() => setImgError(true)}
+              />
+            ) : (
+              <Icon as={FiImage} boxSize="16" color="gray.300" />
+            )}
+          </Box>
+        </Box>
+
+        {/* Right Side: Title, Tagline, Overview, CTA */}
+        <Box flex="1">
+          <Heading as="h1" size="xl" fontWeight="800" color="gray.900" _dark={{ color: 'white' }} lineHeight="1.2">
+            {line.name}
+          </Heading>
+          
+          <Text color="primary.600" _dark={{ color: 'primary.400' }} fontSize="lg" fontWeight="600" mt={2}>
+            {line.tagline}
+          </Text>
+
+          <Text color="gray.600" _dark={{ color: 'gray.300' }} lineHeight="tall" fontSize="md" mt={6}>
+            {line.description}
+          </Text>
+
+          <HStack mt={8} spacing={4} flexWrap="wrap">
+            <Button
+              as={Link}
+              href="/contact"
+              colorScheme="primary"
+              size="md"
+              px={8}
+            >
+              Request Quote
+            </Button>
+            <Button variant="outline" borderColor="gray.300" _dark={{ borderColor: 'gray.600' }} size="md" isDisabled>
+              Download Brochure
+            </Button>
+          </HStack>
+        </Box>
+      </Flex>
+
+      {/* Two-Column Features & Applications */}
+      <Flex direction={{ base: 'column', md: 'row' }} gap={10} mt={12} pt={8} borderTopWidth="1px" borderColor="gray.100" _dark={{ borderColor: 'gray.700' }}>
+        <Box flex="1">
+          <Heading size="md" mb={4} color="gray.800" _dark={{ color: 'white' }}>
+            Key Features
+          </Heading>
+          <UnorderedList spacing={3} pl={4}>
+            {line.features.map((f, i) => (
+              <ListItem key={i} color="gray.600" _dark={{ color: 'gray.300' }} fontSize="sm">
+                {f}
+              </ListItem>
+            ))}
+          </UnorderedList>
+        </Box>
+
+        <Box flex="1">
+          <Heading size="md" mb={4} color="gray.800" _dark={{ color: 'white' }}>
+            Applications
+          </Heading>
+          <UnorderedList spacing={3} pl={4}>
+            {line.applications.map((a, i) => (
+              <ListItem key={i} color="gray.600" _dark={{ color: 'gray.300' }} fontSize="sm">
+                {a}
+              </ListItem>
+            ))}
+          </UnorderedList>
+        </Box>
+      </Flex>
+    </Box>
+  )
+}

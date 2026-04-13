@@ -115,176 +115,127 @@ const ContactPage: NextPage = () => {
         }}
       />
       
-      <Box position="relative" overflow="hidden" minH="100vh" bg={useColorModeValue('gray.50', 'gray.900')}>
-      <BackgroundGradient height="100%" zIndex="-1" />
+      {/* Hero Section with Gradient */}
+      <Box position="relative" overflow="hidden" minH="300px">
+        <BackgroundGradient height="100%" zIndex="-1" />
+        <Container maxW="container.xl" pt={{ base: 32, lg: 40 }} pb="12">
+          <FallInPlace delay={0.15} >
+            <VStack spacing="8" align="stretch">
+              {/* Header Section */}
+              <Box textAlign="center">
+                <Text 
+                  fontSize="sm" 
+                  fontWeight="semibold" 
+                  color="primary.500" 
+                  textTransform="uppercase" 
+                  letterSpacing="wider"
+                  mb={["2", "4", "4", "4"]}
+                >
+                  Get in Touch
+                </Text>
+                <Heading 
+                  fontSize={{ base: '4xl', md: '4xl', lg: '6xl' }}
+                  mb={["2", "4", "4", "4"]}
+                  bgGradient="linear(to-r, primary.400, primary.600)"
+                  bgClip="text"
+                >
+                  Contact Us
+                </Heading>
+                <Text color="muted" fontSize={{ base: 'lg', md: 'xl' }} maxW="2xl" mx="auto">
+                  Have questions about our products or ready to get in touch? Send us a message and we'll respond as soon as possible.
+                </Text>
+              </Box>
+            </VStack>
+          </FallInPlace>
+        </Container>
+      </Box>
       
-      <Container maxW="container.xl" pt={{ base: 32, lg: 40 }} pb="20">
-        <FallInPlace delay={0.15} >
-          <VStack spacing="8" align="stretch">
-            {/* Header Section */}
-            <Box textAlign="center">
-              <Text 
-                fontSize="sm" 
-                fontWeight="semibold" 
-                color="primary.500" 
-                textTransform="uppercase" 
-                letterSpacing="wider"
-                mb={["2", "4", "4", "4"]}
-              >
-                Get in Touch
-              </Text>
-              <Heading 
-                fontSize={{ base: '4xl', md: '4xl', lg: '6xl' }}
-                mb={["2", "4", "4", "4"]}
-                bgGradient="linear(to-r, primary.400, primary.600)"
-                bgClip="text"
-              >
-                Contact Us
-              </Heading>
-              <Text color="muted" fontSize={{ base: 'lg', md: 'xl' }} maxW="2xl" mx="auto">
-                Have questions about our products or ready to get in touch? Send us a message and we'll respond as soon as possible.
-              </Text>
-            </Box>
-
-            {/* Main Content Grid */}
+      {/* Main content with background */}
+      <Box bg={useColorModeValue('gray.50', 'gray.900')}>
+        <Container maxW="container.xl" py={12}>
+          <FallInPlace delay={0.2}>
             <Grid templateColumns={{ base: '1fr', lg: '1fr 2fr' }} gap="12">
               {/* Contact Information Sidebar */}
               <GridItem>
-                <FallInPlace delay={0.2}>
-                  <Box
-                    bg={sidebarBg}
-                    borderRadius="xl"
-                    borderWidth="1px"
-                    borderColor={borderColor}
-                    p="8"
-                    h="fit-content"
-                  >
-                    <VStack spacing="8" align="stretch">
-                      <Box>
-                        <Heading fontSize={{ base: 'lg', md: 'xl' }} mb="4">
-                          Let's Start a Conversation
-                        </Heading>
-                        <Text color="muted" mb="6">
-                          All of your Industrial and logistics needs are met with our products.
-                        </Text>
-                      </Box>
+                <Box
+                  bg={sidebarBg}
+                  borderRadius="xl"
+                  borderWidth="1px"
+                  borderColor={borderColor}
+                  p="8"
+                  h="fit-content"
+                >
+                  <VStack spacing="8" align="stretch">
+                    <Box>
+                      <Heading fontSize={{ base: 'lg', md: 'xl' }} mb="4">
+                        Let's Start a Conversation
+                      </Heading>
+                      <Text color="muted" mb="6">
+                        All of your Industrial and logistics needs are met with our products.
+                      </Text>
+                    </Box>
 
-                      <VStack spacing="6" align="stretch">
-                        {/* Email */}
-                        <HStack spacing="4">
-                          <Box
-                            bg="primary.500"
-                            p="3"
-                            borderRadius="lg"
-                            color="white"
-                          >
-                            <Icon as={FiMail} boxSize="5" />
-                          </Box>
-                          <Box>
-                            <Text fontWeight="semibold" mb="1">Email</Text>
-                            <Text color="muted" fontSize="sm">
-                              info@sparenginc.com
-                            </Text>
-                          </Box>
-                        </HStack>
+                    <VStack spacing="6" align="stretch">
+                      {/* Email */}
+                      <HStack spacing="4">
+                        <Box
+                          bg="primary.500"
+                          p="3"
+                          borderRadius="lg"
+                          color="white"
+                        >
+                          <Icon as={FiMail} boxSize="5" />
+                        </Box>
+                        <Box>
+                          <Text fontWeight="semibold" mb="1">Email</Text>
+                          <Text color="muted" fontSize="sm">
+                            info@sparenginc.com
+                          </Text>
+                        </Box>
+                      </HStack>
 
-                        {/* Phone */}
-                        {/* <HStack spacing="4">
-                          <Box
-                            bg="primary.500"
-                            p="3"
-                            borderRadius="lg"
-                            color="white"
-                          >
-                            <Icon as={FiPhone} boxSize="5" />
-                          </Box>
-                          <Box>
-                            <Text fontWeight="semibold" mb="1">Phone</Text>
-                            <Text color="muted" fontSize="sm">
-                              +91 88855 64040
-                            </Text>
-                          </Box>
-                        </HStack> */}
-
-                        {/* Address */}
-                        <HStack spacing="4">
-                          <Box
-                            bg="primary.500"
-                            p="3"
-                            borderRadius="lg"
-                            color="white"
-                          >
-                            <Icon as={FiMapPin} boxSize="5" />
-                          </Box>
-                          <Box>
-                            <Text fontWeight="semibold" mb="1">Address</Text>
-                            <Text color="muted" fontSize="sm">
-                              Plot No. E8/C8 - 2A, (24-60/10/11), IDA, UPPAL, Hyderabad, Telangana 500039, India
-                            </Text>
-                          </Box>
-                        </HStack>
-                      </VStack>
+                      {/* Address */}
+                      <HStack spacing="4">
+                        <Box
+                          bg="primary.500"
+                          p="3"
+                          borderRadius="lg"
+                          color="white"
+                        >
+                          <Icon as={FiMapPin} boxSize="5" />
+                        </Box>
+                        <Box>
+                          <Text fontWeight="semibold" mb="1">Address</Text>
+                          <Text color="muted" fontSize="sm">
+                            Plot No. E8/C8 - 2A, (24-60/10/11), IDA, UPPAL, Hyderabad, Telangana 500039, India
+                          </Text>
+                        </Box>
+                      </HStack>
                     </VStack>
-                  </Box>
-                </FallInPlace>
+                  </VStack>
+                </Box>
               </GridItem>
 
               {/* Contact Form */}
               <GridItem>
-                <FallInPlace delay={0.4}>
-                  <Box
-                    bg={cardBg}
-                    borderRadius="xl"
-                    borderWidth="1px"
-                    borderColor={borderColor}
-                    p="8"
-                    shadow="lg"
-                  >
-                    <form onSubmit={handleSubmit}>
-                      <VStack spacing="6" align="stretch">
-                        {/* Name and Email Row */}
-                        <Grid templateColumns={{ base: '1fr', md: '1fr 1fr' }} gap="6">
-                          <FormControl isRequired>
-                            <FormLabel fontWeight="semibold">Name</FormLabel>
-                            <Input
-                              name="name"
-                              placeholder="Your name"
-                              value={formData.name}
-                              onChange={handleInputChange}
-                              size="lg"
-                              borderRadius="lg"
-                              _focus={{
-                                borderColor: 'primary.500',
-                                boxShadow: '0 0 0 1px var(--chakra-colors-primary-500)'
-                              }}
-                            />
-                          </FormControl>
-
-                          <FormControl isRequired>
-                            <FormLabel fontWeight="semibold">Email</FormLabel>
-                            <Input
-                              name="email"
-                              type="email"
-                              placeholder="your@email.com"
-                              value={formData.email}
-                              onChange={handleInputChange}
-                              size="lg"
-                              borderRadius="lg"
-                              _focus={{
-                                borderColor: 'primary.500',
-                                boxShadow: '0 0 0 1px var(--chakra-colors-primary-500)'
-                              }}
-                            />
-                          </FormControl>
-                        </Grid>
-
-                        {/* Subject */}
+                <Box
+                  bg={cardBg}
+                  borderRadius="xl"
+                  borderWidth="1px"
+                  borderColor={borderColor}
+                  p="8"
+                  shadow="lg"
+                >
+                  <form onSubmit={handleSubmit}>
+                    <VStack spacing="6" align="stretch">
+                      {/* Name and Email Row */}
+                      <Grid templateColumns={{ base: '1fr', md: '1fr 1fr' }} gap="6">
                         <FormControl isRequired>
-                          <FormLabel fontWeight="semibold">Subject</FormLabel>
+                          <FormLabel fontWeight="semibold">Name</FormLabel>
                           <Input
-                            name="subject"
-                            placeholder="What's this about?"
-                            value={formData.subject}
+                            name="name"
+                            placeholder="Your name"
+                            value={formData.name}
                             onChange={handleInputChange}
                             size="lg"
                             borderRadius="lg"
@@ -295,15 +246,15 @@ const ContactPage: NextPage = () => {
                           />
                         </FormControl>
 
-                        {/* Message */}
                         <FormControl isRequired>
-                          <FormLabel fontWeight="semibold">Message</FormLabel>
-                          <Textarea
-                            name="message"
-                            placeholder="Tell us more about your project or question..."
-                            value={formData.message}
+                          <FormLabel fontWeight="semibold">Email</FormLabel>
+                          <Input
+                            name="email"
+                            type="email"
+                            placeholder="your@email.com"
+                            value={formData.email}
                             onChange={handleInputChange}
-                            rows={6}
+                            size="lg"
                             borderRadius="lg"
                             _focus={{
                               borderColor: 'primary.500',
@@ -311,32 +262,65 @@ const ContactPage: NextPage = () => {
                             }}
                           />
                         </FormControl>
+                      </Grid>
 
-                        {/* Submit Button */}
-                        <Button
-                          type="submit"
-                          colorScheme="primary"
+                      {/* Subject */}
+                      <FormControl isRequired>
+                        <FormLabel fontWeight="semibold">Subject</FormLabel>
+                        <Input
+                          name="subject"
+                          placeholder="What's this about?"
+                          value={formData.subject}
+                          onChange={handleInputChange}
                           size="lg"
                           borderRadius="lg"
-                          w="full"
-                          _hover={{
-                            transform: 'translateY(-2px)',
-                            shadow: 'xl'
+                          _focus={{
+                            borderColor: 'primary.500',
+                            boxShadow: '0 0 0 1px var(--chakra-colors-primary-500)'
                           }}
-                          transition="all 0.2s"
-                        >
-                          Send Message
-                        </Button>
-                      </VStack>
-                    </form>
-                  </Box>
-                </FallInPlace>
+                        />
+                      </FormControl>
+
+                      {/* Message */}
+                      <FormControl isRequired>
+                        <FormLabel fontWeight="semibold">Message</FormLabel>
+                        <Textarea
+                          name="message"
+                          placeholder="Tell us more about your project or question..."
+                          value={formData.message}
+                          onChange={handleInputChange}
+                          rows={6}
+                          borderRadius="lg"
+                          _focus={{
+                            borderColor: 'primary.500',
+                            boxShadow: '0 0 0 1px var(--chakra-colors-primary-500)'
+                          }}
+                        />
+                      </FormControl>
+
+                      {/* Submit Button */}
+                      <Button
+                        type="submit"
+                        colorScheme="primary"
+                        size="lg"
+                        borderRadius="lg"
+                        w="full"
+                        _hover={{
+                          transform: 'translateY(-2px)',
+                          shadow: 'xl'
+                        }}
+                        transition="all 0.2s"
+                      >
+                        Send Message
+                      </Button>
+                    </VStack>
+                  </form>
+                </Box>
               </GridItem>
             </Grid>
-          </VStack>
-        </FallInPlace>
-      </Container>
-    </Box>
+          </FallInPlace>
+        </Container>
+      </Box>
     </>
   )
 }

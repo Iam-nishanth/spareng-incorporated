@@ -9,11 +9,19 @@ export const ImagesSlider = ({
   autoplay = true,
   direction = 'up',
   intervalMs = 5000,
+  height = '600px',
+  objectFit = 'cover',
+  borderRadius,
+  padding = 0,
 }: {
   images: string[]
   autoplay?: boolean
   direction?: 'up' | 'down'
   intervalMs?: number
+  height?: string
+  objectFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down'
+  borderRadius?: string;
+  padding?: number;
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [loading, setLoading] = useState(false)
@@ -102,7 +110,7 @@ export const ImagesSlider = ({
   return (
     <Box
       overflow="hidden"
-      h="600px"
+      h={height}
       w="100%"
       position="relative"
       display="flex"
@@ -121,15 +129,16 @@ export const ImagesSlider = ({
             variants={slideVariants as any}
             style={{
               position: 'absolute',
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
+              top: padding,
+              left: padding,
+              right: padding,
+              bottom: padding,
+              width: `calc(100% - ${padding * 2}px)`,
+              height: `calc(100% - ${padding * 2}px)`,
+              objectFit: objectFit,
               objectPosition: 'center',
-              borderRadius: '10px',
+              borderRadius: borderRadius ?? '10px',
+              backgroundColor: objectFit === 'contain' ? 'white' : 'transparent',
             }}
           />
         </AnimatePresence>

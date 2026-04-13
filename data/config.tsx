@@ -10,6 +10,25 @@ const siteConfig = {
   seo: {
     title: 'Spareng',
     description: 'Premium supplier of Material Handling Equipment (MHE) spare parts including conveyor components, crusher spares, pulleys, idlers, and screening equipment for mining, steel, cement, and power industries',
+    openGraph: {
+      type: 'website',
+      locale: 'en_US',
+      url: 'https://spareng-incorporated.vecel.app',
+      siteName: 'Spareng',
+      images: [
+        {
+          url: 'https://spareng-incorporated.vecel.app/Sparent_INC.png',
+          width: 200,
+          height: 100,
+          alt: 'Spareng Logo',
+        },
+      ],
+    },
+    twitter: {
+      handle: '@spareng',
+      site: '@spareng',
+      cardType: 'summary_large_image',
+    },
   } as NextSeoProps,
   termsUrl: '#',
   privacyUrl: '#',

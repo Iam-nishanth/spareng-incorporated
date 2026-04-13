@@ -4,6 +4,8 @@ import {
   Box,
   Button,
   Container,
+  Grid,
+  GridItem,
   HStack,
   Heading,
   Image,
@@ -355,49 +357,53 @@ export default function IndustriesPage() {
                     <Box
                       px={2}
                       py={1}
-                      bg="primary.50"
+                      bg={useColorModeValue('primary.50', 'primary.900')}
                       borderRadius="md"
                       fontSize="xs"
+                      color={useColorModeValue('gray.800', 'white')}
                     >
                       Troughed Conveyors
                     </Box>
                     <Box
                       px={2}
                       py={1}
-                      bg="primary.50"
+                      bg={useColorModeValue('primary.50', 'primary.900')}
                       borderRadius="md"
                       fontSize="xs"
+                      color={useColorModeValue('gray.800', 'white')}
                     >
                       Impact Idlers
                     </Box>
                     <Box
                       px={2}
                       py={1}
-                      bg="primary.50"
+                      bg={useColorModeValue('primary.50', 'primary.900')}
                       borderRadius="md"
                       fontSize="xs"
+                      color={useColorModeValue('gray.800', 'white')}
                     >
                       Drive Systems
                     </Box>
                   </HStack>
-                  <HStack spacing={3} w="full" justify="space-between">
-                    <ButtonLink
+                  <Box display="flex" gap={3} w="full">
+                    <Button
+                      as="a"
                       href="/contact"
                       size="md"
                       colorScheme="primary"
-                      flex="1"
+                      width="calc(50% - 6px)"
                     >
                       Contact
-                    </ButtonLink>
+                    </Button>
                     <Button
                       size="md"
                       variant="outline"
-                      flex="1"
+                      width="calc(50% - 6px)"
                       onClick={() => handleLearnMore('belt-conveyor')}
                     >
                       Learn More
                     </Button>
-                  </HStack>
+                  </Box>
                 </VStack>
               </Box>
 
@@ -413,13 +419,13 @@ export default function IndustriesPage() {
                 transition="all 0.3s"
               >
                 <VStack align="start" spacing={4}>
-                    <Image
-                      src="/images/machines/Screening-Machines.jpg"
-                      objectFit={'cover'}
-                      alt={'Screening Equipment'}
-                      width="full"
-                      height={'200px'}
-                    />
+                  <Image
+                    src="/images/machines/Screening-Machines.jpg"
+                    objectFit={'cover'}
+                    alt={'Screening Equipment'}
+                    width="full"
+                    height={'200px'}
+                  />
                   <Heading
                     fontSize="xl"
                     fontWeight="semibold"
@@ -435,48 +441,53 @@ export default function IndustriesPage() {
                     <Box
                       px={2}
                       py={1}
-                      bg="primary.50"
+                      bg={useColorModeValue('primary.50', 'primary.900')}
                       borderRadius="md"
                       fontSize="xs"
+                      color={useColorModeValue('gray.800', 'white')}
                     >
                       CMS Screens
                     </Box>
                     <Box
                       px={2}
                       py={1}
-                      bg="primary.50"
+                      bg={useColorModeValue('primary.50', 'primary.900')}
                       borderRadius="md"
                       fontSize="xs"
+                      color={useColorModeValue('gray.800', 'white')}
                     >
                       Flip Flow
                     </Box>
                     <Box
                       px={2}
                       py={1}
-                      bg="primary.50"
+                      bg={useColorModeValue('primary.50', 'primary.900')}
                       borderRadius="md"
                       fontSize="xs"
+                      color={useColorModeValue('gray.800', 'white')}
                     >
                       Linear Motion
                     </Box>
                   </HStack>
-                  <HStack w="full" justify="space-between" gap={4}>
-                    <ButtonLink
+                  <Box display="flex" gap={3} w="full">
+                    <Button
+                      as="a"
                       href="/contact"
+                      size="md"
                       colorScheme="primary"
-                      w="full"
+                      width="calc(50% - 6px)"
                     >
                       Contact
-                    </ButtonLink>
+                    </Button>
                     <Button
                       size="md"
                       variant="outline"
+                      width="calc(50% - 6px)"
                       onClick={() => handleLearnMore('screening')}
-                      w="full"
                     >
                       Learn More
                     </Button>
-                  </HStack>
+                  </Box>
                 </VStack>
               </Box>
 
@@ -492,14 +503,13 @@ export default function IndustriesPage() {
                 transition="all 0.3s"
               >
                 <VStack align="start" spacing={4}>
-
-                    <Image
-                      src="/images/machines/Crushing-Machines.jpeg"
-                      alt={'Crushing Systems'}
-                      width="full"
-                      objectFit={'cover'}
-                      height={'200px'}
-                    />
+                  <Image
+                    src="/images/machines/Crushing-Machines.jpeg"
+                    alt={'Crushing Systems'}
+                    width="full"
+                    objectFit={'cover'}
+                    height={'200px'}
+                  />
 
                   <Heading
                     fontSize="xl"
@@ -516,49 +526,53 @@ export default function IndustriesPage() {
                     <Box
                       px={2}
                       py={1}
-                      bg="primary.50"
+                      bg={useColorModeValue('primary.50', 'primary.900')}
                       borderRadius="md"
                       fontSize="xs"
+                      color={useColorModeValue('gray.800', 'white')}
                     >
                       Impact Mills
                     </Box>
                     <Box
                       px={2}
                       py={1}
-                      bg="primary.50"
+                      bg={useColorModeValue('primary.50', 'primary.900')}
                       borderRadius="md"
                       fontSize="xs"
+                      color={useColorModeValue('gray.800', 'white')}
                     >
                       Hammer Mills
                     </Box>
                     <Box
                       px={2}
                       py={1}
-                      bg="primary.50"
+                      bg={useColorModeValue('primary.50', 'primary.900')}
                       borderRadius="md"
                       fontSize="xs"
+                      color={useColorModeValue('gray.800', 'white')}
                     >
                       Ring Granulators
                     </Box>
                   </HStack>
-                  <HStack spacing={3} w="full" justify="space-between">
-                    <ButtonLink
+                  <Box display="flex" gap={3} w="full">
+                    <Button
+                      as="a"
                       href="/contact"
                       size="md"
                       colorScheme="primary"
-                      flex="1"
+                      width="calc(50% - 6px)"
                     >
                       Contact
-                    </ButtonLink>
+                    </Button>
                     <Button
                       size="md"
                       variant="outline"
-                      flex="1"
+                      width="calc(50% - 6px)"
                       onClick={() => handleLearnMore('crushing')}
                     >
                       Learn More
                     </Button>
-                  </HStack>
+                  </Box>
                 </VStack>
               </Box>
 

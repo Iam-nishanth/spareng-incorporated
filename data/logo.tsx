@@ -1,16 +1,19 @@
-import { chakra, HTMLChakraProps, useColorModeValue } from '@chakra-ui/react'
-import BevconZentry from "#data/Spareng-v1.svg"
+import React from 'react'
+import { Image, ImageProps, useColorModeValue } from '@chakra-ui/react'
 
-export const Logo: React.FC<HTMLChakraProps<'svg'>> = (props) => {
-  const color = useColorModeValue('#231f20', '#fff')
+export const Logo: React.FC<ImageProps> = (props) => {
+  const isDark = useColorModeValue(false, true)
+  
   return (
-    <chakra.svg
-      as={BevconZentry}
-      key="Bevcon Zentry"
-      color={color}
+    <Image
+      src={isDark ? "/Spareng_INC-dark.png" : "/Sparent_INC.png"}
+      alt="Spareng Incorporated"
       width={[150, 200]}
-      height={["80px", "auto"]}
+      height="100px"
+      objectFit="contain"
       display="block"
+      filter={isDark ? 'brightness(1.2) saturate(1.1)' : 'none'}
+      {...props}
     />
   )
 }

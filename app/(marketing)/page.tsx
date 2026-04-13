@@ -2,13 +2,19 @@
 
 import {
   Box,
+  Button,
   ButtonGroup,
+  Card,
+  CardBody,
+  CardFooter,
   Container,
   Flex,
   HStack,
   Heading,
   Icon,
   IconButton,
+  Image,
+  SimpleGrid,
   Stack,
   Tag,
   Text,
@@ -18,7 +24,6 @@ import {
 } from '@chakra-ui/react'
 import { Br, Link } from '@saas-ui/react'
 import type { NextPage } from 'next'
-import Image from 'next/image'
 import { FaLeaf } from 'react-icons/fa'
 import { FaHelmetSafety } from 'react-icons/fa6'
 import {
@@ -66,6 +71,7 @@ import StickyScrollSection from '#components/sticky-scroll-section'
 import { Testimonial, Testimonials } from '#components/testimonials'
 import { Em } from '#components/typography'
 import faq from '#data/faq'
+import { hubCategories } from '#data/hub-categories'
 import pricing from '#data/pricing'
 import testimonials from '#data/testimonials'
 
@@ -206,11 +212,10 @@ const HeroSection: React.FC = () => {
 
               <ImagesSlider
                 images={[
-                  // '/home/highspeed doors.jpg',
-                  // '/home/conveyor-image.jpg',
-                  '/home/Spillage-Dribble-Conveyors.jpg',
-                  '/home/Pneumatic-Conveying-blog.jpg', 
+                  '/images/machines/heavy-duty-conveyor-belt.jpg',
+                  '/images/machines/Screening-Washing-Plant-Titanium-Vibrating-Screen-for-River-Sand.avif',
                   '/home/-9vsb4z5j.webp',
+                  '/home/conveyor-image.jpg',
                   ]}
                 intervalMs={4000}
               />
@@ -271,76 +276,122 @@ const HeroSection: React.FC = () => {
 }
 
 const ProductsSection = () => {
+  // Product lines that should use 'cover' instead of 'contain'
+  const coverProductLines = new Set([
+    'belt-conveyor',
+    'bucket-elevator',
+    'circular-motion-screen',
+    'flip-flow-screen',
+    'rotary-air-valve',
+    'single-roll-crusher',
+  ])
+
   return (
-    <Box overflow="hidden">
-      <Products
-        id="products"
-        title="MHE Spare Parts Catalog"
-        description={
-          <Text color="muted" textAlign="center">
-            Comprehensive range of material handling equipment spare parts and components
+    <Box overflow="hidden" py="24" bg="gray.50" _dark={{ bg: 'gray.900' }}>
+      <Container maxW="container.xl">
+        <Stack spacing={8} textAlign="center" mb={12}>
+          <Heading as="h2" size="2xl" color="gray.900" _dark={{ color: 'white' }} fontWeight="700">
+            Explore Our Product Categories
+          </Heading>
+          <Text color="gray.600" _dark={{ color: 'gray.300' }} textAlign="center" fontSize="lg" maxW="container.md" mx="auto">
+            Discover our extensive range of high-performance material handling systems, industrial processing equipment, and premium spares.
           </Text>
-        }
-        innerWidth="container.xl"
-        columns={[1, 2, 3]}
-        reveal={FallInPlace}
-        products={[
-          {
-            title: 'Conveyor Parts',
-            description:
-              'Idlers, rollers, brackets, and belts for conveyor systems in mining and processing',
-            imageSrc: '/Products/CONVEYOR_PARTS/IDLER_BEARING.jpeg',
-            learnMoreHref: '/products',
-            enquireHref: '/contact',
-            delay: 0.2,
-          },
-          {
-            title: 'Pulleys & Drums',
-            description:
-              'Head, tail, snub, and magnetic pulleys for material handling systems',
-            imageSrc: '/Products/CONVEYOR_PARTS/TAIL_PULLEY.jpeg',
-            learnMoreHref: '/products',
-            enquireHref: '/contact',
-            delay: 0.3,
-          },
-          {
-            title: 'Crusher Spares',
-            description:
-              'High-wear parts and components for crushing equipment in mining operations',
-            imageSrc: '/home/product-range/Conveyor Spares.jpg',
-            learnMoreHref: '/products',
-            enquireHref: '/contact',
-            delay: 0.4,
-          },
-          {
-            title: 'Screening Spares',
-            description:
-              'Screen cloth, flip flow mats, and vibrating screen components for processing',
-            imageSrc: '/Products/FLIP_FLOW_SCREEN/COMPRESSION_SPRINGS.jpeg',
-            learnMoreHref: '/products',
-            enquireHref: '/contact',
-            delay: 0.5,
-          },
-          {
-            title: 'Safety Systems',
-            description:
-              'Zero speed switches, belt sway switches, and pull cord switches for equipment safety',
-            imageSrc: '/Products/BARGE_LOADER/LIMIT_SWITCH.jpeg',
-            learnMoreHref: '/products',
-            enquireHref: '/contact',
-            delay: 0.6,
-          },
-          {
-            title: 'Magnetic Separators',
-            description:
-              'High-intensity magnetic separators and drum magnets for material separation',
-            imageSrc: '/Products/CONVEYOR_PARTS/OVER_BAND_MAGNETIC_SEPERATOR.jpeg',
-            learnMoreHref: '/products',
-            enquireHref: '/contact',
-            delay: 0.7,
-          },
-        ]}
-      />
+        </Stack>
+        <SimpleGrid columns={[1, 2, 3]} spacing={8}>
+          {hubCategories.map((cat, i) => {
+            // Extract distinct product line images for the carousel
+            const images = cat.productLines
+              .map((pl) => pl.image)
+              .filter(Boolean) as string[]
+
+            // Check if category contains any product lines that should use 'cover'
+            const hasCoverProduct = cat.productLines.some((pl) =>
+              coverProductLines.has(pl.id)
+            )
+            const objectFit = hasCoverProduct ? 'cover' : 'contain'
+
+            return (
+              <FallInPlace key={cat.id} delay={0.2 + i * 0.1}>
+                <Card
+                  variant="outline"
+                  maxW="full"
+                  overflow="hidden"
+                  h="full"
+                  display="flex"
+                  flexDirection="column"
+                  bg="white"
+                  _dark={{ bg: 'gray.800', borderColor: 'gray.700' }}
+                  borderColor="gray.200"
+                  _hover={{ shadow: 'xl', borderColor: 'primary.300', transform: 'translateY(-4px)' }}
+                  transition="all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"
+                >
+                  <Box
+                    w="full"
+                    h="250px"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
+                    bg="white"
+                    _dark={{ bg: 'gray.800' }}
+                    overflow="hidden"
+                  >
+                    {images.length > 1 ? (
+                      <ImagesSlider
+                        images={images}
+                        intervalMs={4000}
+                        height="250px"
+                        objectFit={objectFit}
+                        borderRadius='0px'
+                        padding={hasCoverProduct ? 0 : 16}
+                      />
+                    ) : images.length === 1 ? (
+                      <Image src={images[0]} alt={cat.name} w="full" h="full" objectFit="cover" />
+                    ) : (
+                      <Box bg="gray.100" _dark={{ bg: 'gray.700' }} w="full" h="full" display="flex" alignItems="center" justifyContent="center">
+                        <Text color="muted">{cat.name}</Text>
+                      </Box>
+                    )}
+                  </Box>
+                  <CardBody pt={4} pb={2} px={5} flex="1" display="flex" flexDirection="column">
+                    <Heading size="md" mb={1.5} color="gray.900" _dark={{ color: 'white' }}>
+                      {cat.name}
+                    </Heading>
+                    <Text color="gray.600" _dark={{ color: 'gray.300' }} fontSize="sm" lineHeight="tall">
+                      {cat.tagline}
+                    </Text>
+                  </CardBody>
+                  <CardFooter gap="3" display="flex" flexDirection={{ base: 'column', sm: 'row' }} w="full" px={6} pt={5} pb={6} borderTopWidth="1px" borderColor="gray.100" _dark={{ borderColor: 'gray.700' }}>
+                    <Button as={Link} href="/contact" colorScheme="primary" size="md" w="full">
+                      Get Quote
+                    </Button>
+                    <Button
+                      as={Link}
+                      href={`/products?category=${cat.id}`}
+                      variant="outline"
+                      size="md"
+                      w="full"
+                      rightIcon={
+                        <Icon
+                          as={FiArrowRight}
+                          sx={{
+                            transitionProperty: 'common',
+                            transitionDuration: 'normal',
+                            '.chakra-button:hover &': {
+                              transform: 'translate(4px)',
+                            },
+                          }}
+                        />
+                      }
+                    >
+                      View Products
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </FallInPlace>
+            )
+          })}
+        </SimpleGrid>
+      </Container>
     </Box>
   )
 }
