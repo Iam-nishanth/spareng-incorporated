@@ -148,27 +148,6 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({
           >
             {line.description}
           </Text>
-
-          <HStack mt={8} spacing={4} flexWrap="wrap">
-            <Button
-              as={Link}
-              href="/contact"
-              colorScheme="primary"
-              size="md"
-              px={8}
-            >
-              Request Quote
-            </Button>
-            <Button
-              variant="outline"
-              borderColor="gray.300"
-              _dark={{ borderColor: 'gray.600' }}
-              size="md"
-              isDisabled
-            >
-              Download Brochure
-            </Button>
-          </HStack>
         </Box>
       </Flex>
 

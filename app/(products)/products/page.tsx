@@ -4,8 +4,8 @@ import {
   Box,
   Button,
   Flex,
-  Heading,
   HStack,
+  Heading,
   Icon,
   IconButton,
   Image,
@@ -15,16 +15,17 @@ import {
 } from '@chakra-ui/react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { NextPage } from 'next'
-import React, { useState, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { FiArrowLeft, FiImage } from 'react-icons/fi'
 
-import { hubCategories, HubCategory, ProductLine } from '#data/hub-categories'
+import React, { Suspense, useRef, useState } from 'react'
+
+import { CategoryIllustration } from '#components/category-illustrations'
+import { BackgroundGradient } from '#components/gradients/background-gradient'
 import { MobileCategoryPicker } from '#components/mobile-category-picker'
 import { ProductCategoryNav } from '#components/product-category-nav'
 import { ProductDetailView } from '#components/product-detail-view'
-import { CategoryIllustration } from '#components/category-illustrations'
-import { BackgroundGradient } from '#components/gradients/background-gradient'
+import { HubCategory, ProductLine, hubCategories } from '#data/hub-categories'
 
 const MotionBox = motion(Box)
 
@@ -44,7 +45,6 @@ interface RightPanelProps {
   category: HubCategory
   activeView: 'category' | 'detail'
   selectedLine: ProductLine | null
-  navigatingBack: boolean
   onSelectLine: (line: ProductLine) => void
   onBackToCategory: () => void
 }
@@ -53,20 +53,16 @@ const RightPanel: React.FC<RightPanelProps> = ({
   category,
   activeView,
   selectedLine,
-  navigatingBack,
   onSelectLine,
   onBackToCategory,
 }) => {
-  const enterX = navigatingBack ? 100 : -100
-  const exitX = navigatingBack ? -100 : 100
-
   return (
-    <AnimatePresence>
+    <AnimatePresence mode="wait">
       <MotionBox
         key={`${category.id}-${activeView}`}
-        initial={{ opacity: 0, x: enterX }}
-        animate={{ opacity: 1, x: 0, transition: { duration: 0.3, ease: 'easeOut' } }}
-        exit={{ opacity: 0, x: exitX, transition: { duration: 0.25, ease: 'easeIn' } }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { duration: 0.2, ease: 'easeOut' } }}
+        exit={{ opacity: 0, transition: { duration: 0.15, ease: 'easeIn' } }}
         flex="1"
         minH={0}
       >
@@ -87,14 +83,17 @@ const RightPanel: React.FC<RightPanelProps> = ({
                 {category.tagline}
               </Text>
               <Text fontSize="sm" opacity={0.7}>
-                {category.productLines.length} product line{category.productLines.length !== 1 ? 's' : ''}
+                {category.productLines.length} product line
+                {category.productLines.length !== 1 ? 's' : ''}
               </Text>
             </Box>
 
             {/* Product line cards */}
             <SimpleGrid columns={[1, 2, 3]} spacing={4}>
               {category.productLines.map((line) => {
-                const objectFit = coverProductLines.has(line.id) ? 'cover' : 'contain'
+                const objectFit = coverProductLines.has(line.id)
+                  ? 'cover'
+                  : 'contain'
 
                 return (
                   <Box
@@ -131,21 +130,49 @@ const RightPanel: React.FC<RightPanelProps> = ({
                           objectFit={objectFit}
                           w="full"
                           h="full"
-                          fallback={<CategoryIllustration category={category.id} size="40px" color="gray.300" />}
+                          fallback={
+                            <CategoryIllustration
+                              category={category.id}
+                              size="40px"
+                              color="gray.300"
+                            />
+                          }
                         />
                       ) : (
-                        <CategoryIllustration category={category.id} size="40px" color="gray.300" />
+                        <CategoryIllustration
+                          category={category.id}
+                          size="40px"
+                          color="gray.300"
+                        />
                       )}
                     </Box>
 
                     <Box p={4}>
-                      <Text fontWeight="700" fontSize="sm" mb={1} noOfLines={1} color="gray.900" _dark={{ color: 'white' }}>
+                      <Text
+                        fontWeight="700"
+                        fontSize="sm"
+                        mb={1}
+                        noOfLines={1}
+                        color="gray.900"
+                        _dark={{ color: 'white' }}
+                      >
                         {line.name}
                       </Text>
-                      <Text fontSize="xs" color="gray.500" _dark={{ color: 'gray.400' }} noOfLines={2} mb={3}>
+                      <Text
+                        fontSize="xs"
+                        color="gray.500"
+                        _dark={{ color: 'gray.400' }}
+                        noOfLines={2}
+                        mb={3}
+                      >
                         {line.tagline}
                       </Text>
-                      <Text fontSize="xs" color="primary.600" _dark={{ color: 'primary.400' }} fontWeight="600">
+                      <Text
+                        fontSize="xs"
+                        color="primary.600"
+                        _dark={{ color: 'primary.400' }}
+                        fontWeight="600"
+                      >
                         View Details &gt;
                       </Text>
                     </Box>
@@ -245,18 +272,40 @@ const MobileProductList: React.FC<MobileProductListProps> = ({
                     objectFit={objectFit}
                     w="full"
                     h="full"
-                    fallback={<CategoryIllustration category={category.id} size="32px" color="gray.300" />}
+                    fallback={
+                      <CategoryIllustration
+                        category={category.id}
+                        size="32px"
+                        color="gray.300"
+                      />
+                    }
                   />
                 ) : (
-                  <CategoryIllustration category={category.id} size="32px" color="gray.300" />
+                  <CategoryIllustration
+                    category={category.id}
+                    size="32px"
+                    color="gray.300"
+                  />
                 )}
               </Box>
 
               <Box p={3} flex="1" minW={0}>
-                <Text fontWeight="700" fontSize="sm" mb={0.5} noOfLines={1} color="gray.900" _dark={{ color: 'white' }}>
+                <Text
+                  fontWeight="700"
+                  fontSize="sm"
+                  mb={0.5}
+                  noOfLines={1}
+                  color="gray.900"
+                  _dark={{ color: 'white' }}
+                >
                   {line.name}
                 </Text>
-                <Text fontSize="xs" color="gray.500" _dark={{ color: 'gray.400' }} noOfLines={2}>
+                <Text
+                  fontSize="xs"
+                  color="gray.500"
+                  _dark={{ color: 'gray.400' }}
+                  noOfLines={2}
+                >
                   {line.tagline}
                 </Text>
               </Box>
@@ -273,21 +322,25 @@ const MobileProductList: React.FC<MobileProductListProps> = ({
 const ProductsPageContent = () => {
   const searchParams = useSearchParams()
   const initialCategoryParam = searchParams.get('category')
-  const initialCategory = initialCategoryParam && hubCategories.some(c => c.id === initialCategoryParam)
-    ? initialCategoryParam
-    : hubCategories[0].id
+  const initialCategory =
+    initialCategoryParam &&
+    hubCategories.some((c) => c.id === initialCategoryParam)
+      ? initialCategoryParam
+      : hubCategories[0].id
 
   // State
   const [activeCategoryId, setActiveCategoryId] = useState(initialCategory)
-  const [activeView, setActiveView] = useState<'category' | 'detail'>('category')
+  const [activeView, setActiveView] = useState<'category' | 'detail'>(
+    'category',
+  )
   const [selectedLine, setSelectedLine] = useState<ProductLine | null>(null)
-  const [navigatingBack, setNavigatingBack] = useState(false)
   const [savedScrollPosition, setSavedScrollPosition] = useState(0)
+  const rightPanelRef = useRef<HTMLDivElement>(null)
 
   // ── URL Param Initialization ──
   React.useEffect(() => {
     const catParam = searchParams.get('category')
-    if (catParam && hubCategories.some(c => c.id === catParam)) {
+    if (catParam && hubCategories.some((c) => c.id === catParam)) {
       setActiveCategoryId(catParam)
     }
   }, [searchParams])
@@ -303,19 +356,20 @@ const ProductsPageContent = () => {
   // ── Browser History Interceptor ──
   React.useEffect(() => {
     const handlePopState = () => {
-      const catParam = new URLSearchParams(window.location.search).get('category')
-      if (catParam && hubCategories.some(c => c.id === catParam)) {
+      const catParam = new URLSearchParams(window.location.search).get(
+        'category',
+      )
+      if (catParam && hubCategories.some((c) => c.id === catParam)) {
         setActiveCategoryId(catParam)
         setActiveView('category')
         setSelectedLine(null)
       } else if (activeView === 'detail') {
-        setNavigatingBack(true)
         setSavedScrollPosition(window.scrollY)
         setActiveView('category')
         setSelectedLine(null)
       }
     }
-    
+
     window.addEventListener('popstate', handlePopState)
     return () => window.removeEventListener('popstate', handlePopState)
   }, [activeView])
@@ -325,11 +379,12 @@ const ProductsPageContent = () => {
     hubCategories.find((c) => c.id === activeCategoryId) ?? hubCategories[0]
 
   const handleSelectCategory = (id: string) => {
-    setNavigatingBack(false)
     setActiveCategoryId(id)
     setActiveView('category')
     setSelectedLine(null)
-    
+    if (rightPanelRef.current) rightPanelRef.current.scrollTop = 0
+    window.scrollTo(0, 0)
+
     // Update URL param when switching categories
     const url = new URL(window.location.href)
     url.searchParams.set('category', id)
@@ -337,10 +392,10 @@ const ProductsPageContent = () => {
   }
 
   const handleSelectLine = (line: ProductLine) => {
-    setNavigatingBack(false)
     setSavedScrollPosition(window.scrollY)
     setSelectedLine(line)
     setActiveView('detail')
+    window.scrollTo(0, 0)
     window.history.pushState({ detail: true, id: line.id }, '', `#${line.id}`)
   }
 
@@ -358,7 +413,7 @@ const ProductsPageContent = () => {
 
       <Box position="relative" overflow="hidden">
         <BackgroundGradient height="400px" zIndex="-1" />
-        
+
         {/* ── Mobile & Tablet layout (< lg) ── */}
         <Box display={{ base: 'block', lg: 'none' }} pt={[24, 32]} pb="16">
           <Box maxW="container.2xl" mx="auto" px="15px">
@@ -373,7 +428,6 @@ const ProductsPageContent = () => {
                 category={activeCategory}
                 activeView={activeView}
                 selectedLine={selectedLine}
-                navigatingBack={navigatingBack}
                 onSelectLine={handleSelectLine}
                 onBackToCategory={handleBackToCategory}
               />
@@ -381,42 +435,42 @@ const ProductsPageContent = () => {
           </Box>
         </Box>
 
-      {/* ── Desktop layout (≥ lg) ── */}
-      <Box display={{ base: 'none', lg: 'block' }} pt="36" pb="16">
-        <Box maxW="container.2xl" mx="auto" px="15px">
-          <Flex gap={8} alignItems="flex-start">
-            {/* Sidebar */}
-            <ProductCategoryNav
-              categories={hubCategories}
-              activeId={activeCategoryId}
-              onSelect={handleSelectCategory}
-              variant="sidebar"
-            />
-
-            {/* Right panel */}
-            <Box
-              flex="1"
-              minW={0}
-              height="calc(100vh - 160px)"
-              overflowY="auto"
-              pr={2}
-              sx={{
-                scrollbarWidth: 'none',
-                '&::-webkit-scrollbar': { display: 'none' },
-              }}
-            >
-              <RightPanel
-                category={activeCategory}
-                activeView={activeView}
-                selectedLine={selectedLine}
-                navigatingBack={navigatingBack}
-                onSelectLine={handleSelectLine}
-                onBackToCategory={handleBackToCategory}
+        {/* ── Desktop layout (≥ lg) ── */}
+        <Box display={{ base: 'none', lg: 'block' }} pt="36" pb="16">
+          <Box maxW="container.2xl" mx="auto" px="15px">
+            <Flex gap={8} alignItems="flex-start">
+              {/* Sidebar */}
+              <ProductCategoryNav
+                categories={hubCategories}
+                activeId={activeCategoryId}
+                onSelect={handleSelectCategory}
+                variant="sidebar"
               />
-            </Box>
-          </Flex>
+
+              {/* Right panel */}
+              <Box
+                ref={rightPanelRef}
+                flex="1"
+                minW={0}
+                height="calc(100vh - 160px)"
+                overflowY="auto"
+                pr={2}
+                sx={{
+                  scrollbarWidth: 'none',
+                  '&::-webkit-scrollbar': { display: 'none' },
+                }}
+              >
+                <RightPanel
+                  category={activeCategory}
+                  activeView={activeView}
+                  selectedLine={selectedLine}
+                  onSelectLine={handleSelectLine}
+                  onBackToCategory={handleBackToCategory}
+                />
+              </Box>
+            </Flex>
+          </Box>
         </Box>
-      </Box>
       </Box>
     </>
   )

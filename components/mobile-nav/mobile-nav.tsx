@@ -1,12 +1,14 @@
 import {
   Box,
   CloseButton,
+  Divider,
   Flex,
   HStack,
   IconButton,
   IconButtonProps,
   LinkProps,
   Stack,
+  Text,
   useBreakpointValue,
   useColorModeValue,
   useUpdateEffect,
@@ -30,25 +32,35 @@ interface NavLinkProps extends LinkProps {
 
 function NavLink({ href, children, isActive, ...rest }: NavLinkProps) {
   const pathname = usePathname()
+  // CTA-style links (variant="primary") are actions, not nav items — never mark active
+  const isCta = (rest as any).variant === 'primary'
+  isActive = isActive ?? (!isCta && pathname === href)
 
-  const [, group] = href?.split('/') || []
-  isActive = isActive ?? pathname?.includes(group)
+  const activeColor = useColorModeValue('primary.600', 'primary.300')
+  const defaultColor = useColorModeValue('gray.700', 'gray.200')
+  const activeBg = useColorModeValue('primary.50', 'whiteAlpha.100')
+  const hoverBg = useColorModeValue('gray.50', 'whiteAlpha.50')
+  const hoverColor = useColorModeValue('primary.600', 'primary.300')
+  const borderColor = useColorModeValue('gray.100', 'whiteAlpha.100')
 
   return (
     <Link
       href={href}
-      display="inline-flex"
-      flex="1"
-      minH="40px"
-      px="8"
-      py="3"
-      transition="0.2s all"
+      display="flex"
+      alignItems="center"
+      px="15px"
+      py="2"
+      fontSize="md"
       fontWeight={isActive ? 'semibold' : 'medium'}
-      borderColor={isActive ? 'purple.400' : "transparent"}
+      color={isActive ? activeColor : defaultColor}
+      bg={isActive ? activeBg : 'transparent'}
       borderBottomWidth="1px"
-      color={isActive ? 'primary.500' : undefined}
+      borderColor={borderColor}
+      transition="background 0.15s, color 0.15s"
       _hover={{
-        color: isActive ? 'white' : "primary.500"
+        bg: isActive ? activeBg : hoverBg,
+        color: isActive ? activeColor : hoverColor,
+        textDecoration: 'none',
       }}
       {...rest}
     >
@@ -65,14 +77,14 @@ interface MobileNavContentProps {
 export function MobileNavContent(props: MobileNavContentProps) {
   const { isOpen, onClose = () => {} } = props
   const closeBtnRef = React.useRef<HTMLButtonElement>(null)
-  const pathname = usePathname()
-  const bgColor = useColorModeValue('whiteAlpha.900', 'blackAlpha.900')
+  const bgColor = useColorModeValue(
+    'rgba(255, 255, 255, 0.97)',
+    'rgba(17, 19, 24, 0.97)',
+  )
+  const borderColor = useColorModeValue('gray.100', 'whiteAlpha.100')
 
   useRouteChanged(onClose)
-  /**
-   * Scenario: Menu is open on mobile, and user resizes to desktop/tablet viewport.
-   * Result: We'll close the menu
-   */
+
   const showOnBreakpoint = useBreakpointValue({ base: true, lg: false })
 
   React.useEffect(() => {
@@ -102,32 +114,37 @@ export function MobileNavContent(props: MobileNavContentProps) {
             pos="absolute"
             inset="0"
             zIndex="modal"
-            pb="8"
-            backdropFilter="blur(5px)"
+            backdropFilter="blur(12px)"
           >
-            <Box>
-              <Flex justify="space-between" px='2.5'>
-                <Logo />
-                <HStack spacing="5">
-                  <CloseButton ref={closeBtnRef} onClick={onClose} />
-                </HStack>
-              </Flex>
-              <Stack alignItems="stretch" spacing="0">
-                {siteConfig.header.links.map(
-                  ({ href, id, label, ...props }, i) => {
-                    return (
-                      <NavLink
-                        href={href || `/${id}`}
-                        key={i}
-                        {...(props as any)}
-                      >
-                        {label}
-                      </NavLink>
-                    )
-                  },
-                )}
-              </Stack>
-            </Box>
+            {/* Top bar — matches header layout exactly */}
+            <Flex
+              justify="space-between"
+              align="center"
+              px="15px"
+              
+              borderBottomWidth="1px"
+              borderColor={borderColor}
+              minH="64px"
+            >
+              <Logo />
+              <CloseButton ref={closeBtnRef} onClick={onClose} size="md" />
+            </Flex>
+
+            {/* Nav links */}
+            <Stack spacing="0" flex="1">
+              {siteConfig.header.links.map(
+                ({ href, id, label, ...rest }, i) => (
+                  <NavLink
+                    href={href || `/${id}`}
+                    key={i}
+                    label={label}
+                    {...(rest as any)}
+                  >
+                    {label}
+                  </NavLink>
+                ),
+              )}
+            </Stack>
           </Flex>
         </RemoveScroll>
       )}

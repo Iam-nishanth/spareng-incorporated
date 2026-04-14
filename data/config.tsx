@@ -3,13 +3,15 @@ import { Link } from '@saas-ui/react'
 import { NextSeoProps } from 'next-seo'
 import { FaGithub, FaTwitter } from 'react-icons/fa'
 import { FiCheck } from 'react-icons/fi'
+
 import { Logo } from './logo'
 
 const siteConfig = {
   logo: Logo,
   seo: {
     title: 'Spareng',
-    description: 'Premium supplier of Material Handling Equipment (MHE) spare parts including conveyor components, crusher spares, pulleys, idlers, and screening equipment for mining, steel, cement, and power industries',
+    description:
+      'Premium supplier of Material Handling Equipment (MHE) spare parts including conveyor components, crusher spares, pulleys, idlers, and screening equipment for mining, steel, cement, and power industries',
     openGraph: {
       type: 'website',
       locale: 'en_US',
@@ -39,10 +41,6 @@ const siteConfig = {
         label: 'Products',
       },
       {
-        id: 'use-cases',
-        label: 'Use Cases',
-      },
-      {
         id: 'contact',
         label: 'Contact',
         href: '/contact',
@@ -58,7 +56,9 @@ const siteConfig = {
   footer: {
     address: {
       title: 'Address',
-      lines: ['Plot No. E8/C8 - 2A, (24-60/10/11), IDA, UPPAL, Hyderabad, Telangana 500039, India'],
+      lines: [
+        'Plot No. E8/C8 - 2A, (24-60/10/11), IDA, UPPAL, Hyderabad, Telangana 500039, India',
+      ],
     },
     contact: {
       title: 'Contact',
@@ -75,7 +75,6 @@ const siteConfig = {
         title: 'Pages',
         links: [
           { label: 'Products', href: '/products' },
-          { label: 'Use Cases', href: '/use-cases' },
           { label: 'Contact', href: '/contact' },
         ],
       },
@@ -83,7 +82,12 @@ const siteConfig = {
     copyright: (
       <>
         Built by{' '}
-        <Link _hover={{ color: 'primary.500', textDecoration: 'underline' }} href="mailto:nishanthalapati123@gmail.com">Nishanth</Link>
+        <Link
+          _hover={{ color: 'primary.500', textDecoration: 'underline' }}
+          href="mailto:nishanthalapati123@gmail.com"
+        >
+          Nishanth
+        </Link>
       </>
     ),
     // links: [
@@ -100,7 +104,7 @@ const siteConfig = {
     //     label: 'Cookie Policy',
     //   },
     // ],
-  }
+  },
 }
 
 export default siteConfig
