@@ -1,10 +1,11 @@
 'use client'
 
 import { Box, HStack, Text, VStack } from '@chakra-ui/react'
+
 import React from 'react'
 
-import { HubCategory } from '#data/hub-categories'
 import { CategoryIllustration } from '#components/category-illustrations'
+import { HubCategory } from '#data/hub-categories'
 
 interface ProductCategoryNavProps {
   categories: HubCategory[]
@@ -21,13 +22,7 @@ export const ProductCategoryNav: React.FC<ProductCategoryNavProps> = ({
 }) => {
   if (variant === 'sidebar') {
     return (
-      <Box
-        width="260px"
-        position="sticky"
-        top="6"
-        alignSelf="flex-start"
-        flexShrink={0}
-      >
+      <Box width="260px" flexShrink={0}>
         <VStack spacing="1" align="stretch">
           {categories.map((cat) => {
             const isActive = cat.id === activeId
@@ -44,9 +39,9 @@ export const ProductCategoryNav: React.FC<ProductCategoryNavProps> = ({
                 py="2.5"
                 borderRadius="md"
                 bg={isActive ? 'primary.50' : 'transparent'}
-                _dark={{ 
+                _dark={{
                   bg: isActive ? 'primary.900' : 'transparent',
-                  _hover: { bg: isActive ? 'primary.900' : 'gray.800' }
+                  _hover: { bg: isActive ? 'primary.900' : 'gray.800' },
                 }}
                 _hover={{ bg: isActive ? 'primary.50' : 'gray.50' }}
                 transition="all 0.15s"
@@ -63,7 +58,11 @@ export const ProductCategoryNav: React.FC<ProductCategoryNavProps> = ({
                   justifyContent="center"
                   flexShrink={0}
                 >
-                  <CategoryIllustration category={cat.id} size="18px" color="white" />
+                  <CategoryIllustration
+                    category={cat.id}
+                    size="18px"
+                    color="white"
+                  />
                 </Box>
                 <Box minW={0}>
                   <Text
@@ -75,8 +74,14 @@ export const ProductCategoryNav: React.FC<ProductCategoryNavProps> = ({
                   >
                     {cat.name}
                   </Text>
-                  <Text fontSize="xs" color="gray.400" _dark={{ color: 'gray.500' }} whiteSpace="nowrap">
-                    {cat.productLines.length} product{cat.productLines.length !== 1 ? 's' : ''}
+                  <Text
+                    fontSize="xs"
+                    color="gray.400"
+                    _dark={{ color: 'gray.500' }}
+                    whiteSpace="nowrap"
+                  >
+                    {cat.productLines.length} product
+                    {cat.productLines.length !== 1 ? 's' : ''}
                   </Text>
                 </Box>
               </Box>
@@ -94,7 +99,10 @@ export const ProductCategoryNav: React.FC<ProductCategoryNavProps> = ({
       overflowX="auto"
       borderBottom="1px solid"
       borderColor="gray.200"
-      sx={{ scrollbarWidth: 'none', '&::-webkit-scrollbar': { display: 'none' } }}
+      sx={{
+        scrollbarWidth: 'none',
+        '&::-webkit-scrollbar': { display: 'none' },
+      }}
     >
       {categories.map((cat) => {
         const isActive = cat.id === activeId

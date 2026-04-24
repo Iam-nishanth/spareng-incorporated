@@ -67,13 +67,13 @@ const RightPanel: React.FC<RightPanelProps> = ({
         minH={0}
       >
         {activeView === 'category' ? (
-          <Box>
+          <Box px={{ base: 2, md: 6 }} pt={6}>
             {/* Category banner */}
             <Box
               bgGradient={category.gradient}
               borderRadius="xl"
-              p={8}
-              mb={6}
+              p={{ base: 6, md: 8 }}
+              mb={8}
               color="white"
             >
               <Heading size="lg" fontWeight="800" mb={2}>
@@ -88,8 +88,34 @@ const RightPanel: React.FC<RightPanelProps> = ({
               </Text>
             </Box>
 
+            {/* Category description */}
+            <VStack align="stretch" spacing={5} mb={10}>
+              {category.description.map((para, i) => (
+                <Text
+                  key={i}
+                  fontSize={{ base: 'md', md: 'lg' }}
+                  color="gray.700"
+                  _dark={{ color: 'gray.300' }}
+                  lineHeight="tall"
+                >
+                  {para}
+                </Text>
+              ))}
+            </VStack>
+
+            {/* Products heading */}
+            <Heading
+              size="lg"
+              fontWeight="700"
+              mb={6}
+              color="gray.900"
+              _dark={{ color: 'white' }}
+            >
+              Products
+            </Heading>
+
             {/* Product line cards */}
-            <SimpleGrid columns={[1, 2, 3]} spacing={4}>
+            <SimpleGrid columns={{ base: 1, md: 2, xl: 3 }} spacing={5}>
               {category.productLines.map((line) => {
                 const objectFit = coverProductLines.has(line.id)
                   ? 'cover'
@@ -108,20 +134,23 @@ const RightPanel: React.FC<RightPanelProps> = ({
                     _hover={{ shadow: 'md', borderColor: 'primary.200' }}
                     transition="all 0.15s"
                     onClick={() => onSelectLine(line)}
+                    display="flex"
+                    flexDir="column"
                   >
                     {/* Thumbnail */}
                     <Box
                       position="relative"
-                      h="200px"
+                      h={{ base: '220px', md: '200px' }}
                       bg="white"
-                      _dark={{ borderColor: 'gray.700' }}
                       display="flex"
                       alignItems="center"
                       justifyContent="center"
                       overflow="hidden"
                       borderBottom="1px solid"
                       borderColor="gray.100"
+                      _dark={{ bg: 'gray.900', borderColor: 'gray.700' }}
                       p={objectFit === 'cover' ? 0 : 4}
+                      flexShrink={0}
                     >
                       {line.image ? (
                         <Image
@@ -147,28 +176,29 @@ const RightPanel: React.FC<RightPanelProps> = ({
                       )}
                     </Box>
 
-                    <Box p={4}>
+                    <Box p={5} display="flex" flexDir="column" flex="1">
                       <Text
                         fontWeight="700"
-                        fontSize="sm"
-                        mb={1}
-                        noOfLines={1}
+                        fontSize={{ base: 'xl', md: 'xl' }}
+                        mb={3}
                         color="gray.900"
                         _dark={{ color: 'white' }}
+                        lineHeight="short"
                       >
                         {line.name}
                       </Text>
                       <Text
-                        fontSize="xs"
-                        color="gray.500"
+                        fontSize={{ base: 'md', md: 'md' }}
+                        color="gray.600"
                         _dark={{ color: 'gray.400' }}
-                        noOfLines={2}
-                        mb={3}
+                        lineHeight="tall"
+                        flex="1"
+                        mb={5}
                       >
-                        {line.tagline}
+                        {line.summary}
                       </Text>
                       <Text
-                        fontSize="xs"
+                        fontSize="sm"
                         color="primary.600"
                         _dark={{ color: 'primary.400' }}
                         fontWeight="600"
@@ -302,11 +332,12 @@ const MobileProductList: React.FC<MobileProductListProps> = ({
                 </Text>
                 <Text
                   fontSize="xs"
-                  color="gray.500"
+                  color="gray.600"
                   _dark={{ color: 'gray.400' }}
                   noOfLines={2}
+                  lineHeight="tall"
                 >
-                  {line.tagline}
+                  {line.summary}
                 </Text>
               </Box>
             </Box>
@@ -334,8 +365,8 @@ const ProductsPageContent = () => {
     'category',
   )
   const [selectedLine, setSelectedLine] = useState<ProductLine | null>(null)
-  const [savedScrollPosition, setSavedScrollPosition] = useState(0)
   const rightPanelRef = useRef<HTMLDivElement>(null)
+  const mobileContentRef = useRef<HTMLDivElement>(null)
 
   // ── URL Param Initialization ──
   React.useEffect(() => {
@@ -344,14 +375,6 @@ const ProductsPageContent = () => {
       setActiveCategoryId(catParam)
     }
   }, [searchParams])
-
-  // ── Scroll Position Restoration ──
-  React.useEffect(() => {
-    if (activeView === 'category' && savedScrollPosition > 0) {
-      window.scrollTo(0, savedScrollPosition)
-      setSavedScrollPosition(0)
-    }
-  }, [activeView, savedScrollPosition])
 
   // ── Browser History Interceptor ──
   React.useEffect(() => {
@@ -364,7 +387,6 @@ const ProductsPageContent = () => {
         setActiveView('category')
         setSelectedLine(null)
       } else if (activeView === 'detail') {
-        setSavedScrollPosition(window.scrollY)
         setActiveView('category')
         setSelectedLine(null)
       }
@@ -383,19 +405,18 @@ const ProductsPageContent = () => {
     setActiveView('category')
     setSelectedLine(null)
     if (rightPanelRef.current) rightPanelRef.current.scrollTop = 0
-    window.scrollTo(0, 0)
+    if (mobileContentRef.current) mobileContentRef.current.scrollTop = 0
 
-    // Update URL param when switching categories
     const url = new URL(window.location.href)
     url.searchParams.set('category', id)
     window.history.pushState({ category: id }, '', url.toString())
   }
 
   const handleSelectLine = (line: ProductLine) => {
-    setSavedScrollPosition(window.scrollY)
     setSelectedLine(line)
     setActiveView('detail')
-    window.scrollTo(0, 0)
+    if (rightPanelRef.current) rightPanelRef.current.scrollTop = 0
+    if (mobileContentRef.current) mobileContentRef.current.scrollTop = 0
     window.history.pushState({ detail: true, id: line.id }, '', `#${line.id}`)
   }
 
@@ -411,19 +432,55 @@ const ProductsPageContent = () => {
         content="Browse Spareng's full range of material handling equipment: conveyor systems, idlers, pulleys, crushing equipment, feeding systems, and screening equipment."
       />
 
-      <Box position="relative" overflow="hidden">
-        <BackgroundGradient height="400px" zIndex="-1" />
+      <Box
+        h="full"
+        overflow="hidden"
+        position="relative"
+        display="flex"
+        flexDir="column"
+      >
+        <BackgroundGradient height="50%" zIndex="-1" />
 
         {/* ── Mobile & Tablet layout (< lg) ── */}
-        <Box display={{ base: 'block', lg: 'none' }} pt={[24, 32]} pb="16">
-          <Box maxW="container.2xl" mx="auto" px="15px">
-            <ProductCategoryNav
-              categories={hubCategories}
-              activeId={activeCategoryId}
-              onSelect={handleSelectCategory}
-              variant="tabstrip"
-            />
-            <Box mt={6}>
+        <Box
+          display={{ base: 'flex', lg: 'none' }}
+          flexDir="column"
+          flex="1"
+          overflow="hidden"
+          pt={{ base: '20', sm: '24' }}
+        >
+          <Box
+            maxW="container.2xl"
+            mx="auto"
+            px="15px"
+            w="full"
+            display="flex"
+            flexDir="column"
+            flex="1"
+            overflow="hidden"
+          >
+            {/* Tabstrip — does not scroll */}
+            <Box flexShrink={0}>
+              <ProductCategoryNav
+                categories={hubCategories}
+                activeId={activeCategoryId}
+                onSelect={handleSelectCategory}
+                variant="tabstrip"
+              />
+            </Box>
+
+            {/* Scrollable content area */}
+            <Box
+              ref={mobileContentRef}
+              flex="1"
+              overflowY="auto"
+              mt={4}
+              pb={4}
+              sx={{
+                scrollbarWidth: 'none',
+                '&::-webkit-scrollbar': { display: 'none' },
+              }}
+            >
               <RightPanel
                 category={activeCategory}
                 activeView={activeView}
@@ -436,25 +493,50 @@ const ProductsPageContent = () => {
         </Box>
 
         {/* ── Desktop layout (≥ lg) ── */}
-        <Box display={{ base: 'none', lg: 'block' }} pt="36" pb="16">
-          <Box maxW="container.2xl" mx="auto" px="15px">
-            <Flex gap={8} alignItems="flex-start">
+        <Box
+          display={{ base: 'none', lg: 'flex' }}
+          flexDir="column"
+          flex="1"
+          overflow="hidden"
+          pt="24"
+          pb={4}
+        >
+          <Box
+            maxW="container.2xl"
+            mx="auto"
+            px="15px"
+            w="full"
+            flex="1"
+            overflow="hidden"
+            display="flex"
+            flexDir="column"
+          >
+            <Flex gap={8} flex="1" overflow="hidden" alignItems="stretch">
               {/* Sidebar */}
-              <ProductCategoryNav
-                categories={hubCategories}
-                activeId={activeCategoryId}
-                onSelect={handleSelectCategory}
-                variant="sidebar"
-              />
+              <Box
+                flexShrink={0}
+                overflowY="auto"
+                pt={6}
+                sx={{
+                  scrollbarWidth: 'none',
+                  '&::-webkit-scrollbar': { display: 'none' },
+                }}
+              >
+                <ProductCategoryNav
+                  categories={hubCategories}
+                  activeId={activeCategoryId}
+                  onSelect={handleSelectCategory}
+                  variant="sidebar"
+                />
+              </Box>
 
               {/* Right panel */}
               <Box
                 ref={rightPanelRef}
                 flex="1"
                 minW={0}
-                height="calc(100vh - 160px)"
                 overflowY="auto"
-                pr={2}
+                pr={6}
                 sx={{
                   scrollbarWidth: 'none',
                   '&::-webkit-scrollbar': { display: 'none' },

@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import {
   Box,
@@ -41,7 +41,11 @@ export const Header = (props: HeaderProps) => {
       bg={y > height ? bg : ''}
       {...props}
     >
-      <Container maxW="container.2xl" px={["15px", "15px", "15px", "15px"]} py={["0", "3", "3", "3"]} >
+      <Container
+        maxW="container.2xl"
+        px={['15px', '15px', '15px', '15px']}
+        py={['0', '3', '3', '3']}
+      >
         <Flex width="full" align="center" justify="space-between">
           <Logo
             onClick={(e) => {

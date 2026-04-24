@@ -3,6 +3,7 @@ export interface ProductLine {
   index?: number
   name: string
   tagline: string
+  summary: string
   description: string
   features: string[]
   applications: string[]
@@ -14,6 +15,7 @@ export interface HubCategory {
   number: string
   name: string
   tagline: string
+  description: string[]
   gradient: string
   productLines: ProductLine[]
 }
@@ -24,6 +26,10 @@ export const hubCategories: HubCategory[] = [
     number: '01',
     name: 'Processing Equipment',
     tagline: 'Move It. Control It. Deliver It.',
+    description: [
+      "Spareng's Processing Equipment range covers the core technologies that keep bulk material moving efficiently through every stage of an industrial plant, from initial receiving and stockpiling through to in-plant transfer and final discharge. Whether the application demands the continuous, high-volume throughput of a belt conveyor or the precise metering of a rotary air valve into a pneumatic line, every piece of equipment in this range is engineered for duty-cycle demands that most off-the-shelf solutions cannot meet.",
+      'These systems serve mining, steel, cement, coal handling, power generation, and port operations. Each product is configurable to the specific bulk material, carrying distance, throughput requirement, and site layout, ensuring that the equipment integrates cleanly into existing plant infrastructure without compromising operational reliability.',
+    ],
     gradient: 'linear(to-br, primary.900, primary.700)',
     productLines: [
       {
@@ -31,7 +37,10 @@ export const hubCategories: HubCategory[] = [
         index: 1,
         name: 'Belt Conveyor',
         tagline: 'The backbone of bulk material transport.',
-        description: 'Spareng\'s Belt Conveyors are the workhorse of bulk material handling available in troughed, flat, and high angle (steep incline) configurations for transport distances ranging from a few meters to several kilometers. Suitable for coal, iron ore, aggregate, grain, cement, and port handling. All conveyors are designed with impact idlers at loading points, heavy duty return idlers, and drive systems sized for continuous duty. Custom belt widths, carrying angles, and drive arrangements are available to suit any site layout.',
+        summary:
+          'High-capacity bulk transport in troughed, flat, or steep incline configurations. Handles coal, ore, aggregate, grain, and cement across distances from meters to kilometers.',
+        description:
+          "Spareng's Belt Conveyors are the workhorse of bulk material handling available in troughed, flat, and high angle (steep incline) configurations for transport distances ranging from a few meters to several kilometers. Suitable for coal, iron ore, aggregate, grain, cement, and port handling. All conveyors are designed with impact idlers at loading points, heavy duty return idlers, and drive systems sized for continuous duty. Custom belt widths, carrying angles, and drive arrangements are available to suit any site layout.",
         features: [
           'Troughed, flat, and steep incline configurations',
           'Transport distances from meters to kilometers',
@@ -53,7 +62,10 @@ export const hubCategories: HubCategory[] = [
         index: 2,
         name: 'Rotary Air Valve',
         tagline: 'Airtight material discharge with precise flow control.',
-        description: 'The Rotary Air Valve meters bulk material from hoppers, silos, or filter units into pneumatic conveying lines or gravity chutes while maintaining an airtight seal across the pressure differential. The rotor turns within a precision machined body, sweeping material through in measured pockets. Available in mild steel (MS) for abrasive materials and stainless steel for food, pharmaceutical, or corrosive applications. Suitable for fly ash, cement, flour, sugar, plastic pellets, and chemical powders.',
+        summary:
+          'Meters bulk material into pneumatic lines while maintaining an airtight pressure seal. Available in mild and stainless steel for abrasive, food-grade, and corrosive duty.',
+        description:
+          'The Rotary Air Valve meters bulk material from hoppers, silos, or filter units into pneumatic conveying lines or gravity chutes while maintaining an airtight seal across the pressure differential. The rotor turns within a precision machined body, sweeping material through in measured pockets. Available in mild steel (MS) for abrasive materials and stainless steel for food, pharmaceutical, or corrosive applications. Suitable for fly ash, cement, flour, sugar, plastic pellets, and chemical powders.',
         features: [
           'Airtight seal across pressure differential',
           'Precision machined body for consistent pocket metering',
@@ -74,7 +86,10 @@ export const hubCategories: HubCategory[] = [
         index: 3,
         name: 'Drag Chain Conveyor',
         tagline: 'Heavy-duty enclosed transport for demanding applications.',
-        description: 'The Drag Chain Conveyor uses steel flight bars driven by heavy-duty roller chains to push or drag material through a fully enclosed trough. Its sealed construction makes it ideal for dusty, hot, or abrasive materials including coal, ash, limestone, clinker, wood chips, and grain. Multiple inlet and outlet points can be incorporated along the length, allowing flexible plant layouts. Advantages: fully dust-free, handles abrasive and high-temperature material, low maintenance chain drive, and long service life.',
+        summary:
+          'Fully enclosed steel-flight conveyor for dusty, hot, and abrasive materials. Handles coal, ash, clinker, and biomass with multi-point discharge options.',
+        description:
+          'The Drag Chain Conveyor uses steel flight bars driven by heavy-duty roller chains to push or drag material through a fully enclosed trough. Its sealed construction makes it ideal for dusty, hot, or abrasive materials including coal, ash, limestone, clinker, wood chips, and grain. Multiple inlet and outlet points can be incorporated along the length, allowing flexible plant layouts. Advantages: fully dust-free, handles abrasive and high-temperature material, low maintenance chain drive, and long service life.',
         features: [
           'Sealed construction for dusty, hot, or abrasive environments',
           'Steel flight bars on heavy-duty roller chains',
@@ -96,7 +111,10 @@ export const hubCategories: HubCategory[] = [
         index: 4,
         name: 'Screw Conveyor',
         tagline: 'Versatile and compact material transport and metering.',
-        description: 'The Screw Conveyor moves bulk materials by the rotation of a helical screw inside a trough or tube, making it one of the most compact and versatile conveying solutions available. Available in horizontal, inclined, and vertical configurations with variable pitch options for metering and feeding applications. Suitable for cement, grain, chemicals, sludge, fly ash, food grade powders, and abrasive granules. Fully enclosed, low maintenance, and adaptable to process requirements with multiple inlet/outlet configurations.',
+        summary:
+          'Compact helical transport for powders, granules, and sludge. Horizontal, inclined, or vertical configurations with variable pitch for precise metering.',
+        description:
+          'The Screw Conveyor moves bulk materials by the rotation of a helical screw inside a trough or tube, making it one of the most compact and versatile conveying solutions available. Available in horizontal, inclined, and vertical configurations with variable pitch options for metering and feeding applications. Suitable for cement, grain, chemicals, sludge, fly ash, food grade powders, and abrasive granules. Fully enclosed, low maintenance, and adaptable to process requirements with multiple inlet/outlet configurations.',
         features: [
           'Available in horizontal, inclined, and vertical configurations',
           'Variable pitch options for precise metering and feeding',
@@ -119,6 +137,10 @@ export const hubCategories: HubCategory[] = [
     number: '02',
     name: 'Conveyor Idlers',
     tagline: 'Support. Protect. Sustain.',
+    description: [
+      "Conveyor idlers are the most numerous and operationally critical components in any belt conveyor system. They determine belt shape, material containment, rolling resistance, and long-term belt health. Spareng's idler range is engineered to perform in the most demanding environments: high-impact loading zones, abrasive mineral streams, outdoor installations exposed to weather, and long-distance overland systems where a single idler failure translates directly into costly unplanned downtime.",
+      'Every idler in the range, whether impact, return, or self-aligning, is built to minimise energy consumption and maintenance intervention while maximising service life. Sealed bearings, robust frames, and application-matched designs mean that the right idler selection at the design stage directly reduces total cost of ownership across the full operational life of the conveyor.',
+    ],
     gradient: 'linear(to-br, #0d2137, #2980b9)',
     productLines: [
       {
@@ -126,7 +148,10 @@ export const hubCategories: HubCategory[] = [
         index: 1,
         name: 'Impact Idlers',
         tagline: 'Conveyor Belt Protection at High-Load Zones',
-        description: 'Designed specifically for high-load zones, these Impact Idlers utilise high-grade rubber rings and reinforced steel frames to absorb the kinetic energy of falling material at discharge points. This robust construction effectively prevents belt punctures and carcass damage, providing essential protection for the conveyor belt in loading zones, transfer chutes, and high-impact mining applications.',
+        summary:
+          'Rubber-ringed idlers that absorb falling-material impact at loading points. Prevents belt punctures and carcass damage at transfer chutes and drop zones.',
+        description:
+          'Designed specifically for high-load zones, these Impact Idlers utilise high-grade rubber rings and reinforced steel frames to absorb the kinetic energy of falling material at discharge points. This robust construction effectively prevents belt punctures and carcass damage, providing essential protection for the conveyor belt in loading zones, transfer chutes, and high-impact mining applications.',
         features: [
           'High-grade rubber rings absorb kinetic energy of falling material',
           'Reinforced steel frames for heavy-load zones',
@@ -145,7 +170,10 @@ export const hubCategories: HubCategory[] = [
         index: 2,
         name: 'Return Idlers',
         tagline: 'Stable, Low-Friction Return Belt Support',
-        description: 'Essential for maintaining the integrity of the return belt path, these idlers feature a V-return configuration optimised for stability and consistent tracking. Their self-cleaning design prevents material buildup on the roller surface to protect the clean side of the belt, while high-performance, low-friction bearings minimise energy consumption and operational noise across long-distance conveyor systems.',
+        summary:
+          'V-return idlers with self-cleaning rollers for stable tracking on the return path. Low-friction bearings cut energy consumption on long-distance systems.',
+        description:
+          'Essential for maintaining the integrity of the return belt path, these idlers feature a V-return configuration optimised for stability and consistent tracking. Their self-cleaning design prevents material buildup on the roller surface to protect the clean side of the belt, while high-performance, low-friction bearings minimise energy consumption and operational noise across long-distance conveyor systems.',
         features: [
           'Self-cleaning design prevents material buildup on roller surface',
           'V-return configuration for stable belt tracking',
@@ -164,7 +192,10 @@ export const hubCategories: HubCategory[] = [
         index: 3,
         name: 'Self-Alignment Idlers',
         tagline: 'Proactive Belt Path Correction',
-        description: 'Serving as a proactive steering mechanism, Self-Alignment Idlers utilise a pivoting frame that reacts instantly to any belt drift or misalignment. By automatically correcting the belt\'s path, they provide critical edge protection and prevent structural damage caused by wandering belts, ensuring reliable performance in both forward and reversing directions for outdoor or high-speed installations.',
+        summary:
+          'Pivoting-frame idlers that automatically correct belt drift in forward or reverse operation. Critical edge protection for long and outdoor conveyor systems.',
+        description:
+          "Serving as a proactive steering mechanism, Self-Alignment Idlers utilise a pivoting frame that reacts instantly to any belt drift or misalignment. By automatically correcting the belt's path, they provide critical edge protection and prevent structural damage caused by wandering belts, ensuring reliable performance in both forward and reversing directions for outdoor or high-speed installations.",
         features: [
           'Pivoting frame reacts instantly to belt drift',
           'Automatic belt path correction in forward and reverse directions',
@@ -185,6 +216,10 @@ export const hubCategories: HubCategory[] = [
     number: '03',
     name: 'Conveyor Pulleys',
     tagline: 'Drive. Tension. Control.',
+    description: [
+      "Pulleys are the mechanical heart of every belt conveyor. They transmit drive force, maintain belt tension, redirect the belt at each end, and carry the full structural load of a loaded conveyor under continuous operating conditions. Spareng's pulley range is precision-engineered to handle the torque, dynamic loads, and duty cycles that characterise mining, cement, coal handling, and port bulk operations where stopping is not an option.",
+      'Each pulley is matched to its specific function: head (drive) pulleys maximise traction through engineered rubber lagging; tail pulleys provide stable belt redirection and controlled tensioning at the loading end; magnetic pulleys integrate automated tramp iron removal directly into the conveyor discharge without additional equipment or manual intervention, giving a compact, reliable drive and tension system that keeps the conveyor running with minimal planned maintenance.',
+    ],
     gradient: 'linear(to-br, #15223a, #34495e)',
     productLines: [
       {
@@ -192,7 +227,10 @@ export const hubCategories: HubCategory[] = [
         index: 1,
         name: 'Head Pulley (Drive Pulley)',
         tagline: 'Primary Powerhouse of the Conveyor System',
-        description: 'Functioning as the primary powerhouse of the conveyor system, the Head Pulley is precision-machined to ensure smooth, vibration-free operation at the discharge end. It features diamond-pattern rubber lagging to maximize traction and prevent belt slippage, supported by heavy-duty cast steel construction and robust shafting engineered to handle the high torque demands of mining and industrial bulk handling.',
+        summary:
+          'Drive-end pulley with diamond-pattern rubber lagging for maximum belt traction. Heavy-duty cast construction sized for high-torque mining and industrial loads.',
+        description:
+          'Functioning as the primary powerhouse of the conveyor system, the Head Pulley is precision-machined to ensure smooth, vibration-free operation at the discharge end. It features diamond-pattern rubber lagging to maximize traction and prevent belt slippage, supported by heavy-duty cast steel construction and robust shafting engineered to handle the high torque demands of mining and industrial bulk handling.',
         features: [
           'Diamond-pattern rubber lagging for maximum belt traction',
           'Precision-machined for smooth, vibration-free operation',
@@ -212,7 +250,10 @@ export const hubCategories: HubCategory[] = [
         index: 2,
         name: 'Tail Pulley',
         tagline: 'Belt Redirection and Tension Adjustment',
-        description: 'Located at the loading end, the Tail Pulley serves as a critical point for belt redirection and tension adjustment. Available in smooth machined finishes or self-cleaning wing styles, it is designed for use with take-up units to maintain optimal belt tension, utilizing heavy-duty spherical roller bearings to ensure long-term durability and structural integrity in demanding environments.',
+        summary:
+          'Loading-end pulley for belt redirection and tension control. Available in smooth or self-cleaning wing styles with heavy-duty spherical roller bearings.',
+        description:
+          'Located at the loading end, the Tail Pulley serves as a critical point for belt redirection and tension adjustment. Available in smooth machined finishes or self-cleaning wing styles, it is designed for use with take-up units to maintain optimal belt tension, utilizing heavy-duty spherical roller bearings to ensure long-term durability and structural integrity in demanding environments.',
         features: [
           'Smooth machined or self-cleaning wing styles',
           'Designed for use with take-up units for optimal belt tension',
@@ -231,7 +272,10 @@ export const hubCategories: HubCategory[] = [
         index: 3,
         name: 'Magnetic Pulley',
         tagline: 'Automated Magnetic Separation During Discharge',
-        description: 'Combining material transport with automated magnetic separation, this pulley uses permanent rare earth magnets to extract tramp iron from the material stream during discharge. Its stainless steel, non-magnetic housing ensures maximum flux density for deep-reach metal extraction, effectively purifying bulk materials and protecting expensive downstream equipment, such as crushers, from metal damage.',
+        summary:
+          'Drive pulley with permanent rare-earth magnets that extract tramp iron during discharge. Protects downstream crushers and mills without manual intervention.',
+        description:
+          'Combining material transport with automated magnetic separation, this pulley uses permanent rare earth magnets to extract tramp iron from the material stream during discharge. Its stainless steel, non-magnetic housing ensures maximum flux density for deep-reach metal extraction, effectively purifying bulk materials and protecting expensive downstream equipment, such as crushers, from metal damage.',
         features: [
           'Permanent rare earth magnets for deep-reach extraction',
           'Stainless steel non-magnetic housing for maximum flux density',
@@ -253,6 +297,10 @@ export const hubCategories: HubCategory[] = [
     number: '04',
     name: 'Crushing Equipment',
     tagline: 'Break It Down. Built Tough.',
+    description: [
+      "Size reduction is a fundamental step in mineral processing, raw material preparation, and industrial manufacturing, and the right crusher choice directly determines throughput quality, energy efficiency, and downstream process performance. Spareng's Crushing Equipment range covers the core crushing principles of impact, hammering, and compression-shear, providing solutions matched to different feed materials, moisture levels, and required product gradations.",
+      'This range is designed for hard rock, coal, limestone, clinker, gypsum, and clay across primary, secondary, and tertiary crushing stages. Whether the priority is a high reduction ratio in a single pass, tolerance for wet and sticky feeds, or a fine uniform output with minimal fines, each machine is built for heavy-duty continuous operation with accessible maintenance, interchangeable wear parts, and long service intervals.',
+    ],
     gradient: 'linear(to-br, #1a2a1a, #27ae60)',
     productLines: [
       {
@@ -260,7 +308,10 @@ export const hubCategories: HubCategory[] = [
         index: 1,
         name: 'Impact Mill',
         tagline: 'High-velocity impact for precise size reduction',
-        description: 'The Impact Crusher uses a horizontal shaft fitted with blow bars rotating at high speed to strike feed material against breaker plates, achieving a high reduction ratio in a single pass. Designed for secondary and tertiary crushing stages, it handles limestone, coal, gypsum, clinker, and aggregate with ease. Key advantages include an adjustable output size via apron gap settings, low operational downtime, and interchangeable blow bars for extended wear life.',
+        summary:
+          'Horizontal-shaft impact crusher with high-speed blow bars for single-pass size reduction. Ideal for limestone, coal, gypsum, clinker, and aggregate.',
+        description:
+          'The Impact Crusher uses a horizontal shaft fitted with blow bars rotating at high speed to strike feed material against breaker plates, achieving a high reduction ratio in a single pass. Designed for secondary and tertiary crushing stages, it handles limestone, coal, gypsum, clinker, and aggregate with ease. Key advantages include an adjustable output size via apron gap settings, low operational downtime, and interchangeable blow bars for extended wear life.',
         features: [
           'Horizontal shaft with blow bars at high rotational speed',
           'High reduction ratio in a single pass',
@@ -280,8 +331,12 @@ export const hubCategories: HubCategory[] = [
         id: 'hammer-mill',
         index: 2,
         name: 'Hammer Mill',
-        tagline: 'Efficient rotating impact grinding for soft to medium hard materials',
-        description: 'The Hammer Mill operates on the principle of rotating hammers mounted on a shaft within a drum casing. Feed material is struck repeatedly by the hammers and forced through grate bars at the base, producing a fine, uniform product. Variable shaft speed and interchangeable grate configurations allow precise output sizing. Ideal for coal, biomass, limestone, fertilizer, grain, and similar friable materials. Advantages include simple design, easy maintenance access, and low cost per tonne of output.',
+        tagline:
+          'Efficient rotating impact grinding for soft to medium hard materials',
+        summary:
+          'Rotating-hammer crusher producing fine uniform output through adjustable grate bars. Low cost per tonne for coal, biomass, limestone, and soft minerals.',
+        description:
+          'The Hammer Mill operates on the principle of rotating hammers mounted on a shaft within a drum casing. Feed material is struck repeatedly by the hammers and forced through grate bars at the base, producing a fine, uniform product. Variable shaft speed and interchangeable grate configurations allow precise output sizing. Ideal for coal, biomass, limestone, fertilizer, grain, and similar friable materials. Advantages include simple design, easy maintenance access, and low cost per tonne of output.',
         features: [
           'Rotating hammers mounted on shaft within drum casing',
           'Interchangeable grate configurations for precise output sizing',
@@ -302,7 +357,10 @@ export const hubCategories: HubCategory[] = [
         index: 3,
         name: 'Single Roll Crusher',
         tagline: 'Reliable crushing for friable, sticky, and wet materials',
-        description: 'The Single Roll Crusher employs a toothed or serrated roll rotating against a fixed breaker plate, generating a combination of compression and shear force. Its open design tolerates wet, clay-bearing, or sticky feed that would plug other crushers. Applications include clay, coal, limestone, salt, coke, and bauxite. Advantages: handles high-moisture feeds, minimal fines generation, simple robust construction, and low maintenance requirements.',
+        summary:
+          'Toothed-roll crusher engineered for wet, sticky, and clay-bearing feeds that plug other crushers. Minimal fines, robust build, and low maintenance.',
+        description:
+          'The Single Roll Crusher employs a toothed or serrated roll rotating against a fixed breaker plate, generating a combination of compression and shear force. Its open design tolerates wet, clay-bearing, or sticky feed that would plug other crushers. Applications include clay, coal, limestone, salt, coke, and bauxite. Advantages: handles high-moisture feeds, minimal fines generation, simple robust construction, and low maintenance requirements.',
         features: [
           'Toothed or serrated roll against a fixed breaker plate',
           'Combination of compression and shear for efficient reduction',
@@ -325,6 +383,10 @@ export const hubCategories: HubCategory[] = [
     number: '05',
     name: 'Feeding Equipment',
     tagline: 'Precise Feed. Consistent Flow.',
+    description: [
+      "Consistent, controlled material feeding is the foundation of process efficiency. Downstream equipment can only perform to its rated capacity if feed is delivered at the right rate, continuously, and without surging or interruption. Spareng's Feeding Equipment range provides engineered solutions for every feeding challenge: drawing material from hoppers and bins at variable rates, elevating it vertically over heights impractical for belt or screw conveyors, and handling wet or cohesive feeds that would stall conventional feeders.",
+      'This range serves cement plants, coal handling systems, grain processing, fertilizer production, power plants, and mineral beneficiation operations. Each feeder and elevator is designed for continuous duty with variable output control, minimal spillage, and long service intervals, giving plant operators precise control over material flow at every stage from stockpile to process.',
+    ],
     gradient: 'linear(to-br, #2d1b00, #e67e22)',
     productLines: [
       {
@@ -332,7 +394,10 @@ export const hubCategories: HubCategory[] = [
         index: 1,
         name: 'Vibrating Feeder',
         tagline: 'Smooth, controlled material flow from bin to process.',
-        description: 'Spareng\'s Vibrating Feeders use electromechanical or electrodynamic drive units to impart a controlled vibratory motion to the trough, drawing material evenly from hoppers, bins, and stockpiles. Variable frequency drives allow precise feed rate adjustment to match downstream process demands. Suitable for lumpy, granular, or fine materials including coal, ore, limestone, sand, and aggregate. Advantages include adjustable feed rate, low power consumption, minimal spillage, and long operational life.',
+        summary:
+          'Electromechanical feeder drawing material evenly from hoppers and bins. Variable-frequency drive for precise feed rate control with minimal spillage.',
+        description:
+          "Spareng's Vibrating Feeders use electromechanical or electrodynamic drive units to impart a controlled vibratory motion to the trough, drawing material evenly from hoppers, bins, and stockpiles. Variable frequency drives allow precise feed rate adjustment to match downstream process demands. Suitable for lumpy, granular, or fine materials including coal, ore, limestone, sand, and aggregate. Advantages include adjustable feed rate, low power consumption, minimal spillage, and long operational life.",
         features: [
           'Electromechanical or electrodynamic drive units',
           'Variable frequency drives for precise feed rate adjustment',
@@ -373,7 +438,10 @@ export const hubCategories: HubCategory[] = [
         index: 3,
         name: 'Bucket Elevator',
         tagline: 'Vertical material lifting smooth, continuous, and dust-free.',
-        description: 'Spareng\'s Bucket Elevators provide efficient, enclosed vertical transport for bulk materials over heights that are impractical for belt or screw conveyors. Available in centrifugal discharge (high-speed, high capacity) and continuous discharge (gentle handling for fragile products) configurations. Applications span grain, cement, fertilizer, coal, sugar, fly ash, and chemical powders. All models feature enclosed casing for dust-free operation, energy-efficient drives, and easy bucket replacement.',
+        summary:
+          'Enclosed vertical lift for grain, cement, fly ash, fertilizer, and chemical powders. Centrifugal or continuous discharge for high-capacity or gentle handling.',
+        description:
+          "Spareng's Bucket Elevators provide efficient, enclosed vertical transport for bulk materials over heights that are impractical for belt or screw conveyors. Available in centrifugal discharge (high-speed, high capacity) and continuous discharge (gentle handling for fragile products) configurations. Applications span grain, cement, fertilizer, coal, sugar, fly ash, and chemical powders. All models feature enclosed casing for dust-free operation, energy-efficient drives, and easy bucket replacement.",
         features: [
           'Centrifugal and continuous discharge configurations',
           'Fully enclosed for dust-free vertical transport',
@@ -394,7 +462,10 @@ export const hubCategories: HubCategory[] = [
         index: 4,
         name: 'Wet Scraper',
         tagline: 'Efficient handling of wet, sticky, and cohesive materials.',
-        description: 'The Wet Scraper uses steel flight bars driven by a heavy-duty chain to push or scrape material along a sealed trough floor, making it ideal for wet, sticky, or cohesive feeds that would slip or jam on belt systems. Applications include wet coal, slurry, ash, sugarcane bagasse, clay, and foundry sand. Advantages: handles high-moisture content without slippage, low headroom requirement, fully enclosed, and available with self-cleaning tail sections.',
+        summary:
+          'Sealed flight-bar conveyor for wet, sticky, and cohesive feeds. Low-headroom alternative to belt systems for slurry, ash, and bagasse handling.',
+        description:
+          'The Wet Scraper uses steel flight bars driven by a heavy-duty chain to push or scrape material along a sealed trough floor, making it ideal for wet, sticky, or cohesive feeds that would slip or jam on belt systems. Applications include wet coal, slurry, ash, sugarcane bagasse, clay, and foundry sand. Advantages: handles high-moisture content without slippage, low headroom requirement, fully enclosed, and available with self-cleaning tail sections.',
         features: [
           'Steel flight bars on heavy-duty chain drive',
           'Sealed construction prevents spillage and dust',
@@ -417,14 +488,22 @@ export const hubCategories: HubCategory[] = [
     number: '06',
     name: 'Screening Equipment',
     tagline: 'Separate. Grade. Classify.',
+    description: [
+      "Accurate classification and separation of bulk materials by particle size is critical across mining, mineral processing, coal handling, and aggregate production, and the performance of the screen determines the quality of every downstream process that depends on it. Spareng's Screening Equipment range addresses the full spectrum of screening challenges, from high-capacity dry aggregate classification to the notoriously difficult job of screening wet, sticky, or near-mesh materials that blind and peg conventional screens.",
+      "Both machines in this range are built for demanding industrial environments with robust welded body construction, interchangeable screen media, and minimal planned downtime. The circular motion screen delivers high throughput with consistent stratification across multi-deck configurations; the flip flow screen solves the problems that defeat every other screen type, together forming a complete solution for any plant's classification and sizing requirements.",
+    ],
     gradient: 'linear(to-br, #1a0a2e, #8e44ad)',
     productLines: [
       {
         id: 'circular-motion-screen',
         index: 1,
         name: 'Circular Motion Screen',
-        tagline: 'High efficiency multi deck screening for aggregates and minerals.',
-        description: 'The Circular Motion Screen uses an eccentric shaft drive to generate a circular throw motion across the screening deck, providing high material agitation and efficient stratification. Available in single, double, and triple deck configurations with interchangeable screen media. Ideal for dry or slightly wet aggregate, iron ore, coal, sand, and limestone. High capacity per unit footprint, easy panel replacement, and robust welded screen body construction.',
+        tagline:
+          'High efficiency multi deck screening for aggregates and minerals.',
+        summary:
+          'Eccentric-drive multi-deck screen delivering high-efficiency stratification. Handles dry aggregate, iron ore, coal, sand, and limestone classification.',
+        description:
+          'The Circular Motion Screen uses an eccentric shaft drive to generate a circular throw motion across the screening deck, providing high material agitation and efficient stratification. Available in single, double, and triple deck configurations with interchangeable screen media. Ideal for dry or slightly wet aggregate, iron ore, coal, sand, and limestone. High capacity per unit footprint, easy panel replacement, and robust welded screen body construction.',
         features: [
           'Eccentric shaft drive for circular throw motion',
           'Single, double, and triple deck configurations',
@@ -444,8 +523,12 @@ export const hubCategories: HubCategory[] = [
         id: 'flip-flow-screen',
         index: 2,
         name: 'Flip Flow Screen',
-        tagline: 'Breakthrough screening for wet, sticky, and near mesh materials.',
-        description: 'The Flip flow Screen eliminates the blinding and pegging problems that defeat conventional screens when handling difficult materials. Its polyurethane screen panels are alternately fixed and floating, the floating panels flex rapidly in tension and relaxation, creating a powerful self-cleaning action with each cycle. This makes it the optimal solution for wet coal, iron ore fines, demolition waste, potash, and biomass. Modular panel design enables quick replacement without specialized tools.',
+        tagline:
+          'Breakthrough screening for wet, sticky, and near mesh materials.',
+        summary:
+          'Alternately-flexing polyurethane panels that self-clean while screening. The solution for wet, sticky, and near-mesh materials that blind other screens.',
+        description:
+          'The Flip flow Screen eliminates the blinding and pegging problems that defeat conventional screens when handling difficult materials. Its polyurethane screen panels are alternately fixed and floating, the floating panels flex rapidly in tension and relaxation, creating a powerful self-cleaning action with each cycle. This makes it the optimal solution for wet coal, iron ore fines, demolition waste, potash, and biomass. Modular panel design enables quick replacement without specialized tools.',
         features: [
           'Alternately fixed and floating polyurethane screen panels',
           'Panels flex in tension and relaxation for self-cleaning action',

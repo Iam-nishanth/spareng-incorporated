@@ -214,7 +214,7 @@ const HeroSection: React.FC = () => {
                 images={[
                   '/images/machines/heavy-duty-conveyor-belt.jpg',
                   '/images/machines/Screening-Washing-Plant-Titanium-Vibrating-Screen-for-River-Sand.avif',
-                  '/home/-9vsb4z5j.webp',
+                  '/home/bevcon-beltconveyor.webp',
                   '/home/conveyor-image.jpg',
                   ]}
                 intervalMs={4000}

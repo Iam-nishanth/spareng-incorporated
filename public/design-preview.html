@@ -1,0 +1,2921 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spareng — Design Preview v2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Figtree:wght@300;400;500;600;700;800&family=Source+Sans+3:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+      }
+      a {
+        text-decoration: none;
+      }
+
+      /* ─── TAB SWITCHER ─────────────────────────────── */
+      .preview-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 99999;
+        height: 48px;
+        background: #18181b;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #27272a;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+      .preview-label {
+        padding: 0 20px;
+        color: #52525b;
+        font-size: 11px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        border-right: 1px solid #27272a;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+      }
+      .preview-tab {
+        height: 100%;
+        padding: 0 22px;
+        background: transparent;
+        border: none;
+        border-right: 1px solid #27272a;
+        color: #71717a;
+        font-family: inherit;
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.15s;
+        letter-spacing: 0.3px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .preview-tab:hover {
+        color: #d4d4d8;
+        background: #27272a;
+      }
+      .preview-tab.active {
+        color: #fafafa;
+        background: #27272a;
+        border-bottom: 2px solid #3b82f6;
+      }
+      .preview-tab .dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+      }
+      .dot-a {
+        background: #3b82f6;
+      }
+      .dot-b {
+        background: #e85d04;
+      }
+      .dot-c {
+        background: #1c3a7a;
+      }
+      .preview-hint {
+        margin-left: auto;
+        padding: 0 20px;
+        color: #3f3f46;
+        font-size: 11px;
+        letter-spacing: 1px;
+      }
+
+      .dp {
+        display: none;
+        padding-top: 48px;
+      }
+      .dp.active {
+        display: block;
+      }
+
+      /* ═══════════════════════════════════════════════════════
+   DESIGN A — MERIDIAN
+   Clean Corporate · White + Navy + Amber
+   Font: Plus Jakarta Sans
+═══════════════════════════════════════════════════════ */
+      .ma {
+        --navy: #0c2340;
+        --blue: #1b74c3;
+        --amber: #e8961f;
+        --text: #111827;
+        --muted: #4b5563;
+        --light: #9ca3af;
+        --bg: #ffffff;
+        --bg2: #f5f7fb;
+        --border: #e5e7eb;
+        --border-light: #f3f4f6;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      /* Nav A */
+      .ma-nav {
+        background: #fff;
+        border-bottom: 1px solid var(--border);
+        padding: 0 60px;
+        height: 68px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 48px;
+        z-index: 100;
+      }
+      .ma-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .ma-logo img {
+        height: 36px;
+      }
+      .ma-logo-name {
+        font-size: 17px;
+        font-weight: 800;
+        color: var(--navy);
+        letter-spacing: -0.3px;
+      }
+      .ma-logo-name span {
+        color: var(--blue);
+      }
+      .ma-links {
+        display: flex;
+        gap: 2px;
+      }
+      .ma-links a {
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 500;
+        padding: 8px 14px;
+        border-radius: 6px;
+        transition: all 0.15s;
+      }
+      .ma-links a:hover {
+        color: var(--navy);
+        background: var(--bg2);
+      }
+      .ma-cta {
+        background: var(--amber);
+        color: #fff;
+        font-weight: 700;
+        font-size: 13px;
+        padding: 10px 22px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.2s;
+        letter-spacing: 0.2px;
+      }
+      .ma-cta:hover {
+        background: #d4841a;
+        box-shadow: 0 4px 14px rgba(232, 150, 31, 0.4);
+      }
+
+      /* Hero A */
+      .ma-hero {
+        min-height: calc(100vh - 116px);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 100%;
+        overflow: hidden;
+      }
+      .ma-hero-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 80px 72px 80px 60px;
+      }
+      .ma-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        background: #fef3e2;
+        color: #b45309;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 6px 14px;
+        border-radius: 20px;
+        margin-bottom: 28px;
+        width: fit-content;
+        border: 1px solid #fde68a;
+        letter-spacing: 0.2px;
+      }
+      .ma-badge-dot {
+        width: 6px;
+        height: 6px;
+        background: #f59e0b;
+        border-radius: 50%;
+      }
+      .ma-hero h1 {
+        font-size: clamp(36px, 4.5vw, 58px);
+        font-weight: 800;
+        color: var(--navy);
+        line-height: 1.12;
+        letter-spacing: -1px;
+        margin-bottom: 22px;
+      }
+      .ma-hero h1 em {
+        color: var(--blue);
+        font-style: normal;
+      }
+      .ma-hero-desc {
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.75;
+        margin-bottom: 40px;
+        max-width: 460px;
+        font-weight: 400;
+      }
+      .ma-hero-btns {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 52px;
+        flex-wrap: wrap;
+      }
+      .ma-btn-primary {
+        background: var(--navy);
+        color: #fff;
+        font-weight: 700;
+        font-size: 15px;
+        padding: 13px 28px;
+        border-radius: 8px;
+        border: 2px solid var(--navy);
+        transition: all 0.2s;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .ma-btn-primary:hover {
+        background: #0a1e38;
+        box-shadow: 0 6px 20px rgba(12, 35, 64, 0.3);
+      }
+      .ma-btn-outline {
+        background: #fff;
+        color: var(--navy);
+        font-weight: 600;
+        font-size: 15px;
+        padding: 13px 28px;
+        border-radius: 8px;
+        border: 2px solid var(--border);
+        transition: all 0.2s;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .ma-btn-outline:hover {
+        border-color: var(--navy);
+      }
+      .ma-trust {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        border-top: 1px solid var(--border-light);
+        padding-top: 24px;
+        flex-wrap: wrap;
+      }
+      .ma-trust-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        color: var(--light);
+        font-weight: 500;
+      }
+      .ma-trust-check {
+        width: 18px;
+        height: 18px;
+        background: #d1fae5;
+        border-radius: 50%;
+        color: #059669;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+      .ma-hero-right {
+        background: var(--bg2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 60px 40px 24px;
+        position: relative;
+      }
+      .ma-hero-img-frame {
+        width: 100%;
+        max-width: 560px;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow:
+          0 24px 64px rgba(12, 35, 64, 0.18),
+          0 4px 16px rgba(12, 35, 64, 0.08);
+        position: relative;
+        aspect-ratio: 4/3;
+      }
+      .ma-hero-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .ma-hero-img-badge {
+        position: absolute;
+        bottom: 24px;
+        left: 24px;
+        right: 24px;
+        background: rgba(12, 35, 64, 0.88);
+        backdrop-filter: blur(8px);
+        color: #fff;
+        padding: 16px 20px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .ma-img-badge-text {
+        font-size: 13px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.9);
+      }
+      .ma-img-badge-sub {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.5);
+        margin-top: 2px;
+      }
+      .ma-img-badge-link {
+        color: var(--amber);
+        font-size: 13px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      /* Stats strip A */
+      .ma-stats {
+        background: var(--navy);
+        padding: 36px 60px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .ma-stat {
+        text-align: center;
+        padding: 0 20px;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .ma-stat:last-child {
+        border-right: none;
+      }
+      .ma-stat-num {
+        font-size: 40px;
+        font-weight: 800;
+        color: #fff;
+        letter-spacing: -1px;
+        line-height: 1;
+      }
+      .ma-stat-num span {
+        color: var(--amber);
+      }
+      .ma-stat-label {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.5);
+        font-weight: 500;
+        margin-top: 6px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+
+      /* Products A */
+      .ma-sec {
+        padding: 80px 60px;
+      }
+      .ma-sec.alt {
+        background: var(--bg2);
+      }
+      .ma-eyebrow {
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--blue);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+      .ma-sec-title {
+        font-size: clamp(26px, 3vw, 38px);
+        font-weight: 800;
+        color: var(--navy);
+        letter-spacing: -0.5px;
+        margin-bottom: 10px;
+        line-height: 1.2;
+      }
+      .ma-sec-desc {
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.7;
+        max-width: 560px;
+        margin-bottom: 52px;
+      }
+      .ma-prod-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+      .ma-card {
+        background: #fff;
+        border-radius: 14px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        transition: all 0.3s;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+      }
+      .ma-card:hover {
+        border-color: #bfdbfe;
+        box-shadow: 0 12px 36px rgba(12, 35, 64, 0.1);
+        transform: translateY(-4px);
+      }
+      .ma-card-img {
+        height: 200px;
+        overflow: hidden;
+        background: var(--bg2);
+      }
+      .ma-card-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
+      .ma-card:hover .ma-card-img img {
+        transform: scale(1.06);
+      }
+      .ma-card-body {
+        padding: 22px 24px;
+      }
+      .ma-card-num {
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--blue);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+      }
+      .ma-card-name {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 8px;
+        letter-spacing: -0.2px;
+      }
+      .ma-card-tag {
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+      .ma-card-foot {
+        display: flex;
+        gap: 10px;
+        padding: 16px 24px;
+        border-top: 1px solid var(--border-light);
+      }
+      .ma-card-btn-q {
+        background: var(--navy);
+        color: #fff;
+        border: none;
+        border-radius: 7px;
+        padding: 9px 18px;
+        font-family: inherit;
+        font-size: 13px;
+        font-weight: 700;
+        cursor: pointer;
+        flex: 1;
+        transition: all 0.15s;
+      }
+      .ma-card-btn-q:hover {
+        background: #0a1e38;
+      }
+      .ma-card-btn-v {
+        background: transparent;
+        color: var(--navy);
+        border: 1.5px solid var(--border);
+        border-radius: 7px;
+        padding: 9px 18px;
+        font-family: inherit;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        flex: 1;
+        transition: all 0.15s;
+      }
+      .ma-card-btn-v:hover {
+        border-color: var(--navy);
+        background: var(--bg2);
+      }
+
+      /* Features A */
+      .ma-feat-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        background: var(--border);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        overflow: hidden;
+      }
+      .ma-feat {
+        background: #fff;
+        padding: 36px 28px;
+        transition: background 0.2s;
+      }
+      .ma-feat:hover {
+        background: #eff6ff;
+      }
+      .ma-feat-icon {
+        width: 44px;
+        height: 44px;
+        background: #dbeafe;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 18px;
+        font-size: 20px;
+      }
+      .ma-feat-title {
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 8px;
+      }
+      .ma-feat-desc {
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      /* Industries A */
+      .ma-ind-wrap {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 16px;
+      }
+      .ma-ind-item {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 28px 20px;
+        text-align: center;
+        transition: all 0.2s;
+      }
+      .ma-ind-item:hover {
+        border-color: #bfdbfe;
+        box-shadow: 0 4px 16px rgba(27, 116, 195, 0.1);
+      }
+      .ma-ind-icon {
+        font-size: 32px;
+        margin-bottom: 12px;
+      }
+      .ma-ind-name {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--navy);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      /* CTA A */
+      .ma-cta-band {
+        background: var(--navy);
+        padding: 80px 60px;
+        text-align: center;
+      }
+      .ma-cta-band h2 {
+        font-size: clamp(28px, 3.5vw, 46px);
+        font-weight: 800;
+        color: #fff;
+        letter-spacing: -0.5px;
+        margin-bottom: 16px;
+      }
+      .ma-cta-band p {
+        color: rgba(255, 255, 255, 0.65);
+        font-size: 17px;
+        margin-bottom: 40px;
+        max-width: 520px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.7;
+      }
+      .ma-cta-band-btn {
+        background: var(--amber);
+        color: #fff;
+        font-weight: 700;
+        font-size: 16px;
+        padding: 16px 44px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .ma-cta-band-btn:hover {
+        background: #d4841a;
+        box-shadow: 0 8px 28px rgba(232, 150, 31, 0.5);
+      }
+
+      /* Footer A */
+      .ma-footer {
+        background: #060f1e;
+        padding: 64px 60px 36px;
+      }
+      .ma-footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 64px;
+        margin-bottom: 48px;
+      }
+      .ma-footer-brand-name {
+        font-size: 18px;
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 14px;
+      }
+      .ma-footer-brand-desc {
+        color: #4b5563;
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+      }
+      .ma-footer-brand-contact {
+        color: #374151;
+        font-size: 13px;
+        line-height: 2;
+      }
+      .ma-footer-col h4 {
+        font-size: 11px;
+        font-weight: 700;
+        color: #6b7280;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 18px;
+      }
+      .ma-footer-col a {
+        display: block;
+        color: #4b5563;
+        font-size: 14px;
+        margin-bottom: 10px;
+        transition: color 0.15s;
+      }
+      .ma-footer-col a:hover {
+        color: #9ca3af;
+      }
+      .ma-footer-bottom {
+        border-top: 1px solid #111827;
+        padding-top: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .ma-footer-copy {
+        color: #374151;
+        font-size: 13px;
+      }
+
+      /* ═══════════════════════════════════════════════════════
+   DESIGN B — TITAN
+   Industrial Authority · White + Navy + Orange
+   Font: Manrope
+═══════════════════════════════════════════════════════ */
+      .mb {
+        --navy: #1a2d4a;
+        --orange: #e85d04;
+        --orange-light: #fff4ee;
+        --text: #0f1f2e;
+        --muted: #475569;
+        --light: #8e9bad;
+        --bg: #ffffff;
+        --bg2: #f4f6f8;
+        --border: #e0e6ed;
+        font-family: 'Manrope', sans-serif;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      /* Nav B */
+      .mb-nav {
+        background: #fff;
+        height: 70px;
+        padding: 0 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 48px;
+        z-index: 100;
+        box-shadow:
+          0 1px 0 var(--border),
+          0 4px 12px rgba(0, 0, 0, 0.04);
+      }
+      .mb-logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .mb-logo img {
+        height: 36px;
+      }
+      .mb-logo-text {
+        font-size: 17px;
+        font-weight: 800;
+        color: var(--navy);
+      }
+      .mb-links {
+        display: flex;
+        gap: 4px;
+      }
+      .mb-links a {
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 500;
+        padding: 8px 14px;
+        border-radius: 6px;
+        transition: all 0.15s;
+      }
+      .mb-links a:hover {
+        color: var(--navy);
+        background: var(--bg2);
+      }
+      .mb-cta {
+        background: var(--orange);
+        color: #fff;
+        font-weight: 700;
+        font-size: 13px;
+        padding: 10px 22px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .mb-cta:hover {
+        background: #d05204;
+        box-shadow: 0 4px 14px rgba(232, 93, 4, 0.4);
+      }
+
+      /* Hero B */
+      .mb-hero {
+        min-height: calc(100vh - 118px);
+        position: relative;
+        overflow: hidden;
+        background: var(--bg2);
+        display: grid;
+        grid-template-columns: 55% 45%;
+      }
+      .mb-hero-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 80px 64px;
+        background: #fff;
+        position: relative;
+        z-index: 2;
+      }
+      .mb-hero-left::after {
+        content: '';
+        position: absolute;
+        right: -40px;
+        top: 0;
+        bottom: 0;
+        width: 80px;
+        background: #fff;
+        clip-path: polygon(0 0, 0 100%, 100% 100%, 0 50%);
+        z-index: 3;
+      }
+      .mb-eyebrow-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 32px;
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--orange);
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        width: fit-content;
+      }
+      .mb-eyebrow-badge::before {
+        content: '';
+        width: 32px;
+        height: 2px;
+        background: var(--orange);
+      }
+      .mb-hero h1 {
+        font-size: clamp(36px, 4vw, 54px);
+        font-weight: 800;
+        color: var(--navy);
+        line-height: 1.1;
+        letter-spacing: -1px;
+        margin-bottom: 24px;
+      }
+      .mb-hero h1 strong {
+        color: var(--orange);
+        font-weight: 800;
+      }
+      .mb-hero-desc {
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.8;
+        max-width: 440px;
+        margin-bottom: 44px;
+      }
+      .mb-hero-btns {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 52px;
+        flex-wrap: wrap;
+      }
+      .mb-btn-primary {
+        background: var(--navy);
+        color: #fff;
+        font-family: 'Manrope', sans-serif;
+        font-weight: 700;
+        font-size: 15px;
+        padding: 14px 30px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.2s;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .mb-btn-primary:hover {
+        background: #142438;
+        box-shadow: 0 6px 20px rgba(26, 45, 74, 0.35);
+      }
+      .mb-btn-outline {
+        background: transparent;
+        color: var(--navy);
+        font-family: 'Manrope', sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+        padding: 14px 30px;
+        border: 2px solid var(--border);
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.2s;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .mb-btn-outline:hover {
+        border-color: var(--navy);
+        background: var(--bg2);
+      }
+      .mb-hero-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      .mb-hstat {
+        padding: 18px 22px;
+        text-align: center;
+        border-right: 1px solid var(--border);
+        background: var(--bg2);
+      }
+      .mb-hstat:last-child {
+        border-right: none;
+      }
+      .mb-hstat-num {
+        font-size: 28px;
+        font-weight: 800;
+        color: var(--navy);
+        line-height: 1;
+      }
+      .mb-hstat-label {
+        font-size: 11px;
+        color: var(--light);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 4px;
+      }
+      .mb-hero-right {
+        position: relative;
+        overflow: hidden;
+      }
+      .mb-hero-right img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .mb-hero-right-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0.1),
+          transparent
+        );
+      }
+
+      /* Orange accent strip */
+      .mb-accent-strip {
+        background: var(--orange);
+        height: 5px;
+      }
+
+      /* Products B */
+      .mb-sec {
+        padding: 80px 60px;
+      }
+      .mb-sec.alt {
+        background: var(--bg2);
+      }
+      .mb-eyebrow {
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--orange);
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .mb-eyebrow::before {
+        content: '';
+        width: 24px;
+        height: 2px;
+        background: var(--orange);
+      }
+      .mb-sec-title {
+        font-size: clamp(24px, 2.8vw, 36px);
+        font-weight: 800;
+        color: var(--navy);
+        letter-spacing: -0.5px;
+        margin-bottom: 10px;
+      }
+      .mb-sec-desc {
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.7;
+        max-width: 520px;
+        margin-bottom: 52px;
+      }
+      .mb-prod-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .mb-card {
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        transition: all 0.3s;
+      }
+      .mb-card:hover {
+        box-shadow: 0 16px 40px rgba(26, 45, 74, 0.12);
+        transform: translateY(-4px);
+        border-color: transparent;
+      }
+      .mb-card-accent {
+        height: 4px;
+        background: var(--orange);
+      }
+      .mb-card-img {
+        height: 190px;
+        overflow: hidden;
+        background: var(--bg2);
+      }
+      .mb-card-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
+      .mb-card:hover .mb-card-img img {
+        transform: scale(1.06);
+      }
+      .mb-card-body {
+        padding: 20px 22px;
+      }
+      .mb-card-num {
+        font-size: 10px;
+        font-weight: 700;
+        color: var(--light);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+      }
+      .mb-card-name {
+        font-size: 17px;
+        font-weight: 800;
+        color: var(--navy);
+        margin-bottom: 7px;
+      }
+      .mb-card-tag {
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+      .mb-card-link {
+        color: var(--orange);
+        font-size: 13px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        transition: gap 0.2s;
+      }
+      .mb-card:hover .mb-card-link {
+        gap: 10px;
+      }
+
+      /* Features B */
+      .mb-feat-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+      }
+      .mb-feat {
+        padding: 32px 24px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: #fff;
+        position: relative;
+        transition: all 0.2s;
+      }
+      .mb-feat:hover {
+        border-color: var(--orange);
+        box-shadow: 0 8px 24px rgba(232, 93, 4, 0.08);
+      }
+      .mb-feat-num {
+        font-size: 48px;
+        font-weight: 800;
+        color: var(--bg2);
+        position: absolute;
+        top: 16px;
+        right: 18px;
+        line-height: 1;
+        letter-spacing: -2px;
+      }
+      .mb-feat-icon {
+        font-size: 28px;
+        margin-bottom: 16px;
+      }
+      .mb-feat-title {
+        font-size: 15px;
+        font-weight: 800;
+        color: var(--navy);
+        margin-bottom: 8px;
+      }
+      .mb-feat-desc {
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      /* Industries B */
+      .mb-ind-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      .mb-ind-item {
+        padding: 32px 20px;
+        text-align: center;
+        border-right: 1px solid var(--border);
+        transition: background 0.2s;
+        background: #fff;
+      }
+      .mb-ind-item:last-child {
+        border-right: none;
+      }
+      .mb-ind-item:hover {
+        background: var(--orange-light);
+      }
+      .mb-ind-icon {
+        font-size: 32px;
+        margin-bottom: 14px;
+      }
+      .mb-ind-name {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--navy);
+      }
+      .mb-ind-sub {
+        font-size: 12px;
+        color: var(--light);
+        margin-top: 4px;
+      }
+
+      /* CTA B */
+      .mb-cta-band {
+        padding: 80px 60px;
+        background: var(--navy);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+      .mb-cta-band h2 {
+        font-size: clamp(28px, 3vw, 42px);
+        font-weight: 800;
+        color: #fff;
+        letter-spacing: -0.5px;
+        line-height: 1.2;
+      }
+      .mb-cta-band p {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 32px;
+      }
+      .mb-cta-btn {
+        background: var(--orange);
+        color: #fff;
+        font-family: 'Manrope', sans-serif;
+        font-weight: 700;
+        font-size: 15px;
+        padding: 15px 36px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .mb-cta-btn:hover {
+        background: #d05204;
+        box-shadow: 0 6px 20px rgba(232, 93, 4, 0.5);
+      }
+      .mb-cta-contact {
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 13px;
+        margin-top: 12px;
+      }
+
+      /* Footer B */
+      .mb-footer {
+        background: #0d1a2a;
+        padding: 64px 60px 36px;
+      }
+      .mb-footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 64px;
+        margin-bottom: 48px;
+      }
+      .mb-footer-brand-name {
+        font-size: 18px;
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 14px;
+      }
+      .mb-footer-brand-desc {
+        color: #374151;
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+      }
+      .mb-footer-brand-contact {
+        color: #2d3748;
+        font-size: 13px;
+        line-height: 2;
+      }
+      .mb-footer-col h4 {
+        font-size: 11px;
+        font-weight: 700;
+        color: #4b5563;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 18px;
+      }
+      .mb-footer-col a {
+        display: block;
+        color: #374151;
+        font-size: 14px;
+        margin-bottom: 10px;
+        transition: color 0.15s;
+      }
+      .mb-footer-col a:hover {
+        color: #6b7280;
+      }
+      .mb-footer-bottom {
+        border-top: 1px solid #1a2d4a;
+        padding-top: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .mb-footer-copy {
+        color: #2d3748;
+        font-size: 13px;
+      }
+
+      /* ═══════════════════════════════════════════════════════
+   DESIGN C — APEX
+   Premium Split · Navy Panel + Photo Hero
+   Font: Figtree + Source Sans 3
+═══════════════════════════════════════════════════════ */
+      .mc {
+        --navy: #1c3a7a;
+        --navy-dark: #122860;
+        --blue: #2b7de9;
+        --text: #0d1b36;
+        --muted: #4a5568;
+        --light: #94a3b8;
+        --bg: #ffffff;
+        --bg2: #f8fafd;
+        --border: #e5ebf3;
+        font-family: 'Figtree', sans-serif;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      /* Nav C */
+      .mc-nav {
+        background: #fff;
+        height: 70px;
+        padding: 0 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 48px;
+        z-index: 100;
+        border-bottom: 1px solid var(--border);
+      }
+      .mc-logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .mc-logo img {
+        height: 38px;
+      }
+      .mc-logo-text {
+        font-size: 18px;
+        font-weight: 800;
+        color: var(--navy);
+        letter-spacing: -0.3px;
+      }
+      .mc-links {
+        display: flex;
+        gap: 2px;
+      }
+      .mc-links a {
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 500;
+        padding: 8px 14px;
+        border-radius: 6px;
+        transition: all 0.15s;
+      }
+      .mc-links a:hover {
+        color: var(--navy);
+        background: var(--bg2);
+      }
+      .mc-cta {
+        background: var(--blue);
+        color: #fff;
+        font-weight: 700;
+        font-size: 13px;
+        padding: 10px 22px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .mc-cta:hover {
+        background: #2266cc;
+        box-shadow: 0 4px 14px rgba(43, 125, 233, 0.4);
+      }
+
+      /* Hero C — The signature split layout */
+      .mc-hero {
+        display: grid;
+        grid-template-columns: 42% 58%;
+        min-height: calc(100vh - 118px);
+      }
+      .mc-hero-panel {
+        background: var(--navy);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 80px 64px;
+        position: relative;
+        overflow: hidden;
+      }
+      .mc-hero-panel::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            ellipse at 80% 120%,
+            rgba(43, 125, 233, 0.2) 0%,
+            transparent 60%
+          ),
+          radial-gradient(
+            ellipse at -20% -20%,
+            rgba(255, 255, 255, 0.04) 0%,
+            transparent 50%
+          );
+        pointer-events: none;
+      }
+      .mc-panel-eyebrow {
+        font-size: 11px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.5);
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        margin-bottom: 28px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .mc-panel-eyebrow::before {
+        content: '';
+        width: 24px;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.3);
+      }
+      .mc-hero-panel h1 {
+        font-size: clamp(36px, 4vw, 56px);
+        font-weight: 800;
+        color: #fff;
+        line-height: 1.1;
+        letter-spacing: -1px;
+        margin-bottom: 24px;
+      }
+      .mc-hero-panel h1 span {
+        color: #7cb9ff;
+      }
+      .mc-panel-desc {
+        color: rgba(255, 255, 255, 0.65);
+        font-family: 'Source Sans 3', sans-serif;
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 44px;
+      }
+      .mc-panel-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .mc-btn-white {
+        background: #fff;
+        color: var(--navy);
+        font-weight: 700;
+        font-size: 15px;
+        padding: 14px 28px;
+        border-radius: 8px;
+        border: 2px solid #fff;
+        transition: all 0.2s;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        cursor: pointer;
+      }
+      .mc-btn-white:hover {
+        background: transparent;
+        color: #fff;
+      }
+      .mc-btn-ghost {
+        background: transparent;
+        color: rgba(255, 255, 255, 0.75);
+        font-weight: 600;
+        font-size: 15px;
+        padding: 14px 28px;
+        border-radius: 8px;
+        border: 1.5px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.2s;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        cursor: pointer;
+      }
+      .mc-btn-ghost:hover {
+        border-color: rgba(255, 255, 255, 0.5);
+        color: #fff;
+      }
+      .mc-panel-trust {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 28px;
+        margin-top: 44px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .mc-trust-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.5);
+        font-family: 'Source Sans 3', sans-serif;
+      }
+      .mc-trust-check {
+        color: #7cb9ff;
+        font-size: 14px;
+      }
+      .mc-hero-photo {
+        position: relative;
+        overflow: hidden;
+      }
+      .mc-hero-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .mc-hero-photo-stats {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(12, 35, 64, 0.85);
+        backdrop-filter: blur(12px);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 28px 40px;
+      }
+      .mc-pstat {
+        text-align: center;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 0 20px;
+      }
+      .mc-pstat:last-child {
+        border-right: none;
+      }
+      .mc-pstat-num {
+        font-size: 34px;
+        font-weight: 800;
+        color: #fff;
+        line-height: 1;
+      }
+      .mc-pstat-label {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.45);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 4px;
+        font-family: 'Source Sans 3', sans-serif;
+      }
+
+      /* Products C */
+      .mc-sec {
+        padding: 88px 60px;
+      }
+      .mc-sec.alt {
+        background: var(--bg2);
+      }
+      .mc-eyebrow {
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--blue);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+      .mc-sec-title {
+        font-size: clamp(26px, 3vw, 40px);
+        font-weight: 800;
+        color: var(--navy);
+        letter-spacing: -0.5px;
+        margin-bottom: 10px;
+      }
+      .mc-sec-desc {
+        color: var(--muted);
+        font-family: 'Source Sans 3', sans-serif;
+        font-size: 17px;
+        line-height: 1.7;
+        max-width: 560px;
+        margin-bottom: 56px;
+      }
+      .mc-prod-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+      .mc-card {
+        background: #fff;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        transition: all 0.3s;
+      }
+      .mc-card:hover {
+        border-color: #bfdbfe;
+        box-shadow: 0 16px 48px rgba(28, 58, 122, 0.1);
+        transform: translateY(-5px);
+      }
+      .mc-card-img {
+        height: 210px;
+        overflow: hidden;
+        background: var(--bg2);
+      }
+      .mc-card-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
+      .mc-card:hover .mc-card-img img {
+        transform: scale(1.06);
+      }
+      .mc-card-body {
+        padding: 24px 26px;
+      }
+      .mc-card-num {
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--blue);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+      }
+      .mc-card-name {
+        font-size: 19px;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 8px;
+        letter-spacing: -0.3px;
+      }
+      .mc-card-tag {
+        color: var(--muted);
+        font-family: 'Source Sans 3', sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+      .mc-card-foot {
+        padding: 16px 26px 22px;
+        display: flex;
+        gap: 10px;
+        border-top: 1px solid var(--border);
+      }
+      .mc-btn-quote {
+        background: var(--navy);
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 0;
+        font-family: 'Figtree', sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        cursor: pointer;
+        flex: 1;
+        transition: all 0.2s;
+      }
+      .mc-btn-quote:hover {
+        background: var(--navy-dark);
+      }
+      .mc-btn-view {
+        background: transparent;
+        color: var(--navy);
+        border: 1.5px solid var(--border);
+        border-radius: 8px;
+        padding: 10px 0;
+        font-family: 'Figtree', sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        flex: 1;
+        transition: all 0.2s;
+      }
+      .mc-btn-view:hover {
+        border-color: var(--navy);
+        background: var(--bg2);
+      }
+
+      /* Features C */
+      .mc-feat-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      .mc-feat-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+      .mc-feat {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 36px 32px;
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+        transition: all 0.2s;
+      }
+      .mc-feat:hover {
+        border-color: #bfdbfe;
+        box-shadow: 0 8px 24px rgba(28, 58, 122, 0.08);
+      }
+      .mc-feat-icon-wrap {
+        width: 48px;
+        height: 48px;
+        background: #eff6ff;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 22px;
+      }
+      .mc-feat-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 6px;
+      }
+      .mc-feat-desc {
+        color: var(--muted);
+        font-family: 'Source Sans 3', sans-serif;
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      /* Industries C */
+      .mc-ind-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 16px;
+      }
+      .mc-ind-card {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 32px 20px;
+        text-align: center;
+        transition: all 0.25s;
+      }
+      .mc-ind-card:hover {
+        border-color: var(--blue);
+        box-shadow: 0 8px 24px rgba(43, 125, 233, 0.1);
+        transform: translateY(-3px);
+      }
+      .mc-ind-icon {
+        font-size: 36px;
+        margin-bottom: 14px;
+      }
+      .mc-ind-name {
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 4px;
+      }
+      .mc-ind-desc {
+        font-size: 12px;
+        color: var(--light);
+        font-family: 'Source Sans 3', sans-serif;
+        line-height: 1.5;
+      }
+
+      /* CTA C */
+      .mc-cta-band {
+        background: var(--bg2);
+        padding: 88px 60px;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+      .mc-cta-inner {
+        max-width: 720px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .mc-cta-band h2 {
+        font-size: clamp(28px, 3.5vw, 46px);
+        font-weight: 800;
+        color: var(--navy);
+        letter-spacing: -0.5px;
+        margin-bottom: 16px;
+        line-height: 1.15;
+      }
+      .mc-cta-band p {
+        color: var(--muted);
+        font-family: 'Source Sans 3', sans-serif;
+        font-size: 17px;
+        line-height: 1.7;
+        margin-bottom: 40px;
+      }
+      .mc-cta-btn {
+        background: var(--navy);
+        color: #fff;
+        font-weight: 700;
+        font-size: 16px;
+        padding: 16px 48px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s;
+        display: inline-block;
+        margin-bottom: 16px;
+      }
+      .mc-cta-btn:hover {
+        background: var(--navy-dark);
+        box-shadow: 0 8px 28px rgba(28, 58, 122, 0.35);
+      }
+      .mc-cta-contact {
+        color: var(--light);
+        font-size: 14px;
+        font-family: 'Source Sans 3', sans-serif;
+      }
+      .mc-cta-contact a {
+        color: var(--blue);
+        font-weight: 600;
+      }
+
+      /* Footer C */
+      .mc-footer {
+        background: var(--navy-dark);
+        padding: 64px 60px 36px;
+      }
+      .mc-footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 64px;
+        margin-bottom: 48px;
+      }
+      .mc-footer-brand-name {
+        font-size: 18px;
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 14px;
+      }
+      .mc-footer-brand-desc {
+        color: #2d4068;
+        font-size: 14px;
+        line-height: 1.7;
+        font-family: 'Source Sans 3', sans-serif;
+        margin-bottom: 20px;
+      }
+      .mc-footer-brand-contact {
+        color: #1e3060;
+        font-size: 13px;
+        line-height: 2;
+        font-family: 'Source Sans 3', sans-serif;
+      }
+      .mc-footer-col h4 {
+        font-size: 11px;
+        font-weight: 700;
+        color: #2d4068;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 18px;
+      }
+      .mc-footer-col a {
+        display: block;
+        color: #1e3060;
+        font-size: 14px;
+        margin-bottom: 10px;
+        transition: color 0.15s;
+      }
+      .mc-footer-col a:hover {
+        color: #4d6fa0;
+      }
+      .mc-footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        padding-top: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .mc-footer-copy {
+        color: #1e3060;
+        font-size: 13px;
+        font-family: 'Source Sans 3', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ─── TAB BAR ──────────────────────────────────────── -->
+    <div class="preview-bar">
+      <div class="preview-label">Spareng — v2 Design Preview</div>
+      <button class="preview-tab active" onclick="switchTo('a',this)">
+        <span class="dot dot-a"></span> A · Meridian
+      </button>
+      <button class="preview-tab" onclick="switchTo('b',this)">
+        <span class="dot dot-b"></span> B · Titan
+      </button>
+      <button class="preview-tab" onclick="switchTo('c',this)">
+        <span class="dot dot-c"></span> C · Apex
+      </button>
+      <div class="preview-hint">Pick one to implement →</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+     DESIGN A — MERIDIAN
+     Clean Corporate · White + Navy + Amber
+═══════════════════════════════════════════════════ -->
+    <div id="dp-a" class="dp active">
+      <div class="ma">
+        <nav class="ma-nav">
+          <div class="ma-logo">
+            <img
+              src="/Sparent_INC.png"
+              alt="Spareng"
+              onerror="this.style.display='none'"
+            />
+            <span class="ma-logo-name">Spareng <span>Inc.</span></span>
+          </div>
+          <div class="ma-links">
+            <a href="#">Products</a>
+            <a href="#">Industries</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+          <button class="ma-cta">Get a Quote</button>
+        </nav>
+
+        <!-- HERO -->
+        <section class="ma-hero">
+          <div class="ma-hero-left">
+            <div class="ma-badge">
+              <span class="ma-badge-dot"></span> MHE Spare Parts Specialist ·
+              Hyderabad
+            </div>
+            <h1>
+              Material Handling<br /><em>Equipment Spares</em><br />& Components
+            </h1>
+            <p class="ma-hero-desc">
+              Premium bulk material handling spare parts — conveyor components,
+              crusher spares, pulleys, idlers, and screening equipment for
+              Mining, Steel, Cement, and Power industries.
+            </p>
+            <div class="ma-hero-btns">
+              <a href="#" class="ma-btn-primary">Get a Quote &rarr;</a>
+              <a href="#" class="ma-btn-outline">Browse Products</a>
+            </div>
+            <div class="ma-trust">
+              <div class="ma-trust-item">
+                <div class="ma-trust-check">✓</div>
+                ISO Certified Parts
+              </div>
+              <div class="ma-trust-item">
+                <div class="ma-trust-check">✓</div>
+                Pan-India Delivery
+              </div>
+              <div class="ma-trust-item">
+                <div class="ma-trust-check">✓</div>
+                Technical Support
+              </div>
+            </div>
+          </div>
+          <div class="ma-hero-right">
+            <div class="ma-hero-img-frame">
+              <img
+                class="ma-hero-img"
+                src="/home/bevcon-beltconveyor.webp"
+                alt="Material Handling Equipment"
+                onerror="this.closest('.ma-hero-img-frame').style.background='#1C3A7A'"
+              />
+              <div class="ma-hero-img-badge">
+                <div>
+                  <div class="ma-img-badge-text">Belt Conveyor System</div>
+                  <div class="ma-img-badge-sub">
+                    Processing Equipment · Category 01
+                  </div>
+                </div>
+                <div class="ma-img-badge-link">View Products &rarr;</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- STATS -->
+        <div class="ma-stats">
+          <div class="ma-stat">
+            <div class="ma-stat-num">200<span>+</span></div>
+            <div class="ma-stat-label">Products In Catalog</div>
+          </div>
+          <div class="ma-stat">
+            <div class="ma-stat-num">6</div>
+            <div class="ma-stat-label">Product Categories</div>
+          </div>
+          <div class="ma-stat">
+            <div class="ma-stat-num">5<span>+</span></div>
+            <div class="ma-stat-label">Industries Served</div>
+          </div>
+          <div class="ma-stat">
+            <div class="ma-stat-num">ISO</div>
+            <div class="ma-stat-label">Certified Quality</div>
+          </div>
+        </div>
+
+        <!-- PRODUCTS -->
+        <section class="ma-sec alt">
+          <div class="ma-eyebrow">Product Catalog</div>
+          <div class="ma-sec-title">Explore Our Categories</div>
+          <p class="ma-sec-desc">
+            High-performance material handling systems and premium spares built
+            for the most demanding industrial environments.
+          </p>
+          <div class="ma-prod-grid">
+            <div class="ma-card">
+              <div class="ma-card-img">
+                <img
+                  src="/Products/belt-conveyor.jpg"
+                  alt="Processing Equipment"
+                  onerror="this.parentElement.style.background='#1C3A7A'"
+                />
+              </div>
+              <div class="ma-card-body">
+                <div class="ma-card-num">Category 01</div>
+                <div class="ma-card-name">Processing Equipment</div>
+                <p class="ma-card-tag">
+                  Belt Conveyors, Drag Chain Conveyors, Screw Conveyors, Rotary
+                  Air Valves
+                </p>
+              </div>
+              <div class="ma-card-foot">
+                <button class="ma-card-btn-q">Get Quote</button>
+                <button class="ma-card-btn-v">View Products &rarr;</button>
+              </div>
+            </div>
+            <div class="ma-card">
+              <div class="ma-card-img">
+                <img
+                  src="/Products/impact-idler.jpg"
+                  alt="Conveyor Idlers"
+                  onerror="this.parentElement.style.background='#1C3A7A'"
+                />
+              </div>
+              <div class="ma-card-body">
+                <div class="ma-card-num">Category 02</div>
+                <div class="ma-card-name">Conveyor Idlers</div>
+                <p class="ma-card-tag">
+                  Impact Idlers, Return Idlers, Self-Alignment Idlers for belt
+                  conveyors
+                </p>
+              </div>
+              <div class="ma-card-foot">
+                <button class="ma-card-btn-q">Get Quote</button>
+                <button class="ma-card-btn-v">View Products &rarr;</button>
+              </div>
+            </div>
+            <div class="ma-card">
+              <div class="ma-card-img">
+                <img
+                  src="/Products/head-pulley.jpg"
+                  alt="Conveyor Pulleys"
+                  onerror="this.parentElement.style.background='#1C3A7A'"
+                />
+              </div>
+              <div class="ma-card-body">
+                <div class="ma-card-num">Category 03</div>
+                <div class="ma-card-name">Conveyor Pulleys</div>
+                <p class="ma-card-tag">
+                  Head Pulleys, Tail Pulleys, Magnetic Pulleys for heavy
+                  industrial use
+                </p>
+              </div>
+              <div class="ma-card-foot">
+                <button class="ma-card-btn-q">Get Quote</button>
+                <button class="ma-card-btn-v">View Products &rarr;</button>
+              </div>
+            </div>
+            <div class="ma-card">
+              <div class="ma-card-img">
+                <img
+                  src="/Products/impact-mill-new.png"
+                  alt="Crushing Equipment"
+                  onerror="this.parentElement.style.background='#1C3A7A'"
+                />
+              </div>
+              <div class="ma-card-body">
+                <div class="ma-card-num">Category 04</div>
+                <div class="ma-card-name">Crushing Equipment</div>
+                <p class="ma-card-tag">
+                  Impact Mills, Hammer Mills, Single Roll Crushers
+                </p>
+              </div>
+              <div class="ma-card-foot">
+                <button class="ma-card-btn-q">Get Quote</button>
+                <button class="ma-card-btn-v">View Products &rarr;</button>
+              </div>
+            </div>
+            <div class="ma-card">
+              <div class="ma-card-img">
+                <img
+                  src="/Products/vibrating-feeder.jpg"
+                  alt="Feeding Equipment"
+                  onerror="this.parentElement.style.background='#1C3A7A'"
+                />
+              </div>
+              <div class="ma-card-body">
+                <div class="ma-card-num">Category 05</div>
+                <div class="ma-card-name">Feeding Equipment</div>
+                <p class="ma-card-tag">
+                  Vibrating Feeders, Bucket Elevators, Wet Scrapers
+                </p>
+              </div>
+              <div class="ma-card-foot">
+                <button class="ma-card-btn-q">Get Quote</button>
+                <button class="ma-card-btn-v">View Products &rarr;</button>
+              </div>
+            </div>
+            <div class="ma-card">
+              <div class="ma-card-img">
+                <img
+                  src="/Products/circular-motion-screen.png"
+                  alt="Screening Equipment"
+                  onerror="this.parentElement.style.background='#1C3A7A'"
+                />
+              </div>
+              <div class="ma-card-body">
+                <div class="ma-card-num">Category 06</div>
+                <div class="ma-card-name">Screening Equipment</div>
+                <p class="ma-card-tag">
+                  Circular Motion Screens, Flip Flow Screens
+                </p>
+              </div>
+              <div class="ma-card-foot">
+                <button class="ma-card-btn-q">Get Quote</button>
+                <button class="ma-card-btn-v">View Products &rarr;</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- WHY SPARENG -->
+        <section class="ma-sec">
+          <div class="ma-eyebrow">Why Spareng</div>
+          <div class="ma-sec-title">Built for Heavy Industry</div>
+          <p class="ma-sec-desc">
+            Every component we supply is engineered to perform under the
+            harshest conditions — extreme loads, abrasive materials, and
+            continuous duty cycles.
+          </p>
+          <div class="ma-feat-grid">
+            <div class="ma-feat">
+              <div class="ma-feat-icon">🛡️</div>
+              <div class="ma-feat-title">Premium Quality</div>
+              <p class="ma-feat-desc">
+                Precision-engineered parts built for harsh conditions and
+                heavy-duty continuous cycles.
+              </p>
+            </div>
+            <div class="ma-feat">
+              <div class="ma-feat-icon">💰</div>
+              <div class="ma-feat-title">Cost Effective</div>
+              <p class="ma-feat-desc">
+                Competitive pricing on genuine MHE spares with bulk order
+                discounts and volume pricing.
+              </p>
+            </div>
+            <div class="ma-feat">
+              <div class="ma-feat-icon">⛑️</div>
+              <div class="ma-feat-title">Safety Compliant</div>
+              <p class="ma-feat-desc">
+                All parts meet international safety standards and quality
+                certifications for your sector.
+              </p>
+            </div>
+            <div class="ma-feat">
+              <div class="ma-feat-icon">🚚</div>
+              <div class="ma-feat-title">Fast Delivery</div>
+              <p class="ma-feat-desc">
+                Quick dispatch and nationwide delivery with dedicated post-sale
+                technical support.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- INDUSTRIES -->
+        <section class="ma-sec alt">
+          <div class="ma-eyebrow">Sectors</div>
+          <div class="ma-sec-title">Industries We Serve</div>
+          <p class="ma-sec-desc" style="margin-bottom: 36px">
+            From mining operations to power plants, our MHE spares keep critical
+            industries running.
+          </p>
+          <div class="ma-ind-wrap">
+            <div class="ma-ind-item">
+              <div class="ma-ind-icon">⛏️</div>
+              <div class="ma-ind-name">Mining</div>
+            </div>
+            <div class="ma-ind-item">
+              <div class="ma-ind-icon">🏭</div>
+              <div class="ma-ind-name">Steel Plants</div>
+            </div>
+            <div class="ma-ind-item">
+              <div class="ma-ind-icon">🏗️</div>
+              <div class="ma-ind-name">Cement</div>
+            </div>
+            <div class="ma-ind-item">
+              <div class="ma-ind-icon">⚡</div>
+              <div class="ma-ind-name">Power Gen.</div>
+            </div>
+            <div class="ma-ind-item">
+              <div class="ma-ind-icon">🔥</div>
+              <div class="ma-ind-name">Coal Handling</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="ma-cta-band">
+          <h2>Need MHE Spare Parts Fast?</h2>
+          <p>
+            Get a competitive quote from our engineering team. Genuine parts,
+            rapid dispatch, and nationwide delivery across India.
+          </p>
+          <button class="ma-cta-band-btn">Request a Quote Today</button>
+        </div>
+
+        <footer class="ma-footer">
+          <div class="ma-footer-grid">
+            <div>
+              <div class="ma-footer-brand-name">Spareng Incorporated</div>
+              <p class="ma-footer-brand-desc">
+                Premium Material Handling Equipment spare parts supplier serving
+                mining, steel, cement, coal handling, and power industries from
+                Hyderabad, India.
+              </p>
+              <div class="ma-footer-brand-contact">
+                📍 Plot No. E8/C8-2A, IDA, UPPAL, Hyderabad 500039<br />✉
+                info@sparenginc.com
+              </div>
+            </div>
+            <div class="ma-footer-col">
+              <h4>Products</h4>
+              <a href="#">Processing Equipment</a><a href="#">Conveyor Idlers</a
+              ><a href="#">Conveyor Pulleys</a><a href="#">Crushing Equipment</a
+              ><a href="#">Feeding Equipment</a
+              ><a href="#">Screening Equipment</a>
+            </div>
+            <div class="ma-footer-col">
+              <h4>Company</h4>
+              <a href="#">About Us</a><a href="#">Industries</a
+              ><a href="#">Contact</a><a href="#">Get Quote</a>
+            </div>
+          </div>
+          <div class="ma-footer-bottom">
+            <div class="ma-footer-copy">
+              © 2025 Spareng Incorporated. All rights reserved.
+            </div>
+            <div
+              style="
+                font-size: 11px;
+                color: #1f2937;
+                letter-spacing: 1px;
+                font-family: 'Plus Jakarta Sans', sans-serif;
+              "
+            >
+              Design A · Meridian
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+     DESIGN B — TITAN
+     Industrial Authority · White + Navy + Orange
+═══════════════════════════════════════════════════ -->
+    <div id="dp-b" class="dp">
+      <div class="mb">
+        <nav class="mb-nav">
+          <div class="mb-logo">
+            <img
+              src="/Sparent_INC.png"
+              alt="Spareng"
+              onerror="this.style.display='none'"
+            />
+            <span class="mb-logo-text">Spareng Incorporated</span>
+          </div>
+          <div class="mb-links">
+            <a href="#">Products</a>
+            <a href="#">Industries</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+          <button class="mb-cta">Get a Quote</button>
+        </nav>
+
+        <!-- HERO -->
+        <section class="mb-hero">
+          <div class="mb-hero-left">
+            <div class="mb-eyebrow-badge">MHE Spare Parts Specialist</div>
+            <h1>
+              Precision Equipment<br />
+              and Spares for <br /><strong>Material Handling</strong
+              ><br />Systems
+            </h1>
+            <p class="mb-hero-desc">
+              Spareng Incorporated is specialised in Bulk Material Handling
+              Systems, delivering precision-engineered equipment across Mining,
+              Steel, Cement, Power, Sugar, and Port operations
+            </p>
+            <div class="mb-hero-btns">
+              <button class="mb-btn-primary">Get a Quote &rarr;</button>
+              <button class="mb-btn-outline">Browse Catalog</button>
+            </div>
+            <div class="mb-hero-stats">
+              <div class="mb-hstat">
+                <div class="mb-hstat-num">200+</div>
+                <div class="mb-hstat-label">Products</div>
+              </div>
+              <div class="mb-hstat">
+                <div class="mb-hstat-num">6</div>
+                <div class="mb-hstat-label">Categories</div>
+              </div>
+              <div class="mb-hstat">
+                <div class="mb-hstat-num">5+</div>
+                <div class="mb-hstat-label">Industries</div>
+              </div>
+            </div>
+          </div>
+          <div class="mb-hero-right">
+            <img
+              src="/images/machines/heavy-duty-conveyor-belt.jpg"
+              alt="Industrial conveyor"
+              onerror="this.src='/home/bevcon-beltconveyor.webp'"
+            />
+            <div class="mb-hero-right-overlay"></div>
+          </div>
+        </section>
+
+        <div class="mb-accent-strip"></div>
+
+        <!-- PRODUCTS -->
+        <section class="mb-sec">
+          <div class="mb-eyebrow">Product Catalog</div>
+          <div class="mb-sec-title">Our Product Categories</div>
+          <p class="mb-sec-desc">
+            Discover our complete range of high-performance material handling
+            systems and precision-engineered spare parts.
+          </p>
+          <div class="mb-prod-grid">
+            <div class="mb-card">
+              <div class="mb-card-accent"></div>
+              <div class="mb-card-img">
+                <img
+                  src="/Products/belt-conveyor.jpg"
+                  alt="Processing"
+                  onerror="this.parentElement.style.background='#E4E9F0'"
+                />
+              </div>
+              <div class="mb-card-body">
+                <div class="mb-card-num">01 — Processing Equipment</div>
+                <div class="mb-card-name">Processing Equipment</div>
+                <p class="mb-card-tag">
+                  Belt Conveyors, Drag Chain Conveyors, Screw Conveyors, Rotary
+                  Air Valves
+                </p>
+                <div class="mb-card-link">View Products &rarr;</div>
+              </div>
+            </div>
+            <div class="mb-card">
+              <div class="mb-card-accent"></div>
+              <div class="mb-card-img">
+                <img
+                  src="/Products/impact-idler.jpg"
+                  alt="Idlers"
+                  onerror="this.parentElement.style.background='#E4E9F0'"
+                />
+              </div>
+              <div class="mb-card-body">
+                <div class="mb-card-num">02 — Conveyor Idlers</div>
+                <div class="mb-card-name">Conveyor Idlers</div>
+                <p class="mb-card-tag">
+                  Impact Idlers, Return Idlers, Self-Alignment Idlers for belt
+                  conveyors
+                </p>
+                <div class="mb-card-link">View Products &rarr;</div>
+              </div>
+            </div>
+            <div class="mb-card">
+              <div class="mb-card-accent"></div>
+              <div class="mb-card-img">
+                <img
+                  src="/Products/head-pulley.jpg"
+                  alt="Pulleys"
+                  onerror="this.parentElement.style.background='#E4E9F0'"
+                />
+              </div>
+              <div class="mb-card-body">
+                <div class="mb-card-num">03 — Conveyor Pulleys</div>
+                <div class="mb-card-name">Conveyor Pulleys</div>
+                <p class="mb-card-tag">
+                  Head Pulleys, Tail Pulleys, Magnetic Pulleys for heavy
+                  industrial use
+                </p>
+                <div class="mb-card-link">View Products &rarr;</div>
+              </div>
+            </div>
+            <div class="mb-card">
+              <div class="mb-card-accent"></div>
+              <div class="mb-card-img">
+                <img
+                  src="/Products/impact-mill-new.png"
+                  alt="Crushing"
+                  onerror="this.parentElement.style.background='#E4E9F0'"
+                />
+              </div>
+              <div class="mb-card-body">
+                <div class="mb-card-num">04 — Crushing Equipment</div>
+                <div class="mb-card-name">Crushing Equipment</div>
+                <p class="mb-card-tag">
+                  Impact Mills, Hammer Mills, Single Roll Crushers for size
+                  reduction
+                </p>
+                <div class="mb-card-link">View Products &rarr;</div>
+              </div>
+            </div>
+            <div class="mb-card">
+              <div class="mb-card-accent"></div>
+              <div class="mb-card-img">
+                <img
+                  src="/Products/vibrating-feeder.jpg"
+                  alt="Feeding"
+                  onerror="this.parentElement.style.background='#E4E9F0'"
+                />
+              </div>
+              <div class="mb-card-body">
+                <div class="mb-card-num">05 — Feeding Equipment</div>
+                <div class="mb-card-name">Feeding Equipment</div>
+                <p class="mb-card-tag">
+                  Vibrating Feeders, Bucket Elevators, Wet Scrapers for
+                  controlled flow
+                </p>
+                <div class="mb-card-link">View Products &rarr;</div>
+              </div>
+            </div>
+            <div class="mb-card">
+              <div class="mb-card-accent"></div>
+              <div class="mb-card-img">
+                <img
+                  src="/Products/circular-motion-screen.png"
+                  alt="Screening"
+                  onerror="this.parentElement.style.background='#E4E9F0'"
+                />
+              </div>
+              <div class="mb-card-body">
+                <div class="mb-card-num">06 — Screening Equipment</div>
+                <div class="mb-card-name">Screening Equipment</div>
+                <p class="mb-card-tag">
+                  Circular Motion Screens, Flip Flow Screens for classification
+                </p>
+                <div class="mb-card-link">View Products &rarr;</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FEATURES -->
+        <section class="mb-sec alt">
+          <div class="mb-eyebrow">Why Spareng</div>
+          <div class="mb-sec-title">Our Commitment to Quality</div>
+          <p class="mb-sec-desc">
+            Every part in our catalog is precision-engineered to perform under
+            the harshest industrial conditions.
+          </p>
+          <div class="mb-feat-grid">
+            <div class="mb-feat">
+              <div class="mb-feat-num">01</div>
+              <div class="mb-feat-icon">🛡️</div>
+              <div class="mb-feat-title">Premium Quality</div>
+              <p class="mb-feat-desc">
+                Precision-engineered parts for harsh industrial conditions and
+                continuous duty cycles.
+              </p>
+            </div>
+            <div class="mb-feat">
+              <div class="mb-feat-num">02</div>
+              <div class="mb-feat-icon">💰</div>
+              <div class="mb-feat-title">Cost Effective</div>
+              <p class="mb-feat-desc">
+                Competitive pricing on genuine MHE spares with bulk order
+                discounts available.
+              </p>
+            </div>
+            <div class="mb-feat">
+              <div class="mb-feat-num">03</div>
+              <div class="mb-feat-icon">⛑️</div>
+              <div class="mb-feat-title">Safety Compliant</div>
+              <p class="mb-feat-desc">
+                All parts meet international safety standards and quality
+                certifications.
+              </p>
+            </div>
+            <div class="mb-feat">
+              <div class="mb-feat-num">04</div>
+              <div class="mb-feat-icon">🚚</div>
+              <div class="mb-feat-title">Fast Delivery</div>
+              <p class="mb-feat-desc">
+                Quick dispatch, nationwide delivery, and dedicated technical
+                support.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- INDUSTRIES -->
+        <section class="mb-sec">
+          <div class="mb-eyebrow">Sectors</div>
+          <div class="mb-sec-title">Industries We Serve</div>
+          <p class="mb-sec-desc" style="margin-bottom: 40px">
+            From Mine to Port, our parts keep critical industries running
+            without interruption.
+          </p>
+          <div class="mb-ind-grid">
+            <div class="mb-ind-item">
+              <div class="mb-ind-icon">⛏️</div>
+              <div class="mb-ind-name">Mining</div>
+              <div class="mb-ind-sub">Ore & mineral handling</div>
+            </div>
+            <div class="mb-ind-item">
+              <div class="mb-ind-icon">🏭</div>
+              <div class="mb-ind-name">Steel Plants</div>
+              <div class="mb-ind-sub">Raw material handling</div>
+            </div>
+            <div class="mb-ind-item">
+              <div class="mb-ind-icon">🏗️</div>
+              <div class="mb-ind-name">Cement</div>
+              <div class="mb-ind-sub">Clinker & raw mill</div>
+            </div>
+            <div class="mb-ind-item">
+              <div class="mb-ind-icon">⚡</div>
+              <div class="mb-ind-name">Power Gen.</div>
+              <div class="mb-ind-sub">Coal yard & ash handling</div>
+            </div>
+            <div class="mb-ind-item">
+              <div class="mb-ind-icon">🔥</div>
+              <div class="mb-ind-name">Coal Handling</div>
+              <div class="mb-ind-sub">Crushing & screening</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="mb-cta-band">
+          <div>
+            <h2>Ready to Source<br />Quality MHE Spares?</h2>
+          </div>
+          <div>
+            <p>
+              Get a competitive quote from our engineering team. Genuine parts,
+              fast turnaround, and nationwide delivery from Hyderabad.
+            </p>
+            <button class="mb-cta-btn">Request a Quote Today</button>
+            <div class="mb-cta-contact">or email us at info@sparenginc.com</div>
+          </div>
+        </div>
+
+        <footer class="mb-footer">
+          <div class="mb-footer-grid">
+            <div>
+              <div class="mb-footer-brand-name">Spareng Incorporated</div>
+              <p class="mb-footer-brand-desc">
+                Premium Material Handling Equipment spare parts supplier.
+                Serving mining, steel, cement, coal handling, and power
+                industries from Hyderabad, India.
+              </p>
+              <div class="mb-footer-brand-contact">
+                📍 Plot No. E8/C8-2A, IDA, UPPAL, Hyderabad 500039<br />✉
+                info@sparenginc.com
+              </div>
+            </div>
+            <div class="mb-footer-col">
+              <h4>Products</h4>
+              <a href="#">Processing Equipment</a><a href="#">Conveyor Idlers</a
+              ><a href="#">Conveyor Pulleys</a><a href="#">Crushing Equipment</a
+              ><a href="#">Feeding Equipment</a
+              ><a href="#">Screening Equipment</a>
+            </div>
+            <div class="mb-footer-col">
+              <h4>Company</h4>
+              <a href="#">About Us</a><a href="#">Industries</a
+              ><a href="#">Contact</a><a href="#">Get Quote</a>
+            </div>
+          </div>
+          <div class="mb-footer-bottom">
+            <div class="mb-footer-copy">
+              © 2025 Spareng Incorporated. All rights reserved.
+            </div>
+            <div
+              style="
+                font-size: 11px;
+                color: #1a2d4a;
+                letter-spacing: 1px;
+                font-family: 'Manrope', sans-serif;
+              "
+            >
+              Design B · Titan
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+     DESIGN C — APEX
+     Premium Split Hero · Navy Panel + Photo
+═══════════════════════════════════════════════════ -->
+    <div id="dp-c" class="dp">
+      <div class="mc">
+        <nav class="mc-nav">
+          <div class="mc-logo">
+            <img
+              src="/Sparent_INC.png"
+              alt="Spareng"
+              onerror="this.style.display='none'"
+            />
+            <span class="mc-logo-text">Spareng Inc.</span>
+          </div>
+          <div class="mc-links">
+            <a href="#">Products</a>
+            <a href="#">Industries</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+          <button class="mc-cta">Get a Quote</button>
+        </nav>
+
+        <!-- HERO — SIGNATURE SPLIT -->
+        <section class="mc-hero">
+          <div class="mc-hero-panel">
+            <div class="mc-panel-eyebrow">
+              MHE Spare Parts · Hyderabad, India
+            </div>
+            <h1>
+              Material<br />Handling<br /><span>Equipment</span><br />Spares
+            </h1>
+            <p class="mc-panel-desc">
+              Premium bulk material handling spare parts — conveyor components,
+              crusher spares, pulleys, idlers, and screening equipment for
+              critical industries.
+            </p>
+            <div class="mc-panel-btns">
+              <button class="mc-btn-white">Get a Quote &rarr;</button>
+              <button class="mc-btn-ghost">Browse Products</button>
+            </div>
+            <div class="mc-panel-trust">
+              <div class="mc-trust-row">
+                <span class="mc-trust-check">✓</span> ISO Certified Spare Parts
+              </div>
+              <div class="mc-trust-row">
+                <span class="mc-trust-check">✓</span> Pan-India Delivery Network
+              </div>
+              <div class="mc-trust-row">
+                <span class="mc-trust-check">✓</span> Dedicated Technical
+                Support
+              </div>
+            </div>
+          </div>
+          <div class="mc-hero-photo">
+            <img
+              src="/home/bevcon-beltconveyor.webp"
+              alt="Industrial equipment"
+              onerror="this.src='/images/machines/heavy-duty-conveyor-belt.jpg'"
+              style="width: 100%; height: 100%; object-fit: cover"
+            />
+            <div class="mc-hero-photo-stats">
+              <div class="mc-pstat">
+                <div class="mc-pstat-num">200+</div>
+                <div class="mc-pstat-label">Products</div>
+              </div>
+              <div class="mc-pstat">
+                <div class="mc-pstat-num">6</div>
+                <div class="mc-pstat-label">Categories</div>
+              </div>
+              <div class="mc-pstat">
+                <div class="mc-pstat-num">5+</div>
+                <div class="mc-pstat-label">Industries</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- PRODUCTS -->
+        <section class="mc-sec alt">
+          <div class="mc-eyebrow">Product Catalog</div>
+          <div class="mc-sec-title">Explore Our Categories</div>
+          <p class="mc-sec-desc">
+            High-performance material handling systems and precision-engineered
+            spare parts for the most demanding industrial environments.
+          </p>
+          <div class="mc-prod-grid">
+            <div class="mc-card">
+              <div class="mc-card-img">
+                <img
+                  src="/Products/belt-conveyor.jpg"
+                  alt="Processing Equipment"
+                  onerror="this.parentElement.style.background='#EEF3FB'"
+                />
+              </div>
+              <div class="mc-card-body">
+                <div class="mc-card-num">Category 01</div>
+                <div class="mc-card-name">Processing Equipment</div>
+                <p class="mc-card-tag">
+                  Belt Conveyors, Drag Chain Conveyors, Screw Conveyors, Rotary
+                  Air Valves
+                </p>
+              </div>
+              <div class="mc-card-foot">
+                <button class="mc-btn-quote">Get Quote</button>
+                <button class="mc-btn-view">View Products &rarr;</button>
+              </div>
+            </div>
+            <div class="mc-card">
+              <div class="mc-card-img">
+                <img
+                  src="/Products/impact-idler.jpg"
+                  alt="Conveyor Idlers"
+                  onerror="this.parentElement.style.background='#EEF3FB'"
+                />
+              </div>
+              <div class="mc-card-body">
+                <div class="mc-card-num">Category 02</div>
+                <div class="mc-card-name">Conveyor Idlers</div>
+                <p class="mc-card-tag">
+                  Impact Idlers, Return Idlers, Self-Alignment Idlers for belt
+                  conveyors
+                </p>
+              </div>
+              <div class="mc-card-foot">
+                <button class="mc-btn-quote">Get Quote</button>
+                <button class="mc-btn-view">View Products &rarr;</button>
+              </div>
+            </div>
+            <div class="mc-card">
+              <div class="mc-card-img">
+                <img
+                  src="/Products/head-pulley.jpg"
+                  alt="Conveyor Pulleys"
+                  onerror="this.parentElement.style.background='#EEF3FB'"
+                />
+              </div>
+              <div class="mc-card-body">
+                <div class="mc-card-num">Category 03</div>
+                <div class="mc-card-name">Conveyor Pulleys</div>
+                <p class="mc-card-tag">
+                  Head Pulleys, Tail Pulleys, Magnetic Pulleys for heavy
+                  industrial use
+                </p>
+              </div>
+              <div class="mc-card-foot">
+                <button class="mc-btn-quote">Get Quote</button>
+                <button class="mc-btn-view">View Products &rarr;</button>
+              </div>
+            </div>
+            <div class="mc-card">
+              <div class="mc-card-img">
+                <img
+                  src="/Products/impact-mill-new.png"
+                  alt="Crushing Equipment"
+                  onerror="this.parentElement.style.background='#EEF3FB'"
+                />
+              </div>
+              <div class="mc-card-body">
+                <div class="mc-card-num">Category 04</div>
+                <div class="mc-card-name">Crushing Equipment</div>
+                <p class="mc-card-tag">
+                  Impact Mills, Hammer Mills, Single Roll Crushers
+                </p>
+              </div>
+              <div class="mc-card-foot">
+                <button class="mc-btn-quote">Get Quote</button>
+                <button class="mc-btn-view">View Products &rarr;</button>
+              </div>
+            </div>
+            <div class="mc-card">
+              <div class="mc-card-img">
+                <img
+                  src="/Products/vibrating-feeder.jpg"
+                  alt="Feeding Equipment"
+                  onerror="this.parentElement.style.background='#EEF3FB'"
+                />
+              </div>
+              <div class="mc-card-body">
+                <div class="mc-card-num">Category 05</div>
+                <div class="mc-card-name">Feeding Equipment</div>
+                <p class="mc-card-tag">
+                  Vibrating Feeders, Bucket Elevators, Wet Scrapers
+                </p>
+              </div>
+              <div class="mc-card-foot">
+                <button class="mc-btn-quote">Get Quote</button>
+                <button class="mc-btn-view">View Products &rarr;</button>
+              </div>
+            </div>
+            <div class="mc-card">
+              <div class="mc-card-img">
+                <img
+                  src="/Products/circular-motion-screen.png"
+                  alt="Screening Equipment"
+                  onerror="this.parentElement.style.background='#EEF3FB'"
+                />
+              </div>
+              <div class="mc-card-body">
+                <div class="mc-card-num">Category 06</div>
+                <div class="mc-card-name">Screening Equipment</div>
+                <p class="mc-card-tag">
+                  Circular Motion Screens, Flip Flow Screens
+                </p>
+              </div>
+              <div class="mc-card-foot">
+                <button class="mc-btn-quote">Get Quote</button>
+                <button class="mc-btn-view">View Products &rarr;</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FEATURES -->
+        <section class="mc-sec">
+          <div class="mc-eyebrow">Why Spareng</div>
+          <div class="mc-sec-title">Built for Heavy Industry</div>
+          <p class="mc-sec-desc">
+            Every component we supply is engineered to perform under the
+            harshest conditions.
+          </p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px">
+            <div class="mc-feat">
+              <div class="mc-feat-icon-wrap">🛡️</div>
+              <div>
+                <div class="mc-feat-title">Premium Quality</div>
+                <p class="mc-feat-desc">
+                  Precision-engineered parts for harsh conditions and heavy-duty
+                  continuous cycles.
+                </p>
+              </div>
+            </div>
+            <div class="mc-feat">
+              <div class="mc-feat-icon-wrap">💰</div>
+              <div>
+                <div class="mc-feat-title">Cost Effective</div>
+                <p class="mc-feat-desc">
+                  Competitive pricing on genuine MHE spares with bulk order
+                  discounts.
+                </p>
+              </div>
+            </div>
+            <div class="mc-feat">
+              <div class="mc-feat-icon-wrap">⛑️</div>
+              <div>
+                <div class="mc-feat-title">Safety Compliant</div>
+                <p class="mc-feat-desc">
+                  All parts meet international safety standards and quality
+                  certifications.
+                </p>
+              </div>
+            </div>
+            <div class="mc-feat">
+              <div class="mc-feat-icon-wrap">🚚</div>
+              <div>
+                <div class="mc-feat-title">Fast Delivery</div>
+                <p class="mc-feat-desc">
+                  Quick dispatch, nationwide delivery, dedicated technical
+                  support.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- INDUSTRIES -->
+        <section class="mc-sec alt">
+          <div class="mc-eyebrow">Sectors</div>
+          <div class="mc-sec-title">Industries We Serve</div>
+          <p class="mc-sec-desc" style="margin-bottom: 40px">
+            Trusted by industries where unplanned downtime is not an option.
+          </p>
+          <div class="mc-ind-grid">
+            <div class="mc-ind-card">
+              <div class="mc-ind-icon">⛏️</div>
+              <div class="mc-ind-name">Mining</div>
+              <div class="mc-ind-desc">Ore & mineral handling</div>
+            </div>
+            <div class="mc-ind-card">
+              <div class="mc-ind-icon">🏭</div>
+              <div class="mc-ind-name">Steel Plants</div>
+              <div class="mc-ind-desc">Raw material systems</div>
+            </div>
+            <div class="mc-ind-card">
+              <div class="mc-ind-icon">🏗️</div>
+              <div class="mc-ind-name">Cement</div>
+              <div class="mc-ind-desc">Clinker & raw mill</div>
+            </div>
+            <div class="mc-ind-card">
+              <div class="mc-ind-icon">⚡</div>
+              <div class="mc-ind-name">Power Gen.</div>
+              <div class="mc-ind-desc">Coal yard & ash</div>
+            </div>
+            <div class="mc-ind-card">
+              <div class="mc-ind-icon">🔥</div>
+              <div class="mc-ind-name">Coal Handling</div>
+              <div class="mc-ind-desc">Crushing & screening</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="mc-cta-band">
+          <div class="mc-cta-inner">
+            <h2>Ready to Source Quality MHE Spares?</h2>
+            <p>
+              Get a competitive quote from our engineering team. Genuine parts,
+              rapid dispatch, and nationwide delivery from Hyderabad, India.
+            </p>
+            <button class="mc-cta-btn">Request a Quote</button>
+            <div class="mc-cta-contact">
+              or reach us at <a href="#">info@sparenginc.com</a>
+            </div>
+          </div>
+        </div>
+
+        <footer class="mc-footer">
+          <div class="mc-footer-grid">
+            <div>
+              <div class="mc-footer-brand-name">Spareng Incorporated</div>
+              <p class="mc-footer-brand-desc">
+                Premium Material Handling Equipment spare parts supplier serving
+                mining, steel, cement, coal handling, and power industries from
+                Hyderabad, India.
+              </p>
+              <div class="mc-footer-brand-contact">
+                📍 Plot No. E8/C8-2A, IDA, UPPAL, Hyderabad 500039<br />✉
+                info@sparenginc.com
+              </div>
+            </div>
+            <div class="mc-footer-col">
+              <h4>Products</h4>
+              <a href="#">Processing Equipment</a><a href="#">Conveyor Idlers</a
+              ><a href="#">Conveyor Pulleys</a><a href="#">Crushing Equipment</a
+              ><a href="#">Feeding Equipment</a
+              ><a href="#">Screening Equipment</a>
+            </div>
+            <div class="mc-footer-col">
+              <h4>Company</h4>
+              <a href="#">About Us</a><a href="#">Industries</a
+              ><a href="#">Contact</a><a href="#">Get Quote</a>
+            </div>
+          </div>
+          <div class="mc-footer-bottom">
+            <div class="mc-footer-copy">
+              © 2025 Spareng Incorporated. All rights reserved.
+            </div>
+            <div
+              style="
+                font-size: 11px;
+                color: #0e2050;
+                letter-spacing: 1px;
+                font-family: 'Figtree', sans-serif;
+              "
+            >
+              Design C · Apex
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script>
+      function switchTo(id, btn) {
+        document
+          .querySelectorAll('.dp')
+          .forEach((p) => p.classList.remove('active'))
+        document
+          .querySelectorAll('.preview-tab')
+          .forEach((b) => b.classList.remove('active'))
+        document.getElementById('dp-' + id).classList.add('active')
+        btn.classList.add('active')
+        window.scrollTo({ top: 0, behavior: 'instant' })
+      }
+    </script>
+  </body>
+</html>
