@@ -296,7 +296,7 @@ export default function TitanPage() {
               Browse Catalog
             </Link>
           </div>
-          <div className={styles.heroStats}>
+          {/*<div className={styles.heroStats}>
             <div className={styles.hstat}>
               <div className={styles.hstatNum}>200+</div>
               <div className={styles.hstatLabel}>Products</div>
@@ -309,7 +309,7 @@ export default function TitanPage() {
               <div className={styles.hstatNum}>5+</div>
               <div className={styles.hstatLabel}>Industries</div>
             </div>
-          </div>
+          </div>*/}
         </div>
         <div className={styles.heroRight}>
           <HeroImageFader />
