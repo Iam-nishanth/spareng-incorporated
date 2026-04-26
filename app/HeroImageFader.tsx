@@ -9,7 +9,7 @@ const images = [
   // '/home/bevcon-beltconveyor.webp',
   '/home/bevon-solutions-conveyor.jpeg',
   '/home/impact-crushing-system.png',
-  '/home/Screening-system.png',
+  '/home/screening-system.png',
   // '/home/conveyor-image.jpg',
 ]
 
