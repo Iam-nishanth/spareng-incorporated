@@ -5,18 +5,7 @@
 =========================================================== */
 
 .root {
-  --navy: #1a2d4a;
-  --navy-dark: #142438;
-  --accent: #1b74c3;
-  --accent-dark: #155d9e;
-  --accent-light: #eaf4fc;
-  --text: #0f1f2e;
-  --muted: #475569;
-  --light: #8e9bad;
-  --bg: #ffffff;
-  --bg2: #f4f6f8;
-  --border: #e0e6ed;
-  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-sans);
   background: var(--bg);
   color: var(--text);
   min-height: 100vh;
@@ -37,7 +26,7 @@
 
 /* ---------- Nav ---------- */
 .nav {
-  background: #fff;
+  background: var(--surface);
   height: 120px;
   padding: 0 60px;
   display: flex;
@@ -61,7 +50,7 @@
 .logoText {
   font-size: 17px;
   font-weight: 800;
-  color: var(--navy);
+  color: var(--heading);
   letter-spacing: -0.2px;
 }
 .links {
@@ -77,7 +66,7 @@
   transition: all 0.15s;
 }
 .links a:hover {
-  color: var(--navy);
+  color: var(--heading);
   background: var(--bg2);
 }
 .navCta {
@@ -110,7 +99,7 @@
   flex-direction: column;
   justify-content: center;
   padding: 80px 64px;
-  background: #fff;
+  background: var(--surface);
   position: relative;
   z-index: 2;
 }
@@ -121,7 +110,7 @@
   top: 0;
   bottom: 0;
   width: 80px;
-  background: #fff;
+  background: var(--surface);
   clip-path: polygon(0 0, 0 100%, 100% 100%, 0 50%);
   z-index: 3;
 }
@@ -146,7 +135,7 @@
 .heroTitle {
   font-size: clamp(36px, 4vw, 54px);
   font-weight: 800;
-  color: var(--navy);
+  color: var(--heading);
   line-height: 1.1;
   letter-spacing: -1px;
   margin: 0 0 24px;
@@ -224,7 +213,7 @@
 .hstatNum {
   font-size: 28px;
   font-weight: 800;
-  color: var(--navy);
+  color: var(--heading);
   line-height: 1;
 }
 .hstatLabel {
@@ -304,7 +293,7 @@
 .secTitle {
   font-size: clamp(24px, 2.8vw, 36px);
   font-weight: 800;
-  color: var(--navy);
+  color: var(--heading);
   letter-spacing: -0.5px;
   margin: 0 0 10px;
 }
@@ -323,7 +312,7 @@
   gap: 20px;
 }
 .card {
-  background: #fff;
+  background: var(--surface);
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border);
@@ -344,7 +333,7 @@
 .cardImg {
   height: 280px;
   overflow: hidden;
-  background: #fff;
+  background: var(--surface);
   position: relative;
   display: flex;
   align-items: center;
@@ -389,7 +378,7 @@
 .cardName {
   font-size: 18px;
   font-weight: 800;
-  color: var(--navy);
+  color: var(--heading);
   margin: 0 0 8px;
 }
 .cardTag {
@@ -422,7 +411,7 @@
   padding: 32px 26px;
   border: 1px solid var(--border);
   border-radius: 12px;
-  background: #fff;
+  background: var(--surface);
   position: relative;
   transition: all 0.2s;
   overflow: hidden;
@@ -440,6 +429,9 @@
   right: 18px;
   line-height: 1;
   letter-spacing: -2px;
+}
+[data-theme='dark'] .featNum {
+  color: rgba(255, 255, 255, 0.06);
 }
 .featIcon {
   width: 44px;
@@ -461,7 +453,7 @@
 .featTitle {
   font-size: 16px;
   font-weight: 800;
-  color: var(--navy);
+  color: var(--heading);
   margin: 0 0 8px;
   position: relative;
   z-index: 1;
@@ -482,14 +474,14 @@
   border: 1px solid var(--border);
   border-radius: 12px;
   overflow: hidden;
-  background: #fff;
+  background: var(--surface);
 }
 .indItem {
   padding: 36px 20px;
   text-align: center;
   border-right: 1px solid var(--border);
   transition: background 0.2s;
-  background: #fff;
+  background: var(--surface);
   cursor: default;
 }
 .indItem:last-child {
@@ -502,7 +494,7 @@
   width: 40px;
   height: 40px;
   margin: 0 auto 14px;
-  color: var(--navy);
+  color: var(--heading);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -517,7 +509,7 @@
 .indName {
   font-size: 13px;
   font-weight: 700;
-  color: var(--navy);
+  color: var(--heading);
 }
 .indSub {
   font-size: 12px;

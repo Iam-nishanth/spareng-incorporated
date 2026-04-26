@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
+import { ThemeToggle } from './ThemeToggle'
 import { CloseIcon, MenuIcon } from './icons'
 import styles from './Navbar.module.css'
 
@@ -34,7 +35,16 @@ export function Navbar() {
     <>
       <nav className={styles.nav}>
         <Link href="/" className={styles.logo} aria-label="Spareng Home">
-          <img src="/Sparent_INC.png" alt="Spareng" />
+          <img
+            src="/Sparent_INC.png"
+            alt="Spareng"
+            className={styles.logoLight}
+          />
+          <img
+            src="/Spareng_INC-dark.png"
+            alt="Spareng"
+            className={styles.logoDark}
+          />
         </Link>
 
         <div className={styles.links}>
@@ -49,19 +59,21 @@ export function Navbar() {
           ))}
         </div>
 
-        <Link href="/contact" className={styles.navCta}>
-          Get a Quote
-        </Link>
-
-        <button
-          type="button"
-          className={styles.menuBtn}
-          aria-label={open ? 'Close menu' : 'Open menu'}
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-        >
-          {open ? <CloseIcon /> : <MenuIcon />}
-        </button>
+        <div className={styles.actions}>
+          <ThemeToggle className={styles.themeToggle} />
+          <Link href="/contact" className={styles.navCta}>
+            Get a Quote
+          </Link>
+          <button
+            type="button"
+            className={styles.menuBtn}
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <CloseIcon /> : <MenuIcon />}
+          </button>
+        </div>
       </nav>
 
       <div

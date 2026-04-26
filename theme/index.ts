@@ -12,15 +12,11 @@ export const theme = extendTheme(
       useSystemColorMode: false,
     },
     styles: {
-      global: (props: any) => ({
+      global: () => ({
         body: {
           color: 'gray.900',
           bg: 'white',
           fontSize: 'lg',
-          _dark: {
-            color: 'white',
-            bg: 'gray.900',
-          },
         },
       }),
     },

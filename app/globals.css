@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 
 :root {
+  /* Light theme (default) */
   --navy: #1a2d4a;
   --navy-dark: #142438;
   --accent: #1b74c3;
@@ -17,7 +18,31 @@
   --border: #e0e6ed;
   --footer-bg: #0d1a2a;
   --footer-divider: #1a2d4a;
+
+  /* Semantic — flip in dark mode */
+  --heading: #1a2d4a;
+  --surface: #ffffff;
+
   --font-sans: 'Manrope', system-ui, -apple-system, sans-serif;
   --max-content: 1280px;
   --gutter: 60px;
+}
+
+[data-theme='dark'] {
+  --navy: #1a2d4a;
+  --navy-dark: #0a1525;
+  --accent: #4ea6e0;
+  --accent-dark: #1b74c3;
+  --accent-light: #1d3a5c;
+  --text: #e2e8f0;
+  --muted: #a3b3c7;
+  --light: #6c7a91;
+  --bg: #0d1a2a;
+  --bg2: #142438;
+  --border: #1f3553;
+  --footer-bg: #050d18;
+  --footer-divider: #1a2d4a;
+
+  --heading: #f1f5f9;
+  --surface: #142438;
 }

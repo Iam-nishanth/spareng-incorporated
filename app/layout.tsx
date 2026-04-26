@@ -1,14 +1,29 @@
-import { ColorModeScript, theme } from '@chakra-ui/react'
+import { ColorModeScript } from '@chakra-ui/react'
 
 import './globals.css'
 import { Provider } from './provider'
 
-export default function Layout(props: { children: React.ReactNode }) {
-  const colorMode = theme.config.initialColorMode
+// Light is always the default. The toggle persists user choice in
+// localStorage. We never auto-switch from prefers-color-scheme.
+const themeInitScript = `
+(function () {
+  try {
+    var t = localStorage.getItem('theme');
+    if (t === 'dark') {
+      document.documentElement.dataset.theme = 'dark';
+      document.documentElement.style.colorScheme = 'dark';
+    }
+    // Keep Chakra's color-mode locked to light so it never fights us.
+    localStorage.setItem('chakra-ui-color-mode', 'light');
+  } catch (e) {}
+})();
+`
 
+export default function Layout(props: { children: React.ReactNode }) {
   return (
-    <html lang="en" data-theme={colorMode} style={{ colorScheme: colorMode }}>
+    <html lang="en" data-theme="light" style={{ colorScheme: 'light' }}>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         {/* Favicons */}
         {/* <link
           rel="apple-touch-icon"
@@ -103,8 +118,8 @@ export default function Layout(props: { children: React.ReactNode }) {
           }}
         />
       </head>
-      <body className={`chakra-ui-${colorMode}`}>
-        <ColorModeScript initialColorMode={colorMode} />
+      <body className="chakra-ui-light">
+        <ColorModeScript initialColorMode="light" />
         <Provider>{props.children}</Provider>
       </body>
     </html>

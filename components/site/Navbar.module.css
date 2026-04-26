@@ -1,5 +1,5 @@
 .nav {
-  background: #fff;
+  background: var(--surface);
   height: 120px;
   padding: 0 max(var(--gutter), calc((100% - var(--max-content)) / 2));
   display: flex;
@@ -22,6 +22,43 @@
   width: auto;
   display: block;
 }
+.logo .logoDark {
+  display: none;
+}
+[data-theme='dark'] .logo .logoLight {
+  display: none;
+}
+[data-theme='dark'] .logo .logoDark {
+  display: block;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.themeToggle {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px;
+  color: var(--heading);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+.themeToggle:hover {
+  background: var(--accent-light);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.themeToggle svg {
+  width: 18px;
+  height: 18px;
+}
 
 .links {
   display: flex;
@@ -38,11 +75,11 @@
   position: relative;
 }
 .links a:hover {
-  color: var(--navy);
-  background: var(--bg2);
+  color: var(--accent);
+  background: var(--accent-light);
 }
 .linkActive {
-  color: var(--navy) !important;
+  color: var(--heading) !important;
 }
 .linkActive::after {
   content: '';
@@ -81,7 +118,7 @@
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 8px;
-  color: var(--navy);
+  color: var(--heading);
   cursor: pointer;
 }
 .menuBtn svg {
@@ -121,7 +158,7 @@
     right: 0;
     z-index: 90;
     padding: 12px 24px 16px;
-    background: #fff;
+    background: var(--surface);
     border-bottom: 1px solid var(--border);
     box-shadow: 0 12px 28px rgba(15, 31, 46, 0.08);
     transform: translateY(-12px);
@@ -151,7 +188,8 @@
     transition: background 0.15s;
   }
   .dropdownLink:hover {
-    background: var(--bg2);
+    background: var(--accent-light);
+    color: var(--accent);
   }
   .dropdownLinkActive {
     color: var(--accent) !important;
