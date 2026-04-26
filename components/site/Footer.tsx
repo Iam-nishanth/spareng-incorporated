@@ -1,13 +1,15 @@
+import Link from 'next/link'
+
 import styles from './Footer.module.css'
 import { MailIcon, PhoneIcon, PinIcon } from './icons'
 
 const productLinks = [
-  { href: '/products#processing-equipment', label: 'Processing Equipment' },
-  { href: '/products#conveyor-idlers', label: 'Conveyor Idlers' },
-  { href: '/products#conveyor-pulleys', label: 'Conveyor Pulleys' },
-  { href: '/products#crushing-equipment', label: 'Crushing Equipment' },
-  { href: '/products#feeding-equipment', label: 'Feeding Equipment' },
-  { href: '/products#screening-equipment', label: 'Screening Equipment' },
+  { href: '/products?category=processing-equipment', label: 'Conveying Systems' },
+  { href: '/products?category=conveyor-idlers', label: 'Conveyor Idlers' },
+  { href: '/products?category=conveyor-pulleys', label: 'Conveyor Pulleys' },
+  { href: '/products?category=crushing-equipment', label: 'Crushing Equipment' },
+  { href: '/products?category=feeding-equipment', label: 'Feeding Equipment' },
+  { href: '/products?category=screening-equipment', label: 'Screening Equipment' },
 ]
 
 const companyLinks = [
@@ -46,19 +48,25 @@ export function Footer() {
           <div className={styles.col}>
             <h4>Products</h4>
             {productLinks.map((l) => (
-              <a key={l.label} href={l.href}>
+              <Link key={l.label} href={l.href} scroll={false}>
                 {l.label}
-              </a>
+              </Link>
             ))}
           </div>
 
           <div className={styles.col}>
             <h4>Company</h4>
-            {companyLinks.map((l) => (
-              <a key={l.label} href={l.href}>
-                {l.label}
-              </a>
-            ))}
+            {companyLinks.map((l) =>
+              l.href.startsWith('/#') ? (
+                <a key={l.label} href={l.href}>
+                  {l.label}
+                </a>
+              ) : (
+                <Link key={l.label} href={l.href}>
+                  {l.label}
+                </Link>
+              ),
+            )}
           </div>
         </div>
       </div>

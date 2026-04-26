@@ -1,5 +1,7 @@
 'use client'
 
+import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 
 import { ChevronLeftIcon, ChevronRightIcon } from '#components/site/icons'
@@ -12,29 +14,51 @@ export type PillItem = {
   name: string
 }
 
+// y-offset that approximates the bottom edge of the sticky chrome
+// (Navbar 124 + pills bar ~58 + buffer 18 ≈ 200)
+const STICKY_OFFSET = 200
+
 export function CategoryPills({ items }: { items: PillItem[] }) {
-  const [activeId, setActiveId] = useState<string>(items[0]?.id ?? '')
+  const params = useSearchParams()
+  const urlCategory = params?.get('category') ?? null
+
+  const [activeId, setActiveId] = useState<string>(
+    urlCategory && items.some((i) => i.id === urlCategory)
+      ? urlCategory
+      : items[0]?.id ?? '',
+  )
   const [canScrollLeft, setCanScrollLeft] = useState(false)
   const [canScrollRight, setCanScrollRight] = useState(false)
   const scrollRef = useRef<HTMLDivElement>(null)
+  // While CategoryScroller is animating to a new target, freeze the active
+  // pill on that target so we don't flicker through intermediate sections.
+  const lockedTargetRef = useRef<string | null>(null)
 
-  // Update arrow visibility based on current scroll state.
+  // Sync with URL changes (pill click, footer link, homepage card, etc.).
+  useEffect(() => {
+    if (!urlCategory) return
+    if (!items.some((i) => i.id === urlCategory)) return
+    setActiveId(urlCategory)
+    lockedTargetRef.current = urlCategory
+    const t = window.setTimeout(() => {
+      lockedTargetRef.current = null
+    }, 1500)
+    return () => window.clearTimeout(t)
+  }, [urlCategory, items])
+
+  // Update arrow availability based on current scroll state of the pill bar.
   useEffect(() => {
     const el = scrollRef.current
     if (!el) return
-
     const update = () => {
       const { scrollLeft, scrollWidth, clientWidth } = el
       setCanScrollLeft(scrollLeft > 1)
       setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 1)
     }
-
     update()
     el.addEventListener('scroll', update, { passive: true })
     window.addEventListener('resize', update)
-    // Re-check after layout settles (fonts, late style application)
     const t = window.setTimeout(update, 200)
-
     return () => {
       el.removeEventListener('scroll', update)
       window.removeEventListener('resize', update)
@@ -42,32 +66,51 @@ export function CategoryPills({ items }: { items: PillItem[] }) {
     }
   }, [items])
 
-  // Scrollspy: highlight the section currently in view.
+  // Scrollspy: the active section is the last one in DOM order whose top has
+  // crossed below the sticky chrome. This is exactly the section whose
+  // header is currently at the top of the visible content area.
   useEffect(() => {
-    const els = items
-      .map((i) => document.getElementById(i.id))
-      .filter((el): el is HTMLElement => Boolean(el))
-    if (els.length === 0) return
+    const elements = items
+      .map((item) => ({
+        id: item.id,
+        el: document.getElementById(item.id),
+      }))
+      .filter((x): x is { id: string; el: HTMLElement } => x.el !== null)
+    if (elements.length === 0) return
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const intersecting = entries
-          .filter((e) => e.isIntersecting)
-          .sort(
-            (a, b) => a.boundingClientRect.top - b.boundingClientRect.top,
-          )
-        if (intersecting[0]) {
-          setActiveId(intersecting[0].target.id)
+    const update = () => {
+      if (lockedTargetRef.current) return
+      let next = elements[0].id
+      for (const { id, el } of elements) {
+        const top = el.getBoundingClientRect().top
+        if (top - 12 <= STICKY_OFFSET) {
+          next = id
         }
-      },
-      {
-        rootMargin: '-180px 0px -55% 0px',
-        threshold: 0,
-      },
-    )
+      }
+      setActiveId((prev) => (prev === next ? prev : next))
+    }
 
-    els.forEach((el) => observer.observe(el))
-    return () => observer.disconnect()
+    let frameId: number | null = null
+    const onScroll = () => {
+      if (frameId !== null) return
+      frameId = requestAnimationFrame(() => {
+        frameId = null
+        update()
+      })
+    }
+
+    update()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('resize', onScroll)
+    // Re-run after layout settles (image streaming, font swap).
+    const tSettle = window.setTimeout(update, 600)
+
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('resize', onScroll)
+      window.clearTimeout(tSettle)
+      if (frameId !== null) cancelAnimationFrame(frameId)
+    }
   }, [items])
 
   // Keep the active pill in view inside the horizontally-scrolling pill bar.
@@ -111,15 +154,17 @@ export function CategoryPills({ items }: { items: PillItem[] }) {
       <div className={styles.pillsScroll} ref={scrollRef}>
         <div className={styles.pillsInner}>
           {items.map((c) => (
-            <a
+            <Link
               key={c.id}
-              href={`#${c.id}`}
+              href={`/products?category=${c.id}`}
               data-pill-id={c.id}
+              scroll={false}
+              prefetch={false}
               className={`${styles.pill} ${activeId === c.id ? styles.pillActive : ''}`}
             >
               <span className={styles.pillNum}>{c.number}</span>
               {c.name}
-            </a>
+            </Link>
           ))}
         </div>
       </div>

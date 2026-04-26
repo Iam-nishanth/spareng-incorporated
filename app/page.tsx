@@ -24,10 +24,10 @@ type Category = {
 
 const categories: Category[] = [
   {
-    num: '01 / Processing Equipment',
-    name: 'Processing Equipment',
+    num: '01 / Conveying Systems',
+    name: 'Conveying Systems',
     tag: 'Belt Conveyors, Drag Chain Conveyors, Screw Conveyors, and Rotary Air Valves for continuous bulk transport.',
-    image: '/product-images/belt-converyors.png',
+    image: '/home/converyors-home.jpeg',
     slug: 'processing-equipment',
     cover: true,
   },
@@ -161,92 +161,35 @@ const features: Feature[] = [
 type Industry = {
   name: string
   sub: string
-  icon: React.ReactNode
+  image: string
 }
 
-const MiningIcon = (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.8"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M14 3 21 10" />
-    <path d="m10 7 7 7" />
-    <path d="M3 21v-6l11-11 6 6L9 21H3z" />
-  </svg>
-)
-const SteelIcon = (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.8"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M2 20h20" />
-    <path d="M4 20V9l5 3V9l5 3V9l5 3v8" />
-    <path d="M9 20v-5" />
-    <path d="M14 20v-5" />
-    <path d="M4 9V5l3-2 2 2v4" />
-  </svg>
-)
-const CementIcon = (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.8"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M3 21V10l9-7 9 7v11" />
-    <path d="M3 21h18" />
-    <circle cx="12" cy="13" r="2.5" />
-    <path d="M12 13v8" />
-    <path d="M9.8 14.5 7 21" />
-    <path d="M14.2 14.5 17 21" />
-  </svg>
-)
-const PowerIcon = (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.8"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z" />
-  </svg>
-)
-const CoalIcon = (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.8"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M4 20h16" />
-    <path d="M4 20c0-5 3-9 8-9s8 4 8 9" />
-    <circle cx="9" cy="14" r="1.5" />
-    <circle cx="14" cy="15" r="1.5" />
-    <path d="M12 11V5" />
-    <path d="M10 7l2-2 2 2" />
-  </svg>
-)
-
 const industries: Industry[] = [
-  { name: 'Mining', sub: 'Ore & mineral handling', icon: MiningIcon },
-  { name: 'Steel Plants', sub: 'Raw material handling', icon: SteelIcon },
-  { name: 'Cement', sub: 'Clinker & raw mill', icon: CementIcon },
-  { name: 'Power Gen.', sub: 'Coal yard & ash handling', icon: PowerIcon },
-  { name: 'Coal Handling', sub: 'Crushing & screening', icon: CoalIcon },
+  {
+    name: 'Mining',
+    sub: 'Ore & Mineral Handling',
+    image: '/images/industries/mining-systems.jpg',
+  },
+  {
+    name: 'Steel Plants',
+    sub: 'Raw Material Handling',
+    image: '/images/industries/steel-industry.jpg',
+  },
+  {
+    name: 'Cement',
+    sub: 'Clinker & Raw Mill',
+    image: '/images/industries/cement.jpg',
+  },
+  {
+    name: 'Power Generation',
+    sub: 'Coal Yard & Ash Handling',
+    image: '/images/industries/power-generation.jpg',
+  },
+  {
+    name: 'Coal Handling',
+    sub: 'Crushing & Screening',
+    image: '/images/industries/coal-plant.png',
+  },
 ]
 
 const ArrowIcon = (
@@ -330,10 +273,11 @@ export default function TitanPage() {
         </p>
         <div className={styles.prodGrid}>
           {categories.map((c) => (
-            <a
-              href={`/products#${c.slug}`}
+            <Link
+              href={`/products?category=${c.slug}`}
               className={styles.card}
               key={c.name}
+              scroll={false}
             >
               <div className={styles.cardAccent} />
               <div
@@ -349,7 +293,7 @@ export default function TitanPage() {
                   View Products {ArrowIcon}
                 </span>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </section>
@@ -378,17 +322,22 @@ export default function TitanPage() {
       <section className={styles.sec} id="industries">
         <div className={styles.eyebrow}>Sectors</div>
         <h2 className={styles.secTitle}>Industries We Serve</h2>
-        <p className={styles.secDesc} style={{ marginBottom: 40 }}>
-          From Mine to Port, our parts keep critical industries running without
-          interruption.
+        <p className={styles.secDesc} style={{ marginBottom: 48 }}>
+          From mine to port, our equipment and spares keep critical industries
+          running without interruption. Engineered for the heat, dust, and duty
+          cycles each sector demands.
         </p>
         <div className={styles.indGrid}>
           {industries.map((i) => (
-            <div className={styles.indItem} key={i.name}>
-              <div className={styles.indIcon}>{i.icon}</div>
-              <div className={styles.indName}>{i.name}</div>
-              <div className={styles.indSub}>{i.sub}</div>
-            </div>
+            <article className={styles.indCard} key={i.name}>
+              <img src={i.image} alt={i.name} className={styles.indImg} />
+              <span className={styles.indOverlay} />
+              <div className={styles.indContent}>
+                <p className={styles.indSub}>{i.sub}</p>
+                <h3 className={styles.indName}>{i.name}</h3>
+                <span className={styles.indBar} />
+              </div>
+            </article>
           ))}
         </div>
       </section>

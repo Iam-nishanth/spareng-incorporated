@@ -24,10 +24,10 @@ export const hubCategories: HubCategory[] = [
   {
     id: 'processing-equipment',
     number: '01',
-    name: 'Processing Equipment',
+    name: 'Conveying Systems',
     tagline: 'Move It. Control It. Deliver It.',
     description: [
-      "Spareng's Processing Equipment range covers the core technologies that keep bulk material moving efficiently through every stage of an industrial plant, from initial receiving and stockpiling through to in-plant transfer and final discharge. Whether the application demands the continuous, high-volume throughput of a belt conveyor or the precise metering of a rotary air valve into a pneumatic line, every piece of equipment in this range is engineered for duty-cycle demands that most off-the-shelf solutions cannot meet.",
+      "Spareng's Conveying Systems range covers the core technologies that keep bulk material moving efficiently through every stage of an industrial plant, from initial receiving and stockpiling through to in-plant transfer and final discharge. Whether the application demands the continuous, high-volume throughput of a belt conveyor or the precise metering of a rotary air valve into a pneumatic line, every piece of equipment in this range is engineered for duty-cycle demands that most off-the-shelf solutions cannot meet.",
       'These systems serve mining, steel, cement, coal handling, power generation, and port operations. Each product is configurable to the specific bulk material, carrying distance, throughput requirement, and site layout, ensuring that the equipment integrates cleanly into existing plant infrastructure without compromising operational reliability.',
     ],
     gradient: 'linear(to-br, primary.900, primary.700)',
@@ -55,7 +55,7 @@ export const hubCategories: HubCategory[] = [
           'Aggregate and quarry operations',
           'Cement plant raw material conveying',
         ],
-        image: '/product-images/belt-converyors.png',
+        image: '/product-images/belt-conveyor.jpeg',
       },
       {
         id: 'rotary-air-valve',
@@ -79,7 +79,7 @@ export const hubCategories: HubCategory[] = [
           'Silo and hopper metering',
           'Powder and granule flow control',
         ],
-        image: '/product-images/rotary-air-valve.png',
+        image: '/product-images/rotary_air_valve.png',
       },
       {
         id: 'drag-chain-conveyor',

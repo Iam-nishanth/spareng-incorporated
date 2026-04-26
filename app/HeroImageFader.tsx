@@ -5,11 +5,12 @@ import { useEffect, useState } from 'react'
 import styles from './titan.module.css'
 
 const images = [
-  '/images/machines/heavy-duty-conveyor-belt.jpg',
-  // '/images/machines/Screening-Washing-Plant-Titanium-Vibrating-Screen-for-River-Sand.avif',
+  // '/images/machines/heavy-duty-conveyor-belt.jpg',
   // '/home/bevcon-beltconveyor.webp',
-  '/home/converyors-home.jpeg',
-  '/home/conveyor-image.jpg',
+  '/home/bevon-solutions-conveyor.jpeg',
+  '/home/impact-crushing-system.png',
+  '/home/Screening-system.png',
+  // '/home/conveyor-image.jpg',
 ]
 
 const INTERVAL_MS = 5000

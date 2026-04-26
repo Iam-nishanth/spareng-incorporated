@@ -33,7 +33,7 @@ const industries: { [key: string]: Industry } = {
     title: 'Screening Spares',
     description: 'Circular motion screens, flip flow screens, and linear motion screens for material separation and grading.',
     imageSrc: '/images/machines/Screening-Washing-Plant-Titanium-Vibrating-Screen-for-River-Sand.avif',
-    category: 'Processing Equipment',
+    category: 'Conveying Systems',
     benefits: [
       'Circular motion screens for efficient separation',
       'Flip flow screens for difficult materials',
@@ -53,7 +53,7 @@ const industries: { [key: string]: Industry } = {
     title: 'Crushing Systems',
     description: 'Impact mills, hammer mills, and ring granulators for material size reduction and processing.',
     imageSrc: '/images/machines/impact-crusher-1.jpg',
-    category: 'Processing Equipment',
+    category: 'Conveying Systems',
     benefits: [
       'High-impact crushing efficiency',
       'Reversible hammer design',

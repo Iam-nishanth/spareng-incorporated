@@ -470,51 +470,124 @@
 /* ---------- Industries ---------- */
 .indGrid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  border: 1px solid var(--border);
-  border-radius: 12px;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  grid-template-rows: minmax(260px, 1fr) minmax(260px, 1fr);
+  gap: 12px;
+}
+.indCard {
+  position: relative;
   overflow: hidden;
-  background: var(--surface);
+  border-radius: 14px;
+  cursor: pointer;
+  background: var(--bg2);
+  isolation: isolate;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
 }
-.indItem {
-  padding: 36px 20px;
-  text-align: center;
-  border-right: 1px solid var(--border);
-  transition: background 0.2s;
-  background: var(--surface);
-  cursor: default;
+.indCard:first-child {
+  grid-row: 1 / span 2;
 }
-.indItem:last-child {
-  border-right: none;
+.indCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(15, 31, 46, 0.18);
 }
-.indItem:hover {
-  background: var(--accent-light);
-}
-.indIcon {
-  width: 40px;
-  height: 40px;
-  margin: 0 auto 14px;
-  color: var(--heading);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.indItem:hover .indIcon {
-  color: var(--accent);
-}
-.indIcon svg {
+.indImg {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  display: block;
+  z-index: 0;
 }
-.indName {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--heading);
+.indCard:hover .indImg {
+  transform: scale(1.06);
+}
+.indOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(13, 26, 42, 0.3) 0%,
+    rgba(13, 26, 42, 0.55) 45%,
+    rgba(13, 26, 42, 0.92) 100%
+  );
+  transition: background 0.35s ease;
+}
+.indCard:hover .indOverlay {
+  background: linear-gradient(
+    180deg,
+    rgba(13, 26, 42, 0.5) 0%,
+    rgba(13, 26, 42, 0.75) 45%,
+    rgba(13, 26, 42, 0.98) 100%
+  );
+}
+.indContent {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 22px 22px 24px;
+  color: #fff;
 }
 .indSub {
-  font-size: 12px;
-  color: var(--light);
-  margin-top: 4px;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #6fb6f0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+  transition: color 0.25s ease;
+}
+.indCard:hover .indSub {
+  color: #a8d4f5;
+}
+.indName {
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+  margin: 0;
+  letter-spacing: -0.4px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.indCard:hover .indName {
+  transform: translateY(-2px);
+}
+.indBar {
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  margin-top: 12px;
+  border-radius: 2px;
+  transition: width 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.indCard:hover .indBar {
+  width: 56px;
+}
+
+/* Featured (first) card gets larger type */
+.indCard:first-child .indContent {
+  padding: 32px 32px 36px;
+}
+.indCard:first-child .indSub {
+  font-size: 11.5px;
+}
+.indCard:first-child .indName {
+  font-size: clamp(26px, 2.6vw, 36px);
+}
+.indCard:first-child .indBar {
+  margin-top: 16px;
+}
+.indCard:first-child:hover .indBar {
+  width: 80px;
 }
 
 /* ---------- CTA band ---------- */
@@ -749,13 +822,14 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .indGrid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(220px, 1fr) minmax(220px, 1fr) minmax(220px, 1fr);
   }
-  .indItem:nth-child(3n) {
-    border-right: none;
+  .indContent {
+    padding: 20px 20px 22px;
   }
-  .indItem:nth-child(-n + 3) {
-    border-bottom: 1px solid var(--border);
+  .indCard:first-child .indContent {
+    padding: 24px 24px 26px;
   }
   .ctaBand {
     grid-template-columns: 1fr;
@@ -816,16 +890,14 @@
     grid-template-columns: 1fr;
   }
   .indGrid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 220px);
   }
-  .indItem {
-    border-bottom: 1px solid var(--border);
+  .indCard:first-child {
+    grid-row: auto;
   }
-  .indItem:nth-child(2n) {
-    border-right: none;
-  }
-  .indItem:last-child {
-    border-bottom: none;
+  .indCard:first-child .indName {
+    font-size: 24px;
   }
   .ctaBand {
     padding: 48px 20px;

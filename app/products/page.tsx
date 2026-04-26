@@ -1,19 +1,20 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { Suspense } from 'react'
 
 import { Footer } from '#components/site/Footer'
-import { HashScroller } from '#components/site/HashScroller'
 import { Navbar } from '#components/site/Navbar'
 import { ArrowIcon } from '#components/site/icons'
 import { hubCategories } from '#data/hub-categories'
 
 import { CategoryPills } from './CategoryPills'
+import { CategoryScroller } from './CategoryScroller'
 import styles from './products.module.css'
 
 export const metadata: Metadata = {
   title: 'Products | Spareng Incorporated',
   description:
-    'Complete catalog of MHE spare parts and equipment: Processing Equipment, Conveyor Idlers, Pulleys, Crushers, Feeders, and Screening Equipment for industrial bulk material handling.',
+    'Complete catalog of MHE spare parts and equipment: Conveying Systems, Conveyor Idlers, Pulleys, Crushers, Feeders, and Screening Equipment for industrial bulk material handling.',
 }
 
 const coverLineIds = new Set([
@@ -74,7 +75,9 @@ export default function ProductsPage() {
   return (
     <div className={styles.root}>
       <Navbar />
-      <HashScroller />
+      <Suspense fallback={null}>
+        <CategoryScroller />
+      </Suspense>
 
       <section className={styles.hero}>
         <div className={styles.heroInner}>
@@ -112,7 +115,9 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      <CategoryPills items={pillItems} />
+      <Suspense fallback={null}>
+        <CategoryPills items={pillItems} />
+      </Suspense>
 
       {hubCategories.map((c, idx) => {
         const meta = categoryMeta[c.id]
