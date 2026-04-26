@@ -1,5 +1,5 @@
 import styles from './Footer.module.css'
-import { LinkedInIcon, MailIcon, PhoneIcon, PinIcon } from './icons'
+import { MailIcon, PhoneIcon, PinIcon } from './icons'
 
 const productLinks = [
   { href: '/products#processing-equipment', label: 'Processing Equipment' },
@@ -12,16 +12,7 @@ const productLinks = [
 
 const companyLinks = [
   { href: '/#why', label: 'About Us' },
-  { href: '/#industries', label: 'Industries' },
   { href: '/contact', label: 'Contact' },
-  { href: '/contact', label: 'Get Quote' },
-]
-
-const supportLinks = [
-  { href: '/contact', label: 'Sales Enquiry' },
-  { href: '/contact', label: 'Technical Support' },
-  { href: '/contact', label: 'Visit Plant' },
-  { href: 'mailto:info@sparenginc.com', label: 'Email Us' },
 ]
 
 export function Footer() {
@@ -51,22 +42,24 @@ export function Footer() {
           </div>
         </div>
 
-        <div className={styles.col}>
-          <h4>Products</h4>
-          {productLinks.map((l) => (
-            <a key={l.label} href={l.href}>
-              {l.label}
-            </a>
-          ))}
-        </div>
+        <div className={styles.linksGroup}>
+          <div className={styles.col}>
+            <h4>Products</h4>
+            {productLinks.map((l) => (
+              <a key={l.label} href={l.href}>
+                {l.label}
+              </a>
+            ))}
+          </div>
 
-        <div className={styles.col}>
-          <h4>Company</h4>
-          {companyLinks.map((l) => (
-            <a key={l.label} href={l.href}>
-              {l.label}
-            </a>
-          ))}
+          <div className={styles.col}>
+            <h4>Company</h4>
+            {companyLinks.map((l) => (
+              <a key={l.label} href={l.href}>
+                {l.label}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
 

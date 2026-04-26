@@ -33,7 +33,7 @@ export function Navbar() {
   return (
     <>
       <nav className={styles.nav}>
-        <Link href="/" className={styles.logo} aria-label="Spareng — Home">
+        <Link href="/" className={styles.logo} aria-label="Spareng Home">
           <img src="/Sparent_INC.png" alt="Spareng" />
         </Link>
 

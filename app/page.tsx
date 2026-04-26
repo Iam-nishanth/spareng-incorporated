@@ -8,9 +8,9 @@ import { HeroImageFader } from './HeroImageFader'
 import styles from './titan.module.css'
 
 export const metadata: Metadata = {
-  title: 'Spareng — Precision Equipment & Spares for Material Handling Systems',
+  title: 'Spareng | Precision Equipment & Spares for Material Handling Systems',
   description:
-    'Premium Material Handling Equipment spare parts — conveyor components, crusher spares, pulleys, idlers, and screening equipment for Mining, Steel, Cement, Power, and Coal Handling industries.',
+    'Premium Material Handling Equipment spare parts: conveyor components, crusher spares, pulleys, idlers, and screening equipment for Mining, Steel, Cement, Power, and Coal Handling industries.',
 }
 
 type Category = {
@@ -24,7 +24,7 @@ type Category = {
 
 const categories: Category[] = [
   {
-    num: '01 — Processing Equipment',
+    num: '01 / Processing Equipment',
     name: 'Processing Equipment',
     tag: 'Belt Conveyors, Drag Chain Conveyors, Screw Conveyors, and Rotary Air Valves for continuous bulk transport.',
     image: '/product-images/belt-converyors.png',
@@ -32,35 +32,35 @@ const categories: Category[] = [
     cover: true,
   },
   {
-    num: '02 — Conveyor Idlers',
+    num: '02 / Conveyor Idlers',
     name: 'Conveyor Idlers',
     tag: 'Impact, Return, and Self-Alignment Idlers engineered for long-distance and high-impact belt systems.',
     image: '/product-images/impact-idler.jpg',
     slug: 'conveyor-idlers',
   },
   {
-    num: '03 — Conveyor Pulleys',
+    num: '03 / Conveyor Pulleys',
     name: 'Conveyor Pulleys',
     tag: 'Head, Tail, and Magnetic Pulleys with diamond lagging and heavy-duty bearings for industrial drives.',
     image: '/product-images/head-pulley.png',
     slug: 'conveyor-pulleys',
   },
   {
-    num: '04 — Crushing Equipment',
+    num: '04 / Crushing Equipment',
     name: 'Crushing Equipment',
     tag: 'Impact Mills, Hammer Mills, and Single Roll Crushers for primary, secondary, and tertiary size reduction.',
     image: '/product-images/impact-mill.png',
     slug: 'crushing-equipment',
   },
   {
-    num: '05 — Feeding Equipment',
+    num: '05 / Feeding Equipment',
     name: 'Feeding Equipment',
     tag: 'Vibrating Feeders, Bucket Elevators, and Wet Scrapers for precise, controlled material flow.',
     image: '/product-images/vibrating-feeder.jpg',
     slug: 'feeding-equipment',
   },
   {
-    num: '06 — Screening Equipment',
+    num: '06 / Screening Equipment',
     name: 'Screening Equipment',
     tag: 'Circular Motion Screens and Flip Flow Screens for accurate classification, even on wet, sticky feeds.',
     image: '/product-images/circular-motion-screen.png',
@@ -272,153 +272,151 @@ export default function TitanPage() {
 
       {/* ---------- HERO ---------- */}
       <section className={styles.hero}>
-          <div className={styles.heroLeft}>
-            <div className={styles.eyebrowBadge}>
-              MHE Spare Parts Specialist
-            </div>
-            <h1 className={styles.heroTitle}>
-              Precision Equipment
-              <br />
-              and Spares for
-              <br />
-              <strong>Material Handling</strong>
-              <br />
-              Systems
-            </h1>
-            <p className={styles.heroDesc}>
-              Spareng Incorporated specialises in Bulk Material Handling
-              Systems, delivering precision-engineered equipment across Mining,
-              Steel, Cement, Power, Sugar, and Port operations.
-            </p>
-            <div className={styles.heroBtns}>
-              <Link href="/contact" className={styles.btnPrimary}>
-                Get a Quote {ArrowIcon}
-              </Link>
-              <Link href="/products" className={styles.btnOutline}>
-                Browse Catalog
-              </Link>
-            </div>
-            <div className={styles.heroStats}>
-              <div className={styles.hstat}>
-                <div className={styles.hstatNum}>200+</div>
-                <div className={styles.hstatLabel}>Products</div>
-              </div>
-              <div className={styles.hstat}>
-                <div className={styles.hstatNum}>6</div>
-                <div className={styles.hstatLabel}>Categories</div>
-              </div>
-              <div className={styles.hstat}>
-                <div className={styles.hstatNum}>5+</div>
-                <div className={styles.hstatLabel}>Industries</div>
-              </div>
-            </div>
-          </div>
-          <div className={styles.heroRight}>
-            <HeroImageFader />
-            <div className={styles.heroRightOverlay} />
-          </div>
-        </section>
-
-        <div className={styles.accentStrip} />
-
-        {/* ---------- PRODUCTS ---------- */}
-        <section className={styles.sec} id="products">
-          <div className={styles.eyebrow}>Product Catalog</div>
-          <h2 className={styles.secTitle}>Our Product Categories</h2>
-          <p className={styles.secDesc}>
-            Discover our complete range of high-performance material handling
-            systems and precision-engineered spare parts built for continuous
-            industrial duty.
+        <div className={styles.heroLeft}>
+          <div className={styles.eyebrowBadge}>MHE Spare Parts Specialist</div>
+          <h1 className={styles.heroTitle}>
+            Precision Equipment
+            <br />
+            and Spares for
+            <br />
+            <strong>Material Handling</strong>
+            <br />
+            Systems
+          </h1>
+          <p className={styles.heroDesc}>
+            Spareng Incorporated specialises in Bulk Material Handling Systems,
+            delivering precision-engineered equipment across Mining, Steel,
+            Cement, Power, Sugar, and Port operations.
           </p>
-          <div className={styles.prodGrid}>
-            {categories.map((c) => (
-              <a
-                href={`/products#${c.slug}`}
-                className={styles.card}
-                key={c.name}
-              >
-                <div className={styles.cardAccent} />
-                <div
-                  className={`${styles.cardImg} ${c.cover ? styles.cardImgCover : ''}`}
-                >
-                  <img src={c.image} alt={c.name} />
-                </div>
-                <div className={styles.cardBody}>
-                  <div className={styles.cardNum}>{c.num}</div>
-                  <h3 className={styles.cardName}>{c.name}</h3>
-                  <p className={styles.cardTag}>{c.tag}</p>
-                  <span className={styles.cardLink}>
-                    View Products {ArrowIcon}
-                  </span>
-                </div>
-              </a>
-            ))}
-          </div>
-        </section>
-
-        {/* ---------- FEATURES ---------- */}
-        <section className={`${styles.sec} ${styles.secAlt}`} id="why">
-          <div className={styles.eyebrow}>Why Spareng</div>
-          <h2 className={styles.secTitle}>Our Commitment to Quality</h2>
-          <p className={styles.secDesc}>
-            Every part in our catalog is precision-engineered to perform under
-            the harshest industrial conditions.
-          </p>
-          <div className={styles.featGrid}>
-            {features.map((f) => (
-              <div className={styles.feat} key={f.num}>
-                <div className={styles.featNum}>{f.num}</div>
-                <div className={styles.featIcon}>{f.icon}</div>
-                <h3 className={styles.featTitle}>{f.title}</h3>
-                <p className={styles.featDesc}>{f.desc}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ---------- INDUSTRIES ---------- */}
-        <section className={styles.sec} id="industries">
-          <div className={styles.eyebrow}>Sectors</div>
-          <h2 className={styles.secTitle}>Industries We Serve</h2>
-          <p className={styles.secDesc} style={{ marginBottom: 40 }}>
-            From Mine to Port, our parts keep critical industries running
-            without interruption.
-          </p>
-          <div className={styles.indGrid}>
-            {industries.map((i) => (
-              <div className={styles.indItem} key={i.name}>
-                <div className={styles.indIcon}>{i.icon}</div>
-                <div className={styles.indName}>{i.name}</div>
-                <div className={styles.indSub}>{i.sub}</div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ---------- CTA BAND ---------- */}
-        <div className={styles.ctaBand} id="contact">
-          <div>
-            <h2>
-              Ready to Source
-              <br />
-              Quality MHE Spares?
-            </h2>
-          </div>
-          <div>
-            <p>
-              Get a competitive quote from our engineering team. Genuine parts,
-              fast turnaround, and nationwide delivery from Hyderabad.
-            </p>
-            <Link href="/contact" className={styles.ctaBtn}>
-              Request a Quote Today {ArrowIcon}
+          <div className={styles.heroBtns}>
+            <Link href="/contact" className={styles.btnPrimary}>
+              Get a Quote {ArrowIcon}
             </Link>
-            <div className={styles.ctaContact}>
-              or email us at info@sparenginc.com
+            <Link href="/products" className={styles.btnOutline}>
+              Browse Catalog
+            </Link>
+          </div>
+          <div className={styles.heroStats}>
+            <div className={styles.hstat}>
+              <div className={styles.hstatNum}>200+</div>
+              <div className={styles.hstatLabel}>Products</div>
+            </div>
+            <div className={styles.hstat}>
+              <div className={styles.hstatNum}>6</div>
+              <div className={styles.hstatLabel}>Categories</div>
+            </div>
+            <div className={styles.hstat}>
+              <div className={styles.hstatNum}>5+</div>
+              <div className={styles.hstatLabel}>Industries</div>
             </div>
           </div>
         </div>
+        <div className={styles.heroRight}>
+          <HeroImageFader />
+          <div className={styles.heroRightOverlay} />
+        </div>
+      </section>
 
-        <Footer />
+      <div className={styles.accentStrip} />
+
+      {/* ---------- PRODUCTS ---------- */}
+      <section className={styles.sec} id="products">
+        <div className={styles.eyebrow}>Product Catalog</div>
+        <h2 className={styles.secTitle}>Our Product Categories</h2>
+        <p className={styles.secDesc}>
+          Discover our complete range of high-performance material handling
+          systems and precision-engineered spare parts built for continuous
+          industrial duty.
+        </p>
+        <div className={styles.prodGrid}>
+          {categories.map((c) => (
+            <a
+              href={`/products#${c.slug}`}
+              className={styles.card}
+              key={c.name}
+            >
+              <div className={styles.cardAccent} />
+              <div
+                className={`${styles.cardImg} ${c.cover ? styles.cardImgCover : ''}`}
+              >
+                <img src={c.image} alt={c.name} />
+              </div>
+              <div className={styles.cardBody}>
+                {/*{/*<div className={styles.cardNum}>{c.num}</div>*/}
+                <h3 className={styles.cardName}>{c.name}</h3>
+                <p className={styles.cardTag}>{c.tag}</p>
+                <span className={styles.cardLink}>
+                  View Products {ArrowIcon}
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      {/* ---------- FEATURES ---------- */}
+      <section className={`${styles.sec} ${styles.secAlt}`} id="why">
+        <div className={styles.eyebrow}>Why Spareng</div>
+        <h2 className={styles.secTitle}>Our Commitment to Quality</h2>
+        <p className={styles.secDesc}>
+          Every part in our catalog is precision-engineered to perform under the
+          harshest industrial conditions.
+        </p>
+        <div className={styles.featGrid}>
+          {features.map((f) => (
+            <div className={styles.feat} key={f.num}>
+              <div className={styles.featNum}>{f.num}</div>
+              <div className={styles.featIcon}>{f.icon}</div>
+              <h3 className={styles.featTitle}>{f.title}</h3>
+              <p className={styles.featDesc}>{f.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ---------- INDUSTRIES ---------- */}
+      <section className={styles.sec} id="industries">
+        <div className={styles.eyebrow}>Sectors</div>
+        <h2 className={styles.secTitle}>Industries We Serve</h2>
+        <p className={styles.secDesc} style={{ marginBottom: 40 }}>
+          From Mine to Port, our parts keep critical industries running without
+          interruption.
+        </p>
+        <div className={styles.indGrid}>
+          {industries.map((i) => (
+            <div className={styles.indItem} key={i.name}>
+              <div className={styles.indIcon}>{i.icon}</div>
+              <div className={styles.indName}>{i.name}</div>
+              <div className={styles.indSub}>{i.sub}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ---------- CTA BAND ---------- */}
+      <div className={styles.ctaBand} id="contact">
+        <div>
+          <h2>
+            Ready to Source
+            <br />
+            Quality MHE Spares?
+          </h2>
+        </div>
+        <div>
+          <p>
+            Get a competitive quote from our engineering team. Genuine parts,
+            fast turnaround, and nationwide delivery from Hyderabad.
+          </p>
+          <Link href="/contact" className={styles.ctaBtn}>
+            Request a Quote Today {ArrowIcon}
+          </Link>
+          <div className={styles.ctaContact}>
+            or email us at info@sparenginc.com
+          </div>
+        </div>
+      </div>
+
+      <Footer />
     </div>
   )
 }

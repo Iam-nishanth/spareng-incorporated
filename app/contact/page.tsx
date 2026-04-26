@@ -17,7 +17,7 @@ import styles from './contact.module.css'
 
 const inquiryTypes = [
   'General Enquiry',
-  'Quote Request — MHE Spares',
+  'Quote Request: MHE Spares',
   'Custom Fabrication',
   'Technical Support',
   'Partnership / Distributor',
@@ -26,15 +26,11 @@ const inquiryTypes = [
 const points = [
   {
     title: 'Engineer-led replies',
-    sub: 'Your enquiry lands directly with our applications team — never a generic inbox.',
+    sub: 'Your enquiry lands directly with our applications team. Never a generic inbox.',
   },
   {
     title: 'Response within one working day',
     sub: 'For RFQs we acknowledge same day, with full quote inside 48 hours.',
-  },
-  {
-    title: 'Drawings & samples welcome',
-    sub: 'Send a part number, drawing, or sample — we’ll match or build to spec.',
   },
 ]
 
@@ -54,7 +50,7 @@ export default function ContactPage() {
         <div className={styles.heroInner}>
           <div className={styles.heroEyebrow}>Get in Touch</div>
           <h1 className={styles.heroTitle}>
-            Tell us what you need —
+            Tell us what you need,
             <br />
             <strong>we’ll engineer the rest.</strong>
           </h1>
@@ -113,7 +109,7 @@ export default function ContactPage() {
             <h2>Specifications, drawings, or just a problem to solve.</h2>
             <p>
               Most of our enquiries arrive as a sketch, a sample, or a worn-out
-              part on a workshop bench. Send what you have — we’ll come back
+              part on a workshop bench. Send what you have. We’ll come back
               with options, prices, and lead times.
             </p>
 
@@ -245,7 +241,7 @@ export default function ContactPage() {
             </div>
 
             <button type="submit" className={styles.submit}>
-              {submitted ? 'Message Sent — Thank You' : 'Send Message'}{' '}
+              {submitted ? 'Message Sent. Thank You' : 'Send Message'}{' '}
               {!submitted && <ArrowIcon />}
             </button>
             <p className={styles.formNote}>
@@ -280,7 +276,7 @@ export default function ContactPage() {
 
           <div className={styles.map}>
             <iframe
-              title="Spareng Incorporated — Hyderabad"
+              title="Spareng Incorporated, Hyderabad"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               src="https://www.google.com/maps?q=IDA+Uppal+Hyderabad+500039&output=embed"

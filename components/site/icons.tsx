@@ -71,3 +71,15 @@ export const LinkedInIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <circle cx="4" cy="4" r="2" />
   </svg>
 )
+
+export const ChevronLeftIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg {...baseProps} {...props}>
+    <polyline points="15 18 9 12 15 6" />
+  </svg>
+)
+
+export const ChevronRightIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg {...baseProps} {...props}>
+    <polyline points="9 18 15 12 9 6" />
+  </svg>
+)

@@ -11,7 +11,7 @@ import { CategoryPills } from './CategoryPills'
 import styles from './products.module.css'
 
 export const metadata: Metadata = {
-  title: 'Products — Spareng Incorporated',
+  title: 'Products | Spareng Incorporated',
   description:
     'Complete catalog of MHE spare parts and equipment: Processing Equipment, Conveyor Idlers, Pulleys, Crushers, Feeders, and Screening Equipment for industrial bulk material handling.',
 }
@@ -42,19 +42,19 @@ const categoryMeta: Record<string, CategoryMeta> = {
   },
   'conveyor-pulleys': {
     eyebrow: 'Drive & Tail',
-    lead: 'Heavy-duty drive, redirect, and magnetic pulleys engineered for high tension — with precision-turned shells and rubber lagging matched to the duty.',
+    lead: 'Heavy-duty drive, redirect, and magnetic pulleys engineered for high tension, with precision-turned shells and rubber lagging matched to the duty.',
   },
   'crushing-equipment': {
     eyebrow: 'Size Reduction',
-    lead: 'Primary, secondary, and tertiary crushers built to reduce hard ore, coal, limestone, and minerals — backed by a full inventory of interchangeable wear parts.',
+    lead: 'Primary, secondary, and tertiary crushers built to reduce hard ore, coal, limestone, and minerals, backed by a full inventory of interchangeable wear parts.',
   },
   'feeding-equipment': {
     eyebrow: 'Controlled Flow',
-    lead: 'Feeders, elevators, and scrapers that draw, meter, and lift material from hoppers, bins, and stockpiles — including the wet, cohesive feeds that defeat conventional systems.',
+    lead: 'Feeders, elevators, and scrapers that draw, meter, and lift material from hoppers, bins, and stockpiles, including the wet, cohesive feeds that defeat conventional systems.',
   },
   'screening-equipment': {
     eyebrow: 'Classification',
-    lead: 'Precision screening solutions for accurate sizing — from high-throughput stratification through to flip-flow separation of wet, sticky, near-mesh feeds.',
+    lead: 'Precision screening solutions for accurate sizing, from high-throughput stratification through to flip-flow separation of wet, sticky, near-mesh feeds.',
   },
 }
 
@@ -88,7 +88,7 @@ export default function ProductsPage() {
             <p className={styles.heroDesc}>
               {hubCategories.length} core categories. {totalLines} distinct
               product lines. Every system in our catalog is
-              precision-engineered for continuous industrial duty — whether
+              precision-engineered for continuous industrial duty, whether
               you’re sourcing a complete conveyor, a single impact idler, or a
               custom wear liner.
             </p>
@@ -125,7 +125,7 @@ export default function ProductsPage() {
             <div className={styles.sectionInner}>
               <div className={styles.intro}>
                 <div className={styles.introEyebrow}>
-                  {c.number} — {meta?.eyebrow ?? c.tagline}
+                  {c.number} / {meta?.eyebrow ?? c.tagline}
                 </div>
                 <h2 className={styles.introTitle}>{c.name}</h2>
                 <p className={styles.introLead}>

@@ -96,7 +96,11 @@
 
 @media (max-width: 1024px) {
   .nav {
+    height: 124px;
     padding: 0 24px;
+  }
+  .logo img {
+    height: 108px;
   }
   .links,
   .navCta {
@@ -112,7 +116,7 @@
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 120px;
+    top: 124px;
     left: 0;
     right: 0;
     z-index: 90;
@@ -157,14 +161,14 @@
 
 @media (max-width: 640px) {
   .nav {
-    height: 76px;
+    height: 84px;
     padding: 0 16px;
   }
   .logo img {
-    height: 56px;
+    height: 68px;
   }
   .dropdown {
-    top: 76px;
+    top: 84px;
     padding: 10px 16px 14px;
   }
 }
