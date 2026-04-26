@@ -275,8 +275,8 @@
 
 /* ---------- Product Lines grid ---------- */
 .lines {
-  margin-top: 72px;
-  padding-top: 56px;
+  margin-top: 36px;
+  padding-top: 28px;
   border-top: 1px solid var(--border);
 }
 .sectionAlt .lines {
@@ -345,7 +345,7 @@
 
 .lineImg {
   height: 320px;
-  background: var(--bg2);
+  background: #fff;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -355,7 +355,7 @@
   border-bottom: 1px solid var(--border);
 }
 .sectionAlt .lineImg {
-  background: var(--surface);
+  background: #fff;
 }
 /* Product images stay on white in dark mode for product clarity. */
 [data-theme='dark'] .lineImg,
@@ -422,10 +422,36 @@
 }
 .lineSummary {
   color: var(--muted);
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 15.5px;
+  line-height: 1.6;
   margin: 0;
+}
+.lineHighlights {
+  list-style: none;
+  padding: 0;
+  margin: 2px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   flex: 1;
+}
+.lineHighlights li {
+  position: relative;
+  padding-left: 20px;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.55;
+  font-weight: 500;
+}
+.lineHighlights li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
 }
 .lineMeta {
   display: flex;
@@ -434,12 +460,12 @@
   margin-top: 4px;
 }
 .lineChip {
-  font-size: 11.5px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--muted);
   background: var(--bg2);
   border: 1px solid var(--border);
-  padding: 6px 10px;
+  padding: 7px 12px;
   border-radius: 999px;
   line-height: 1.2;
 }
@@ -535,8 +561,8 @@
     max-width: 100%;
   }
   .lines {
-    margin-top: 56px;
-    padding-top: 40px;
+    margin-top: 28px;
+    padding-top: 22px;
   }
   .linesGrid {
     grid-template-columns: repeat(2, 1fr);
@@ -579,8 +605,8 @@
     scroll-margin-top: 160px;
   }
   .lines {
-    margin-top: 44px;
-    padding-top: 32px;
+    margin-top: 22px;
+    padding-top: 18px;
   }
   .linesHead {
     flex-direction: column;

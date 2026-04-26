@@ -17,15 +17,7 @@ export const metadata: Metadata = {
     'Complete catalog of MHE spare parts and equipment: Conveying Systems, Conveyor Idlers, Pulleys, Crushers, Feeders, and Screening Equipment for industrial bulk material handling.',
 }
 
-const coverLineIds = new Set([
-  'belt-conveyor',
-  'bucket-elevator',
-  'circular-motion-screen',
-  'flip-flow-screen',
-  'rotary-air-valve',
-  'single-roll-crusher',
-  'sizer-grader',
-])
+const coverLineIds = new Set(['belt-conveyor', 'bucket-elevator'])
 
 type CategoryMeta = {
   eyebrow: string
@@ -178,9 +170,14 @@ export default function ProductsPage() {
                         <div className={styles.lineBody}>
                           <p className={styles.lineTag}>{line.tagline}</p>
                           <h4 className={styles.lineName}>{line.name}</h4>
-                          <p className={styles.lineSummary}>
-                            {line.description}
-                          </p>
+                          <p className={styles.lineSummary}>{line.summary}</p>
+                          {line.highlights.length > 0 && (
+                            <ul className={styles.lineHighlights}>
+                              {line.highlights.slice(0, 3).map((h) => (
+                                <li key={h}>{h}</li>
+                              ))}
+                            </ul>
+                          )}
                           {line.applications.length > 0 && (
                             <div className={styles.lineMeta}>
                               {line.applications.slice(0, 3).map((a) => (
