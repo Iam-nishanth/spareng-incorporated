@@ -1,4 +1,8 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
+
+import { Footer } from '#components/site/Footer'
+import { Navbar } from '#components/site/Navbar'
 
 import { HeroImageFader } from './HeroImageFader'
 import styles from './titan.module.css'
@@ -14,6 +18,7 @@ type Category = {
   name: string
   tag: string
   image: string
+  slug: string
   cover?: boolean
 }
 
@@ -22,38 +27,44 @@ const categories: Category[] = [
     num: '01 — Processing Equipment',
     name: 'Processing Equipment',
     tag: 'Belt Conveyors, Drag Chain Conveyors, Screw Conveyors, and Rotary Air Valves for continuous bulk transport.',
-    image: '/Products/belt-conveyor.jpg',
+    image: '/product-images/belt-converyors.png',
+    slug: 'processing-equipment',
     cover: true,
   },
   {
     num: '02 — Conveyor Idlers',
     name: 'Conveyor Idlers',
     tag: 'Impact, Return, and Self-Alignment Idlers engineered for long-distance and high-impact belt systems.',
-    image: '/Products/impact-idler.jpg',
+    image: '/product-images/impact-idler.jpg',
+    slug: 'conveyor-idlers',
   },
   {
     num: '03 — Conveyor Pulleys',
     name: 'Conveyor Pulleys',
     tag: 'Head, Tail, and Magnetic Pulleys with diamond lagging and heavy-duty bearings for industrial drives.',
-    image: '/Products/head-pulley.jpg',
+    image: '/product-images/head-pulley.png',
+    slug: 'conveyor-pulleys',
   },
   {
     num: '04 — Crushing Equipment',
     name: 'Crushing Equipment',
     tag: 'Impact Mills, Hammer Mills, and Single Roll Crushers for primary, secondary, and tertiary size reduction.',
-    image: '/Products/impact-mill-new.png',
+    image: '/product-images/impact-mill.png',
+    slug: 'crushing-equipment',
   },
   {
     num: '05 — Feeding Equipment',
     name: 'Feeding Equipment',
     tag: 'Vibrating Feeders, Bucket Elevators, and Wet Scrapers for precise, controlled material flow.',
-    image: '/Products/vibrating-feeder.jpg',
+    image: '/product-images/vibrating-feeder.jpg',
+    slug: 'feeding-equipment',
   },
   {
     num: '06 — Screening Equipment',
     name: 'Screening Equipment',
     tag: 'Circular Motion Screens and Flip Flow Screens for accurate classification, even on wet, sticky feeds.',
-    image: '/Products/circular-motion-screen.png',
+    image: '/product-images/circular-motion-screen.png',
+    slug: 'screening-equipment',
   },
 ]
 
@@ -254,61 +265,13 @@ const ArrowIcon = (
   </svg>
 )
 
-const PinIcon = (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M12 21s-7-7.58-7-12a7 7 0 0 1 14 0c0 4.42-7 12-7 12z" />
-    <circle cx="12" cy="9" r="2.5" />
-  </svg>
-)
-const MailIcon = (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <rect x="3" y="5" width="18" height="14" rx="2" />
-    <path d="m3 7 9 6 9-6" />
-  </svg>
-)
-
 export default function TitanPage() {
   return (
-    <>
-      {/* Manrope font */}
-      {/* eslint-disable-next-line @next/next/no-page-custom-font */}
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-      />
-      <div className={styles.root}>
-        {/* ---------- NAV ---------- */}
-        <nav className={styles.nav}>
-          <div className={styles.logo}>
-            <img src="/Sparent_INC.png" alt="Spareng" />
-          </div>
-          <div className={styles.links}>
-            <a href="#products">Products</a>
-            <a href="#industries">Industries</a>
-            <a href="#why">About</a>
-            <a href="#contact">Contact</a>
-          </div>
-          <button className={styles.navCta} type="button">
-            Get a Quote
-          </button>
-        </nav>
+    <div className={styles.root}>
+      <Navbar />
 
-        {/* ---------- HERO ---------- */}
-        <section className={styles.hero}>
+      {/* ---------- HERO ---------- */}
+      <section className={styles.hero}>
           <div className={styles.heroLeft}>
             <div className={styles.eyebrowBadge}>
               MHE Spare Parts Specialist
@@ -328,12 +291,12 @@ export default function TitanPage() {
               Steel, Cement, Power, Sugar, and Port operations.
             </p>
             <div className={styles.heroBtns}>
-              <button className={styles.btnPrimary} type="button">
+              <Link href="/contact" className={styles.btnPrimary}>
                 Get a Quote {ArrowIcon}
-              </button>
-              <button className={styles.btnOutline} type="button">
+              </Link>
+              <Link href="/products" className={styles.btnOutline}>
                 Browse Catalog
-              </button>
+              </Link>
             </div>
             <div className={styles.heroStats}>
               <div className={styles.hstat}>
@@ -369,7 +332,11 @@ export default function TitanPage() {
           </p>
           <div className={styles.prodGrid}>
             {categories.map((c) => (
-              <div className={styles.card} key={c.name}>
+              <a
+                href={`/products#${c.slug}`}
+                className={styles.card}
+                key={c.name}
+              >
                 <div className={styles.cardAccent} />
                 <div
                   className={`${styles.cardImg} ${c.cover ? styles.cardImgCover : ''}`}
@@ -384,7 +351,7 @@ export default function TitanPage() {
                     View Products {ArrowIcon}
                   </span>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </section>
@@ -442,66 +409,16 @@ export default function TitanPage() {
               Get a competitive quote from our engineering team. Genuine parts,
               fast turnaround, and nationwide delivery from Hyderabad.
             </p>
-            <button className={styles.ctaBtn} type="button">
+            <Link href="/contact" className={styles.ctaBtn}>
               Request a Quote Today {ArrowIcon}
-            </button>
+            </Link>
             <div className={styles.ctaContact}>
               or email us at info@sparenginc.com
             </div>
           </div>
         </div>
 
-        {/* ---------- FOOTER ---------- */}
-        <footer className={styles.footer}>
-          <div className={styles.footerGrid}>
-            <div>
-              <img
-                src="/Spareng_INC-dark.png"
-                alt="Spareng Incorporated"
-                className={styles.footerLogo}
-              />
-              <p className={styles.footerBrandDesc}>
-                Premium Material Handling Equipment spare parts supplier.
-                Serving mining, steel, cement, coal handling, and power
-                industries from Hyderabad, India.
-              </p>
-              <div className={styles.footerBrandContact}>
-                <span>
-                  {PinIcon}
-                  Plot No. E8/C8-2A, IDA, UPPAL, Hyderabad 500039, Telangana,
-                  India
-                </span>
-                <span>
-                  {MailIcon}
-                  info@sparenginc.com
-                </span>
-              </div>
-            </div>
-            <div className={styles.footerCol}>
-              <h4>Products</h4>
-              <a href="#">Processing Equipment</a>
-              <a href="#">Conveyor Idlers</a>
-              <a href="#">Conveyor Pulleys</a>
-              <a href="#">Crushing Equipment</a>
-              <a href="#">Feeding Equipment</a>
-              <a href="#">Screening Equipment</a>
-            </div>
-            <div className={styles.footerCol}>
-              <h4>Company</h4>
-              <a href="#">About Us</a>
-              <a href="#">Industries</a>
-              <a href="#">Contact</a>
-              <a href="#">Get Quote</a>
-            </div>
-          </div>
-          <div className={styles.footerBottom}>
-            <div className={styles.footerCopy}>
-              © 2025 Spareng Incorporated. All rights reserved.
-            </div>
-            <div className={styles.footerTag}>Design · Titan</div>
-          </div>
-        </footer>
-      </div>
-    </>
+        <Footer />
+    </div>
   )
 }

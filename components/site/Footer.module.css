@@ -1,0 +1,142 @@
+.footer {
+  background: var(--footer-bg);
+  padding: 64px max(var(--gutter), calc((100% - var(--max-content)) / 2)) 36px;
+  font-family: var(--font-sans);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 56px;
+  margin-bottom: 48px;
+}
+
+.brand img {
+  display: block;
+  height: 120px;
+  width: auto;
+  margin: -18px 0 10px -18px;
+}
+.brandDesc {
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0 0 22px;
+  max-width: 380px;
+}
+.brandContact {
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.9;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.brandContact a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.brandContact a:hover {
+  color: var(--accent);
+}
+.brandContact span {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.brandContact svg {
+  width: 16px;
+  height: 16px;
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.col h4 {
+  font-size: 11px;
+  font-weight: 700;
+  color: #cbd5e1;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 18px;
+}
+.col a {
+  display: block;
+  color: #94a3b8;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.col a:hover {
+  color: var(--accent);
+}
+
+.bottom {
+  border-top: 1px solid var(--footer-divider);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.copy {
+  color: #64748b;
+  font-size: 13px;
+}
+.tag {
+  font-size: 11px;
+  color: #64748b;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.social {
+  display: flex;
+  gap: 8px;
+}
+.social a {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid #1f3553;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  transition: all 0.15s;
+}
+.social a:hover {
+  color: #fff;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.social svg {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: 48px 28px 28px;
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+  .brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

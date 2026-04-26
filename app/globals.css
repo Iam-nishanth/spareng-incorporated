@@ -1,0 +1,23 @@
+/* ===========================================================
+   GLOBAL DESIGN TOKENS — Spareng (Titan System)
+=========================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --navy: #1a2d4a;
+  --navy-dark: #142438;
+  --accent: #1b74c3;
+  --accent-dark: #155d9e;
+  --accent-light: #eaf4fc;
+  --text: #0f1f2e;
+  --muted: #475569;
+  --light: #8e9bad;
+  --bg: #ffffff;
+  --bg2: #f4f6f8;
+  --border: #e0e6ed;
+  --footer-bg: #0d1a2a;
+  --footer-divider: #1a2d4a;
+  --font-sans: 'Manrope', system-ui, -apple-system, sans-serif;
+  --max-content: 1280px;
+  --gutter: 60px;
+}

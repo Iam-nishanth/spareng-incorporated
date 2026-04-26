@@ -6,8 +6,9 @@ import styles from './titan.module.css'
 
 const images = [
   '/images/machines/heavy-duty-conveyor-belt.jpg',
-  '/images/machines/Screening-Washing-Plant-Titanium-Vibrating-Screen-for-River-Sand.avif',
-  '/home/bevcon-beltconveyor.webp',
+  // '/images/machines/Screening-Washing-Plant-Titanium-Vibrating-Screen-for-River-Sand.avif',
+  // '/home/bevcon-beltconveyor.webp',
+  '/home/converyors-home.jpeg',
   '/home/conveyor-image.jpg',
 ]
 

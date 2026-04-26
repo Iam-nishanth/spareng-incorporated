@@ -29,7 +29,6 @@
 
 .root a {
   text-decoration: none;
-  color: inherit;
 }
 
 .root button {
@@ -188,12 +187,12 @@
   box-shadow: 0 6px 20px rgba(26, 45, 74, 0.35);
 }
 .btnOutline {
-  background: transparent;
-  color: var(--navy);
+  background: var(--navy);
+  color: #fff;
   font-weight: 600;
   font-size: 15px;
   padding: 14px 30px;
-  border: 2px solid var(--border);
+  border: 2px solid var(--navy);
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s;
@@ -202,8 +201,9 @@
   gap: 8px;
 }
 .btnOutline:hover {
-  border-color: var(--navy);
-  background: var(--bg2);
+  background: var(--navy-dark);
+  border-color: var(--navy-dark);
+  box-shadow: 0 6px 20px rgba(26, 45, 74, 0.25);
 }
 .heroStats {
   display: grid;
@@ -279,7 +279,7 @@
 
 /* ---------- Section ---------- */
 .sec {
-  padding: 80px 60px;
+  padding: 80px max(var(--gutter), calc((100% - var(--max-content)) / 2));
 }
 .secAlt {
   background: var(--bg2);
@@ -527,7 +527,7 @@
 
 /* ---------- CTA band ---------- */
 .ctaBand {
-  padding: 80px 60px;
+  padding: 80px max(var(--gutter), calc((100% - var(--max-content)) / 2));
   background: var(--navy);
   display: grid;
   grid-template-columns: 1fr 1fr;
