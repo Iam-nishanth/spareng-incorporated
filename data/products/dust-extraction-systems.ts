@@ -106,6 +106,6 @@ export const dustExtractionSystemsProducts: Product[] = [
 export const dustExtractionSystemsData: BrandData = {
   brand: 'Spareng Dust Extraction Systems',
   description: 'Comprehensive range of dust extraction and air filtration components for environmental control and industrial dust management',
-  website: 'https://spareng.com',
+  website: 'https://www.sparenginc.com',
   products: dustExtractionSystemsProducts
 }

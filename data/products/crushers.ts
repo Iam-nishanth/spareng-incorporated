@@ -453,6 +453,6 @@ export const crushersProducts: Product[] = [
 export const crushersData: BrandData = {
   brand: 'Spareng',
   description: 'Premium MHE crusher spare parts and components for all types of crushing equipment including impact crushers, jaw crushers, cone crushers, and hammer mills.',
-  website: 'https://spareng.com',
+  website: 'https://www.sparenginc.com',
   products: crushersProducts
 }

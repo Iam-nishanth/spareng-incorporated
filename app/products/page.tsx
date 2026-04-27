@@ -11,10 +11,72 @@ import { CategoryPills } from './CategoryPills'
 import { CategoryScroller } from './CategoryScroller'
 import styles from './products.module.css'
 
+const PRODUCTS_DESCRIPTION =
+  'Complete catalog of MHE spare parts and equipment from Spareng Incorporated: Conveying Systems, Conveyor Idlers, Pulleys, Crushers, Feeders, and Screening Equipment for industrial bulk material handling.'
+
 export const metadata: Metadata = {
-  title: 'Products | Spareng Incorporated',
-  description:
-    'Complete catalog of MHE spare parts and equipment: Conveying Systems, Conveyor Idlers, Pulleys, Crushers, Feeders, and Screening Equipment for industrial bulk material handling.',
+  title: 'Products',
+  description: PRODUCTS_DESCRIPTION,
+  alternates: { canonical: '/products/' },
+  openGraph: {
+    title: 'Products | Spareng Incorporated',
+    description: PRODUCTS_DESCRIPTION,
+    url: '/products/',
+    type: 'website',
+  },
+  twitter: {
+    title: 'Products | Spareng Incorporated',
+    description: PRODUCTS_DESCRIPTION,
+  },
+}
+
+const SITE_URL = 'https://www.sparenginc.com'
+
+const itemListLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Spareng Incorporated — Product Catalog',
+  description: PRODUCTS_DESCRIPTION,
+  numberOfItems: hubCategories.length,
+  itemListElement: hubCategories.map((c, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: {
+      '@type': 'ProductGroup',
+      name: c.name,
+      url: `${SITE_URL}/products/?category=${c.id}`,
+      description: c.description?.[0] ?? c.tagline,
+      brand: { '@type': 'Brand', name: 'Spareng Incorporated' },
+      hasVariant: c.productLines.map((line) => ({
+        '@type': 'Product',
+        name: line.name,
+        description: line.summary,
+        brand: { '@type': 'Brand', name: 'Spareng Incorporated' },
+        ...(line.image
+          ? { image: `${SITE_URL}${line.image.startsWith('/') ? '' : '/'}${line.image}` }
+          : {}),
+      })),
+    },
+  })),
+}
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: `${SITE_URL}/`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Products',
+      item: `${SITE_URL}/products/`,
+    },
+  ],
 }
 
 const coverLineIds = new Set(['belt-conveyor', 'bucket-elevator'])
@@ -66,6 +128,14 @@ export default function ProductsPage() {
 
   return (
     <div className={styles.root}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
       <Navbar />
       <Suspense fallback={null}>
         <CategoryScroller />
@@ -170,7 +240,6 @@ export default function ProductsPage() {
                         <div className={styles.lineBody}>
                           <p className={styles.lineTag}>{line.tagline}</p>
                           <h4 className={styles.lineName}>{line.name}</h4>
-                          <p className={styles.lineSummary}>{line.summary}</p>
                           {line.highlights.length > 0 && (
                             <ul className={styles.lineHighlights}>
                               {line.highlights.slice(0, 3).map((h) => (

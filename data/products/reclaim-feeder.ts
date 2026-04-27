@@ -337,6 +337,6 @@ export const reclaimFeederProducts: Product[] = [
 export const reclaimFeederData: BrandData = {
   brand: 'Spareng Reclaim Feeder',
   description: 'Comprehensive range of reclaim feeder components and spare parts for efficient bulk material reclaiming operations',
-  website: 'https://spareng.com',
+  website: 'https://www.sparenginc.com',
   products: reclaimFeederProducts
 }

@@ -357,6 +357,6 @@ export const vibratingScreensProducts: Product[] = [
 export const vibratingScreensData: BrandData = {
   brand: 'Spareng Vibrating Screens',
   description: 'Comprehensive range of vibrating screen components and spare parts for circular motion screens (CMS)',
-  website: 'https://spareng.com',
+  website: 'https://www.sparenginc.com',
   products: vibratingScreensProducts
 }

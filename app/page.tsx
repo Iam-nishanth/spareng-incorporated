@@ -7,10 +7,61 @@ import { Navbar } from '#components/site/Navbar'
 import { HeroImageFader } from './HeroImageFader'
 import styles from './titan.module.css'
 
+const HOME_DESCRIPTION =
+  'Spareng Incorporated supplies precision-engineered Material Handling Equipment and spare parts — conveyors, idlers, pulleys, crushers, feeders, and screens for mining, steel, cement, power, sugar, and port operations across India.'
+
 export const metadata: Metadata = {
-  title: 'Spareng | Precision Equipment & Spares for Material Handling Systems',
-  description:
-    'Premium Material Handling Equipment spare parts: conveyor components, crusher spares, pulleys, idlers, and screening equipment for Mining, Steel, Cement, Power, and Coal Handling industries.',
+  title:
+    'Precision Equipment & Spares for Material Handling Systems | Spareng Incorporated',
+  description: HOME_DESCRIPTION,
+  alternates: { canonical: '/' },
+  openGraph: {
+    title: 'Spareng Incorporated | Precision MHE Spares',
+    description: HOME_DESCRIPTION,
+    url: '/',
+    type: 'website',
+  },
+  twitter: {
+    title: 'Spareng Incorporated | Precision MHE Spares',
+    description: HOME_DESCRIPTION,
+  },
+}
+
+const SITE_URL = 'https://www.sparenginc.com'
+
+const localBusinessLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': `${SITE_URL}/#localbusiness`,
+  name: 'Spareng Incorporated',
+  url: SITE_URL,
+  image: `${SITE_URL}/Sparent_INC.png`,
+  logo: `${SITE_URL}/Sparent_INC.png`,
+  email: 'info@sparenginc.com',
+  description: HOME_DESCRIPTION,
+  priceRange: '$$',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Plot No. E8/C8-2A (24-60/10/II), IDA Uppal',
+    addressLocality: 'Hyderabad',
+    addressRegion: 'Telangana',
+    postalCode: '500039',
+    addressCountry: 'IN',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 17.4065,
+    longitude: 78.5691,
+  },
+  areaServed: [
+    { '@type': 'Country', name: 'India' },
+    'Mining',
+    'Steel Plants',
+    'Cement',
+    'Power Generation',
+    'Sugar',
+    'Ports',
+  ],
 }
 
 type Category = {
@@ -26,7 +77,7 @@ const categories: Category[] = [
   {
     num: '01 / Conveying Systems',
     name: 'Conveying Systems',
-    tag: 'Belt Conveyors, Drag Chain Conveyors, Screw Conveyors, and Rotary Air Valves for continuous bulk transport.',
+    tag: 'Belt Conveyors, Bucket Elevators, Drag Chain Conveyors, and Screw Conveyors for continuous bulk transport.',
     image: '/home/converyors-home.jpeg',
     slug: 'processing-equipment',
     cover: true,
@@ -55,7 +106,7 @@ const categories: Category[] = [
   {
     num: '05 / Feeding Equipment',
     name: 'Feeding Equipment',
-    tag: 'Vibrating Feeders, Bucket Elevators, and Wet Scrapers for precise, controlled material flow.',
+    tag: 'Vibrating Feeders, Rotary Air Valves, and Wet Scrapers for precise, controlled material flow.',
     image: '/product-images/vibrating-feeder.jpg',
     slug: 'feeding-equipment',
   },
@@ -186,9 +237,14 @@ const industries: Industry[] = [
     image: '/images/industries/power-generation.jpg',
   },
   {
-    name: 'Coal Handling',
-    sub: 'Crushing & Screening',
-    image: '/images/industries/coal-plant.png',
+    name: 'Sugar',
+    sub: 'Crystal Sizing & Bagasse',
+    image: '/images/industries/sugar-process.png',
+  },
+  {
+    name: 'Ports',
+    sub: 'High Capacity Conveyor Spares for Ports',
+    image: '/images/industries/port-handling.jpg',
   },
 ]
 
@@ -211,6 +267,10 @@ const ArrowIcon = (
 export default function TitanPage() {
   return (
     <div className={styles.root}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessLd) }}
+      />
       <Navbar />
 
       {/* ---------- HERO ---------- */}

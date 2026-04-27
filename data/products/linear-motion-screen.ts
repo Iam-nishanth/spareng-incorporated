@@ -82,6 +82,6 @@ export const linearMotionScreenProducts: Product[] = [
 export const linearMotionScreenData: BrandData = {
   brand: 'Spareng Linear Motion Screen',
   description: 'Comprehensive range of linear motion screen components and spare parts',
-  website: 'https://spareng.com',
+  website: 'https://www.sparenginc.com',
   products: linearMotionScreenProducts
 }

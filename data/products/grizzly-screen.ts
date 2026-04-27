@@ -157,6 +157,6 @@ export const grizzlyScreenProducts: Product[] = [
 export const grizzlyScreenData: BrandData = {
   brand: 'Spareng Grizzly Screen',
   description: 'Comprehensive range of grizzly screen components and spare parts',
-  website: 'https://spareng.com',
+  website: 'https://www.sparenginc.com',
   products: grizzlyScreenProducts
 }

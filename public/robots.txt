@@ -1,15 +1,13 @@
-# robots.txt for https://spareng.com/
+# robots.txt for https://www.sparenginc.com/
 User-agent: *
 Allow: /
 
-# Disallow specific paths if needed
-Disallow: /api/
+# Disallow build artefacts and error pages
 Disallow: /_next/
-Disallow: /temp/
+Disallow: /api/
 Disallow: /404
 Disallow: /404.html
 Disallow: /not-found
 Disallow: /not-found.html
 
-# Sitemap location
-Sitemap: https://spareng.com/sitemap.xml
+Sitemap: https://www.sparenginc.com/sitemap.xml

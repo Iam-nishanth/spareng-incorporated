@@ -981,6 +981,6 @@ export const conveyorPartsProducts: Product[] = [
 export const conveyorPartsData: BrandData = {
   brand: 'Spareng Conveyor Parts',
   description: 'Comprehensive range of conveyor components including idlers, pulleys, belts, bearings, safety systems, and maintenance equipment for all types of material handling applications.',
-  website: 'https://spareng.com',
+  website: 'https://www.sparenginc.com',
   products: conveyorPartsProducts
 }

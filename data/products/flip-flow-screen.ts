@@ -256,6 +256,6 @@ export const flipFlowScreenProducts: Product[] = [
 export const flipFlowScreenData: BrandData = {
   brand: 'Spareng Flip Flow Screen',
   description: 'Comprehensive range of flip flow screen components and spare parts',
-  website: 'https://spareng.com',
+  website: 'https://www.sparenginc.com',
   products: flipFlowScreenProducts
 }

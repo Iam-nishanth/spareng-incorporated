@@ -357,6 +357,6 @@ export const sizerSugarGraderProducts: Product[] = [
 export const sizerSugarGraderData: BrandData = {
   brand: 'Spareng Sizer Sugar Grader',
   description: 'Comprehensive range of sizer and sugar grader components and spare parts',
-  website: 'https://spareng.com',
+  website: 'https://www.sparenginc.com',
   products: sizerSugarGraderProducts
 }

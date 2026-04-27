@@ -264,6 +264,6 @@ export const mobileHopperProducts: Product[] = [
 export const mobileHopperData: BrandData = {
   brand: 'Spareng Mobile Hopper',
   description: 'Comprehensive range of mobile hopper components and spare parts for mobile material handling systems',
-  website: 'https://spareng.com',
+  website: 'https://www.sparenginc.com',
   products: mobileHopperProducts
 }

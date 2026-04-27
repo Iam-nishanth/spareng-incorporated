@@ -1,7 +1,140 @@
 import { ColorModeScript } from '@chakra-ui/react'
+import type { Metadata, Viewport } from 'next'
 
 import './globals.css'
 import { Provider } from './provider'
+
+const SITE_URL = 'https://www.sparenginc.com'
+
+const SITE_DESCRIPTION =
+  'Spareng Incorporated supplies precision-engineered Material Handling Equipment and spare parts — conveyor systems, idlers, pulleys, crushers, feeders, and screening equipment for mining, steel, cement, power, sugar, and port operations across India.'
+
+const OG_IMAGE = {
+  url: '/Sparent_INC.png',
+  width: 1536,
+  height: 1024,
+  alt: 'Spareng Incorporated — Precision MHE Spares and Material Handling Equipment',
+}
+
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default:
+      'Spareng Incorporated | Precision MHE Spares & Material Handling Equipment',
+    template: '%s | Spareng Incorporated',
+  },
+  description: SITE_DESCRIPTION,
+  applicationName: 'Spareng Incorporated',
+  authors: [{ name: 'Spareng Incorporated', url: SITE_URL }],
+  creator: 'Spareng Incorporated',
+  publisher: 'Spareng Incorporated',
+  category: 'Industrial Equipment',
+  keywords: [
+    'MHE spares',
+    'material handling equipment',
+    'material handling equipment parts',
+    'conveyor systems',
+    'belt conveyor',
+    'bucket elevator',
+    'drag chain conveyor',
+    'screw conveyor',
+    'conveyor idlers',
+    'impact idler',
+    'return idler',
+    'self-alignment idler',
+    'conveyor pulleys',
+    'head pulley',
+    'tail pulley',
+    'magnetic pulley',
+    'crusher spares',
+    'impact mill',
+    'hammer mill',
+    'single roll crusher',
+    'vibrating feeder',
+    'rotary air valve',
+    'wet scraper',
+    'screening equipment',
+    'circular motion screen',
+    'flip flow screen',
+    'industrial spare parts',
+    'mining equipment',
+    'cement plant equipment',
+    'coal handling equipment',
+    'port handling equipment',
+    'Spareng',
+    'Spareng Incorporated',
+    'Hyderabad',
+    'Telangana',
+    'India',
+  ],
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    'max-image-preview': 'large',
+    'max-snippet': -1,
+    'max-video-preview': -1,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    siteName: 'Spareng Incorporated',
+    title:
+      'Spareng Incorporated | Precision MHE Spares & Material Handling Equipment',
+    description: SITE_DESCRIPTION,
+    url: '/',
+    locale: 'en_IN',
+    images: [OG_IMAGE],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title:
+      'Spareng Incorporated | Precision MHE Spares & Material Handling Equipment',
+    description: SITE_DESCRIPTION,
+    images: [OG_IMAGE.url],
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/favicon-16x16.png', type: 'image/png', sizes: '16x16' },
+    ],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180' }],
+    other: [
+      { rel: 'icon', url: '/android-chrome-192x192.png', sizes: '192x192' },
+      { rel: 'icon', url: '/android-chrome-512x512.png', sizes: '512x512' },
+    ],
+  },
+  manifest: '/site.webmanifest',
+  other: {
+    'geo.region': 'IN-TG',
+    'geo.placename': 'Hyderabad',
+    'geo.position': '17.4065;78.5691',
+    ICBM: '17.4065, 78.5691',
+  },
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#0d1a2a' },
+  ],
+}
 
 // Light is always the default. The toggle persists user choice in
 // localStorage. We never auto-switch from prefers-color-scheme.
@@ -19,103 +152,79 @@ const themeInitScript = `
 })();
 `
 
+const organizationLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${SITE_URL}/#organization`,
+  name: 'Spareng Incorporated',
+  legalName: 'Spareng Incorporated',
+  url: SITE_URL,
+  logo: {
+    '@type': 'ImageObject',
+    url: `${SITE_URL}/Sparent_INC.png`,
+    contentUrl: `${SITE_URL}/Sparent_INC.png`,
+  },
+  description: SITE_DESCRIPTION,
+  foundingLocation: 'Hyderabad, Telangana, India',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Plot No. E8/C8-2A (24-60/10/II), IDA Uppal',
+    addressLocality: 'Hyderabad',
+    addressRegion: 'Telangana',
+    postalCode: '500039',
+    addressCountry: 'IN',
+  },
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      contactType: 'sales',
+      email: 'sales@sparenginc.com',
+      areaServed: 'IN',
+      availableLanguage: ['en', 'hi'],
+    },
+    {
+      '@type': 'ContactPoint',
+      contactType: 'customer support',
+      email: 'info@sparenginc.com',
+      areaServed: 'IN',
+      availableLanguage: ['en', 'hi'],
+    },
+  ],
+  knowsAbout: [
+    'Material Handling Equipment',
+    'Bulk Material Handling',
+    'Conveyor Systems',
+    'Conveyor Idlers',
+    'Conveyor Pulleys',
+    'Crushing Equipment',
+    'Feeding Equipment',
+    'Screening Equipment',
+  ],
+}
+
+const websiteLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${SITE_URL}/#website`,
+  name: 'Spareng Incorporated',
+  url: SITE_URL,
+  description: SITE_DESCRIPTION,
+  publisher: { '@id': `${SITE_URL}/#organization` },
+  inLanguage: 'en-IN',
+}
+
 export default function Layout(props: { children: React.ReactNode }) {
   return (
     <html lang="en" data-theme="light" style={{ colorScheme: 'light' }}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
-        {/* Favicons */}
-        {/* <link
-          rel="apple-touch-icon"
-          sizes="76x76"
-          href="/static/favicons/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/static/favicons/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/static/favicons/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/static/favicons/manifest.json" />
-        <link rel="shortcut icon" href="/static/favicons/favicon.ico" /> */}
-        
-        {/* Basic SEO */}
-        <title>Spareng - MHE Spares, Material Handling Equipment Parts & Industrial Components</title>
-        <meta name="description" content="Leading supplier of Material Handling Equipment (MHE) spare parts including conveyor components, crusher spares, pulleys, idlers, and screening equipment. Quality parts for mining, steel, cement, and power industries across India." />
-        <meta name="keywords" content="MHE spares, material handling equipment parts, conveyor parts, idlers, pulleys, crusher spares, screen spares, industrial spare parts, mining equipment parts, Spareng, conveyor idlers, material handling components" />
-        <meta name="author" content="Spareng" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        <link rel="canonical" href="https://spareng.com/" />
-        
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://spareng.com/" />
-        <meta property="og:site_name" content="Spareng" />
-        <meta property="og:title" content="Spareng - MHE Spares & Material Handling Equipment Parts" />
-        <meta property="og:description" content="Leading supplier of Material Handling Equipment (MHE) spare parts including conveyor components, crusher spares, and screening equipment for industrial applications." />
-        <meta property="og:image" content="https://spareng.com/static/meta/Spareng-Twitter-Card.png" />
-        <meta property="og:image:alt" content="Spareng - MHE Spares and Material Handling Equipment Parts" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://spareng.com/" />
-        <meta name="twitter:title" content="Spareng - MHE Spares & Material Handling Equipment Parts" />
-        <meta name="twitter:description" content="Leading supplier of Material Handling Equipment (MHE) spare parts including conveyor components, crusher spares, and screening equipment." />
-        <meta name="twitter:image" content="https://spareng.com/static/meta/Spareng-Twitter-Card.png" />
-        
-        {/* Geo Tags */}
-        <meta name="geo.region" content="IN" />
-        <meta name="geo.placename" content="India" />
-        
-        {/* Schema.org JSON-LD */}
-        <script 
+        <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Spareng",
-              "url": "https://spareng.com",
-              "logo": "https://spareng.com/static/favicons/favicon.ico",
-              "description": "Leading supplier of Material Handling Equipment (MHE) spare parts including conveyor components, crusher spares, and screening equipment",
-              "address": {
-                "@type": "PostalAddress",
-                "addressCountry": "IN"
-              },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "contactType": "Sales",
-                "availableLanguage": ["en", "hi"]
-              },
-              "sameAs": []
-            })
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }}
         />
-        <script 
+        <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              "name": "Spareng",
-              "url": "https://spareng.com",
-              "description": "MHE Spares and Material Handling Equipment Parts",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://spareng.com/products/?search={search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
-            })
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
         />
       </head>
       <body className="chakra-ui-light">

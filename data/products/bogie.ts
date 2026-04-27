@@ -156,6 +156,6 @@ export const bogieProducts: Product[] = [
 export const bogieData: BrandData = {
   brand: 'Spareng Bogie',
   description: 'Comprehensive range of bogie components and spare parts for mobile material handling equipment',
-  website: 'https://spareng.com',
+  website: 'https://www.sparenginc.com',
   products: bogieProducts
 }

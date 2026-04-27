@@ -182,6 +182,6 @@ export const mechanicalVibroFeederProducts: Product[] = [
 export const mechanicalVibroFeederData: BrandData = {
   brand: 'Spareng Mechanical Vibro Feeder',
   description: 'Comprehensive range of mechanical vibro feeder components and spare parts',
-  website: 'https://spareng.com',
+  website: 'https://www.sparenginc.com',
   products: mechanicalVibroFeederProducts
 }

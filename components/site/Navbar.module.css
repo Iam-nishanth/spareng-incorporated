@@ -21,6 +21,8 @@
   height: 100px;
   width: auto;
   display: block;
+  transform: scale(1.2);
+  transform-origin: left center;
 }
 .logo .logoDark {
   display: none;
@@ -138,6 +140,8 @@
   }
   .logo img {
     height: 108px;
+    transform: scale(1.2);
+    transform-origin: left center;
   }
   .links,
   .navCta {

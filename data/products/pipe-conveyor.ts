@@ -484,6 +484,6 @@ export const pipeConveyorProducts: Product[] = [
 export const pipeConveyorData: BrandData = {
   brand: 'Spareng Pipe Conveyor',
   description: 'Comprehensive range of pipe conveyor components and spare parts for enclosed material transport systems',
-  website: 'https://spareng.com',
+  website: 'https://www.sparenginc.com',
   products: pipeConveyorProducts
 }

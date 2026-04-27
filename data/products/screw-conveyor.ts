@@ -233,6 +233,6 @@ export const screwConveyorProducts: Product[] = [
 export const screwConveyorData: BrandData = {
   brand: 'Spareng Screw Conveyor',
   description: 'Comprehensive range of screw conveyor components and spare parts',
-  website: 'https://spareng.com',
+  website: 'https://www.sparenginc.com',
   products: screwConveyorProducts
 }

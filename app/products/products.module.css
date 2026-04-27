@@ -89,6 +89,30 @@
   max-width: 560px;
   margin: 0;
 }
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 8px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .heroEyebrow,
+  .heroTitle,
+  .heroDesc {
+    animation: fadeUp 0.45s ease-out both;
+  }
+  .heroTitle {
+    animation-delay: 70ms;
+  }
+  .heroDesc {
+    animation-delay: 140ms;
+  }
+}
 .heroStats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

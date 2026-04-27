@@ -702,6 +702,6 @@ export const bargeLoaderProducts: Product[] = [
 export const bargeLoaderData: BrandData = {
   brand: 'Spareng Barge Loader',
   description: 'Comprehensive range of barge loader components and spare parts for efficient port operations and bulk material handling',
-  website: 'https://spareng.com',
+  website: 'https://www.sparenginc.com',
   products: bargeLoaderProducts
 }

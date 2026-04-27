@@ -110,6 +110,6 @@ export const driveBaseAssemblyProducts: Product[] = [
 export const driveBaseAssemblyData: BrandData = {
   brand: 'Spareng Drive Base Assembly',
   description: 'Complete drive base assembly components including motors, gearboxes, couplings, and pulleys for conveyor systems',
-  website: 'https://spareng.com',
+  website: 'https://www.sparenginc.com',
   products: driveBaseAssemblyProducts
 }

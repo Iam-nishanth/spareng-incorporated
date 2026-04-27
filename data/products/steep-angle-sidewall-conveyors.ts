@@ -677,6 +677,6 @@ export const steepAngleSidewallConveyorsProducts: Product[] = [
 export const steepAngleSidewallConveyorsData: BrandData = {
   brand: 'Spareng Steep Angle Sidewall Conveyors',
   description: 'Comprehensive range of steep angle sidewall conveyor components and spare parts for vertical and inclined material transport',
-  website: 'https://spareng.com',
+  website: 'https://www.sparenginc.com',
   products: steepAngleSidewallConveyorsProducts
 }

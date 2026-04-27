@@ -340,6 +340,6 @@ export const pneumaticHandlingSystemsProducts: Product[] = [
 export const pneumaticHandlingSystemsData: BrandData = {
   brand: 'Spareng Pneumatic Handling Spares',
   description: 'Comprehensive range of pneumatic handling system components including valves, actuators, and control systems for industrial automation',
-  website: 'https://spareng.com',
+  website: 'https://www.sparenginc.com',
   products: pneumaticHandlingSystemsProducts
 }

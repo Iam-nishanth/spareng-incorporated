@@ -470,7 +470,7 @@
 /* ---------- Industries ---------- */
 .indGrid {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: minmax(260px, 1fr) minmax(260px, 1fr);
   gap: 12px;
 }
@@ -484,9 +484,6 @@
   transition:
     transform 0.35s ease,
     box-shadow 0.35s ease;
-}
-.indCard:first-child {
-  grid-row: 1 / span 2;
 }
 .indCard:hover {
   transform: translateY(-2px);
@@ -574,22 +571,6 @@
 }
 
 /* Featured (first) card gets larger type */
-.indCard:first-child .indContent {
-  padding: 32px 32px 36px;
-}
-.indCard:first-child .indSub {
-  font-size: 11.5px;
-}
-.indCard:first-child .indName {
-  font-size: clamp(26px, 2.6vw, 36px);
-}
-.indCard:first-child .indBar {
-  margin-top: 16px;
-}
-.indCard:first-child:hover .indBar {
-  width: 80px;
-}
-
 /* ---------- CTA band ---------- */
 .ctaBand {
   padding: 80px max(var(--gutter), calc((100% - var(--max-content)) / 2));
@@ -734,6 +715,47 @@
   font-weight: 600;
 }
 
+/* ---------- Entry animations ---------- */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 8px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .eyebrowBadge,
+  .heroTitle,
+  .heroDesc,
+  .heroBtns {
+    animation: fadeUp 0.45s ease-out both;
+  }
+  .heroTitle {
+    animation-delay: 70ms;
+  }
+  .heroDesc {
+    animation-delay: 140ms;
+  }
+  .heroBtns {
+    animation-delay: 210ms;
+  }
+  .heroRight {
+    animation: fadeIn 0.6s ease-out both;
+    animation-delay: 80ms;
+  }
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 1024px) {
   .nav {
@@ -828,9 +850,6 @@
   .indContent {
     padding: 20px 20px 22px;
   }
-  .indCard:first-child .indContent {
-    padding: 24px 24px 26px;
-  }
   .ctaBand {
     grid-template-columns: 1fr;
     padding: 56px 28px;
@@ -891,13 +910,7 @@
   }
   .indGrid {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 220px);
-  }
-  .indCard:first-child {
-    grid-row: auto;
-  }
-  .indCard:first-child .indName {
-    font-size: 24px;
+    grid-template-rows: repeat(6, 220px);
   }
   .ctaBand {
     padding: 48px 20px;

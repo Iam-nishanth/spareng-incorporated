@@ -106,6 +106,6 @@
 // export const stackerScraperReclaimerData: BrandData = {
 //   brand: 'Spareng Stacker Scraper Reclaimer',
 //   description: 'Essential components for stacker and scraper reclaimer systems used in bulk material handling and stockyard operations',
-//   website: 'https://spareng.com',
+//   website: 'https://www.sparenginc.com',
 //   products: stackerScraperReclaimerProducts
 // }

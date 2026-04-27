@@ -157,6 +157,6 @@ export const prismGateFlowDiverterProducts: Product[] = [
 export const prismGateFlowDiverterData: BrandData = {
   brand: 'Spareng Prism Gate Flow Diverter',
   description: 'Specialized components for prism gates and flow diverter systems used in material handling and flow control applications',
-  website: 'https://spareng.com',
+  website: 'https://www.sparenginc.com',
   products: prismGateFlowDiverterProducts
 }

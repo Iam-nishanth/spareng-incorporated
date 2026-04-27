@@ -160,6 +160,6 @@ export const bulkReceptionUnitProducts: Product[] = [
 export const bulkReceptionUnitData: BrandData = {
   brand: 'Spareng Bulk Reception Unit',
   description: 'Comprehensive range of bulk reception unit components and spare parts',
-  website: 'https://spareng.com',
+  website: 'https://www.sparenginc.com',
   products: bulkReceptionUnitProducts
 }

@@ -158,6 +158,6 @@ export const rotaryAirLockValveProducts: Product[] = [
 export const rotaryAirLockValveData: BrandData = {
   brand: 'Spareng Rotary Air Lock Valve',
   description: 'Comprehensive range of rotary air lock valve components and spare parts',
-  website: 'https://spareng.com',
+  website: 'https://www.sparenginc.com',
   products: rotaryAirLockValveProducts
 }

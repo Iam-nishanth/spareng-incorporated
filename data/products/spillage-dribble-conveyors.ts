@@ -158,6 +158,6 @@ export const spillageDribbleConveyorsProducts: Product[] = [
 export const spillageDribbleConveyorsData: BrandData = {
   brand: 'Spareng Spillage Dribble Conveyors',
   description: 'Specialized components for spillage and dribble conveyor systems designed for material cleanup and collection',
-  website: 'https://spareng.com',
+  website: 'https://www.sparenginc.com',
   products: spillageDribbleConveyorsProducts
 }
