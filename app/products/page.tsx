@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+
 import { Suspense } from 'react'
 
 import { Footer } from '#components/site/Footer'
@@ -53,7 +54,9 @@ const itemListLd = {
         description: line.summary,
         brand: { '@type': 'Brand', name: 'Spareng Incorporated' },
         ...(line.image
-          ? { image: `${SITE_URL}${line.image.startsWith('/') ? '' : '/'}${line.image}` }
+          ? {
+              image: `${SITE_URL}${line.image.startsWith('/') ? '' : '/'}${line.image}`,
+            }
           : {}),
       })),
     },
@@ -152,10 +155,9 @@ export default function ProductsPage() {
             </h1>
             <p className={styles.heroDesc}>
               {hubCategories.length} core categories. {totalLines} distinct
-              product lines. Every system in our catalog is
-              precision-engineered for continuous industrial duty, whether
-              you’re sourcing a complete conveyor, a single impact idler, or a
-              custom wear liner.
+              product lines. Every system in our catalog is precision-engineered
+              for continuous industrial duty, whether you’re sourcing a complete
+              conveyor, a single impact idler, or a custom wear liner.
             </p>
           </div>
           <div className={styles.heroStats}>
@@ -164,9 +166,7 @@ export default function ProductsPage() {
               <div className={styles.heroStatLabel}>Product Lines</div>
             </div>
             <div className={styles.heroStat}>
-              <div className={styles.heroStatNum}>
-                {hubCategories.length}
-              </div>
+              <div className={styles.heroStatNum}>{hubCategories.length}</div>
               <div className={styles.heroStatLabel}>Categories</div>
             </div>
             <div className={styles.heroStat}>
@@ -195,9 +195,7 @@ export default function ProductsPage() {
                   {c.number} / {meta?.eyebrow ?? c.tagline}
                 </div>
                 <h2 className={styles.introTitle}>{c.name}</h2>
-                <p className={styles.introLead}>
-                  {meta?.lead ?? c.tagline}
-                </p>
+                <p className={styles.introLead}>{meta?.lead ?? c.tagline}</p>
               </div>
 
               <div className={styles.lines}>
@@ -213,9 +211,7 @@ export default function ProductsPage() {
                   className={styles.linesGrid}
                   style={
                     {
-                      ['--cols' as string]: colsForCount(
-                        c.productLines.length,
-                      ),
+                      ['--cols' as string]: colsForCount(c.productLines.length),
                     } as React.CSSProperties
                   }
                 >
@@ -267,7 +263,7 @@ export default function ProductsPage() {
         )
       })}
 
-      <div className={styles.ctaBand}>
+      {/*<div className={styles.ctaBand}>
         <div>
           <h2>
             Need a part that
@@ -288,7 +284,7 @@ export default function ProductsPage() {
             or email us at info@sparenginc.com
           </div>
         </div>
-      </div>
+      </div>*/}
 
       <Footer />
     </div>

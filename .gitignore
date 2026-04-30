@@ -43,3 +43,7 @@ Spareng Pdf Pages
 .roomodes
 .windsurfrules
 *.md
+
+# Catalog generator (PPTX deck + previews)
+/catalog
+.claude/

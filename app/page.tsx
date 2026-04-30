@@ -37,7 +37,8 @@ const localBusinessLd = {
   url: SITE_URL,
   image: `${SITE_URL}/Sparent_INC.png`,
   logo: `${SITE_URL}/Sparent_INC.png`,
-  email: 'info@sparenginc.com',
+  email: 'ppl@sparenginc.com',
+  telephone: ['+91-90001-74999', '+91-99598-93699'],
   description: HOME_DESCRIPTION,
   priceRange: '$$',
   address: {
@@ -420,7 +421,7 @@ export default function TitanPage() {
             Request a Quote Today {ArrowIcon}
           </Link>
           <div className={styles.ctaContact}>
-            or email us at info@sparenginc.com
+            or email us at ppl@sparenginc.com
           </div>
         </div>
       </div>

@@ -1,6 +1,8 @@
 import { ColorModeScript } from '@chakra-ui/react'
 import type { Metadata, Viewport } from 'next'
 
+import { OverlayScrollbar } from '#components/site/OverlayScrollbar'
+
 import './globals.css'
 import { Provider } from './provider'
 
@@ -174,18 +176,22 @@ const organizationLd = {
     postalCode: '500039',
     addressCountry: 'IN',
   },
+  email: 'ppl@sparenginc.com',
+  telephone: ['+91-90001-74999', '+91-99598-93699'],
   contactPoint: [
     {
       '@type': 'ContactPoint',
       contactType: 'sales',
-      email: 'sales@sparenginc.com',
+      email: 'ppl@sparenginc.com',
+      telephone: '+91-90001-74999',
       areaServed: 'IN',
       availableLanguage: ['en', 'hi'],
     },
     {
       '@type': 'ContactPoint',
       contactType: 'customer support',
-      email: 'info@sparenginc.com',
+      email: 'ppl@sparenginc.com',
+      telephone: '+91-99598-93699',
       areaServed: 'IN',
       availableLanguage: ['en', 'hi'],
     },
@@ -230,6 +236,7 @@ export default function Layout(props: { children: React.ReactNode }) {
       <body className="chakra-ui-light">
         <ColorModeScript initialColorMode="light" />
         <Provider>{props.children}</Provider>
+        <OverlayScrollbar />
       </body>
     </html>
   )

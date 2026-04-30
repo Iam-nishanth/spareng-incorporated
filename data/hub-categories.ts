@@ -644,14 +644,12 @@ export const hubCategories: HubCategory[] = [
         summary:
           'Rotating disc/roller classifier for precise crystal size separation. Delivers consistent on-spec sizing across all grades of sugar and granular feeds.',
         highlights: [
-          'Rotating discs or rollers with adjustable spacing for precise crystal sizing',
           'On spec crystals fall through, oversize is conveyed forward for further processing',
           'All grades of sugar separated to strict quality specifications',
         ],
         description:
           'The Sizer / Grader uses rotating discs or rollers with adjustable spacing to deliver precise, consistent crystal size separation across all grades of sugar. As material passes over the rotating elements, on-spec crystals fall through cleanly while oversized material is conveyed forward for further processing or recrystallization, ensuring every grade meets strict quality standards.',
         features: [
-          'Rotating discs or rollers with adjustable spacing',
           'Precise, consistent crystal size separation',
           'On-spec crystals fall through; oversize is conveyed forward',
           'All grades of sugar handled to strict quality specifications',

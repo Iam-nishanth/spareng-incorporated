@@ -81,7 +81,7 @@ export default function ContactPage() {
           </div>
           <div className={styles.infoTitle}>Email</div>
           <p className={styles.infoMain}>
-            <a href="mailto:info@sparenginc.com">info@sparenginc.com</a>
+            <a href="mailto:ppl@sparenginc.com">ppl@sparenginc.com</a>
           </p>
           <p className={styles.infoSub}>
             Send drawings, RFQs, and technical questions. Replies within one
@@ -94,7 +94,10 @@ export default function ContactPage() {
           </div>
           <div className={styles.infoTitle}>Phone</div>
           <p className={styles.infoMain}>
-            <a href="tel:+914012345678">+91 40 1234 5678</a>
+            <a href="tel:+919000174999">+91 90001 74999</a>
+          </p>
+          <p className={styles.infoMain}>
+            <a href="tel:+919959893699">+91 99598 93699</a>
           </p>
           <p className={styles.infoSub}>
             Speak directly with our applications engineers, Monday – Saturday.
@@ -109,8 +112,8 @@ export default function ContactPage() {
             <h2>Specifications, drawings, or just a problem to solve.</h2>
             <p>
               Most of our enquiries arrive as a sketch, a sample, or a worn-out
-              part on a workshop bench. Send what you have. We’ll come back
-              with options, prices, and lead times.
+              part on a workshop bench. Send what you have. We’ll come back with
+              options, prices, and lead times.
             </p>
 
             <ul className={styles.points}>
@@ -252,7 +255,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className={styles.locStrip}>
+      {/*<section className={styles.locStrip}>
         <div className={styles.locInner}>
           <div className={styles.locText}>
             <div className={styles.eyebrow}>Our Plant</div>
@@ -283,7 +286,7 @@ export default function ContactPage() {
             />
           </div>
         </div>
-      </section>
+      </section>*/}
 
       <Footer />
     </div>

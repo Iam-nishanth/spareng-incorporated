@@ -65,8 +65,18 @@ const siteConfig = {
       items: [
         {
           label: 'Email',
-          value: 'info@sparenginc.com',
-          href: 'mailto:info@sparenginc.com',
+          value: 'ppl@sparenginc.com',
+          href: 'mailto:ppl@sparenginc.com',
+        },
+        {
+          label: 'Phone',
+          value: '+91 90001 74999',
+          href: 'tel:+919000174999',
+        },
+        {
+          label: 'Phone',
+          value: '+91 99598 93699',
+          href: 'tel:+919959893699',
         },
       ],
     },

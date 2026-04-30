@@ -35,11 +35,20 @@ export function Footer() {
             </span>
             <span>
               <MailIcon />
-              <a href="mailto:info@sparenginc.com">info@sparenginc.com</a>
+              <a href="mailto:ppl@sparenginc.com">ppl@sparenginc.com</a>
             </span>
             <span>
               <PhoneIcon />
-              <a href="tel:+914012345678">+91 40 1234 5678</a>
+              <span
+                style={{
+                  display: 'inline-flex',
+                  flexDirection: 'column',
+                  lineHeight: 1.6,
+                }}
+              >
+                <a href="tel:+919000174999">+91 90001 74999</a>
+                <a href="tel:+919959893699">+91 99598 93699</a>
+              </span>
             </span>
           </div>
         </div>

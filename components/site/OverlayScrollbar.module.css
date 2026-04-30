@@ -1,0 +1,58 @@
+.track {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 12px;
+  height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.track.active {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.thumb {
+  position: absolute;
+  top: 0;
+  right: 3px;
+  width: 6px;
+  height: 36px;
+  border-radius: 999px;
+  background-color: rgba(15, 31, 46, 0.28);
+  transition:
+    width 140ms ease,
+    right 140ms ease,
+    background-color 160ms ease;
+  cursor: grab;
+  will-change: transform;
+}
+
+.track:hover .thumb,
+.track.dragging .thumb {
+  width: 8px;
+  right: 2px;
+  background-color: rgba(15, 31, 46, 0.5);
+}
+
+.track.dragging .thumb {
+  cursor: grabbing;
+}
+
+:global([data-theme='dark']) .thumb {
+  background-color: rgba(255, 255, 255, 0.28);
+}
+
+:global([data-theme='dark']) .track:hover .thumb,
+:global([data-theme='dark']) .track.dragging .thumb {
+  background-color: rgba(255, 255, 255, 0.55);
+}
+
+@media (max-width: 768px), (pointer: coarse) {
+  .track {
+    display: none;
+  }
+}
