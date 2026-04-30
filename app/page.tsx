@@ -35,7 +35,7 @@ const localBusinessLd = {
   '@id': `${SITE_URL}/#localbusiness`,
   name: 'Spareng Incorporated',
   url: SITE_URL,
-  image: `${SITE_URL}/Sparent_INC.png`,
+  image: `${SITE_URL}/spareng-og.png`,
   logo: `${SITE_URL}/Sparent_INC.png`,
   email: 'ppl@sparenginc.com',
   telephone: ['+91-90001-74999', '+91-99598-93699'],

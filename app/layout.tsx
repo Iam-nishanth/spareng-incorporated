@@ -12,7 +12,7 @@ const SITE_DESCRIPTION =
   'Spareng Incorporated supplies precision-engineered Material Handling Equipment and spare parts — conveyor systems, idlers, pulleys, crushers, feeders, and screening equipment for mining, steel, cement, power, sugar, and port operations across India.'
 
 const OG_IMAGE = {
-  url: '/Sparent_INC.png',
+  url: '/spareng-og.png',
   width: 1536,
   height: 1024,
   alt: 'Spareng Incorporated — Precision MHE Spares and Material Handling Equipment',
