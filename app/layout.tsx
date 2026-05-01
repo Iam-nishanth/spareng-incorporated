@@ -106,7 +106,7 @@ export const metadata: Metadata = {
     title:
       'Spareng Incorporated | Precision MHE Spares & Material Handling Equipment',
     description: SITE_DESCRIPTION,
-    images: [OG_IMAGE.url],
+    images: [{ url: OG_IMAGE.url, alt: OG_IMAGE.alt }],
   },
   icons: {
     icon: [
